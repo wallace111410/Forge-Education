@@ -1,0 +1,892 @@
+{
+  "setupComplete": true,
+  "forge": {
+    "version": "1.0",
+    "created": "2026-04-10",
+    "family": {
+      "id": "wallace",
+      "name": "Wallace Family",
+      "parents": [
+        {
+          "name": "Nicole",
+          "email": "nicole@example.com",
+          "role": "primary"
+        },
+        {
+          "name": "Estil",
+          "email": "estil@example.com",
+          "role": "primary"
+        }
+      ],
+      "parentPin": "1234",
+      "settings": {
+        "timezone": "America/Phoenix",
+        "safetyNotificationEmails": [
+          "nicole@example.com",
+          "estil@example.com"
+        ],
+        "schedule": {
+          "monday": {
+            "forgeWindow": {
+              "start": "09:00",
+              "end": "12:00"
+            },
+            "activities": [
+              "tennis",
+              "speech_debate"
+            ],
+            "speechClubEvening": true,
+            "notes": "Apologetics focus before Speech"
+          },
+          "tuesday": {
+            "forgeWindow": {
+              "start": "09:00",
+              "end": "11:30"
+            },
+            "activities": [
+              "tennis",
+              "ballet",
+              "martial_arts"
+            ],
+            "notes": "Good morning window before tennis"
+          },
+          "wednesday": {
+            "forgeWindow": null,
+            "activities": [
+              "thrive_coop",
+              "piano"
+            ],
+            "protected": true,
+            "notes": "ZERO SCREENS — Thrive Co-op + Piano"
+          },
+          "thursday": {
+            "forgeWindow": {
+              "start": "10:00",
+              "end": "14:30"
+            },
+            "activities": [
+              "jellybean_business",
+              "s2s",
+              "martial_arts"
+            ],
+            "anchorDay": true,
+            "notes": "Best day — 4.5hr window after business block"
+          },
+          "friday": {
+            "forgeWindow": {
+              "start": "10:15",
+              "end": "13:30"
+            },
+            "activities": [
+              "horseback",
+              "tennis"
+            ],
+            "notes": "After horseback, before tennis"
+          },
+          "saturday": {
+            "forgeWindow": null,
+            "activities": [
+              "church",
+              "youth_group"
+            ],
+            "notes": "Chill morning, church 2-4pm",
+            "protected": true
+          },
+          "sunday": {
+            "forgeWindow": null,
+            "activities": [
+              "coach_dillon"
+            ],
+            "notes": "REST after Coach Dillon"
+          }
+        },
+        "scheduleOverrides": {},
+        "todayUnlock": null,
+        "testingMode": false
+      }
+    },
+    "children": {
+      "everly": {
+        "id": "everly",
+        "name": "Everly",
+        "age": 11,
+        "birthYear": 2015,
+        "stage": 3,
+        "pin": "1111",
+        "primaryAgent": {
+          "name": "Vera",
+          "systemName": "vera",
+          "avatarStage": 3,
+          "voiceId": "vera_voice_placeholder"
+        },
+        "domains": {
+          "identity": {
+            "currentLevel": 5,
+            "targetLevel": 6,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "IJ-L5-001",
+              "IJ-L5-002",
+              "IJ-L5-003",
+              "IJ-L5-004",
+              "IJ-L5-005"
+            ]
+          },
+          "communication": {
+            "currentLevel": 6,
+            "targetLevel": 7,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "CP-L5-001",
+              "CP-L5-002",
+              "CP-L5-003"
+            ]
+          },
+          "building": {
+            "currentLevel": 6,
+            "targetLevel": 7,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "BE-L6-001",
+              "BE-L6-002",
+              "BE-L6-003"
+            ]
+          },
+          "humanFluency": {
+            "currentLevel": 4,
+            "targetLevel": 5,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "HF-L4-001",
+              "HF-L4-002",
+              "HF-L4-003"
+            ]
+          },
+          "aiSystems": {
+            "currentLevel": 5,
+            "targetLevel": 6,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "AI-L5-001",
+              "AI-L5-002",
+              "AI-L5-003"
+            ]
+          },
+          "physical": {
+            "currentLevel": 6,
+            "targetLevel": 7,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "PM-L6-001",
+              "PM-L6-002",
+              "PM-L6-003"
+            ]
+          }
+        },
+        "sessions": [],
+        "portfolio": {
+          "artifacts": [],
+          "conversations": [],
+          "growthTimelines": [],
+          "featuredItems": [],
+          "reflections": []
+        },
+        "streak": {
+          "current": 0,
+          "longest": 0,
+          "lastSessionDate": null
+        },
+        "agentMemory": {
+          "personalityProfile": "Knowledge-driven, history-obsessed, avoids challenges when failure is possible. Trusts her mind more than her performance. Drawn to thinking events not performance events. Competitive in speech: apologetics, impromptu, informative. Runs JellyBean Vending with Isla. Strong in Building and Communication domains. Human Fluency is the growth edge.",
+          "currentProjects": [
+            "May 9th tournament prep",
+            "JellyBean loan repayment",
+            "Apologetics bank mastery"
+          ],
+          "recentObservations": [],
+          "knownStrengths": [
+            "Historical reasoning",
+            "Intellectual depth",
+            "Business understanding",
+            "Apologetics preparation"
+          ],
+          "knownChallenges": [
+            "Challenge avoidance — identity protection pattern",
+            "Prefers safe territory of ideas over performance"
+          ],
+          "currentMissions": {
+            "identity": "IJ-L5-001",
+            "communication": "CP-L5-001",
+            "building": "BE-L6-001",
+            "humanFluency": "HF-L4-001",
+            "aiSystems": "AI-L5-001",
+            "physical": "PM-L6-001"
+          },
+          "s2sNotes": "Fine motor 60%, eye tracking at goal, primitive reflexes 67%. Fear Paralysis moderate. 7-month program. Challenge avoidance is NOT neurological — separate issue.",
+          "coachDillonNotes": "10 hrs/week. Currently transitioning from tennis to golf for summer. Mental performance coaching is a core component.",
+          "speechNotes": "NCFCA juniors — Apologetics, Impromptu, Informative. May 9th tournament coming. Club: Mr & Mrs Wilson, Monday evenings. 12 apologetics questions assigned.",
+          "lastSessionSummary": ""
+        },
+        "s2sProfile": {
+          "fineMotor": 60,
+          "eyeTrackingAccuracy": 90,
+          "eyeTrackingSpeed": 90,
+          "bilateralCoordination": 85,
+          "primitiveReflexes": 67,
+          "programStartDate": "2026-02-27",
+          "programLengthMonths": 7,
+          "monthlyProgress": []
+        },
+        "mapScores": [],
+        "tournamentDates": [
+          "2026-05-09"
+        ],
+        "firstLoginComplete": false,
+        "avatarConfig": {
+          "skinColor": "ffdbb4",
+          "hairColor": "4a312c",
+          "presentationStyle": "long",
+          "eyeStyle": "default",
+          "eyebrowStyle": "defaultNatural",
+          "mouthStyle": "smile",
+          "clothing": "shirtCrewNeck",
+          "clothesColor": "65c9ff",
+          "accessory": "none",
+          "facialHair": "none",
+          "facialHairColor": "4a312c",
+          "topVariant": 0
+        },
+        "reports": {
+          "dailyBriefs": [],
+          "weeklyDigests": [],
+          "progressHistory": []
+        },
+        "messages": {
+          "parentInbox": []
+        },
+        "memory": {
+          "sessionMemories": [],
+          "characterNotes": ""
+        },
+        "curriculum": {
+          "missionProgress": {},
+          "stuck": {}
+        },
+        "schedule": {
+          "weeklyActivities": [],
+          "upcomingEvents": [
+            {
+              "date": "2026-05-01",
+              "event": "Test Event",
+              "location": "",
+              "notes": ""
+            },
+            {
+              "date": "2026-05-09",
+              "event": "Speech tournament",
+              "location": "Phoenix",
+              "notes": ""
+            }
+          ]
+        },
+        "resources": {
+          "curriculum": [
+            {
+              "id": "ev-curr-1",
+              "subject": "Math",
+              "name": "Truth, Goodness & Beauty Math",
+              "currentChapter": "Chapter 5",
+              "currentLesson": "Multiplication",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-2",
+              "subject": "Language Arts",
+              "name": "Truth, Goodness & Beauty Language Arts",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-3",
+              "subject": "History",
+              "name": "Truth, Goodness & Beauty History",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-4",
+              "subject": "Spelling",
+              "name": "Simply Spelling",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-5",
+              "subject": "Typing",
+              "name": "Typesy",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-6",
+              "subject": "Speech",
+              "name": "525 Speech Practice",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-7",
+              "subject": "Logic",
+              "name": "Logic Puzzles",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-8",
+              "subject": "Piano",
+              "name": "Piano Practice",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "ev-curr-9",
+              "subject": "Current Events",
+              "name": "World Watch",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            }
+          ],
+          "agentReadingList": [
+            {
+              "id": "read_1776199336838_5a926b",
+              "title": "The Hiding Place",
+              "author": "Corrie ten Boom",
+              "assignedBy": "Parent",
+              "assignedDate": "2026-04-14",
+              "reason": "",
+              "currentChapter": "",
+              "status": "in_progress",
+              "parentAdded": true
+            }
+          ],
+          "documents": []
+        }
+      },
+      "isla": {
+        "id": "isla",
+        "name": "Isla",
+        "age": 8,
+        "birthYear": 2018,
+        "stage": 2,
+        "pin": "2222",
+        "primaryAgent": {
+          "name": "Ren",
+          "systemName": "ren",
+          "avatarStage": 2,
+          "voiceId": "ren_voice_placeholder"
+        },
+        "domains": {
+          "identity": {
+            "currentLevel": 3,
+            "targetLevel": 4,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "IJ-L3-001",
+              "IJ-L3-002",
+              "IJ-L3-003"
+            ]
+          },
+          "communication": {
+            "currentLevel": 3,
+            "targetLevel": 4,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "CP-L3-001",
+              "CP-L3-002",
+              "CP-L3-003"
+            ]
+          },
+          "building": {
+            "currentLevel": 4,
+            "targetLevel": 5,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "BE-L4-001",
+              "BE-L4-002",
+              "BE-L4-003"
+            ]
+          },
+          "humanFluency": {
+            "currentLevel": 3,
+            "targetLevel": 4,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "HF-L3-001",
+              "HF-L3-002",
+              "HF-L3-003"
+            ]
+          },
+          "aiSystems": {
+            "currentLevel": 3,
+            "targetLevel": 4,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "AI-L3-001",
+              "AI-L3-002"
+            ]
+          },
+          "physical": {
+            "currentLevel": 4,
+            "targetLevel": 5,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "PM-L4-001",
+              "PM-L4-002"
+            ]
+          }
+        },
+        "sessions": [],
+        "portfolio": {
+          "artifacts": [],
+          "conversations": [],
+          "growthTimelines": [],
+          "featuredItems": [],
+          "reflections": []
+        },
+        "streak": {
+          "current": 0,
+          "longest": 0,
+          "lastSessionDate": null
+        },
+        "agentMemory": {
+          "personalityProfile": "Bold, challenge-embracing, emotionally intense. Goes TOWARD hard things not away from them. High frustration recovery difficulty — neurological not character. Fear Paralysis at Significant level means emotional regulation under stress is harder. Never pathologize intensity — it is her superpower. Co-regulation not correction when she dysregulates.",
+          "currentProjects": [
+            "JellyBean loan repayment",
+            "S2S program 6-9 months",
+            "NCFCA observing/preparing for speech"
+          ],
+          "recentObservations": [],
+          "knownStrengths": [
+            "Boldness toward challenge",
+            "Business instincts",
+            "Physical courage",
+            "Genuine enthusiasm"
+          ],
+          "knownChallenges": [
+            "Frustration recovery time — neurological, not character",
+            "Fine motor at 20% — S2S priority",
+            "Eye tracking at 40%"
+          ],
+          "currentMissions": {
+            "identity": "IJ-L3-001",
+            "communication": "CP-L3-001",
+            "building": "BE-L4-001",
+            "humanFluency": "HF-L3-001",
+            "aiSystems": "AI-L3-001",
+            "physical": "PM-L4-001"
+          },
+          "s2sNotes": "Fine motor 20% SIGNIFICANT. Eye tracking accuracy 40% SIGNIFICANT. Fear Paralysis SIGNIFICANT. 6-9 month program. Writing starts 1-3 sentences, increases monthly as fine motor improves. Voice-first portfolio.",
+          "coachDillonNotes": "10 hrs/week with Everly. Golf for summer. Mental performance coaching.",
+          "lastSessionSummary": ""
+        },
+        "s2sProfile": {
+          "fineMotor": 20,
+          "eyeTrackingAccuracy": 40,
+          "eyeTrackingSpeed": 65,
+          "bilateralCoordination": 85,
+          "primitiveReflexes": 56,
+          "fearParalysisLevel": "significant",
+          "programStartDate": "2026-02-27",
+          "programLengthMonths": 9,
+          "monthlyProgress": [],
+          "writingSentenceLimit": 3
+        },
+        "mapScores": [],
+        "firstLoginComplete": false,
+        "avatarConfig": {
+          "skinColor": "ffdbb4",
+          "hairColor": "724133",
+          "presentationStyle": "long",
+          "topVariant": 4,
+          "eyeStyle": "happy",
+          "eyebrowStyle": "raisedExcitedNatural",
+          "mouthStyle": "smile",
+          "clothing": "hoodie",
+          "clothesColor": "ff488e",
+          "accessory": "none",
+          "facialHair": "none",
+          "facialHairColor": "724133"
+        },
+        "reports": {
+          "dailyBriefs": [],
+          "weeklyDigests": [],
+          "progressHistory": []
+        },
+        "messages": {
+          "parentInbox": []
+        },
+        "memory": {
+          "sessionMemories": [],
+          "characterNotes": "Isla is Grammar stage (age 8). Reserved, takes time to open up. Short answers are normal not disengagement. Actively developing communication skills. Ren: accept short answers warmly, never pressure, use stories without requiring response, celebrate every extension of thought no matter how small, slow pacing, shorter sentences. Track communication growth — note any session where she extends beyond her baseline."
+        },
+        "curriculum": {
+          "missionProgress": {},
+          "stuck": {}
+        },
+        "schedule": {
+          "weeklyActivities": [],
+          "upcomingEvents": []
+        },
+        "resources": {
+          "curriculum": [
+            {
+              "id": "is-curr-1",
+              "subject": "Math",
+              "name": "Truth, Goodness & Beauty Math",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-2",
+              "subject": "Language Arts",
+              "name": "Truth, Goodness & Beauty Language Arts",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-3",
+              "subject": "History",
+              "name": "Truth, Goodness & Beauty History",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-4",
+              "subject": "Typing",
+              "name": "Typesy",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-5",
+              "subject": "Speech",
+              "name": "525 Speech Practice",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-6",
+              "subject": "Logic",
+              "name": "Logic Puzzles",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-7",
+              "subject": "Piano",
+              "name": "Piano Practice",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-8",
+              "subject": "Current Events",
+              "name": "World Watch",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "is-curr-9",
+              "subject": "Dance",
+              "name": "Dance (Enrichment)",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "Enrichment activity",
+              "documentSummary": "",
+              "active": true
+            }
+          ],
+          "agentReadingList": [],
+          "documents": []
+        }
+      },
+      "weston": {
+        "id": "weston",
+        "name": "Weston",
+        "age": 4,
+        "birthYear": 2022,
+        "stage": 1,
+        "pin": "3333",
+        "primaryAgent": {
+          "name": "Ozzy",
+          "systemName": "ozzy",
+          "avatarStage": 1,
+          "voiceId": "ozzy_voice_placeholder"
+        },
+        "domains": {
+          "identity": {
+            "currentLevel": 1,
+            "targetLevel": 2,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-001",
+              "W-002",
+              "W-003"
+            ]
+          },
+          "communication": {
+            "currentLevel": 1,
+            "targetLevel": 2,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-008"
+            ]
+          },
+          "building": {
+            "currentLevel": 1,
+            "targetLevel": 2,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-002",
+              "W-009",
+              "W-011"
+            ]
+          },
+          "humanFluency": {
+            "currentLevel": 1,
+            "targetLevel": 2,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-004",
+              "W-006",
+              "W-012"
+            ]
+          },
+          "aiSystems": {
+            "currentLevel": 1,
+            "targetLevel": 2,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-005",
+              "W-015"
+            ]
+          },
+          "physical": {
+            "currentLevel": 2,
+            "targetLevel": 3,
+            "masteryEvidence": [],
+            "advancementFlagged": false,
+            "advancementConfirmed": false,
+            "missionsCompleted": [],
+            "missionsAvailable": [
+              "W-001",
+              "W-003",
+              "W-014"
+            ]
+          }
+        },
+        "sessions": [],
+        "portfolio": {
+          "artifacts": [],
+          "conversations": [],
+          "growthTimelines": [],
+          "featuredItems": [],
+          "weeklyBestThings": []
+        },
+        "streak": {
+          "current": 0,
+          "longest": 0,
+          "lastSessionDate": null
+        },
+        "agentMemory": {
+          "personalityProfile": "Age 4. Play-based learning. Loves golf (trains with Coach Dillon alongside sisters), martial arts (2x/week). Grows up watching sisters run JellyBean Vending business. Voice-first — cannot read or write meaningfully. Sessions max 20 minutes. Ozzy sends him back into real life with one thing to notice or do after every session.",
+          "currentProjects": [
+            "Martial arts training",
+            "Golf with Coach Dillon",
+            "Being Weston"
+          ],
+          "recentObservations": [],
+          "knownStrengths": [
+            "Natural curiosity",
+            "Physical boldness",
+            "Family business exposure"
+          ],
+          "knownChallenges": [
+            "Age-appropriate attention span — 20 min max",
+            "Voice-only interface"
+          ],
+          "currentMissions": {
+            "integrated": "W-001"
+          },
+          "lastSessionSummary": "",
+          "weeklyBestThing": ""
+        },
+        "mapScores": [],
+        "firstLoginComplete": false,
+        "avatarConfig": {
+          "skinColor": "ffdbb4",
+          "hairColor": "4a312c",
+          "presentationStyle": "short",
+          "topVariant": 0,
+          "eyeStyle": "default",
+          "eyebrowStyle": "default",
+          "mouthStyle": "twinkle",
+          "clothing": "graphicShirt",
+          "clothesColor": "a7ffc4",
+          "accessory": "none",
+          "facialHair": "none",
+          "facialHairColor": "4a312c"
+        },
+        "reports": {
+          "dailyBriefs": [],
+          "weeklyDigests": [],
+          "progressHistory": []
+        },
+        "messages": {
+          "parentInbox": []
+        },
+        "memory": {
+          "sessionMemories": [],
+          "characterNotes": "Weston is 4, early Grammar stage. Everything is wonder, story, play, noticing. Ozzy asks only observational questions: What did you notice? What was your favorite part? What would you do if you were there? Sessions feel like joyful conversation. Never push for depth. Plant seeds. Let curiosity lead."
+        },
+        "curriculum": {
+          "missionProgress": {},
+          "stuck": {}
+        },
+        "schedule": {
+          "weeklyActivities": [],
+          "upcomingEvents": []
+        },
+        "resources": {
+          "curriculum": [
+            {
+              "id": "we-curr-1",
+              "subject": "Early Learning",
+              "name": "Truth, Goodness & Beauty Early Learning",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            },
+            {
+              "id": "we-curr-2",
+              "subject": "Enrichment",
+              "name": "Age-Appropriate Games, Stories & Physical Play",
+              "currentChapter": "",
+              "currentLesson": "",
+              "notes": "",
+              "documentSummary": "",
+              "active": true
+            }
+          ],
+          "agentReadingList": [],
+          "documents": []
+        }
+      }
+    },
+    "safetyLog": [],
+    "curriculum": {}
+  }
+}

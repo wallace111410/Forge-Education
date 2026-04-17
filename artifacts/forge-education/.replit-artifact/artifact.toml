@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Forge Education"
+version = "1.0.0"
+id = "artifacts/forge-education"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23655
+
+[services.development]
+run = "pnpm --filter @workspace/forge-education run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/forge-education", "run", "build" ]
+
+[services.production.run]
+args = ["node", "artifacts/forge-education/server/index.js"]
+
+[services.production.run.env]
+NODE_ENV = "production"
+
+[services.env]
+PORT = "23655"
+BASE_PATH = "/"

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --forge-orange: #f97316;
+  --forge-orange-light: #ffedd5;
+  --forge-black: #0d0d0d;
+  --forge-dark: #1a1a1a;
+  --forge-surface: #222222;
+  --forge-border: #2a2a2a;
+  --forge-text: #ffffff;
+  --forge-text-muted: #888888;
+  --forge-text-subtle: #444444;
+  --identity-color: #7c3aed;
+  --communication-color: #2563eb;
+  --building-color: #d97706;
+  --humanfluency-color: #db2777;
+  --aisystems-color: #0891b2;
+  --physical-color: #16a34a;
+  --everly-color: #7c3aed;
+  --isla-color: #dc2626;
+  --weston-color: #16a34a;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --transition-fast: 0.12s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.35s ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--forge-black);
+  color: var(--forge-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root, .forge-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.display { font-family: var(--font-display); font-weight: 900; }
+.serif { font-family: var(--font-display); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.forge-card {
+  background: var(--forge-dark);
+  border: 1px solid var(--forge-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.forge-btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.forge-btn-primary {
+  background: var(--forge-orange);
+  color: white;
+}
+
+.forge-btn-primary:hover {
+  background: #ea6c0a;
+  transform: translateY(-1px);
+}
+
+.forge-btn-ghost {
+  background: transparent;
+  color: var(--forge-text-muted);
+  border: 1px solid var(--forge-border);
+}
+
+.forge-btn-ghost:hover {
+  background: var(--forge-surface);
+  color: var(--forge-text);
+}
+
+.forge-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--forge-text-muted);
+  font-size: 0.875rem;
+}
+
+.forge-loading::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--forge-border);
+  border-top-color: var(--forge-orange);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--forge-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+
+:focus-visible {
+  outline: 2px solid var(--forge-orange);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.first-intro {
+  min-height: 100vh; background: #0d0d0d; display: flex; align-items: center;
+  justify-content: center; padding: 2rem;
+}
+.first-intro-inner {
+  text-align: center; max-width: 420px; position: relative;
+}
+.first-intro-glow {
+  position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+  width: 180px; height: 180px; border-radius: 50%; opacity: 0.08; filter: blur(60px);
+  pointer-events: none;
+}
+.first-intro-emoji { font-size: 3.5rem; margin-bottom: 1rem; }
+.first-intro-title {
+  font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 900;
+  color: #fff; margin-bottom: 0.5rem;
+}
+.first-intro-subtitle {
+  font-size: 1rem; color: #ccc; line-height: 1.5; margin-bottom: 1rem;
+}
+.first-intro-subtitle strong { color: #fff; }
+.first-intro-text {
+  font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 0.75rem;
+}
+.first-intro-btn {
+  margin-top: 1.5rem; color: #000; border: none; border-radius: 12px;
+  padding: 1rem 2.5rem; font-size: 1rem; font-weight: 700; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: opacity 0.2s;
+}
+.first-intro-btn:hover { opacity: 0.9; }

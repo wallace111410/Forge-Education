@@ -1,0 +1,198 @@
+/* ─── Forge Global Design System ────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand */
+  --forge-orange: #f97316;
+  --forge-orange-light: #ffedd5;
+  --forge-black: #0d0d0d;
+  --forge-dark: #1a1a1a;
+  --forge-surface: #222222;
+  --forge-border: #2a2a2a;
+  --forge-text: #ffffff;
+  --forge-text-muted: #888888;
+  --forge-text-subtle: #444444;
+
+  /* Domain colors */
+  --identity-color: #7c3aed;
+  --communication-color: #2563eb;
+  --building-color: #d97706;
+  --humanfluency-color: #db2777;
+  --aisystems-color: #0891b2;
+  --physical-color: #16a34a;
+
+  /* Child colors */
+  --everly-color: #7c3aed;
+  --isla-color: #dc2626;
+  --weston-color: #16a34a;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.12s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.35s ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--forge-black);
+  color: var(--forge-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root, .forge-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+
+.display { font-family: var(--font-display); font-weight: 900; }
+.serif { font-family: var(--font-display); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Shared components ──────────────────────────────────────────────────── */
+
+.forge-card {
+  background: var(--forge-dark);
+  border: 1px solid var(--forge-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.forge-btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.forge-btn-primary {
+  background: var(--forge-orange);
+  color: white;
+}
+
+.forge-btn-primary:hover {
+  background: #ea6c0a;
+  transform: translateY(-1px);
+}
+
+.forge-btn-ghost {
+  background: transparent;
+  color: var(--forge-text-muted);
+  border: 1px solid var(--forge-border);
+}
+
+.forge-btn-ghost:hover {
+  background: var(--forge-surface);
+  color: var(--forge-text);
+}
+
+/* Domain badge */
+.domain-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Level indicator */
+.level-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+/* Loading state */
+.forge-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--forge-text-muted);
+  font-size: 0.875rem;
+}
+
+.forge-loading::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--forge-border);
+  border-top-color: var(--forge-orange);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--forge-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+
+/* ─── Focus states ───────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--forge-orange);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
