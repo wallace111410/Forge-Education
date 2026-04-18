@@ -1,6 +1,6 @@
 [build]
-builder = "NIXPACKS"
-buildCommand = "corepack enable && corepack prepare pnpm@10.0.0 --activate && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/forge-education run build"
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
 
 [deploy]
 startCommand = "node artifacts/forge-education/server/index.js"
