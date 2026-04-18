@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "npm install -g pnpm && pnpm install --no-frozen-lockfile"
+buildCommand = "corepack enable && corepack prepare pnpm@9.0.0 --activate && pnpm install --no-frozen-lockfile"
 
 [deploy]
 startCommand = "node artifacts/forge-education/server/index.js"
