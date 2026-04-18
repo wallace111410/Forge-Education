@@ -1,6 +1,7 @@
 [build]
 builder = "NIXPACKS"
+buildCommand = "npm install -g pnpm && pnpm install"
 
 [deploy]
-startCommand = "npm start"
+startCommand = "node artifacts/forge-education/server/index.js"
 restartPolicyType = "ON_FAILURE"
