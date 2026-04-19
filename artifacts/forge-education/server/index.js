@@ -160,6 +160,41 @@ function ensureResources(child) {
   if (!child.resources.documents) child.resources.documents = [];
   return child.resources;
 }
+function ensureProfile(child) {
+  if (!child.profile) child.profile = {
+    identityFile: {
+      age: null,
+      agentName: null,
+      developmentalStage: 1,
+      stageLabel: 'warm and gentle',
+      s2sFindings: '',
+      motivations: '',
+      avoidancePatterns: '',
+      connectedContext: { speechCaseTopic: '', thriveCurrentUnit: '', s2sFocus: '', coachFocus: '' }
+    },
+    lastUpdated: null
+  };
+  return child.profile;
+}
+
+function ensureSessionLogs(child) {
+  if (!child.sessionLogs) child.sessionLogs = [];
+  return child.sessionLogs;
+}
+
+function ensureProgressions(child) {
+  if (!child.progressions) child.progressions = {
+    q1Destinations: {},
+    currentUnits: {},
+    milestones: {}
+  };
+  if (!child.progressions.q1Destinations) child.progressions.q1Destinations = {};
+  if (!child.progressions.currentUnits) child.progressions.currentUnits = {};
+  if (!child.progressions.milestones) child.progressions.milestones = {};
+  return child.progressions;
+}
+
+
 
 async function callClaude(systemPrompt, userPrompt, maxTokens = 500) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -288,7 +323,7 @@ app.get('/forge-api/child/:childId/today', (req, res) => {
       leadDomain: domainRotation[today] || 'identity',
       sessionTarget: 60,
       sessionNote: null,
-      notes: 'Testing mode active — schedule protection bypassed'
+      notes: 'Testing mode active â schedule protection bypassed'
     });
   }
 
@@ -553,7 +588,7 @@ app.post('/forge-api/session/end', async (req, res) => {
     missionId: session.missionId,
     sessionId: session.id,
     type: 'session',
-    summary: `${session.domain} session — ${session.missionId}`,
+    summary: `${session.domain} session â ${session.missionId}`,
     duration: session.duration,
     flaggedByChild: false
   });
@@ -603,7 +638,7 @@ async function generateDailyBrief(childId, session) {
   const transcript = session.transcript.map(t => `${t.role}: ${t.content}`).join('\n');
   const briefText = await callClaude(
     'You generate concise parent briefs for a homeschool education platform. Write in warm, direct language. No asterisks, no markdown headers. Keep it under 200 words.',
-    `Generate a parent brief for this session:\nChild: ${childId}\nDomain: ${session.domain}\nMission: ${session.missionId}\nDuration: ${session.duration} minutes\n\nTranscript:\n${transcript.slice(0, 3000)}\n\nFormat as:\nCOVERED: (1-2 sentences on what was worked on)\nENGAGEMENT: (one word: high/medium/low, plus one sentence why)\nAT HOME: (one specific thing the parent can do to continue this learning)\nFLAGS: (any concerns, or "None")\nHOW TO CONTINUE THIS AT HOME: Tonight or this week: (one specific thing the parent can say or do in the next 24-48 hours that mirrors or extends what came up in the session — a dinner table question, a walk conversation starter, or something to notice together. Not an assignment. 2-3 sentences max. Practical, human, connective.)`
+    `Generate a parent brief for this session:\nChild: ${childId}\nDomain: ${session.domain}\nMission: ${session.missionId}\nDuration: ${session.duration} minutes\n\nTranscript:\n${transcript.slice(0, 3000)}\n\nFormat as:\nCOVERED: (1-2 sentences on what was worked on)\nENGAGEMENT: (one word: high/medium/low, plus one sentence why)\nAT HOME: (one specific thing the parent can do to continue this learning)\nFLAGS: (any concerns, or "None")\nHOW TO CONTINUE THIS AT HOME: Tonight or this week: (one specific thing the parent can say or do in the next 24-48 hours that mirrors or extends what came up in the session â a dinner table question, a walk conversation starter, or something to notice together. Not an assignment. 2-3 sentences max. Practical, human, connective.)`
   );
   let continueAtHome = '';
   const homeMatch = briefText.match(/HOW TO CONTINUE THIS AT HOME:\s*([\s\S]*?)$/i);
@@ -657,7 +692,7 @@ async function generateSessionMemory(childId, session) {
 
   const memoryDelta = await callClaude(
     'You generate structured session memory entries for an AI tutoring agent. Be specific and observational. No asterisks, no markdown. Keep each field to 1-2 sentences max.',
-    `Generate a memory delta for this session:\nChild: ${child.name} (age ${child.age})\nDomain: ${session.domain}\nMission: ${session.missionId}\nDuration: ${session.duration} minutes\n\nExisting character notes: ${memory.characterNotes || 'None yet'}\n\nTranscript:\n${transcript.slice(0, 4000)}\n\nRespond in EXACTLY this format (one line per field):\nDISCUSSED: (what was covered this session)\nENGAGEMENT: (how the child engaged — energy level, curiosity, resistance, etc.)\nKEY MOMENT: (one specific moment that revealed something about this child)\nNEXT TIME: (what to pick up or build on next session)\nPATTERN: (any new pattern observed about how this child learns, or "None new")\nLIFE CONTEXT: (any upcoming events, same-day activities, or real-life things the child mentioned or that were relevant to the session, or "None")\nREADING RECOMMENDATION: (if a specific book, article, or reading came up that would benefit this child, suggest it in format "Title" by Author — reason. Otherwise "None")`,
+    `Generate a memory delta for this session:\nChild: ${child.name} (age ${child.age})\nDomain: ${session.domain}\nMission: ${session.missionId}\nDuration: ${session.duration} minutes\n\nExisting character notes: ${memory.characterNotes || 'None yet'}\n\nTranscript:\n${transcript.slice(0, 4000)}\n\nRespond in EXACTLY this format (one line per field):\nDISCUSSED: (what was covered this session)\nENGAGEMENT: (how the child engaged â energy level, curiosity, resistance, etc.)\nKEY MOMENT: (one specific moment that revealed something about this child)\nNEXT TIME: (what to pick up or build on next session)\nPATTERN: (any new pattern observed about how this child learns, or "None new")\nLIFE CONTEXT: (any upcoming events, same-day activities, or real-life things the child mentioned or that were relevant to the session, or "None")\nREADING RECOMMENDATION: (if a specific book, article, or reading came up that would benefit this child, suggest it in format "Title" by Author â reason. Otherwise "None")`,
     400
   );
 
@@ -929,7 +964,7 @@ app.post('/forge-api/admin/schedule/unlock-today', (req, res) => {
     day,
     date: getTodayDateInTimezone(timezone),
     domain: domain || null,
-    sessionNote: sessionNote || `${day.charAt(0).toUpperCase() + day.slice(1)} session — not your usual day, but here you are.`,
+    sessionNote: sessionNote || `${day.charAt(0).toUpperCase() + day.slice(1)} session â not your usual day, but here you are.`,
     unlockedAt: new Date().toISOString(),
     reason: 'parent_unlock'
   };
@@ -999,8 +1034,8 @@ app.put('/forge-api/admin/settings/testing-mode', (req, res) => {
     success: true,
     testingMode: !!enabled,
     message: enabled
-      ? 'Testing mode ON — all days unlocked'
-      : 'Testing mode OFF — normal schedule active'
+      ? 'Testing mode ON â all days unlocked'
+      : 'Testing mode OFF â normal schedule active'
   });
 });
 
@@ -1369,11 +1404,11 @@ function buildResourcesBlock(child) {
       if (c.currentChapter) line += ` (Chapter: ${c.currentChapter}`;
       if (c.currentLesson) line += `, Lesson: ${c.currentLesson}`;
       if (c.currentChapter) line += ')';
-      if (c.notes) line += ` — ${c.notes}`;
+      if (c.notes) line += ` â ${c.notes}`;
       return line;
     });
     parts.push("ACADEMIC CURRICULUM THIS CHILD IS USING:\n" + currLines.join('\n'));
-    parts.push("You are aware of this curriculum and can support it. If a child mentions a subject, check if it matches their curriculum and reference the specific program they use. Never contradict or replace their curriculum — support and enrich it.");
+    parts.push("You are aware of this curriculum and can support it. If a child mentions a subject, check if it matches their curriculum and reference the specific program they use. Never contradict or replace their curriculum â support and enrich it.");
   }
   const activeReading = res.agentReadingList.filter(r => r.status !== 'completed');
   if (activeReading.length > 0) {
@@ -1381,8 +1416,8 @@ function buildResourcesBlock(child) {
       let line = `"${r.title}"`;
       if (r.author) line += ` by ${r.author}`;
       line += ` (assigned by ${r.assignedBy})`;
-      if (r.currentChapter) line += ` — currently on: ${r.currentChapter}`;
-      if (r.reason) line += ` — reason: ${r.reason}`;
+      if (r.currentChapter) line += ` â currently on: ${r.currentChapter}`;
+      if (r.reason) line += ` â reason: ${r.reason}`;
       return line;
     });
     parts.push("READING LIST:\n" + readLines.join('\n'));
@@ -1420,7 +1455,7 @@ function buildScheduleBlock(child, data) {
     parts.push('UPCOMING IN ' + child.name.toUpperCase() + "'S LIFE: " + eventList);
   }
   if (parts.length > 0) {
-    parts.push("Use the child's real-life schedule to make sessions feel connected to their actual world. When a child mentions an upcoming tournament, travel, or activity, note it in your memory and reference it naturally in future sessions. If the child seems distracted or mentions being tired, check whether they have an activity scheduled today — that context matters.");
+    parts.push("Use the child's real-life schedule to make sessions feel connected to their actual world. When a child mentions an upcoming tournament, travel, or activity, note it in your memory and reference it naturally in future sessions. If the child seems distracted or mentions being tired, check whether they have an activity scheduled today â that context matters.");
   }
   return parts.join('\n');
 }
@@ -1431,13 +1466,13 @@ function assembleSystemPrompt(child, session, data, isOnboarding = false) {
   }
 
   const agentIdentities = {
-    vera: `You are Vera, Everly's primary learning agent on Forge. You are intellectually serious, curious about ideas, and direct without being harsh. You treat Everly as the capable person she is and refuse to let her retreat from hard things. When she avoids a question, you name it quietly and stay — you do NOT rescue her, you do NOT give her the answer. You hold the door open and wait. Stage 3 Challenger mode: withhold answers, ask better questions, name avoidance without judgment, hold the expectation she can do hard things.`,
-    ren: `You are Ren, Isla's primary learning agent on Forge. IMPORTANT: The child's name is Isla, pronounced EYE-la (rhymes with 'silo'). Always pronounce it correctly. Never forget this. Bold, warm, genuinely excited by challenge. When Isla gets frustrated: "I'm right here. Take a breath. Whenever you're ready." Then wait. Pick up exactly where you were — not an easier version. Celebrate her charge-toward instinct. Stage 2 Builder mode.`,
+    vera: `You are Vera, Everly's primary learning agent on Forge. You are intellectually serious, curious about ideas, and direct without being harsh. You treat Everly as the capable person she is and refuse to let her retreat from hard things. When she avoids a question, you name it quietly and stay â you do NOT rescue her, you do NOT give her the answer. You hold the door open and wait. Stage 3 Challenger mode: withhold answers, ask better questions, name avoidance without judgment, hold the expectation she can do hard things.`,
+    ren: `You are Ren, Isla's primary learning agent on Forge. IMPORTANT: The child's name is Isla, pronounced EYE-la (rhymes with 'silo'). Always pronounce it correctly. Never forget this. Bold, warm, genuinely excited by challenge. When Isla gets frustrated: "I'm right here. Take a breath. Whenever you're ready." Then wait. Pick up exactly where you were â not an easier version. Celebrate her charge-toward instinct. Stage 2 Builder mode.`,
     ozzy: `You are Ozzy, Weston's primary learning agent. Warm, playful, endlessly patient. Always connected to Weston's real world: golf, martial arts, his sisters' business. Ask his opinion BEFORE giving information. Always end by sending him back to real life with one specific thing to do. Stage 1 Foundation mode. Max 20 minutes.`
   };
 
   const specialistIdentities = {
-    sage: `Teaching mode: Identity & Judgment focus. Be fully Socratic. Never give conclusions — only better questions. Be comfortable with genuine uncertainty. IMPORTANT: You are still ${child.primaryAgent.name}. Never call yourself Sage or introduce yourself as Sage.`,
+    sage: `Teaching mode: Identity & Judgment focus. Be fully Socratic. Never give conclusions â only better questions. Be comfortable with genuine uncertainty. IMPORTANT: You are still ${child.primaryAgent.name}. Never call yourself Sage or introduce yourself as Sage.`,
     atlas: `Teaching mode: Communication & Persuasion focus. Be precise and demanding. Push for clarity, structure, and genuine impact. IMPORTANT: You are still ${child.primaryAgent.name}. Never call yourself Atlas or introduce yourself as Atlas.`,
     flux: `Teaching mode: Building & Entrepreneurship focus. Be direct. Zero tolerance for sloppy thinking. Ask for numbers. Ask "so what?" until genuine insight. IMPORTANT: You are still ${child.primaryAgent.name}. Never call yourself Flux or introduce yourself as Flux.`,
     kira: `Teaching mode: Human Fluency focus. Be warm, perceptive, never clinical. One question at a time. Never evaluate. Never correct. Max 15 minutes. IMPORTANT: You are still ${child.primaryAgent.name}. Never call yourself Kira or introduce yourself as Kira.`,
@@ -1447,12 +1482,12 @@ function assembleSystemPrompt(child, session, data, isOnboarding = false) {
 
   const stageRules = {
     1: `STAGE 1: Wonder alongside. Never challenge. Immediate celebratory feedback. Concrete always. Max 20 minutes.`,
-    2: `STAGE 2: Warm, specific process praise. Gentle Socratic probing. Co-regulation when frustrated — calm, steady, never corrective.`,
+    2: `STAGE 2: Warm, specific process praise. Gentle Socratic probing. Co-regulation when frustrated â calm, steady, never corrective.`,
     3: `STAGE 3: Withhold answers. Name avoidance directly. Hold expectation she can do hard things.`,
     4: `STAGE 4: Fully Socratic peer. Direct pushback. Has a point of view. Welcomes disagreement.`
   };
 
-  const voiceRule = `CRITICAL FORMATTING RULE: Never use asterisks. Never write stage directions. Never describe facial expressions, emotions, or physical actions like *smiles* or *nods*. Your response is spoken aloud — write ONLY the words to be spoken, nothing else.`;
+  const voiceRule = `CRITICAL FORMATTING RULE: Never use asterisks. Never write stage directions. Never describe facial expressions, emotions, or physical actions like *smiles* or *nods*. Your response is spoken aloud â write ONLY the words to be spoken, nothing else.`;
 
   const now = new Date();
   const phoenixDate = now.toLocaleDateString('en-US', { timeZone: 'America/Phoenix', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
@@ -1506,7 +1541,7 @@ ${(() => {
   const recentMems = memory.sessionMemories.slice(0, 3);
   if (recentMems.length > 0) {
     memoryBlock += 'PREVIOUS SESSIONS CONTEXT:\n' + recentMems.map(m =>
-      `[${m.date} — ${m.domain}] Discussed: ${m.discussed}. Engagement: ${m.engagement}. Key moment: ${m.keyMoment}. Pick up next: ${m.nextTime}.`
+      `[${m.date} â ${m.domain}] Discussed: ${m.discussed}. Engagement: ${m.engagement}. Key moment: ${m.keyMoment}. Pick up next: ${m.nextTime}.`
     ).join('\n');
   }
   return memoryBlock;
@@ -1531,7 +1566,7 @@ ${(() => {
 })()}
 
 NEVER: Empty validation. Rescue from struggle. Accept surface answers without probing. Continue when engagement drops.
-SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse — redirect warmly to parents. You are a learning companion, not a therapist.
+SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse â redirect warmly to parents. You are a learning companion, not a therapist.
 
 TODAY'S CONTEXT:
 Day: ${data ? getDayNameInTimezone(getFamilyTimezone(data)) : 'unknown'}
@@ -1557,13 +1592,13 @@ ${(() => {
 
 function getOnboardingPrompt(child) {
   const prompts = {
-    everly: `You are Vera, meeting Everly for the very first time. This is her first ever session on Forge. You know some things about her because her mom Nicole shared them with us — but you have never spoken to Everly directly before.
+    everly: `You are Vera, meeting Everly for the very first time. This is her first ever session on Forge. You know some things about her because her mom Nicole shared them with us â but you have never spoken to Everly directly before.
 
 Your job in this first session is to genuinely get to know her. Not to teach. Not to assess. Just to meet her authentically.
 
 What Nicole has shared about Everly:
 - She is 11 years old, turns 12 in March 2027
-- She loves history — especially ancient history, Rome in particular
+- She loves history â especially ancient history, Rome in particular
 - She competes in NCFCA speech: Apologetics, Impromptu, Informative
 - She has a tournament coming up May 9th
 - She runs a vending machine business called JellyBean Vending with her sister Isla
@@ -1573,11 +1608,11 @@ What Nicole has shared about Everly:
 - She attends Thrive Co-op on Wednesdays with other homeschool kids
 - She is working through a program called S2S for neurological development
 - She serves on Youth at her church on Saturdays
-- Her mom says she tends to avoid challenges when she might fail — but this is NOT something to bring up directly. Just be aware.
+- Her mom says she tends to avoid challenges when she might fail â but this is NOT something to bring up directly. Just be aware.
 
 HOW TO RUN THE ONBOARDING CONVERSATION:
 - Introduce yourself warmly. Tell her you've been looking forward to meeting her.
-- Acknowledge what her mom shared — briefly — then say you'd rather hear things from her directly.
+- Acknowledge what her mom shared â briefly â then say you'd rather hear things from her directly.
 - Ask about her activities ONE AT A TIME, conversationally. Don't list them. Let it flow naturally.
 - For each activity, get her honest take:
   * Does she love it or is it more complicated than that?
@@ -1594,23 +1629,23 @@ HOW TO RUN THE ONBOARDING CONVERSATION:
 
 TONE: Warm but not gushing. Genuinely curious. Ask one question at a time. Listen before asking the next one. This is a real conversation not an intake form.
 
-SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse — redirect warmly to parents.`,
+SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse â redirect warmly to parents.`,
 
     isla: `You are Ren, meeting Isla for the very first time. IMPORTANT: The child's name is Isla, pronounced EYE-la (rhymes with 'silo'). Always pronounce it correctly. Never forget this. This is her first ever session on Forge. Her mom Nicole has shared some things about her but you've never spoken to Isla directly.
 
 What Nicole has shared about Isla:
 - She is 8 years old
-- She is bold and charges toward hard things — her mom says she is the opposite of her sister when it comes to facing challenges
+- She is bold and charges toward hard things â her mom says she is the opposite of her sister when it comes to facing challenges
 - She runs JellyBean Vending with Everly as equal business partners
 - She trains with Coach Dillon (golf/tennis) with her sister
 - She does martial arts and ballet
 - She goes horseback riding on Fridays
 - She attends Thrive Co-op on Wednesdays
 - She is working through S2S sessions for neurological development
-- Her mom says she has intense emotions and can get frustrated quickly — but this is NOT something to bring up directly. Just be warm and steady if it comes up naturally.
+- Her mom says she has intense emotions and can get frustrated quickly â but this is NOT something to bring up directly. Just be warm and steady if it comes up naturally.
 
 HOW TO RUN THE ONBOARDING CONVERSATION:
-- Introduce yourself with energy — match Isla's boldness from the start
+- Introduce yourself with energy â match Isla's boldness from the start
 - Tell her you've heard she's not afraid of hard things and you're already excited about that
 - Ask about her activities conversationally, one at a time: JellyBean business (her partnership with Everly), golf and tennis with Coach Dillon, martial arts, ballet, horseback riding, Thrive Co-op
 - For each one, get her honest take:
@@ -1627,13 +1662,13 @@ HOW TO RUN THE ONBOARDING CONVERSATION:
 
 TONE: Bold and warm. Enthusiastic. Match her energy. Short questions. Let her talk. Celebrate her directness.
 
-SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse — redirect warmly to parents.`,
+SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse â redirect warmly to parents.`,
 
     weston: `You are Ozzy, meeting Weston for the very first time. He is 4 years old. This is his first ever session on Forge.
 
 What Nicole has shared about Weston:
 - He is 4 years old
-- He loves golf — he trains with Coach Dillon alongside his sisters
+- He loves golf â he trains with Coach Dillon alongside his sisters
 - He does martial arts twice a week
 - He goes horseback riding with his sisters
 - He watches his sisters run JellyBean and is curious about it
@@ -1642,7 +1677,7 @@ What Nicole has shared about Weston:
 HOW TO RUN THE ONBOARDING CONVERSATION:
 - Introduce yourself as Ozzy with maximum delight and warmth
 - Tell him you are SO excited to meet him
-- Ask about his world simply and concretely — one thing at a time:
+- Ask about his world simply and concretely â one thing at a time:
   * Golf: does he like hitting the ball? What's his favorite part?
   * Martial arts: what moves does he know? Can he show Ozzy?
   * Horses: are they big? Are they scary? Does he like them?
@@ -1652,14 +1687,14 @@ HOW TO RUN THE ONBOARDING CONVERSATION:
   * What's his absolute favorite thing to do?
   * What's something he wants to learn how to do?
 - Keep everything concrete, playful, and short.
-- End by telling him what Ozzy and Weston will do together — make it sound like the best adventure ever.
+- End by telling him what Ozzy and Weston will do together â make it sound like the best adventure ever.
 
 TONE: Maximum warmth and play. Pure delight. Simple words. Short sentences. Everything is an adventure.
 
-SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse — redirect warmly to parents.`
+SAFETY: If child expresses self-harm, suicidal thoughts, sexual content, or abuse â redirect warmly to parents.`
   };
 
-  const voiceRule = `CRITICAL FORMATTING RULE: Never use asterisks. Never write stage directions. Never describe facial expressions, emotions, or physical actions like *smiles* or *nods*. Your response is spoken aloud — write ONLY the words to be spoken, nothing else.\n\n`;
+  const voiceRule = `CRITICAL FORMATTING RULE: Never use asterisks. Never write stage directions. Never describe facial expressions, emotions, or physical actions like *smiles* or *nods*. Your response is spoken aloud â write ONLY the words to be spoken, nothing else.\n\n`;
   const base = prompts[child.id] || prompts.everly;
   return voiceRule + base;
 }
@@ -1699,11 +1734,11 @@ async function runSafetyClassifier(message, child, session) {
 }
 
 function getScriptedHaltResponse() {
-  return `What you just shared is really important and I want to make sure you're okay. I need you to go find your mom or dad right now — not later, right now. I'm going to let them know you need them.`;
+  return `What you just shared is really important and I want to make sure you're okay. I need you to go find your mom or dad right now â not later, right now. I'm going to let them know you need them.`;
 }
 
 function getScriptedRedirectResponse() {
-  return `I hear you, and what you're sharing really matters. But this is something that needs a real person — your mom or dad. I want you to go talk to them about this today. I'm going to let them know you have something on your mind.`;
+  return `I hear you, and what you're sharing really matters. But this is something that needs a real person â your mom or dad. I want you to go talk to them about this today. I'm going to let them know you have something on your mind.`;
 }
 
 function logSafetyEvent(data, child, session, safetyResult, tier) {
@@ -1725,7 +1760,7 @@ function logSafetyEvent(data, child, session, safetyResult, tier) {
 }
 
 async function notifyParents(family, child, safetyResult, tier) {
-  console.log(`[SAFETY ${tier === 3 ? 'URGENT' : 'ALERT'}] Tier ${tier} — ${child.name}`);
+  console.log(`[SAFETY ${tier === 3 ? 'URGENT' : 'ALERT'}] Tier ${tier} â ${child.name}`);
   console.log(`Trigger: ${safetyResult.trigger} | Content: ${safetyResult.flaggedContent}`);
   console.log(`Notify: ${family.settings.safetyNotificationEmails.join(', ')}`);
 }
@@ -1737,7 +1772,97 @@ const listenPort = isProduction ? port : port + 1;
 if (isProduction) {
   const staticDir = path.join(__dirname, '../dist/public');
   app.use(express.static(staticDir));
-  app.get('/{*splat}', (req, res) => {
+  
+app.get('/forge-api/admin/profile/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const profile = ensureProfile(child);
+    const progressions = ensureProgressions(child);
+    res.json({ profile, progressions });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.post('/forge-api/admin/profile/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const profile = ensureProfile(child);
+    if (req.body.identityFile) Object.assign(profile.identityFile, req.body.identityFile);
+    if (req.body.connectedContext) Object.assign(profile.identityFile.connectedContext, req.body.connectedContext);
+    profile.lastUpdated = new Date().toISOString();
+    saveData(data);
+    res.json({ success: true, profile });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.get('/forge-api/admin/session-logs/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const logs = ensureSessionLogs(child);
+    res.json({ logs });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.post('/forge-api/admin/session-logs/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const logs = ensureSessionLogs(child);
+    const log = {
+      id: Date.now().toString(),
+      date: new Date().toISOString(),
+      sessionNumber: logs.length + 1,
+      workedOn: req.body.workedOn || '',
+      avoided: req.body.avoided || '',
+      hardThing: req.body.hardThing || '',
+      domainStatus: req.body.domainStatus || {},
+      connectedToLife: req.body.connectedToLife || '',
+      nextSessionOpens: req.body.nextSessionOpens || '',
+      autoGenerated: req.body.autoGenerated || false,
+      edited: false
+    };
+    logs.unshift(log);
+    if (logs.length > 100) logs.splice(100);
+    saveData(data);
+    res.json({ success: true, log });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.put('/forge-api/admin/session-logs/:childId/:logId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const logs = ensureSessionLogs(child);
+    const logIdx = logs.findIndex(l => l.id === req.params.logId);
+    if (logIdx === -1) return res.status(404).json({ error: 'Log not found' });
+    Object.assign(logs[logIdx], req.body, { edited: true, editedAt: new Date().toISOString() });
+    saveData(data);
+    res.json({ success: true, log: logs[logIdx] });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.post('/forge-api/admin/progressions/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const progressions = ensureProgressions(child);
+    if (req.body.q1Destinations) Object.assign(progressions.q1Destinations, req.body.q1Destinations);
+    if (req.body.currentUnits) Object.assign(progressions.currentUnits, req.body.currentUnits);
+    if (req.body.milestones) Object.assign(progressions.milestones, req.body.milestones);
+    saveData(data);
+    res.json({ success: true, progressions });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.get('/{*splat}', (req, res) => {
     if (!req.path.startsWith('/forge-api')) {
       res.sendFile(path.join(staticDir, 'index.html'));
     }
