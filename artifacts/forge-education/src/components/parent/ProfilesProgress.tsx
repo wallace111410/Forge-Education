@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { CHILD_PROFILES } from '../../lib/profileData';
 
 const DOMAINS = [
   { key: 'identity', label: 'Identity & Judgment', color: '#7c3aed' },
@@ -56,9 +57,24 @@ export default function ProfilesProgress({ basePath }: { basePath: string }) {
       ]);
       const profJson = await profRes.json();
       const logsJson = await logsRes.json();
-      setProfileData(profJson);
-      setProfileDraft(profJson.profile?.identityFile || {});
-      setProgressionDraft(profJson.progressions || {});
+      const identity = profJson.profile?.identityFile || {};
+      if (!identity.agentName && CHILD_PROFILES[selectedChild]) {
+        const seed = CHILD_PROFILES[selectedChild].identityFile;
+        await fetch(`${basePath}/forge-api/admin/profile/${selectedChild}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identityFile: seed })
+        });
+        const reRes = await fetch(`${basePath}/forge-api/admin/profile/${selectedChild}`);
+        const reJson = await reRes.json();
+        setProfileData(reJson);
+        setProfileDraft(reJson.profile?.identityFile || {});
+        setProgressionDraft(reJson.progressions || {});
+      } else {
+        setProfileData(profJson);
+        setProfileDraft(identity);
+        setProgressionDraft(profJson.progressions || {});
+      }
       setLogs(logsJson.logs || []);
     } catch (e) {
       console.error(e);
