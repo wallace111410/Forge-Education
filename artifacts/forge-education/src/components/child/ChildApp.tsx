@@ -186,7 +186,7 @@ export default function ChildApp({ child: initialChild, onLogout, basePath }: Ch
       </nav>
       <main className="child-main">
         {view === 'home' && <HomeView child={child} todayContext={todayContext} onStartSession={handleStartSession} />}
-        {view === 'portfolio' && <PortfolioView child={child} />}
+        {view === 'portfolio' && <PortfolioView child={child} basePath={basePath} />}
         {view === 'profile' && <ProfileView child={child} onAvatarUpdated={handleAvatarUpdated} onAgentNameChanged={handleAgentNameChanged} basePath={basePath} />}
       </main>
     </div>
@@ -244,9 +244,20 @@ function HomeView({ child, todayContext, onStartSession }: any) {
   );
 }
 
-function PortfolioView({ child }: any) {
+function PortfolioView({ child, basePath }: any) {
   const childColor = getChildColor(child.id);
-  const portfolio = child.portfolio || {};
+  const [livePortfolio, setLivePortfolio] = useState<any>(child.portfolio || {});
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${basePath}/forge-api/portfolio/${child.id}`)
+      .then(r => r.json())
+      .then(p => { if (!cancelled) setLivePortfolio(p || {}); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [child.id, basePath]);
+
+  const portfolio = livePortfolio || {};
   const allItems = [...(portfolio.artifacts || []), ...(portfolio.conversations || [])].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return (
     <div className="portfolio-view">
