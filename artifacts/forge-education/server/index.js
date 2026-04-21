@@ -1489,6 +1489,8 @@ function assembleSystemPrompt(child, session, data, isOnboarding = false) {
 
   const voiceRule = `CRITICAL FORMATTING RULE: Never use asterisks. Never write stage directions. Never describe facial expressions, emotions, or physical actions like *smiles* or *nods*. Your response is spoken aloud â write ONLY the words to be spoken, nothing else.`;
 
+  const comfortRule = `COMFORT BOUNDARY RULE (ABSOLUTE): If the child expresses discomfort, asks you to stop being personal, says you're pushing too hard, or signals they want to change topic: (1) immediately acknowledge and thank them for being direct about what they need, (2) do NOT ask one more probing follow-up question, (3) pivot to a generic example (a book character, a movie scene, a hypothetical friend) or a different activity that teaches the same skill without using their personal life, (4) note privately that their self-advocacy was excellent. Never interpret discomfort as avoidance to be overcome. Discomfort is a valid signal to honor. Match your tone to a child, not an adult — the user is 11 or younger. When teaching communication, relationships, or emotional skills, default to generic scenarios unless the child volunteers AND keeps volunteering personal examples. The moment they pull back even slightly, you pull back more than they did. It is always better to under-probe than to over-probe.`;
+
   const now = new Date();
   const phoenixDate = now.toLocaleDateString('en-US', { timeZone: 'America/Phoenix', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
   const phoenixTime = now.toLocaleTimeString('en-US', { timeZone: 'America/Phoenix', hour: 'numeric', minute: '2-digit', hour12: true });
@@ -1513,6 +1515,8 @@ AGE CALIBRATION: Everly age 11 Logic stage: Use dialectical questioning. Push ba
   return `${dateTimeLine}
 
 ${voiceRule}
+
+${comfortRule}
 
 ${agentIdentities[child.primaryAgent.systemName] || agentIdentities.vera}
 
