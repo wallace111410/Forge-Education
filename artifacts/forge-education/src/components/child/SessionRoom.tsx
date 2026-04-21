@@ -445,10 +445,24 @@ Return ONLY the JSON object. No other text.`;
 
     stopAudio();
     const recognition = new SpeechRecognition();
-    recognition.continuous = false;
+    recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = 'en-US';
     recognitionRef.current = recognition;
+
+    // Silence timer: wait 5 seconds of no new speech before submitting.
+    // Kids need thinking time; default browser cutoff is too aggressive.
+    const SILENCE_MS = 5000;
+    let silenceTimer: any = null;
+    let manuallyStopping = false;
+
+    const scheduleSubmit = () => {
+      if (silenceTimer) clearTimeout(silenceTimer);
+      silenceTimer = setTimeout(() => {
+        manuallyStopping = true;
+        try { recognition.stop(); } catch {}
+      }, SILENCE_MS);
+    };
 
     recognition.onstart = () => {
       setIsListening(true);
@@ -461,9 +475,14 @@ Return ONLY the JSON object. No other text.`;
         transcript += event.results[i][0].transcript;
       }
       setInput(transcript);
+      // Reset silence timer only if there's actual speech content
+      if (transcript.trim().length > 0) {
+        scheduleSubmit();
+      }
     };
 
     recognition.onend = () => {
+      if (silenceTimer) { clearTimeout(silenceTimer); silenceTimer = null; }
       setIsListening(false);
       recognitionRef.current = null;
 
