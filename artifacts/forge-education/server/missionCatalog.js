@@ -1,10 +1,7 @@
 // AUTO-GENERATED MISSION CATALOG
 // 235 missions: 108 authored + 127 stubs
-// Schema fields: id, title, domain, level, stage, specialist, childIds, type, timeMinutes,
-//   brief, offScreenPrep, conversationFramework[], masterySignal, portfolioCapture,
-//   crossDomains[], laWeavingHook, connectiveHooks[], contentStatus
-// Stubs have brief/conversationFramework/masterySignal as null and contentStatus="stub"
-// Authored missions have all fields populated and contentStatus="authored"
+// 108 authored missions now include masteryLayers: { layer1, layer2, layer3 }
+// Stuck thresholds: Everly L1@2 L3@4 | Isla L1@4 L3@7 | Weston engagement-only@3
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -45,7 +42,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can name the difference between an informational opening and an emotional one, and explain why the emotional opening lands harder on an audience.",
+      "layer2": "Everly produces a revised opening line for a real piece she has or is working on — demonstrating the principle in practice, not just describing it.",
+      "layer3": "Everly self-applies the test unprompted: reads her own opening, diagnoses whether it leads with information or feeling, and corrects it without being asked."
+    }
   },
   "CP-L5-002": {
     "id": "CP-L5-002",
@@ -87,7 +89,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can distinguish a narrative from an argument and name the difference in her own words.",
+      "layer2": "Everly can extract the implicit claim from a historical narrative (Lincoln, Caesar, or another) and articulate it directly — 'the argument underneath the story is...'",
+      "layer3": "Everly applies the skill to her own work: identifies a narrative she has written or spoken and surfaces the implicit argument it contains, then judges whether that's the argument she intended."
+    }
   },
   "CP-L5-003": {
     "id": "CP-L5-003",
@@ -136,7 +143,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can identify at least one specific strong moment and one weak moment in a delivery she gives or observes.",
+      "layer2": "Everly articulates why each moment was strong or weak — not just 'that was good' but what specific technique or choice made it land or fall flat.",
+      "layer3": "Everly begins self-correcting mid-delivery or immediately after without being prompted — catches herself and adjusts in real time."
+    }
   },
   "CP-L5-004": {
     "id": "CP-L5-004",
@@ -178,7 +190,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can name what a counterargument is and why including one makes a case stronger rather than weaker.",
+      "layer2": "Everly produces a genuine counterargument to a position she holds or has argued, and steelmans it — makes it as strong as possible rather than weakening it.",
+      "layer3": "Everly integrates a counterargument into a live argument she is making, addresses it honestly, and shows why her position still holds. The acknowledgment feels genuine, not performative."
+    }
   },
   "CP-L5-005": {
     "id": "CP-L5-005",
@@ -219,7 +236,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can define ethos, pathos, logos in her own words and give a basic example of each.",
+      "layer2": "Everly can identify which appeal is doing the most work in a specific speech or argument she examines, and explain why the speaker chose that one for that audience.",
+      "layer3": "Everly deliberately chooses and deploys an appeal in her own argument, naming afterward which she used and why it was right for that audience and moment."
+    }
   },
   "CP-L5-006": {
     "id": "CP-L5-006",
@@ -261,7 +283,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a concession is and why making one doesn't mean losing the argument.",
+      "layer2": "Everly makes a genuine concession in a live argument — acknowledges a real limitation or flaw in her position without abandoning the position itself.",
+      "layer3": "Everly uses concession strategically: makes it at the right moment, phrases it in a way that strengthens rather than undermines her credibility, and pivots back to her main claim cleanly."
+    }
   },
   "CP-L5-007": {
     "id": "CP-L5-007",
@@ -303,7 +330,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what makes a question powerful versus a question that just fills space — in her own words.",
+      "layer2": "Everly generates a set of questions for a specific topic that are genuinely probing — each one opens territory rather than closing it.",
+      "layer3": "Everly uses a strategic question in a live conversation or argument that shifts the frame, exposes an assumption, or moves the other person to think rather than just respond."
+    }
   },
   "CP-L5-008": {
     "id": "CP-L5-008",
@@ -344,7 +376,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a rhetorical device is and name at least two (anaphora, antithesis, tricolon, etc.) with examples.",
+      "layer2": "Everly identifies a rhetorical device in a real speech or text and explains what work it is doing — why the speaker used it there.",
+      "layer3": "Everly deliberately deploys at least one rhetorical device in her own speaking or writing, names it afterward, and judges whether it served or distracted."
+    }
   },
   "CP-L5-009": {
     "id": "CP-L5-009",
@@ -386,7 +423,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what it means to read an audience — adjusting based on energy, confusion, or resistance — versus delivering a fixed script regardless of response.",
+      "layer2": "Everly identifies at least one specific moment in a real delivery (her own or observed) where the speaker did or should have adjusted based on audience feedback.",
+      "layer3": "Everly adjusts her delivery in real time during a practice or live session in response to an audience signal — slows down, changes examples, shifts tone — and can name what she noticed and why she adjusted."
+    }
   },
   "CP-L5-010": {
     "id": "CP-L5-010",
@@ -428,7 +470,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what silence does in a speech — why a pause can carry more weight than words — in her own words.",
+      "layer2": "Everly deliberately uses a pause in a practice delivery and can describe what it was intended to do and whether it worked.",
+      "layer3": "Everly integrates silence as a tool across a full delivery — uses it before key claims, after emotional moments, to let an idea land — and it reads as intentional rather than hesitation."
+    }
   },
   "CP-L5-011": {
     "id": "CP-L5-011",
@@ -477,7 +524,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to argue from principle versus arguing from preference — and why one is more persuasive.",
+      "layer2": "Everly identifies the underlying principle in an argument she makes or examines — surfaces the 'because this matters' underneath the 'I think X.'",
+      "layer3": "Everly grounds her own argument in a stated principle, holds to it when challenged, and can show how her claim follows from the principle rather than from personal taste."
+    }
   },
   "CP-L5-012": {
     "id": "CP-L5-012",
@@ -520,7 +572,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can name what makes an ending land versus an ending that just stops — the difference between a conclusion and a trailing off.",
+      "layer2": "Everly produces a closing that does one specific job well: calls to action, reframes the question, or leaves the audience with an image or idea that stays.",
+      "layer3": "Everly writes or delivers a complete piece with an ending that was clearly designed — not discovered accidentally — and can explain what she wanted the audience to feel or think in the last 15 seconds."
+    }
   },
   "IJ-L5-001": {
     "id": "IJ-L5-001",
@@ -561,7 +618,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what a worldview is — the set of assumptions underneath how someone sees everything — in her own words.",
+      "layer2": "Everly can identify her own working assumptions in at least one domain (justice, human nature, truth) and name where they came from.",
+      "layer3": "Everly can examine a belief she holds, surface the worldview assumption underneath it, and honestly evaluate whether that assumption is one she has chosen or one she has inherited without examination."
+    }
   },
   "IJ-L5-002": {
     "id": "IJ-L5-002",
@@ -604,7 +666,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what it means to reason morally — not just 'this feels right' but following a chain of reasoning to a conclusion.",
+      "layer2": "Everly works through a real ethical dilemma using a framework (consequences, duties, virtues, or her own) and arrives at a reasoned position she can defend.",
+      "layer3": "Everly applies moral reasoning to a situation in her own life — not a hypothetical — names the framework she's using, and holds her position under gentle challenge."
+    }
   },
   "IJ-L5-003": {
     "id": "IJ-L5-003",
@@ -648,7 +715,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can name at least two ways that cultural pressure shapes what people believe is normal or acceptable, with examples.",
+      "layer2": "Everly identifies a specific belief or behavior in her own life or community that comes from cultural pressure rather than reasoned conviction.",
+      "layer3": "Everly can articulate, in her own words, a position she holds that runs counter to dominant cultural pressure — and explain why she holds it and what it costs her."
+    }
   },
   "IJ-L5-004": {
     "id": "IJ-L5-004",
@@ -691,7 +763,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what intellectual humility means — holding beliefs firmly enough to act on them, loosely enough to revise them.",
+      "layer2": "Everly identifies a belief she holds that she would update if she encountered strong enough evidence, and names what that evidence would look like.",
+      "layer3": "Everly demonstrates intellectual humility in a real conversation: genuinely engages with a challenge to one of her beliefs, updates or refines her position, and does not experience that as defeat."
+    }
   },
   "IJ-L5-005": {
     "id": "IJ-L5-005",
@@ -735,7 +812,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can define virtue ethics in basic terms — character as the foundation of moral action — and contrast it with rule-following.",
+      "layer2": "Everly can name two or three virtues she is actively trying to build and give a specific recent example of each in her own life.",
+      "layer3": "Everly can articulate what kind of person she is trying to become — not a list of behaviors but a character description — and name one thing she is doing now that either builds or undermines that person."
+    }
   },
   "IJ-L5-006": {
     "id": "IJ-L5-006",
@@ -783,7 +865,12 @@ const MISSION_CATALOG = {
       "IJ-L5-004",
       "IJ-L5-005"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what integrity means — alignment between stated values and actual behavior — and give an example of both integrity and its absence.",
+      "layer2": "Everly can identify a specific area of her own life where her actions and her stated values are aligned, and one where they are not.",
+      "layer3": "Everly honestly examines a gap between her stated values and her behavior, names what is causing the gap, and articulates one concrete change she intends to make."
+    }
   },
   "IJ-L5-007": {
     "id": "IJ-L5-007",
@@ -826,7 +913,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate the difference between conviction and stubbornness — when holding firm is right and when it is just defensiveness.",
+      "layer2": "Everly can give a real example of each from her own experience: a time she held firm rightly, and a time she held firm when she should have updated.",
+      "layer3": "Everly applies the distinction in a live conversation — identifies in real time whether her resistance to a challenge is principled or defensive, and responds accordingly."
+    }
   },
   "IJ-L5-008": {
     "id": "IJ-L5-008",
@@ -870,7 +962,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to steelman an opposing view — make it as strong as possible before engaging with it.",
+      "layer2": "Everly produces a genuine steelman of a position she disagrees with — strong enough that someone who holds that view would recognize it as fair.",
+      "layer3": "Everly uses steelmanning as a habit in live argument: before pushing back, she restates the opposing view in its strongest form, gets confirmation that she has it right, then responds."
+    }
   },
   "IJ-L5-009": {
     "id": "IJ-L5-009",
@@ -913,7 +1010,12 @@ const MISSION_CATALOG = {
       "IJ-L5-001",
       "IJ-L5-004"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to act with courage versus acting from fear — and name the difference in a concrete situation.",
+      "layer2": "Everly identifies a situation in her own life where fear shaped her action or inaction, and can articulate what courageous action would have looked like.",
+      "layer3": "Everly takes a specific action she has been avoiding because of fear — names it, does it, and reflects honestly on what it cost and what it produced."
+    }
   },
   "IJ-L5-010": {
     "id": "IJ-L5-010",
@@ -956,7 +1058,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what it means to have a calling versus just having goals — the difference between being driven by identity and being driven by outcomes.",
+      "layer2": "Everly can describe, in her own words, a sense of what she might be called to — even tentatively — and why she thinks that rather than something else.",
+      "layer3": "Everly connects her daily choices and current work to a bigger sense of purpose — can name how what she is doing now is either building toward or distracting from what she believes she is for."
+    }
   },
   "IJ-L5-011": {
     "id": "IJ-L5-011",
@@ -1000,7 +1107,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can define wisdom — not just knowledge or intelligence, but the right use of both — and give an example of someone who is knowledgeable but not wise.",
+      "layer2": "Everly can identify a decision in her own life where she knew the right answer intellectually but acted differently, and name what got in the way.",
+      "layer3": "Everly makes a real decision — not a hypothetical — by applying wisdom deliberately: naming the competing goods, the risks, the values at stake, and choosing from that full picture."
+    }
   },
   "IJ-L5-012": {
     "id": "IJ-L5-012",
@@ -1044,7 +1156,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what legacy means in practical terms — the pattern of choices that outlasts a person — and name whose legacy has shaped her own life.",
+      "layer2": "Everly can articulate, specifically, what kind of legacy she wants to leave in her immediate circles: her family, her co-op, her community.",
+      "layer3": "Everly can name one specific choice she makes regularly that either builds or undermines the legacy she says she wants — and engage honestly with the gap if one exists."
+    }
   },
   "BE-L6-001": {
     "id": "BE-L6-001",
@@ -1085,7 +1202,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a value proposition is — why someone would choose this over alternatives — in one clear sentence without jargon.",
+      "layer2": "Everly articulates a specific value proposition for JellyBean or another venture she is working on, tested against the question: 'why you, why this, why now?'",
+      "layer3": "Everly stress-tests her value proposition against a real objection — someone says 'I could just do X instead' — and sharpens it in response without abandoning the core claim."
+    }
   },
   "BE-L6-002": {
     "id": "BE-L6-002",
@@ -1129,7 +1251,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a market is, what market size means, and why it matters before building anything.",
+      "layer2": "Everly estimates the market size for a real venture (JellyBean or another) using actual numbers — not guesses — and names her assumptions explicitly.",
+      "layer3": "Everly identifies the slice of the market she is actually targeting (not the whole TAM) and explains why that segment is the right starting point and what expansion would look like."
+    }
   },
   "BE-L6-003": {
     "id": "BE-L6-003",
@@ -1174,7 +1301,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can define unit economics — revenue per unit, cost per unit, margin — and explain why they matter before scaling.",
+      "layer2": "Everly calculates unit economics for JellyBean or a real venture: knows her cost per sale, revenue per sale, and gross margin with actual numbers.",
+      "layer3": "Everly can project what happens to unit economics at 2x and 5x current volume — identifies which costs scale with volume and which don't, and names what breaks first."
+    }
   },
   "BE-L6-004": {
     "id": "BE-L6-004",
@@ -1220,7 +1352,12 @@ const MISSION_CATALOG = {
       "BE-L6-001",
       "BE-L6-003"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what a customer acquisition strategy is and why organic growth and paid growth have different risk profiles.",
+      "layer2": "Everly names the primary acquisition channel for a real venture she is building and explains why that channel fits this specific business and customer.",
+      "layer3": "Everly designs a simple acquisition experiment: a specific action, a measurable result she is looking for, and a clear decision rule for what she does next based on the outcome."
+    }
   },
   "BE-L6-005": {
     "id": "BE-L6-005",
@@ -1264,7 +1401,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what cash flow is — not profit, but actual cash in versus cash out at each point in time — and why businesses with profit can still fail.",
+      "layer2": "Everly maps a simple cash flow timeline for JellyBean or another venture: when does money go out, when does it come in, and what is the gap?",
+      "layer3": "Everly identifies the cash flow vulnerability in a real venture — the moment where the gap is largest — and proposes one specific change that would reduce it."
+    }
   },
   "BE-L6-006": {
     "id": "BE-L6-006",
@@ -1307,7 +1449,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a business model is — how the business creates, delivers, and captures value — and name two different models for the same type of product.",
+      "layer2": "Everly articulates the business model for JellyBean or another venture she is building, naming how each of the three components (create, deliver, capture) works.",
+      "layer3": "Everly identifies one assumption in her current business model that, if wrong, would break the model — and names how she would test that assumption before it breaks her."
+    }
   },
   "BE-L6-007": {
     "id": "BE-L6-007",
@@ -1352,7 +1499,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a negotiation is at its core: two parties, each with different interests, trying to find terms both can accept.",
+      "layer2": "Everly can name her walk-away point (BATNA) and her ideal outcome for a real negotiation she is in or will be in — and hold the difference between the two clearly.",
+      "layer3": "Everly conducts or rehearses a real negotiation — supplier, customer, or parent — identifies the other party's interests (not just positions), and finds or proposes terms that address both sides."
+    }
   },
   "BE-L6-008": {
     "id": "BE-L6-008",
@@ -1397,7 +1549,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a pitch is for and why the first 60 seconds determine whether the rest gets heard.",
+      "layer2": "Everly delivers a 60-second pitch for a real venture that covers: what it is, who it is for, why now, and what she is asking for — without notes.",
+      "layer3": "Everly delivers the pitch and handles at least one hard question without preparation — stays on message, doesn't collapse under pressure, and closes with a clear ask."
+    }
   },
   "BE-L6-009": {
     "id": "BE-L6-009",
@@ -1440,7 +1597,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what systems thinking means — how parts of a business affect each other, not just individually — with a simple example.",
+      "layer2": "Everly maps a feedback loop in a real venture: names one thing that, if it improves, improves something else, which then improves the first thing.",
+      "layer3": "Everly identifies a constraint in a system she is running — the thing that limits the whole system regardless of how much everything else improves — and proposes one change that addresses the constraint directly."
+    }
   },
   "BE-L6-010": {
     "id": "BE-L6-010",
@@ -1485,7 +1647,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what leadership means in a business context — not authority, but the ability to get people moving toward something together.",
+      "layer2": "Everly identifies a moment in a real team or family business context where she led well and one where she led poorly — and names specifically what made the difference.",
+      "layer3": "Everly applies a leadership decision deliberately in a real situation — names the decision, names why she made it, and reflects afterward on what it produced."
+    }
   },
   "HF-L4-001": {
     "id": "HF-L4-001",
@@ -1522,7 +1689,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what emotional intelligence means — reading her own emotions and others' accurately and responding skillfully — in her own words.",
+      "layer2": "Everly can name her emotional pattern in a specific type of situation (conflict, disappointment, pressure) and describe what it costs her when she doesn't manage it well.",
+      "layer3": "Everly identifies a specific emotional pattern she wants to change and names one concrete practice she has taken on to change it — and can report honestly on whether it is working."
+    }
   },
   "HF-L4-002": {
     "id": "HF-L4-002",
@@ -1565,7 +1737,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what active listening means beyond 'paying attention' — the specific behaviors that signal genuine engagement versus polite presence.",
+      "layer2": "Everly demonstrates active listening in a real conversation: reflects back, asks follow-up questions rooted in what was said, and does not redirect to her own experience.",
+      "layer3": "Everly catches herself redirecting mid-conversation, names it to herself, and returns to the other person — without being prompted."
+    }
   },
   "HF-L4-003": {
     "id": "HF-L4-003",
@@ -1607,7 +1784,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what empathy is and distinguish it from sympathy — feeling with someone versus feeling for them.",
+      "layer2": "Everly demonstrates empathy in a real interaction: names what the other person is feeling, validates it without immediately solving it, and stays present with the discomfort.",
+      "layer3": "Everly applies empathy in a situation where her instinct is to fix or advise — holds back, stays with the person, and lets them feel heard before offering anything else."
+    }
   },
   "HF-L4-004": {
     "id": "HF-L4-004",
@@ -1651,7 +1833,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a difficult conversation is and why most people avoid them — what the avoidance costs versus what the conversation costs.",
+      "layer2": "Everly prepares for a real difficult conversation: names what she needs to say, what she fears the other person will feel, and how she will open without accusing.",
+      "layer3": "Everly has a real difficult conversation — not a practice one — and navigates it without shutting down, getting defensive, or abandoning the purpose. Can debrief honestly afterward."
+    }
   },
   "HF-L4-005": {
     "id": "HF-L4-005",
@@ -1694,7 +1881,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what conflict resolution means as a skill — not winning or avoiding, but moving toward understanding and workable agreement.",
+      "layer2": "Everly can identify the difference between her position (what she wants) and her interest (why she wants it) in a real conflict she is in or has been in.",
+      "layer3": "Everly facilitates or participates in a real conflict resolution — names both parties' interests, not just positions, and helps find a path forward that both can accept."
+    }
   },
   "HF-L4-006": {
     "id": "HF-L4-006",
@@ -1737,7 +1929,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a boundary is — not a wall but a stated limit that protects something she values — and give an example.",
+      "layer2": "Everly can name a boundary she needs to set in a real relationship (sibling, friend, co-op peer) and articulate what she is protecting by setting it.",
+      "layer3": "Everly sets a real boundary — names it clearly to the other person, holds it when tested, and does not over-apologize or collapse under pushback."
+    }
   },
   "HF-L4-007": {
     "id": "HF-L4-007",
@@ -1781,7 +1978,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what forgiveness is and distinguish it from excusing behavior, reconciliation, or forgetting.",
+      "layer2": "Everly can identify something she is holding — resentment, hurt, a grudge — and name honestly whether she has forgiven it or just suppressed it.",
+      "layer3": "Everly takes a real step toward forgiveness in a real situation — not a completed process, but a genuine movement — and can articulate what she chose and why."
+    }
   },
   "HF-L4-008": {
     "id": "HF-L4-008",
@@ -1823,7 +2025,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what gratitude as a practice means — distinct from polite thank-you's — and why research suggests it changes how people experience their lives.",
+      "layer2": "Everly identifies three specific things she is genuinely grateful for and articulates why each one matters — going beyond the surface level to the value underneath.",
+      "layer3": "Everly builds a real gratitude practice into her life — not just naming items but connecting gratitude to perspective shifts in how she sees hard things."
+    }
   },
   "HF-L4-009": {
     "id": "HF-L4-009",
@@ -1864,7 +2071,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to repair a relationship after a rupture — that rupture is normal and repair is the skill.",
+      "layer2": "Everly can identify a recent rupture in a relationship (sibling, friend, parent) and name what her part in it was — without deflecting to the other person's fault.",
+      "layer3": "Everly initiates a real repair: names her part, makes a genuine apology without conditions, and does not require the other person to reciprocate before doing so."
+    }
   },
   "HF-L4-010": {
     "id": "HF-L4-010",
@@ -1907,7 +2119,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what loneliness is as a distinct experience from being alone, and why even highly social people can feel it.",
+      "layer2": "Everly can describe her own experience of connection and loneliness honestly — what fills her and what empties her — without performing either.",
+      "layer3": "Everly takes a real action toward deeper connection — not more contact, but more honesty or vulnerability in an existing relationship — and reflects on what it cost and produced."
+    }
   },
   "AI-L5-001": {
     "id": "AI-L5-001",
@@ -1950,7 +2167,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a large language model is at a conceptual level — what it is trained on, what it predicts, why it can be wrong — in her own words without jargon.",
+      "layer2": "Everly can identify at least two specific failure modes of LLMs (hallucination, sycophancy, context window limits) and explain why each happens structurally.",
+      "layer3": "Everly applies this knowledge in real use: catches a failure mode in a live Claude interaction, names what happened and why, and adjusts her approach accordingly."
+    }
   },
   "AI-L5-002": {
     "id": "AI-L5-002",
@@ -1994,7 +2216,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a prompt is and why the same question phrased differently produces different outputs.",
+      "layer2": "Everly demonstrates prompt iteration: takes a prompt that produced a weak output, diagnoses why it was weak, rewrites it with a specific change, and compares results.",
+      "layer3": "Everly builds a prompt with multiple engineered elements (role, context, format, constraints, examples) for a real task she needs done, evaluates the output, and refines to production quality."
+    }
   },
   "AI-L5-003": {
     "id": "AI-L5-003",
@@ -2037,7 +2264,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what AI bias means and give one real example of how training data shapes model outputs in ways that reflect human biases.",
+      "layer2": "Everly can identify a category of task where AI bias is likely to show up and explain the mechanism — why that kind of task is vulnerable.",
+      "layer3": "Everly interrogates a real AI output for potential bias: names what population or perspective might be underrepresented or misrepresented, and proposes how she would check or correct for it."
+    }
   },
   "AI-L5-004": {
     "id": "AI-L5-004",
@@ -2081,7 +2313,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what automation means in economic terms — which kinds of tasks AI replaces first and why — beyond 'AI will take jobs.'",
+      "layer2": "Everly can name three specific skill categories that are more resistant to automation and explain why — connecting to what AI cannot replicate.",
+      "layer3": "Everly applies this to her own life: names the skills she is building that are automation-resistant and explains how she is developing them deliberately."
+    }
   },
   "AI-L5-005": {
     "id": "AI-L5-005",
@@ -2125,7 +2362,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what an algorithm is and give a real example of an algorithm shaping what she sees (social media feed, search results, recommendations).",
+      "layer2": "Everly can describe how a specific algorithm she interacts with shapes her behavior or beliefs — and name what she does that it rewards and punishes.",
+      "layer3": "Everly makes a deliberate change to how she interacts with an algorithmic system — turns something off, changes a behavior — and can articulate why and what she noticed."
+    }
   },
   "AI-L5-006": {
     "id": "AI-L5-006",
@@ -2168,7 +2410,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what AI safety means at a basic level — why alignment between AI goals and human values is hard and why it matters.",
+      "layer2": "Everly can articulate at least one specific AI safety concern (misalignment, misuse, concentration of power) with enough depth to hold a real conversation about it.",
+      "layer3": "Everly forms and defends a position on an AI safety question — not a rehearsed answer, but a reasoned view she can update under challenge."
+    }
   },
   "AI-L5-007": {
     "id": "AI-L5-007",
@@ -2211,7 +2458,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can describe what data privacy means and give examples of data she generates that is collected, used, or sold.",
+      "layer2": "Everly audits one area of her digital life for privacy exposure: names what data is collected, who has it, and what it is used for.",
+      "layer3": "Everly makes a deliberate privacy choice — changes a setting, stops using a service, or adjusts a behavior — based on her own values rather than defaults."
+    }
   },
   "AI-L5-008": {
     "id": "AI-L5-008",
@@ -2255,7 +2507,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-003"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to use AI as a tool versus as an authority — the difference between consulting it and deferring to it.",
+      "layer2": "Everly demonstrates the distinction in a real interaction: uses AI output as a starting point, evaluates it critically, and modifies or rejects parts that don't hold up.",
+      "layer3": "Everly builds a workflow for a real task that integrates AI intelligently — AI does what it is good at, she provides judgment where she is better — and can articulate why she divided the labor the way she did."
+    }
   },
   "AI-L5-009": {
     "id": "AI-L5-009",
@@ -2300,7 +2557,12 @@ const MISSION_CATALOG = {
       "AI-L5-001",
       "AI-L5-006"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a system is — interdependent parts that produce behavior none of the parts would produce alone — and give a real example.",
+      "layer2": "Everly maps a real system she interacts with (her family, JellyBean, her co-op) — names the parts, the connections, and at least one feedback loop.",
+      "layer3": "Everly identifies a leverage point in a system she mapped: a place where a small change would produce a large effect — and explains the mechanism, not just the outcome."
+    }
   },
   "AI-L5-010": {
     "id": "AI-L5-010",
@@ -2342,7 +2604,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L5-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what the internet of things is and give examples of embedded intelligence in physical objects she encounters.",
+      "layer2": "Everly can describe the data flows in at least one IoT system she interacts with — what is collected, processed, and acted on — and name the privacy or security implications.",
+      "layer3": "Everly evaluates a new technology or system she encounters using a structured lens: what does it do, what data does it generate, who benefits, who bears the risk — and forms a reasoned view on whether she wants it in her life."
+    }
   },
   "PM-L6-001": {
     "id": "PM-L6-001",
@@ -2383,7 +2650,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what mental performance means in sport — that the mind is trainable just like the body — and name one specific mental skill elite athletes develop.",
+      "layer2": "Everly can describe her own mental performance patterns in competition or high-pressure practice: where her mind goes, what helps, what derails her.",
+      "layer3": "Everly applies a specific mental performance technique (pre-shot routine, process focus, reset breath) in real competition or practice and can report honestly on what it changed."
+    }
   },
   "PM-L6-002": {
     "id": "PM-L6-002",
@@ -2427,7 +2699,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what a growth mindset means beyond the slogan — specifically the belief that ability is developed through effort and that failure is information.",
+      "layer2": "Everly can identify a specific domain where she has a fixed mindset — where she believes she either has it or she doesn't — and name how that belief affects her behavior.",
+      "layer3": "Everly makes a real change in how she engages with a difficult skill: moves from avoidance or performance anxiety to deliberate practice, and can name what shifted in her thinking."
+    }
   },
   "PM-L6-003": {
     "id": "PM-L6-003",
@@ -2470,7 +2747,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what recovery means in athletic training — not rest as laziness but rest as adaptation — and name the physiological reason it matters.",
+      "layer2": "Everly can describe her own current recovery practices honestly: what she does, what she avoids, and what she knows she should do but doesn't.",
+      "layer3": "Everly implements one specific recovery change — sleep, nutrition timing, active recovery, or stress management — tracks it for a week, and reflects on what it produced."
+    }
   },
   "PM-L6-004": {
     "id": "PM-L6-004",
@@ -2513,7 +2795,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what periodization means — structured variation in training load over time — and why training hard all the time produces worse results than planned variation.",
+      "layer2": "Everly can map her own current training schedule and identify whether it has structure (cycles, peaks, recovery weeks) or is just consistent volume.",
+      "layer3": "Everly and Zion design a simple periodization block for the next 4-6 weeks around a specific goal (tournament, performance peak) — names the loading weeks, the deload, and the target."
+    }
   },
   "PM-L6-005": {
     "id": "PM-L6-005",
@@ -2558,7 +2845,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what fueling for performance means and distinguish it from eating for other reasons — naming key nutritional levers for athletic output.",
+      "layer2": "Everly tracks her nutrition on a training day and a rest day and identifies at least one gap between what she is eating and what would optimize her performance.",
+      "layer3": "Everly makes one specific, sustainable nutritional change based on her own analysis — not a diet, but a targeted adjustment — and tracks its effect on training quality for two weeks."
+    }
   },
   "PM-L6-006": {
     "id": "PM-L6-006",
@@ -2600,7 +2892,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what competition anxiety is physiologically — what the body is doing and why — and distinguish it from the mental stories layered on top.",
+      "layer2": "Everly can describe her personal competition anxiety pattern: when it starts, what it feels like, and what she currently does with it.",
+      "layer3": "Everly applies a specific pre-competition protocol she has designed for herself — uses it before a real competitive moment — and debriefs honestly on what it changed."
+    }
   },
   "PM-L6-007": {
     "id": "PM-L6-007",
@@ -2640,7 +2937,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what deliberate practice means — targeted, specific, feedback-rich work on the edge of current ability — versus general practice that just accumulates time.",
+      "layer2": "Everly can identify one skill she is working on and design a deliberate practice session for it: the specific skill, the specific drill, the specific feedback mechanism.",
+      "layer3": "Everly runs a deliberate practice session with a coach or partner, collects specific feedback, and adjusts in the next session based on what she learned — not based on how it felt."
+    }
   },
   "PM-L6-008": {
     "id": "PM-L6-008",
@@ -2683,7 +2985,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what it means to compete with integrity — winning and losing within the spirit of the sport — and name one specific way that integrity shows up in her sport.",
+      "layer2": "Everly can name a real situation in her athletic life where competing with integrity cost her something — and whether she chose integrity or didn't.",
+      "layer3": "Everly articulates a personal code for competition: not a list of rules but a set of commitments about who she will be when it is hard — and names one real situation where she will test it soon."
+    }
   },
   "PM-L6-009": {
     "id": "PM-L6-009",
@@ -2724,7 +3031,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can explain what resilience means in sport — the ability to recover from adversity within a performance — and name one technique elite athletes use.",
+      "layer2": "Everly can describe her own resilience pattern: how she responds to mistakes, bad rounds, or unexpected difficulty in competition.",
+      "layer3": "Everly applies a specific reset technique in a real competitive moment — catches a mistake, uses the technique, and returns to process focus rather than outcome focus. Can debrief specifically afterward."
+    }
   },
   "PM-L6-010": {
     "id": "PM-L6-010",
@@ -2767,7 +3079,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L6-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Everly can articulate what it means to be a student of her sport — studying it, not just playing it — and name one thing she has learned recently from studying rather than practicing.",
+      "layer2": "Everly can identify one specific technical or strategic element of her sport she does not yet understand well and name how she will learn it.",
+      "layer3": "Everly conducts independent study of her sport — watches film, reads, or interviews a more advanced athlete — and applies one specific insight in her next practice session. Can name the insight and what changed."
+    }
   },
   "IJ-L3-001": {
     "id": "IJ-L3-001",
@@ -2808,7 +3125,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name something true about herself — not what she is good at, but who she is — in her own words, even simply.",
+      "layer2": "Isla can distinguish between something she does and something she is — the difference between 'I play golf' and 'I am someone who keeps going when things are hard.'",
+      "layer3": "Isla articulates one genuine identity statement about herself that she believes, unprompted — something about her character, not her accomplishments — and it comes with feeling behind it."
+    }
   },
   "IJ-L3-002": {
     "id": "IJ-L3-002",
@@ -2858,7 +3180,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name at least one person she trusts and say something specific about why she trusts them.",
+      "layer2": "Isla can describe what trust feels like from the inside — what it makes possible that wouldn't be possible without it.",
+      "layer3": "Isla connects trust to a specific relationship in her life and names one thing she does (or could do) that builds trust with that person."
+    }
   },
   "IJ-L3-003": {
     "id": "IJ-L3-003",
@@ -2900,7 +3227,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name a feeling she has had recently and say what caused it — basic emotion labeling in her own words.",
+      "layer2": "Isla can distinguish between the feeling and the story she tells about it — 'I felt scared' versus 'I thought something bad was going to happen.'",
+      "layer3": "Isla can name a feeling, trace where it came from, and say what she did with it — or what she wishes she had done — showing basic emotional self-awareness."
+    }
   },
   "IJ-L3-004": {
     "id": "IJ-L3-004",
@@ -2942,7 +3274,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "IJ-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name a choice she made recently — any choice — and say what she was thinking when she made it.",
+      "layer2": "Isla can identify whether a specific choice she made was a good one and give a reason why — not just 'because Mom said so' but something about the outcome or the value.",
+      "layer3": "Isla reflects on a choice she made that she would make differently now, and can say why she would change it — showing that she is learning to evaluate her own decisions."
+    }
   },
   "CP-L3-001": {
     "id": "CP-L3-001",
@@ -2991,7 +3328,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can say what she thinks about a topic out loud without prompting — gives an opinion, not just a description.",
+      "layer2": "Isla can say why she thinks what she thinks — gives a reason for her opinion, even a simple one.",
+      "layer3": "Isla holds her opinion when Atlas gently pushes back — doesn't immediately change because someone disagreed, but considers the challenge and responds with her own reasoning."
+    }
   },
   "CP-L3-002": {
     "id": "CP-L3-002",
@@ -3033,7 +3375,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can retell a simple story in order — beginning, middle, end — without major gaps or losing the thread.",
+      "layer2": "Isla can tell a story from her own life with a clear beginning, middle, and end — and include at least one detail that makes it feel real.",
+      "layer3": "Isla tells a story with purpose — not just what happened, but why it mattered — and the listener understands both the events and the meaning."
+    }
   },
   "CP-L3-003": {
     "id": "CP-L3-003",
@@ -3074,7 +3421,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can ask one good question in a conversation — something that comes from genuine curiosity rather than filling silence.",
+      "layer2": "Isla asks a follow-up question based on what the other person just said — showing she was actually listening.",
+      "layer3": "Isla asks a question that opens up a conversation rather than closing it — the kind of question that makes the other person want to keep talking."
+    }
   },
   "CP-L3-004": {
     "id": "CP-L3-004",
@@ -3117,7 +3469,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "CP-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can describe something she knows about or cares about in enough detail that someone else could picture it.",
+      "layer2": "Isla can explain something to someone who doesn't know it — uses examples, comparisons, or stories to make it clear.",
+      "layer3": "Isla checks whether the person understood — asks or notices — and adjusts her explanation if they didn't. She can tell the difference between 'I said it' and 'they got it.'"
+    }
   },
   "BE-L4-001": {
     "id": "BE-L4-001",
@@ -3158,7 +3515,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name one problem she has noticed that bothers her or someone she knows — something real, not invented.",
+      "layer2": "Isla can describe why the problem matters — who it affects and what it costs them — in her own words.",
+      "layer3": "Isla generates at least one idea for how the problem could be solved — even a simple or impractical one — showing she is thinking like a builder, not just a noticer."
+    }
   },
   "BE-L4-002": {
     "id": "BE-L4-002",
@@ -3199,7 +3561,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can explain what a customer is — someone who has a problem and would pay (or trade) to have it solved.",
+      "layer2": "Isla can name who the customer is for JellyBean or another simple venture and describe what problem they have.",
+      "layer3": "Isla can say why that customer would choose JellyBean over doing nothing — what makes it worth it to them."
+    }
   },
   "BE-L4-003": {
     "id": "BE-L4-003",
@@ -3244,7 +3611,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can explain what money in versus money out means for a simple business — that you have to make more than you spend.",
+      "layer2": "Isla can name the income and at least one cost for JellyBean or another simple venture and say whether it makes money.",
+      "layer3": "Isla can identify one way to make JellyBean more profitable — either bring more in or spend less — and explain why it would work."
+    }
   },
   "BE-L4-004": {
     "id": "BE-L4-004",
@@ -3287,7 +3659,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "BE-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can describe what it means to make something and sell it — the basic loop of building and offering.",
+      "layer2": "Isla can name one thing she has made or could make that someone else would want — and say why they would want it.",
+      "layer3": "Isla completes the full loop at a small scale: makes something, offers it, and reflects on what she learned from whether it worked."
+    }
   },
   "HF-L3-001": {
     "id": "HF-L3-001",
@@ -3327,7 +3704,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name one feeling she has had recently toward a sibling or friend — something real, not a performance.",
+      "layer2": "Isla can say what caused the feeling and what she did with it — basic emotional cause-and-effect.",
+      "layer3": "Isla reflects on whether what she did with the feeling was a good choice, and names what she might do differently — showing she is learning to manage emotions, not just report them."
+    }
   },
   "HF-L3-002": {
     "id": "HF-L3-002",
@@ -3369,7 +3751,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name one way she is similar to someone in her family and one way she is different.",
+      "layer2": "Isla can describe what it is like to be around someone who is very different from her — what is hard about it and what is good about it.",
+      "layer3": "Isla connects the difference to something she has learned — something she knows or can do because of spending time with someone who is different from her."
+    }
   },
   "HF-L3-003": {
     "id": "HF-L3-003",
@@ -3412,7 +3799,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "HF-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name something kind she did recently and say why she did it.",
+      "layer2": "Isla can distinguish between doing something kind because she felt like it and doing something kind when she didn't feel like it.",
+      "layer3": "Isla can name a time she chose kindness when it was hard — and say what made her choose it. Even a small moment counts."
+    }
   },
   "AI-L3-001": {
     "id": "AI-L3-001",
@@ -3452,7 +3844,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can describe what a computer is doing when it follows instructions — that it does exactly what it is told, not what you meant.",
+      "layer2": "Isla can give an example of a time instructions were misunderstood (by a person or a machine) because the words were unclear.",
+      "layer3": "Isla writes or gives a set of instructions for a simple task that are clear enough that someone (or something) following them exactly would get the right result."
+    }
   },
   "AI-L3-002": {
     "id": "AI-L3-002",
@@ -3494,7 +3891,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "AI-L3-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can explain what it means for something to be 'smart' versus just 'following rules' — that a calculator isn't thinking, it's computing.",
+      "layer2": "Isla can name something she thought was smart that turned out to be rule-following — or something that seemed like rule-following that actually required thinking.",
+      "layer3": "Isla articulates what she thinks the difference between human thinking and machine computation is — in her own words, without a right or wrong answer. The quality being assessed is genuine reflection, not accuracy."
+    }
   },
   "PM-L4-001": {
     "id": "PM-L4-001",
@@ -3536,7 +3938,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name one physical activity she does that she is working to get better at — not just doing, but improving.",
+      "layer2": "Isla can describe one specific thing she is trying to do better in that activity — not 'be better' but a specific skill or movement.",
+      "layer3": "Isla names something she practiced that got harder before it got easier — and connects that to how getting better actually works."
+    }
   },
   "PM-L4-002": {
     "id": "PM-L4-002",
@@ -3579,7 +3986,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "PM-L4-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Isla can name one way her body feels different after exercise versus before — basic physical self-awareness.",
+      "layer2": "Isla can describe what rest means for her body — not just stopping, but why the body needs it to grow stronger.",
+      "layer3": "Isla connects physical effort and rest to a goal she cares about — can say, in her own words, why she is doing the hard physical work she is doing."
+    }
   },
   "W-001": {
     "id": "W-001",
@@ -3622,7 +4034,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 1,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with the session — responded to Ozzy, stayed present for most of the time window, didn't ask to stop early.",
+      "layer2": "Weston showed curiosity or delight at some point — asked a question, laughed, leaned in, or pointed at something.",
+      "layer3": "Weston said or did something that connected to the session content — imitated a sound, named a color, acted out an animal, or made any link between the activity and something he knows."
+    }
   },
   "W-002": {
     "id": "W-002",
@@ -3665,7 +4082,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with the session and stayed present.",
+      "layer2": "Weston showed delight or curiosity — responded to Ozzy's enthusiasm, asked 'why' or 'what's that.'",
+      "layer3": "Weston made a genuine observation about something he noticed — named something, pointed something out, or connected what he saw to something he knows."
+    }
   },
   "W-003": {
     "id": "W-003",
@@ -3709,7 +4131,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and stayed present for most of the session.",
+      "layer2": "Weston participated actively — moved his body, made sounds, or responded to Ozzy's prompts with energy.",
+      "layer3": "Weston expressed a preference or made a choice — 'I want to do this one' or 'that one is my favorite' — showing developing self-awareness."
+    }
   },
   "W-004": {
     "id": "W-004",
@@ -3752,7 +4179,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 4,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with the session and was willing to try.",
+      "layer2": "Weston attempted the activity even when it was new or slightly hard — didn't give up immediately.",
+      "layer3": "Weston noticed his own effort — said something like 'I did it' or 'that was hard' — showing beginning awareness of his own capability."
+    }
   },
   "W-005": {
     "id": "W-005",
@@ -3804,7 +4236,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 5,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and was present.",
+      "layer2": "Weston showed interest in the story or concept Ozzy introduced — asked what happens next, wanted to hear more.",
+      "layer3": "Weston connected the story to something real — 'that's like my...' or 'I have one of those' — showing the beginning of analogical thinking."
+    }
   },
   "W-006": {
     "id": "W-006",
@@ -3845,7 +4282,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 6,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and stayed with Ozzy through the session.",
+      "layer2": "Weston imitated, repeated, or played along — joined in what Ozzy was doing rather than watching passively.",
+      "layer3": "Weston added something of his own — a sound, a word, an action — that was not just imitation but genuine contribution."
+    }
   },
   "W-007": {
     "id": "W-007",
@@ -3887,7 +4329,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 7,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston responded to questions or prompts with something beyond 'I don't know' — tried to answer even if not correctly.",
+      "layer3": "Weston gave an answer that showed he was thinking, not just guessing — connected to something real in his experience."
+    }
   },
   "W-008": {
     "id": "W-008",
@@ -3930,7 +4377,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 8,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and was willing to explore.",
+      "layer2": "Weston explored with curiosity — touched, looked, asked, or pointed — rather than staying passive.",
+      "layer3": "Weston named something he discovered or noticed — 'look at this' or 'it feels like...' — showing beginning observational vocabulary."
+    }
   },
   "W-009": {
     "id": "W-009",
@@ -3972,7 +4424,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 9,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and stayed present.",
+      "layer2": "Weston showed emotional responsiveness — laughed, got excited, expressed surprise or wonder.",
+      "layer3": "Weston named or expressed an emotion — 'that's funny' or 'I like that' or 'that's scary' — showing emotional vocabulary is developing."
+    }
   },
   "W-010": {
     "id": "W-010",
@@ -4021,7 +4478,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 10,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with Ozzy and was willing to participate.",
+      "layer2": "Weston followed a simple two-step direction or sequence — showing working memory and attention.",
+      "layer3": "Weston anticipated what came next in a pattern or sequence — showed he remembered from earlier in the session or a previous one."
+    }
   },
   "W-011": {
     "id": "W-011",
@@ -4062,7 +4524,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 11,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston made a choice between two options — showed preference and basic decision-making.",
+      "layer3": "Weston gave a reason for his choice — even a simple one like 'because I like it' — showing beginning reasoning."
+    }
   },
   "W-012": {
     "id": "W-012",
@@ -4103,7 +4570,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 12,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and stayed with the session.",
+      "layer2": "Weston participated in a back-and-forth with Ozzy — took turns, listened, responded.",
+      "layer3": "Weston asked Ozzy a question — genuine curiosity, not prompted — showing he is engaging rather than just receiving."
+    }
   },
   "W-013": {
     "id": "W-013",
@@ -4147,7 +4619,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and was willing to try something new.",
+      "layer2": "Weston tried the new thing without excessive resistance — was willing to explore even if uncertain.",
+      "layer3": "Weston expressed something about the new experience — liked it, didn't like it, wanted more, or noticed something about it."
+    }
   },
   "W-014": {
     "id": "W-014",
@@ -4188,7 +4665,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 14,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston responded to a story or imaginative scenario — played along, added a sound or action.",
+      "layer3": "Weston contributed to the story — added a character, a detail, or an action of his own — showing beginning imaginative participation."
+    }
   },
   "W-015": {
     "id": "W-015",
@@ -4232,7 +4714,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with Ozzy and stayed present.",
+      "layer2": "Weston showed physical engagement — moved, acted, pointed — not just verbal.",
+      "layer3": "Weston connected physical action to language — named what he was doing or described what he noticed while doing it."
+    }
   },
   "W-016": {
     "id": "W-016",
@@ -4274,7 +4761,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 16,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and was willing to participate.",
+      "layer2": "Weston attended to something for longer than his default attention span — showed sustained focus.",
+      "layer3": "Weston returned to the same topic or idea more than once in the session — showed it captured genuine interest, not just momentary attention."
+    }
   },
   "W-017": {
     "id": "W-017",
@@ -4317,7 +4809,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston showed empathy or social awareness — noticed how someone else felt, or responded to an emotional cue in a story.",
+      "layer3": "Weston named someone else's feeling — 'Ozzy is happy' or 'he is sad' — showing beginning theory of mind."
+    }
   },
   "W-018": {
     "id": "W-018",
@@ -4358,7 +4855,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 18,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with the session.",
+      "layer2": "Weston sorted, grouped, or categorized something — showed early conceptual organization.",
+      "layer3": "Weston named the rule he used to sort — 'these are the same because...' — showing beginning abstract thinking."
+    }
   },
   "W-019": {
     "id": "W-019",
@@ -4403,7 +4905,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston repeated a word, sound, or phrase from the session — showed it registered.",
+      "layer3": "Weston used a word from the session in a new context — spontaneous transfer of new vocabulary."
+    }
   },
   "W-020": {
     "id": "W-020",
@@ -4447,7 +4954,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-004"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and stayed with Ozzy.",
+      "layer2": "Weston showed persistence — tried something more than once without giving up.",
+      "layer3": "Weston noticed his own improvement — 'I did it better' or 'I can do it now' — showing beginning growth mindset."
+    }
   },
   "W-021": {
     "id": "W-021",
@@ -4489,7 +5001,12 @@ const MISSION_CATALOG = {
     ],
     "recommendedOrder": 21,
     "prerequisites": [],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and willing.",
+      "layer2": "Weston showed awareness of rules — knew what was allowed and what wasn't in the context of the activity.",
+      "layer3": "Weston followed a rule even when he didn't want to — showed beginning self-regulation."
+    }
   },
   "W-022": {
     "id": "W-022",
@@ -4532,7 +5049,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with Ozzy and participated.",
+      "layer2": "Weston showed creativity — did something unexpected, silly, or inventive within the session.",
+      "layer3": "Weston built on an idea — took something Ozzy introduced and extended it in his own direction."
+    }
   },
   "W-023": {
     "id": "W-023",
@@ -4575,7 +5097,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-005"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston was present and engaged.",
+      "layer2": "Weston asked 'why' or 'how' about something — showed causal curiosity.",
+      "layer3": "Weston proposed an explanation for something — even a wrong one — showing he is building a model of how things work."
+    }
   },
   "W-024": {
     "id": "W-024",
@@ -4619,7 +5146,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged and was willing to try.",
+      "layer2": "Weston showed care for something or someone — gentle handling, concern for a character in a story, or awareness of another person's need.",
+      "layer3": "Weston took a caring action — helped, shared, or did something kind — not because he was told to but because he chose to."
+    }
   },
   "W-025": {
     "id": "W-025",
@@ -4663,7 +5195,12 @@ const MISSION_CATALOG = {
     "prerequisites": [
       "W-001"
     ],
-    "contentStatus": "authored"
+    "contentStatus": "authored",
+    "masteryLayers": {
+      "layer1": "Weston engaged with Ozzy's closing reflection and was present.",
+      "layer2": "Weston named something from the session — a moment, a thing, a feeling — showing he retained something.",
+      "layer3": "Weston expressed a preference or feedback — 'I liked that' or 'can we do that again' — showing metacognitive awareness of his own experience."
+    }
   },
   "CP-L5-013": {
     "id": "CP-L5-013",
