@@ -1,7 +1,6 @@
 // AUTO-GENERATED MISSION CATALOG
-// 235 missions: 108 authored + 127 stubs
-// 108 authored missions now include masteryLayers: { layer1, layer2, layer3 }
-// Stuck thresholds: Everly L1@2 L3@4 | Isla L1@4 L3@7 | Weston engagement-only@3
+// 235 missions: 119 authored + 116 stubs
+// Includes masteryLayers on all authored missions
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -6780,23 +6779,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage has been thinking about something tricky: rules are good, but sometimes following a rule perfectly misses the point of why the rule exists. Isla knows the rule — don't lie, be kind, obey. But she's also old enough to notice that life gets complicated. Today Sage isn't going to give her the answer. Sage is going to help her think out loud about what rules are actually for — and what that means when a situation gets messy.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What's a rule you follow even when you don't feel like it? Why do you follow it?",
+      "Here's a hard one: is it ever okay to break a rule? When? How do you decide?",
+      "Let's try a real one — if you know something true about Everly that would hurt her feelings, do you have to say it? What's the rule there? And what's the point of that rule?",
+      "So when someone makes an exception to a rule, how can you tell if they're making a wise choice or just making an excuse?",
+      "What's one rule you think God cares about more than people sometimes think He does?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can articulate that rules have a purpose — not just a list — and that wisdom means understanding the purpose, not just following or breaking the rule. She doesn't need to resolve the tension perfectly. She needs to engage it honestly.",
+    "portfolioCapture": "Isla's answer to question 4 in her own words.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "sibling relationships",
+      "Everly",
+      "honesty",
+      "kindness"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name a moment when following a rule was hard and describe what made it hard. She doesn't need to have chosen the right thing — just honest recognition that the gap between rule and situation exists.",
+      "layer2": "Isla can articulate that rules have a purpose — not just a list to follow or break — and give an example of a rule whose purpose she understands.",
+      "layer3": "Isla can distinguish in a specific scenario between making a wise exception and making an excuse — and explain the difference in her own words, even simply."
+    }
   },
   "IJ-L3-006": {
     "id": "IJ-L3-006",
@@ -6808,23 +6826,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage isn't here to lecture Isla about lying — she already knows lying is wrong. Sage is curious about something deeper: does Isla know why it's wrong? Not the rule, the reason. This mission is about helping Isla connect honesty to something she actually values — trust, love, what God is like — so that telling the truth becomes something she wants, not just something she's supposed to do. Use her real experience of telling the truth when it was hard as the anchor. Don't rush past it. That moment cost her something, and it was good.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever told the truth about something when you really didn't want to — like when you hurt Weston or Everly and you knew you'd get in trouble? What made you tell the truth anyway?",
+      "What would have happened if you hadn't told the truth? Not just with your mom — what would have happened inside you?",
+      "Why do you think God cares so much about honesty? What does it say about what He's like?",
+      "Is there a difference between a lie and just not saying anything? When does staying quiet become a kind of lie?",
+      "If you had a friend who lied to you sometimes — not about big things, just little things — how would that change how you felt about her?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can connect honesty not just to a rule but to something relational — trust, love, what God values — in her own words. She doesn't need to be articulate. She needs to mean it.",
+    "portfolioCapture": "Isla's answer to question 1 — the story, in her own words. Voice memo fine.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "sibling relationships",
+      "faith",
+      "trust",
+      "consequences",
+      "God's character"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name a real moment when she told the truth when it was hard — she doesn't need to explain it, just name it and acknowledge that it cost her something.",
+      "layer2": "Isla can connect honesty to something relational — trust, what a friendship feels like when someone lies — not just to a rule.",
+      "layer3": "Isla says something genuine about why God cares about honesty — connects it to His character or to love — in her own words, with real feeling behind it."
+    }
   },
   "IJ-L3-007": {
     "id": "IJ-L3-007",
@@ -6836,23 +6874,45 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage is coming in curious, not teacherly. The Exodus story may or may not be familiar to Isla — so Sage checks first, and if Isla can't retell it, Sage gives a short, warm, age-appropriate recap before moving into the real conversation. The goal isn't Bible trivia. Sage wants to know what Isla thinks made Pharaoh and Moses respond so differently to God — and then, gently, whether she recognizes either pattern in herself. The sibling anchors are fair game: times Isla hardened her heart toward Everly or Weston, and times she didn't. Keep it light — this isn't confession, it's curiosity.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Do you know the story of Moses and Pharaoh? Tell me what you remember — just the basics, who they were and what happened. (If Isla can't recall or gets lost: Sage gives a warm 2-minute recap — God asked Moses to lead His people out of Egypt where Pharaoh was keeping them as slaves. Every time Moses asked Pharaoh to let them go, God sent a plague. Pharaoh kept saying yes, then changing his mind and saying no. Moses kept going back even though it was scary and he didn't feel qualified. Eventually Pharaoh let them go.)",
+      "Every time things got hard, Pharaoh dug in and said no — even when it cost him everything. Why do you think he kept doing that? What was he holding onto?",
+      "Moses wasn't perfect either — he told God he couldn't speak well and didn't want to go. But he kept going back anyway. What's the difference between him and Pharaoh?",
+      "Have you ever had a moment where you knew what the right thing was and did it anyway, even though it was hard? What made you choose that?",
+      "And have you ever dug in and kept saying no to something you knew was right? What were you holding onto?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can name a real distinction between Pharaoh and Moses — not just 'one was bad and one was good' but something about what each was holding onto or afraid of. And she can connect it, even loosely, to her own experience.",
+    "portfolioCapture": "Isla's answer to question 3 — the distinction she draws — in her own words.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Exodus",
+      "Moses",
+      "Pharaoh",
+      "obedience",
+      "hardness of heart",
+      "courage",
+      "faith"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can retell the basic Exodus story — either from memory or after Sage's recap — and name that Moses and Pharaoh made opposite choices.",
+      "layer2": "Isla can name a distinction between Pharaoh and Moses — something about what they were each holding onto or afraid of — beyond one was bad and one was good.",
+      "layer3": "Isla connects the distinction to her own experience — a moment she dug in like Pharaoh, or a moment she kept going like Moses — even loosely, with honest recognition."
+    }
   },
   "IJ-L3-008": {
     "id": "IJ-L3-008",
@@ -6864,23 +6924,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage loves a good 'what would you do if' conversation — not to trick Isla or catch her in the wrong answer, but because thinking through hard situations before they happen is one of the best ways to build good judgment. Today Sage brings a few scenarios and genuinely wants to know what Isla thinks. There are no perfectly right answers. Sage is listening for how Isla reasons, not just what she concludes. Push gently on the first answer — not to correct it, but to see if she can go one level deeper.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What would you do if you saw Weston break something on accident and he asked you not to tell? What makes that hard?",
+      "What if Everly did something you thought was wrong — not against you, but against someone else — and she asked you to keep it secret? Same answer, or different? Why?",
+      "Here's a harder one: what if telling the truth would get you in trouble even though you didn't do anything wrong? Would you still tell it?",
+      "What if you knew something true about a friend — something embarrassing — and saying it out loud would make people laugh. Would you say it? What's the rule there?",
+      "Which of these was the hardest one to answer? Why do you think that one was harder?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla engages the dilemmas with genuine reasoning — not just 'I would tell the truth because that's right' but some acknowledgment of what makes each situation hard. She can name why one is harder than another.",
+    "portfolioCapture": "Isla's answer to question 5 — which was hardest and why — in her own words.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "siblings",
+      "Weston",
+      "Everly",
+      "honesty",
+      "loyalty",
+      "consequences"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla engages with at least one dilemma genuinely — doesn't just give the 'right' answer but acknowledges what makes it hard.",
+      "layer2": "Isla can name why one dilemma is harder than another — identifies what specifically creates the tension in each case.",
+      "layer3": "Isla applies a consistent principle across the dilemmas — not the same answer, but a consistent way of reasoning that she can name and defend."
+    }
   },
   "IJ-L3-009": {
     "id": "IJ-L3-009",
@@ -6892,23 +6973,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage finds changing your mind fascinating — most people treat it like a failure, but Sage thinks it might actually be a superpower. Today Sage wants to hear about a real time Isla believed something, then found out she was wrong, and changed. It doesn't have to be big. It could be about a person, a food, a rule, a fear, God — anything. Sage is listening for what made Isla willing to update, not just what she updated on. Keep it warm and unhurried. If Isla says she can't think of anything, Sage can gently offer a lightweight example to prime the pump ('Have you ever thought something was going to be awful and then loved it?').",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever believed something was true and then realized you were wrong? What was it?",
+      "What made you change your mind? Was it something someone said, something you experienced, or something you just noticed on your own?",
+      "How did it feel to realize you were wrong? Was it uncomfortable, or was it kind of a relief?",
+      "Is changing your mind a good thing or a bad thing? Can it be both?",
+      "Is there anything you believe right now that you think might be wrong someday? What would it take to change your mind about it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can describe a real example of updating a belief and name — even loosely — what caused the update. She shows some comfort with the idea that being wrong and changing is normal, not shameful.",
+    "portfolioCapture": "Isla's answer to question 4 — is changing your mind good, bad, or both?",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "intellectual humility",
+      "faith",
+      "learning",
+      "growth",
+      "courage"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name a real thing she changed her mind about — even something small — and say what it was she used to believe.",
+      "layer2": "Isla can say what caused the update — something she experienced, heard, or noticed — showing she understands that minds change for reasons.",
+      "layer3": "Isla shows comfort with the idea of being wrong — doesn't treat it as shameful — and can engage genuinely with question 4 or 5 without deflecting."
+    }
   },
   "IJ-L3-010": {
     "id": "IJ-L3-010",
@@ -6920,23 +7021,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage has been thinking about fairness — specifically about how kids (and a lot of adults) mix up 'fair' with 'the same.' Isla probably has strong opinions about fairness already. Sage isn't going to correct those opinions. Sage is going to help Isla think through whether fair and same are actually the same thing, using examples from her own life — her siblings, her family, her responsibilities. Let Isla lead. If she brings up a real grievance, follow it. That's the material.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does 'fair' mean to you? Give me an example of something that felt unfair recently.",
+      "Was that unfair because it wasn't the same as what someone else got — or unfair for a different reason?",
+      "Here's a tricky one: if Everly gets a later bedtime than you, is that fair or unfair? What makes you say that?",
+      "Can you think of a time when something was the same for everyone but it still felt unfair? Or something that was different but actually was fair?",
+      "If God treated everyone exactly the same — same rules, same consequences, same gifts — would that be fair? What do you think fairness actually means to God?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can articulate — even roughly — that fair doesn't always mean same. She can give at least one real example where the difference shows up. She doesn't need the theological answer to question 5, just genuine engagement with it.",
+    "portfolioCapture": "Isla's answer to question 4 — her own example of different-but-fair or same-but-unfair.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "siblings",
+      "Everly",
+      "Weston",
+      "justice",
+      "God's character",
+      "family rules"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name something that felt unfair to her recently — a real grievance, not a hypothetical.",
+      "layer2": "Isla can distinguish between unfair-because-different and unfair-for-another-reason — even roughly, with her own example.",
+      "layer3": "Isla can articulate that fair doesn't always mean same — gives at least one real example of different-but-fair or same-but-unfair from her own life."
+    }
   },
   "IJ-L3-011": {
     "id": "IJ-L3-011",
@@ -6948,23 +7070,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage is genuinely curious who Isla looks up to — not who she's supposed to admire, but who she actually thinks is impressive. It could be a Bible figure, someone in her family, a book character, an athlete, anyone. Sage isn't going to evaluate the choice. Sage is going to dig into why — what specific quality in that person makes Isla lean in. Then gently, at the end, Sage turns the mirror: where does Isla already have a seed of that quality? Don't rush this. Let her pick her own hero without steering.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who is someone you really respect — like you think they're genuinely impressive? It can be anyone. Real, made up, from the Bible, from a book, someone you know.",
+      "What is it about them specifically that you respect? Not just 'they're good' — what did they do or who are they that makes you think that?",
+      "Was there ever a moment where that person had to choose between the easy thing and the right thing? What did they choose?",
+      "If you could have one thing from that person — one quality, one way of being — what would you want?",
+      "Here's what I'm curious about: do you think you already have a little bit of that in you? Where have you seen it show up, even just a little?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can name a specific quality in her hero — not just 'she's nice' but something more precise — and make at least a small, genuine connection between that quality and herself. The connection doesn't have to be confident. It just has to be honest.",
+    "portfolioCapture": "Isla's hero, the quality she named, and her answer to question 5 — in her own words. Voice memo fine.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "identity",
+      "faith",
+      "Bible figures",
+      "courage",
+      "character",
+      "virtue"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real hero — someone she actually admires, not just a safe answer — and can say what impresses her about them.",
+      "layer2": "Isla names a specific quality in her hero — something more precise than 'they're good' — and can say why that quality matters.",
+      "layer3": "Isla makes a genuine, honest connection between her hero's quality and herself — even a small seed — with real feeling rather than performance."
+    }
   },
   "IJ-L3-012": {
     "id": "IJ-L3-012",
@@ -6976,23 +7119,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to talk about one of the hardest human experiences: doing something you really didn't want to do. Not because you got forced, but because you chose to anyway. Isla has had those moments — maybe telling the truth when she could have stayed quiet, maybe being kind to Everly or Weston when she didn't feel like it, maybe doing something scary at church or co-op. Sage isn't looking for a performance. Sage is genuinely curious: what made her do it? And what did it feel like on the other side? Don't rush to the lesson. Let her find it herself.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time you did something you really didn't want to do — but you did it anyway. What was it?",
+      "What was going through your head right before you chose to do it? What made you decide to go ahead?",
+      "Was there a voice inside you that said 'you should do this'? Where do you think that voice comes from?",
+      "How did you feel after — right after, not later? Was it worth it?",
+      "Is there something right now that you know you should do but keep not doing? What's making it hard?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can describe the internal experience of choosing to act against her preference — not just what she did, but something about what it felt like before and after. She doesn't need theological language. She needs honest reflection.",
+    "portfolioCapture": "Isla's answer to question 2 — what was going through her head — in her own words. Voice memo fine.",
+    "crossDomains": [
+      "identity",
+      "physical"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "obedience",
+      "conscience",
+      "courage",
+      "character",
+      "self-discipline",
+      "siblings"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name a real moment she did something she didn't want to do — something she actually chose, not was forced into.",
+      "layer2": "Isla can describe something about the internal experience — what was going through her head, what made her go ahead — not just the external events.",
+      "layer3": "Isla reflects on what it felt like after — whether it was worth it — with genuine honesty. She doesn't need it to have been worth it. She needs to mean whatever she says."
+    }
   },
   "IJ-L3-013": {
     "id": "IJ-L3-013",
@@ -7004,23 +7168,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage isn't here to lecture about lying — Isla already knows it's wrong. Sage is curious about something more interesting: why do people actually do it? Not bad people — regular people, kids like Isla, people you love. What is a lie actually trying to do? Sage wants to help Isla think about lying from the inside out, so she understands the temptation, not just the rule. Use her real experience — times she's been tempted to lie to stay out of trouble, or said something that wasn't quite the whole truth. Stay warm and non-accusatory. This is investigation, not confession.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Why do you think people lie? Not bad people — just regular people, kids, even people who love each other. What are they usually trying to do?",
+      "Have you ever been really tempted to lie — like you could feel yourself wanting to? What were you afraid of?",
+      "What's the difference between a lie to protect yourself and a lie to protect someone else? Is one worse than the other?",
+      "Here's what I'm curious about: if lying usually comes from fear, what does that tell us about what God wants us to trust Him with?",
+      "What do you think is the hardest kind of lie to stop telling — the big ones, or the small ones that don't seem to matter?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can name at least one real reason people lie — something beyond 'because they're bad' — and connect it honestly to something she's felt herself. She doesn't need the theological frame to land perfectly. She needs genuine reflection on the inside experience of temptation.",
+    "portfolioCapture": "Isla's answer to question 1 — why people lie — in her own words.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "honesty",
+      "fear",
+      "trust",
+      "God's character",
+      "siblings",
+      "temptation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name at least one real reason people lie — something beyond 'because they're bad' — even something simple like 'they're scared of getting in trouble.'",
+      "layer2": "Isla connects the reason to her own experience — a real moment she felt the temptation, even if she didn't lie.",
+      "layer3": "Isla engages with the theological question — what lying from fear tells us about what God wants us to trust Him with — with genuine reflection, not a rehearsed answer."
+    }
   },
   "IJ-L3-014": {
     "id": "IJ-L3-014",
@@ -7032,23 +7217,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage isn't here to check whether Isla follows the rules. Sage is curious about something more interesting: which rule is genuinely hard for her, and why? Not the rules she breaks — the ones she finds herself internally wrestling with even when she follows them. Maybe it's being kind when she doesn't feel like it. Maybe it's telling the truth when it costs her something. Maybe it's something about how she treats Everly or Weston. Sage wants to know what the resistance feels like from the inside, and what Isla thinks God might be doing in that hard place.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What's a rule you actually find hard to follow — not because you always break it, but because it costs you something every time?",
+      "What makes it hard? What are you giving up when you follow it?",
+      "Have you ever followed that rule even though it was hard? What made you do it?",
+      "Why do you think that particular rule is hard for you but maybe easy for someone else — or hard for someone else but easy for you?",
+      "What do you think God might be trying to build in you by making that rule hard?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla can name a specific rule that genuinely costs her and articulate — even roughly — what she's giving up when she follows it. She doesn't need a theological answer to question 5. She needs honest engagement with the difficulty.",
+    "portfolioCapture": "Isla's answer to questions 1 and 2 — what the rule is and what it costs her — in her own words.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "obedience",
+      "character",
+      "self-discipline",
+      "faith",
+      "siblings",
+      "conscience"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla can name a specific rule that genuinely costs her — not a safe or easy answer — something she actually wrestles with.",
+      "layer2": "Isla can articulate what she gives up when she follows it — names the thing the rule requires her to sacrifice or resist.",
+      "layer3": "Isla engages with question 4 or 5 with genuine reflection — either names why it's her specific hard rule, or says something honest about what God might be doing in that hard place."
+    }
   },
   "IJ-L3-015": {
     "id": "IJ-L3-015",
@@ -7060,23 +7266,44 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage isn't here to tell Isla her fears are silly or that she shouldn't be afraid. Sage is genuinely curious: what does Isla actually fear, and what does that tell her about what she loves or values? Fear and love are connected — we're often afraid of losing the things that matter most to us. This mission stays warm and unhurried. If Isla gets to something real, stay with it. Don't rush to reassurance. Let her feel that naming a fear out loud to someone safe is itself a brave thing.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there something you're afraid of? It can be something big or something small — both count.",
+      "When you're afraid of something, what does it feel like in your body? Where do you feel it?",
+      "Do you think fear is always bad — or is it sometimes useful? When might being afraid actually help you?",
+      "Here's what I'm curious about: do you think the things we're afraid of tell us something about what we love or care about? What do you think?",
+      "Is there something you're afraid of that you've done anyway? What made you do it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names at least one real fear and engages with it honestly — not a performance, not a minimized 'I'm not really afraid of anything.' She can say something genuine about what the fear tells her about herself.",
+    "portfolioCapture": "Isla's answer to question 4 — what she thinks fear tells us about what we love — in her own words. Voice memo fine.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "courage",
+      "identity",
+      "faith",
+      "God's love",
+      "family",
+      "self-knowledge"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real fear out loud — something she actually feels, not a safe answer. Willingness to be honest is what matters here.",
+      "layer2": "Isla can say something about what the fear feels like or what it tells her — even a simple connection like 'I'm afraid of that because I don't want to lose it.'",
+      "layer3": "Isla connects fear to something she values or loves, in her own words, with genuine insight. She doesn't need it to be profound. She needs it to be true."
+    }
   },
   "CP-L3-005": {
     "id": "CP-L3-005",
