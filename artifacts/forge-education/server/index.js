@@ -474,7 +474,9 @@ app.post('/forge-api/session/start', (req, res) => {
     safetyFlags: [],
     agentMemoryUpdate: null,
     parentNote: '',
-    status: 'active'
+    status: 'active',
+    startTimeISO: new Date().toISOString(),
+    targetMinutes: (() => { const cat = MISSION_CATALOG[missionId]; if (cat && cat.timeMinutes) return cat.timeMinutes; return child.stage === 1 ? 20 : child.stage === 2 ? 30 : 45; })()
   };
 
   child.sessions.unshift(session);
@@ -639,7 +641,8 @@ async function generateDailyBrief(childId, session) {
   const transcript = session.transcript.map(t => `${t.role}: ${t.content}`).join('\n');
   const briefText = await callClaude(
     'You generate concise parent briefs for a homeschool education platform. Write in warm, direct language. No asterisks, no markdown headers. Keep it under 200 words.',
-    `Generate a parent brief for this session:\nChild: ${childId}\nDomain: ${session.domain}\nMission: ${session.missionId}\nDuration: ${session.duration} minutes\n\nTranscript:\n${transcript.slice(0, 3000)}\n\nFormat as:\nCOVERED: (1-2 sentences on what was worked on)\nENGAGEMENT: (one word: high/medium/low, plus one sentence why)\nAT HOME: (one specific thing the parent can do to continue this learning)\nFLAGS: (any concerns, or "None")\nHOW TO CONTINUE THIS AT HOME: Tonight or this week: (one specific thing the parent can say or do in the next 24-48 hours that mirrors or extends what came up in the session â a dinner table question, a walk conversation starter, or something to notice together. Not an assignment. 2-3 sentences max. Practical, human, connective.)`
+    `Generate a parent brief for this session:\nChild: ${childId}\nDomain: ${session.domain}\nMission: ${session.missionId}
+Session time: ${(() => { const start = session.startTimeISO ? new Date(session.startTimeISO).getTime() : (session.startTime ? new Date(session.startTime).getTime() : Date.now()); const elapsed = Math.round((Date.now() - start) / 60000); const target = session.targetMinutes || (child.stage === 1 ? 20 : child.stage === 2 ? 30 : 45); const remaining = Math.max(0, target - elapsed); return elapsed + " min elapsed / " + target + " min target (" + remaining + " min remaining)"; })()}\nDuration: ${session.duration} minutes\n\nTranscript:\n${transcript.slice(0, 3000)}\n\nFormat as:\nCOVERED: (1-2 sentences on what was worked on)\nENGAGEMENT: (one word: high/medium/low, plus one sentence why)\nAT HOME: (one specific thing the parent can do to continue this learning)\nFLAGS: (any concerns, or "None")\nHOW TO CONTINUE THIS AT HOME: Tonight or this week: (one specific thing the parent can say or do in the next 24-48 hours that mirrors or extends what came up in the session â a dinner table question, a walk conversation starter, or something to notice together. Not an assignment. 2-3 sentences max. Practical, human, connective.)`
   );
   let continueAtHome = '';
   const homeMatch = briefText.match(/HOW TO CONTINUE THIS AT HOME:\s*([\s\S]*?)$/i);
@@ -1588,6 +1591,12 @@ STAY WITH THE ANSWER: After a child responds, do not move to the next question. 
 CONVERSATION FRAMEWORK USAGE: The numbered conversation framework in a mission brief is a guide for your thinking — not a script, not a checklist, not a question queue. It tells you the territory this mission is exploring and gives you example entry points. You are not required to use every question, ask them in order, or finish the list. Start with the first question, then follow the child. If they take you somewhere unexpected and real, go there. If they get stuck, try a different angle from the framework. A session where you only covered two questions deeply is better than one where you raced through all five.
 
 SESSION PACING: Sessions are not meant to last hours. Each mission has a target time — honor it. Track the conversation energy: if a child is engaged and real progress is happening, stay in it. If a child is stuck, confused, or giving flat answers after two or three genuine attempts at an angle, do not keep pushing the same approach. Either pivot to a different entry point from the framework, try a simpler example, or close the loop on what you did cover and end cleanly. A stuck child who feels safe to not know something is better than a frustrated child who learns to dread sessions. Never drag a conversation past the point of genuine engagement just to complete the mission. The mission can continue next time.
+
+SESSION TIME LIMITS: Every session has a healthy time ceiling based on the child's developmental stage and screen health. These are not soft suggestions — they protect brain development, attention capacity, and retention. Log time is tracked server-side and surfaced to you as "Session time" in TODAY'S CONTEXT on every message turn.
+- Weston (Stage 1, age 4): Hard ceiling 20 minutes total. Preoperational brains cannot consolidate learning past this point. If you are approaching 18 minutes, begin wrapping up warmly regardless of where you are in the mission.
+- Isla (Stage 2, age 8): Target 25-35 minutes. Hard ceiling 40 minutes. At 30 minutes, assess: is she still genuinely engaged? If yes, you may continue briefly. If energy is dropping, close the loop now. Screen fatigue at this age is real and undermines retention.
+- Everly (Stage 3, age 11): Target 40-55 minutes. Hard ceiling 60 minutes. Logic-stage learners can sustain longer but still hit diminishing returns. At 50 minutes, begin moving toward closure even if the conversation is rich — end on a high note, not an exhausted one.
+When you are within 5 minutes of the target, begin steering toward a natural close: summarize what was discovered, give the child the last word, and end warmly. Never abruptly cut off — land the session intentionally.
 
 GOAL: Your goal is never to teach. Your goal is to help the child discover what they already know and build what they do not yet have the courage to try. Every session ends with the child feeling seen, not evaluated. Never graded. Never corrected harshly. Always respected as a person in process.
 
