@@ -81,7 +81,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
         <button className="admin-logout" onClick={onLogout}>â Exit</button>
       </header>
       <nav className="admin-nav">
-        {[{ id: 'overview', label: 'Overview' }, { id: 'briefs', label: 'Briefs' }, { id: 'progress', label: 'Progress' }, { id: 'messages', label: 'Messages' }, { id: 'children', label: 'Children' }, { id: 'resources', label: 'Resources' }, { id: 'life-schedule', label: 'Life Schedule' }, { id: 'schedule', label: 'Forge Schedule' }, { id: 'safety', label: 'Safety' }, { id: 'settings', label: 'Settings' }, { id: 'profiles', label: 'Profiles & Progress' }].map(item => (
+        {[{ id: 'overview', label: 'Overview' }, { id: 'briefs', label: 'Briefs' }, { id: 'progress', label: 'Progress' }, { id: 'messages', label: 'Messages' }, { id: 'children', label: 'Children' }, { id: 'resources', label: 'Resources' }, { id: 'life-schedule', label: 'Life Schedule' }, { id: 'schedule', label: 'Forge Schedule' }, { id: 'safety', label: 'Safety' }, { id: 'settings', label: 'Settings' }, { id: 'transcripts', label: 'Transcripts' }, { id: 'profiles', label: 'Profiles & Progress' }].map(item => (
           <button key={item.id} className={`admin-nav-btn ${view === item.id ? 'active' : ''}`} onClick={() => handleNavClick(item.id)}>{item.label}</button>
         ))}
       </nav>
@@ -97,7 +97,8 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
         {view === 'life-schedule' && <LifeSchedulePanel basePath={basePath} />}
         {view === 'schedule' && <ScheduleEditorPanel basePath={basePath} />}
         {view === 'settings' && <SettingsPanel basePath={basePath} />}
-        {view === 'profiles' && <ProfilesProgress basePath={basePath} />}
+        {view === 'transcripts' && <TranscriptsPanel basePath={basePath} />}
+      {view === 'profiles' && <ProfilesProgress basePath={basePath} />}
       </main>
     </div>
   );
@@ -1847,6 +1848,85 @@ function SchedulePanel({ basePath }: { basePath: string }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function TranscriptsPanel({ basePath }: { basePath: string }) {
+  const [childId, setChildId] = useState<string>('everly');
+  const [sessions, setSessions] = useState<any[]>([]);
+  const [childName, setChildName] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    fetch(`${basePath}/forge-api/admin/transcripts/${childId}`)
+      .then(r => r.json())
+      .then(d => {
+        if (cancelled) return;
+        setSessions(Array.isArray(d.sessions) ? d.sessions : []);
+        setChildName(d.childName || '');
+        setLoading(false);
+      })
+      .catch(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [childId, basePath]);
+
+  const sorted = [...sessions].sort((a, b) => (b.startTime || b.date || '').localeCompare(a.startTime || a.date || ''));
+  const byDate: Record<string, any[]> = {};
+  for (const s of sorted) {
+    const k = s.date || 'unknown';
+    if (!byDate[k]) byDate[k] = [];
+    byDate[k].push(s);
+  }
+  const dateKeys = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+
+  const downloadOne = (sessionId: string) => {
+    window.location.href = `${basePath}/forge-api/admin/transcript/${childId}/${sessionId}`;
+  };
+  const downloadAll = () => {
+    window.location.href = `${basePath}/forge-api/admin/transcripts-all/${childId}`;
+  };
+
+  return (
+    <div className="panel">
+      <div className="panel-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+        <div>
+          <h2 style={{ margin: 0 }}>Transcripts</h2>
+          <div style={{ fontSize: '0.85rem', color: '#888', marginTop: '0.25rem' }}>Full conversation transcripts from every session. Download for review.</div>
+        </div>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <select value={childId} onChange={e => setChildId(e.target.value)} style={{ padding: '0.4rem 0.6rem', background: '#1a1a1a', color: 'white', border: '1px solid #333', borderRadius: 4 }}>
+            <option value="everly">Everly</option>
+            <option value="isla">Isla</option>
+            <option value="weston">Weston</option>
+          </select>
+          <button onClick={downloadAll} style={{ padding: '0.45rem 0.8rem', background: '#ff6b35', color: 'white', border: 'none', borderRadius: 4, cursor: 'pointer', fontWeight: 600 }}>Download all ({sessions.length})</button>
+        </div>
+      </div>
+      {loading && <div style={{ color: '#888' }}>Loading sessions...</div>}
+      {!loading && sessions.length === 0 && <div style={{ color: '#888', padding: '2rem', textAlign: 'center' }}>No sessions yet for {childName || childId}.</div>}
+      {!loading && dateKeys.map(dateKey => (
+        <div key={dateKey} style={{ marginBottom: '1.25rem' }}>
+          <div style={{ fontSize: '0.8rem', color: '#aaa', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem' }}>{dateKey}</div>
+          {byDate[dateKey].map(s => (
+            <div key={s.id} style={{ padding: '0.75rem 1rem', background: '#111', border: '1px solid #222', borderRadius: 6, marginBottom: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 600 }}>{s.domain || 'session'} {s.missionId ? ' - ' + s.missionId : ''}</div>
+                <div style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.15rem' }}>
+                  {s.startTime ? new Date(s.startTime).toLocaleTimeString() : ''}
+                  {s.duration ? '  ' + Math.round(s.duration / 60) + ' min' : ''}
+                  {'  ' + (s.turnCount || 0) + ' turns'}
+                  {s.safetyFlagCount > 0 ? '  FLAGS: ' + s.safetyFlagCount : ''}
+                  {'  status: ' + (s.status || 'unknown')}
+                </div>
+              </div>
+              <button onClick={() => downloadOne(s.id)} style={{ padding: '0.35rem 0.7rem', background: '#222', color: 'white', border: '1px solid #444', borderRadius: 4, cursor: 'pointer', fontSize: '0.85rem' }}>Download</button>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
