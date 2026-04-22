@@ -1536,6 +1536,22 @@ CHALLENGES: ${child.agentMemory.knownChallenges.join(', ')}
 PROJECTS: ${child.agentMemory.currentProjects.join(', ')}
 LAST SESSION: ${child.agentMemory.lastSessionSummary || 'First session'}
 
+TODAY'S RESOURCES & CONTEXT:
+${(() => {
+  const docs = (child.resources?.documents || []).map(d => d.name || d.title || d.filename || 'doc').filter(Boolean);
+  const reading = (child.resources?.agentReadingList || []).map(r => r.title || r.name || 'reading').filter(Boolean);
+  const weekly = (child.schedule?.weeklyActivities || []).slice(0,5).map(a => a.title || a.name || a.activity).filter(Boolean);
+  const upcoming = (child.schedule?.upcomingEvents || []).slice(0,3).map(e => `${e.date || ''}: ${e.title || e.name || ''}`.trim()).filter(s => s.length > 1);
+  const lines = [];
+  lines.push(`- Parent-uploaded documents: ${docs.length ? docs.join(', ') : 'none'}`);
+  lines.push(`- Assigned reading: ${reading.length ? reading.join(', ') : 'none'}`);
+  lines.push(`- This week's activities: ${weekly.length ? weekly.join(', ') : 'none scheduled'}`);
+  lines.push(`- Upcoming events: ${upcoming.length ? upcoming.join('; ') : 'none'}`);
+  return lines.join('\n');
+})()}
+
+OPENING PROTOCOL (FIRST TURN ONLY): Do NOT dive straight into the day's topic. Begin with a brief warm check-in that (1) references what you worked on last session if there was one ("Yesterday we looked at X..."), (2) names today's domain and any specific thing on their plate from the resources/schedule above ("Today's focus is Y, and I see you have [item] coming up"), (3) asks one open question about what's on their mind right now. Keep the opening to 2-3 sentences total. On subsequent turns this protocol no longer applies — continue the conversation naturally.
+
 ${(() => {
   const memory = ensureMemory(child);
   let memoryBlock = '';
