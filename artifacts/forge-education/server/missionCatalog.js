@@ -1,8 +1,10 @@
-// Forge Education mission catalog
-// 83 missions — Everly (all 6 domains) + Isla (partial: IJ, CP, BE, HF, AI, PM sparse)
-// Weston (25 missions) + remaining Isla missions to be added in Push B phase 2
-// Each mission is keyed by mission ID (e.g. "CP-L5-001") matching child.domains[domain].missionsAvailable IDs
-// Schema: see https://github.com/wallace111410/Forge-Education/blob/main/README.md
+// AUTO-GENERATED MISSION CATALOG
+// 235 missions: 108 authored + 127 stubs
+// Schema: id, title, domain, level, stage, specialist, childIds, type, timeMinutes,
+//         brief, offScreenPrep, conversationFramework[], masterySignal, portfolioCapture,
+//         crossDomains[], laWeavingHook, connectiveHooks[], contentStatus
+// Stubs: contentStatus="stub", brief/framework/masterySignal are null.
+// Authored: contentStatus="authored", all fields populated.
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -34,7 +36,7 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Direct LA opportunity: sentence craft, rhetorical purpose, precise word choice. Name it out loud when Everly revises.",
+    "laWeavingHook": "Direct LA opportunity: sentence craft, rhetorical purpose, precise word choice in a single opening line. Name it out loud when Everly revises the line.",
     "connectiveHooks": [
       "apologetics prep",
       "Roman history",
@@ -42,7 +44,8 @@ const MISSION_CATALOG = {
       "NCFCA tournament"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "CP-L5-002": {
     "id": "CP-L5-002",
@@ -74,13 +77,17 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Reading comprehension at a higher level — distinguishing argument from narrative is an advanced LA skill. Name it.",
+    "laWeavingHook": "Reading comprehension at its deepest: extracting implicit thesis from narrative. Name this as core LA work.",
     "connectiveHooks": [
       "Veritas reading",
-      "Roman history"
+      "Roman history",
+      "argument construction"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-003": {
     "id": "CP-L5-003",
@@ -100,7 +107,7 @@ const MISSION_CATALOG = {
     "brief": "Atlas has a topic for you. No preparation. Two minutes. The only rule: your first sentence cannot start with 'I think' or 'I believe.' He wants you to start with something that makes the listener need to hear what comes next. Ready?",
     "offScreenPrep": null,
     "conversationFramework": [
-      "[Serve one topic from topicBank, calibrated to her current interests and recent Veritas content.]",
+      "[Serve one topic from topicBank, calibrated to current Veritas content or interests.]",
       "[After the 2 minutes] What was your strongest sentence? Not your favorite — your strongest. The one that did the most work.",
       "What was the moment you felt least certain? I could hear it.",
       "Your opening sentence — did it make me need to hear what came next? Be honest.",
@@ -115,19 +122,21 @@ const MISSION_CATALOG = {
       "What the Roman Republic got right that we've forgotten."
     ],
     "masterySignal": "Child can self-identify the strongest and weakest moments in their own delivery. Beginning to self-correct without prompting.",
-    "portfolioCapture": "Each run: topic served + strongest sentence + one change. Accumulates into longitudinal impromptu log.",
+    "portfolioCapture": "Each run: topic served + one line on strongest sentence + one line on what she'd change. Accumulates into longitudinal impromptu log.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Word choice and sentence opening are live LA skills. Atlas names the connection after delivery.",
+    "laWeavingHook": "Sentence construction under time pressure. Name every strong sentence Atlas identifies as LA in action.",
     "connectiveHooks": [
       "Roman history",
-      "business thinking"
+      "business thinking",
+      "tournament prep"
     ],
     "recommendedOrder": 3,
     "prerequisites": [
       "CP-L5-001"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-004": {
     "id": "CP-L5-004",
@@ -159,13 +168,17 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Audience awareness is core LA — who is the reader/listener and what do they want? Atlas names this as the transferable LA principle.",
     "connectiveHooks": [
-      "Roman history",
-      "apologetics audience awareness"
+      "Veritas",
+      "apologetics audience",
+      "Roman history"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-005": {
     "id": "CP-L5-005",
@@ -185,24 +198,28 @@ const MISSION_CATALOG = {
     "brief": "Atlas watched your last practice session. He noticed one thing — not something bad, something specific — that if you changed it would make everything else better. He's going to tell you what it is and then he wants to know if you agree with his diagnosis. You're allowed to push back.",
     "offScreenPrep": null,
     "conversationFramework": [
-      "[Atlas surfaces a specific, data-driven observation based on Vera's session memory — e.g.: 'You have a habit of slowing down right before your most important point, as if you're giving the audience permission to stop listening.']",
+      "[Atlas surfaces a specific, data-driven observation based on Vera's session memory. Example patterns: slowing before the most important point; closings weaker than openings; voice shifts between history and biblical points.]",
       "Do you agree with that observation?",
       "When does it happen most?",
       "What would you need to change to fix it? Not the technique — what would you need to believe or think differently?"
     ],
     "topicBank": null,
-    "masterySignal": "Accepts specific critical feedback without deflecting. Can engage analytically with their own delivery patterns.",
-    "portfolioCapture": "The specific observation + her response + her planned change.",
+    "masterySignal": "Accepts specific critical feedback without deflecting. Can engage analytically with her own delivery patterns.",
+    "portfolioCapture": "Atlas's observation + Everly's response + the one thing she commits to change.",
     "crossDomains": [
       "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "speech practice",
-      "self-assessment"
+      "self-assessment",
+      "delivery craft",
+      "Speech club"
     ],
     "recommendedOrder": 5,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-006": {
     "id": "CP-L5-006",
@@ -218,28 +235,33 @@ const MISSION_CATALOG = {
     "timeMinutes": 20,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — steelmanning builds tournament resilience",
+    "tournamentRelevance": "Direct — builds anticipation of tournament objections",
     "brief": "Atlas has a challenge. He wants you to take one of your apologetics answers — the one you're most confident about — and argue against it. Not weakly. As hard as you can. Find the strongest possible objection to your own position. He thinks this will make your answer 20 times better. He might be right.",
-    "offScreenPrep": null,
+    "offScreenPrep": "Bring your most confident apologetics card.",
     "conversationFramework": [
       "Which apologetics card are you most confident about? That's the one we're working with.",
       "State your answer. One clear sentence.",
       "Now forget you believe it. You're the smartest skeptic who has ever heard this argument. What's the most devastating thing you could say against it?",
       "Harder. That objection was too easy. What would a philosopher say? What would someone who has genuinely wrestled with this say?",
-      "[After a strong counter is found] Now — how does knowing that objection exist change how you deliver your original answer? What do you add? What do you remove?"
+      "Now — how does knowing that objection exist change how you deliver your original answer? What do you add? What do you remove?"
     ],
     "topicBank": null,
-    "masterySignal": "Can steelman an opposing view on a position she holds. Understanding that anticipating the counter makes the original argument stronger.",
-    "portfolioCapture": "Original claim + strongest counter + revised delivery.",
+    "masterySignal": "Can steelman an opposing view on a position she holds. Understands that anticipating the counter makes the original argument stronger.",
+    "portfolioCapture": "Original answer + strongest objection Everly found + revised answer that anticipates the objection.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Argument structure: claim-evidence-warrant + anticipated objection. Atlas names this as a reusable LA structure.",
+    "laWeavingHook": "Claim-evidence-warrant-counterargument: the core structure of persuasive writing. Atlas names this explicitly.",
     "connectiveHooks": [
-      "apologetics prep"
+      "apologetics prep",
+      "NCFCA May 9",
+      "steelmanning"
     ],
     "recommendedOrder": 6,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-007": {
     "id": "CP-L5-007",
@@ -267,14 +289,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can produce multiple variations on the same content. Can distinguish between voice-authentic and rhetorically effective writing. Beginning to understand these can be the same.",
-    "portfolioCapture": "All three opening paragraphs + the combined version + her reflection on which felt most like her.",
-    "crossDomains": [],
-    "laWeavingHook": "Core LA moment — real writing craft. Atlas explicitly names this as LA practice that replaces a separate LA assignment.",
+    "portfolioCapture": "All three opening paragraphs + Everly's ranking + the combined 'best of' opening.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Writing craft — voice, revision, variation. This IS language arts. Atlas names it explicitly.",
     "connectiveHooks": [
-      "fall informative speech"
+      "informative speech",
+      "writing voice",
+      "revision as craft"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-008": {
     "id": "CP-L5-008",
@@ -305,13 +334,17 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Rhetorical analysis of a primary-source text — direct LA work on voice, pronoun choice, and structural concision.",
+    "laWeavingHook": "Primary source rhetorical analysis. Pronoun choice as craft. Both are core LA — Atlas names this.",
     "connectiveHooks": [
-      "Lincoln reading list",
-      "informative speech prep"
+      "Gettysburg Address",
+      "American history",
+      "informative speech"
     ],
     "recommendedOrder": 8,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-009": {
     "id": "CP-L5-009",
@@ -339,17 +372,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can distinguish between a topic and an argument about a topic. Can identify where her existing knowledge gives her a structural advantage.",
-    "portfolioCapture": "Two candidate one-sentence arguments + reasoning for which has more structural advantage.",
+    "portfolioCapture": "Two candidate topics stated as arguments + Everly's chosen direction + reasoning.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Thesis development — the difference between a topic and an argument about a topic is core LA.",
+    "laWeavingHook": "Thesis construction: topic vs argument about a topic. Atlas names this as the single most important LA distinction.",
     "connectiveHooks": [
-      "fall informative speech",
-      "Veritas knowledge base"
+      "informative speech",
+      "Veritas knowledge",
+      "fall tournament"
     ],
     "recommendedOrder": 9,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-010": {
     "id": "CP-L5-010",
@@ -377,16 +414,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the relationship between listening and persuasion. Understands audience awareness as an active not passive skill.",
-    "portfolioCapture": "Her articulation of what good listening looks like in a speaking context.",
+    "portfolioCapture": "Everly's own definition of 'listening while speaking' in one or two sentences.",
     "crossDomains": [
       "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "apologetics audience awareness"
+      "audience awareness",
+      "Speech club",
+      "persuasion"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-011": {
     "id": "CP-L5-011",
@@ -406,7 +448,7 @@ const MISSION_CATALOG = {
     "brief": "Atlas found an argument. It sounds convincing. It's actually deeply flawed. He wants you to find the flaw — not because bad arguments are common, but because understanding exactly how they fail makes your own arguments much stronger.",
     "offScreenPrep": null,
     "conversationFramework": [
-      "[Agent serves one of: 'Rome fell because it got too big to govern. Therefore no civilization should expand beyond a certain size.' / 'The most successful leaders in history were all great speakers. Therefore if you become a great speaker you will be a successful leader.' / 'The Bible has survived for 2000 years without changing. Therefore everything in it must be true.']",
+      "[Atlas serves a logically flawed but superficially convincing argument — calibrated to Everly's level. Examples: 'Rome fell because it got too big to govern. Therefore no civilization should expand beyond a certain size.' 'The most successful leaders in history were all great speakers. Therefore if you become a great speaker you will be a successful leader.' 'The Bible has survived for 2000 years without changing. Therefore everything in it must be true.']",
       "State the argument in your own words.",
       "On first read — does it sound convincing? Why?",
       "What is the argument assuming that it hasn't proven?",
@@ -414,19 +456,28 @@ const MISSION_CATALOG = {
       "What would the argument need to add to actually be sound?",
       "This kind of flaw has a name — do you know it? If not, let's figure out what to call it."
     ],
-    "topicBank": null,
-    "masterySignal": "Can identify the unstated assumption in a flawed argument. Can construct a counter-example. Beginning to name specific logical fallacies spontaneously.",
-    "portfolioCapture": "The argument she dissected + the flaw named + her counter-example.",
-    "crossDomains": [
-      "identity"
+    "topicBank": [
+      "Rome fell because it got too big to govern. Therefore no civilization should expand beyond a certain size.",
+      "The most successful leaders in history were all great speakers. Therefore if you become a great speaker you will be a successful leader.",
+      "The Bible has survived for 2000 years without changing. Therefore everything in it must be true."
     ],
-    "laWeavingHook": null,
+    "masterySignal": "Can identify the unstated assumption in a flawed argument. Can construct a counter-example. Beginning to name specific logical fallacies spontaneously.",
+    "portfolioCapture": "Argument served + assumption identified + counter-example + name of fallacy (if found).",
+    "crossDomains": [
+      "identity",
+      "aiSystems"
+    ],
+    "laWeavingHook": "Argument analysis — identifying unstated premises. Explicit LA skill.",
     "connectiveHooks": [
-      "Fallacy Detective reading",
-      "apologetics"
+      "Fallacy Detective",
+      "apologetics",
+      "systems thinking"
     ],
     "recommendedOrder": 11,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L5-012": {
     "id": "CP-L5-012",
@@ -458,13 +509,18 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Rhetorical device identification at an advanced LA level — repetition, anaphora, building structure.",
+    "laWeavingHook": "Rhetorical device analysis — anaphora, reframing, structural escalation. All LA.",
     "connectiveHooks": [
       "WWII history",
-      "rhetorical devices"
+      "Churchill",
+      "rhetorical devices",
+      "monthly speech series"
     ],
     "recommendedOrder": 12,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-001": {
     "id": "IJ-L5-001",
@@ -480,9 +536,9 @@ const MISSION_CATALOG = {
     "timeMinutes": 20,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — 'Is God loving?' is one of her 12 bank questions",
+    "tournamentRelevance": "Direct — one of her 12 bank questions",
     "brief": "Sage has been thinking about one of your apologetics questions — 'Is God loving?' — and he noticed something. The standard answer — yes, because the Bible says so — is true. But it doesn't actually address what the person asking is really wondering about. Sage thinks there's a deeper question hiding underneath the surface question. He wants you to find it.",
-    "offScreenPrep": "Have her current 'Is God loving?' apologetics card on hand.",
+    "offScreenPrep": "Have your 'Is God loving?' apologetics card on hand.",
     "conversationFramework": [
       "When someone asks 'Is God loving?' at a tournament — what do you think they're actually worried about? What's the real question underneath?",
       "Can you think of a situation where someone would ask that question not because they don't know the answer but because the answer isn't satisfying them? What situation would that be?",
@@ -494,16 +550,18 @@ const MISSION_CATALOG = {
     "masterySignal": "Can identify the deeper question beneath a surface apologetics question. Can articulate why answering only the surface question is incomplete.",
     "portfolioCapture": "'The real question underneath Is God loving? is...' — one paragraph in her own words.",
     "crossDomains": [
-      "communication"
+      "communication",
+      "humanFluency"
     ],
-    "laWeavingHook": "Question analysis and audience awareness are rhetorical LA skills. Name it.",
+    "laWeavingHook": "Reading comprehension at interpretive depth: the stated question vs the intended question. Core LA.",
     "connectiveHooks": [
-      "NCFCA apologetics bank",
+      "apologetics bank",
       "problem of evil",
       "May 9 tournament"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "IJ-L5-002": {
     "id": "IJ-L5-002",
@@ -535,14 +593,18 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "communication"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Argument from multiple evidence sources (biblical + historical) is core persuasive writing structure.",
     "connectiveHooks": [
-      "Roman history",
+      "apologetics",
       "Veritas",
-      "apologetics"
+      "Roman history",
+      "original sin"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-003": {
     "id": "IJ-L5-003",
@@ -558,7 +620,7 @@ const MISSION_CATALOG = {
     "timeMinutes": 20,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — prepares her for hostile cross-examination",
+    "tournamentRelevance": "Direct — prepares her for hostile cross-exam questions",
     "brief": "Sage wants to prepare you for something that happens at tournaments. Sometimes a question sounds like it's asking one thing but is actually designed to trap the answerer. He wants you to learn to see the trap before you step in it. Today's example: 'Can God make a rock so heavy He can't lift it?'",
     "offScreenPrep": null,
     "conversationFramework": [
@@ -571,17 +633,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify the unstated assumption in a loaded question. Can respond to it without defensiveness — naming the assumption and redirecting to the real question.",
-    "portfolioCapture": "Her response to the rock question + one other loaded-question she identifies with the same structure.",
+    "portfolioCapture": "The rock paradox + Everly's response script for naming-and-redirecting.",
     "crossDomains": [
-      "communication"
+      "communication",
+      "aiSystems"
     ],
-    "laWeavingHook": "Identifying unstated premises is core logical analysis and LA reading comprehension.",
+    "laWeavingHook": "Identifying implicit premises in language — core critical reading skill.",
     "connectiveHooks": [
       "cross-examination prep",
-      "Fallacy Detective"
+      "Fallacy Detective",
+      "logical structure"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-004": {
     "id": "IJ-L5-004",
@@ -599,7 +666,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": "Direct — 'Is Hell real?' is in her bank",
     "brief": "Sage thinks 'Is Hell real?' is the hardest question in your bank. Not because it's hard to say yes — but because saying yes raises an immediate objection that most apologetics cards don't address: how is eternal punishment consistent with a loving God? He wants to work through this with you — not to give you a canned answer, but to make sure you've actually thought it through.",
-    "offScreenPrep": "Have her current 'Is Hell real?' apologetics card on hand.",
+    "offScreenPrep": "Have your current 'Is Hell real?' apologetics card on hand.",
     "conversationFramework": [
       "State your current answer to 'Is Hell real?' as clearly as you can.",
       "Now: someone says 'But if God is loving, how could He send anyone to Hell forever?' What do you say?",
@@ -610,20 +677,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can engage with the most serious objection to her position without deflecting. Has thought through the logical relationship between divine love, justice, human freedom, and Hell. Answer is deeper than her current card.",
-    "portfolioCapture": "Revised version of the Hell apologetics card after this session. Side-by-side with original.",
+    "portfolioCapture": "Revised version of the Hell apologetics card after this session. Side-by-side: original + revision + Everly's note on what changed.",
     "crossDomains": [
       "communication"
     ],
-    "laWeavingHook": "Argument structure: claim → objection → response → refined claim.",
+    "laWeavingHook": "Claim → objection → response → refined claim — core argument structure. Sage names this.",
     "connectiveHooks": [
-      "apologetics bank",
       "C.S. Lewis reading",
-      "IJ-L5-009 free will"
+      "free will mission IJ-L5-009",
+      "apologetics bank"
     ],
     "recommendedOrder": 4,
     "prerequisites": [
       "IJ-L5-001"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-005": {
     "id": "IJ-L5-005",
@@ -641,7 +709,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": "Direct — builds confidence through coherence before May 9",
     "brief": "Sage noticed something about your 12 apologetics questions. They're not random. They follow a logical order — almost like an argument. He wants you to see the arc. When you understand how the questions connect, drawing a random question at tournament won't feel like pulling a card out of nowhere. It'll feel like opening a door into a room you already know.",
-    "offScreenPrep": "Have her full 12-question bank laid out.",
+    "offScreenPrep": "Have all 12 apologetics questions written out.",
     "conversationFramework": [
       "Look at your four categories: God, Revelation, Humanity, Jesus. Why do you think they're in that order?",
       "If someone knew nothing about Christianity and you had to introduce it through these 12 questions — what order would you put them in and why?",
@@ -654,20 +722,20 @@ const MISSION_CATALOG = {
     "masterySignal": "Can articulate the logical relationship between questions in her bank. Understands the bank as a coherent theology not a list of isolated facts. Confidence grounded in understanding not memorization.",
     "portfolioCapture": "'The arc of my 12 questions is...' — Everly's own map of how the questions connect.",
     "crossDomains": [
-      "communication"
+      "communication",
+      "aiSystems"
     ],
-    "laWeavingHook": "Structural argument analysis — how separate claims compose into a coherent whole. Advanced LA.",
+    "laWeavingHook": "Identifying logical dependency between ideas — systems thinking applied to argument.",
     "connectiveHooks": [
-      "NCFCA apologetics bank",
-      "May 9 tournament"
+      "apologetics bank",
+      "May 9",
+      "systems thinking"
     ],
     "recommendedOrder": 5,
     "prerequisites": [
-      "IJ-L5-001",
-      "IJ-L5-002",
-      "IJ-L5-003",
-      "IJ-L5-004"
-    ]
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-006": {
     "id": "IJ-L5-006",
@@ -683,7 +751,7 @@ const MISSION_CATALOG = {
     "timeMinutes": 15,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — run the evening before tournament",
+    "tournamentRelevance": "Direct — run the evening before the tournament",
     "brief": "Sage has one question for you tonight. Not about your answers. About you.",
     "offScreenPrep": null,
     "conversationFramework": [
@@ -692,24 +760,30 @@ const MISSION_CATALOG = {
       "Sage wants to tell you something: you have not been preparing answers. You have been becoming someone who has genuinely thought about these things. That person walks into tomorrow differently than someone who memorized cards. Do you feel that difference?",
       "One question: if you draw the hardest one tomorrow — the one that genuinely challenges you — what do you do in the first five seconds?",
       "Good. Now close Forge and go to sleep. You're ready.",
-      "[Vera closes: 'I'll be here when you get back tomorrow. Tell me everything.']"
+      "[Vera closes after Sage: 'I'll be here when you get back tomorrow. Tell me everything.']"
     ],
     "topicBank": null,
-    "masterySignal": "Confidence is grounded in her actual growth, not performance prep. Can articulate her first-five-seconds protocol for a hard question.",
-    "portfolioCapture": "Her answer to 'what do I know about how I think now.' A keepsake entry.",
+    "masterySignal": "Grounded confidence from understanding, not from memorization. Has a clear first-five-seconds plan for the hardest question.",
+    "portfolioCapture": "Everly's one-sentence summary: 'What I know now that I didn't know four weeks ago is...' + her first-five-seconds plan.",
     "crossDomains": [
-      "humanFluency",
-      "physical"
+      "physical",
+      "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "May 9 tournament",
-      "Coach Dillon composure work"
+      "four-week apologetics arc",
+      "composure"
     ],
     "recommendedOrder": 6,
     "prerequisites": [
+      "IJ-L5-001",
+      "IJ-L5-002",
+      "IJ-L5-003",
+      "IJ-L5-004",
       "IJ-L5-005"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-007": {
     "id": "IJ-L5-007",
@@ -737,17 +811,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can analyze historical events for the internal values and identity failures that produced external outcomes. Can connect historical judgment to personal character formation.",
-    "portfolioCapture": "Her one-paragraph theory of what destroyed the Republic + what internal virtue resists it.",
+    "portfolioCapture": "Everly's analysis: the value or virtue that died first in Rome, and her argument for why.",
     "crossDomains": [
       "communication"
     ],
-    "laWeavingHook": "Historical analysis as argument construction — live LA work.",
+    "laWeavingHook": "Historical argument construction — claim, evidence, warrant from primary period knowledge.",
     "connectiveHooks": [
-      "Veritas Roman history",
-      "Caesar"
+      "Veritas",
+      "Roman Republic",
+      "virtue ethics",
+      "Julius Caesar"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-008": {
     "id": "IJ-L5-008",
@@ -775,19 +854,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can distinguish received answers from built answers. Can apply first principles thinking to at least one apologetics question and produce an answer that is genuinely her own construction.",
-    "portfolioCapture": "One apologetics answer rebuilt from first principles + her reflection on what changed.",
+    "portfolioCapture": "One apologetics answer rebuilt from first principles + Everly's note on how it differs from her original card.",
     "crossDomains": [
       "aiSystems",
       "building"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Argument construction from foundations — the core skill of analytical writing.",
     "connectiveHooks": [
+      "Aristotle",
       "apologetics",
-      "AoPS mathematical reasoning",
-      "business reasoning"
+      "business reasoning",
+      "systems thinking"
     ],
     "recommendedOrder": 8,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-009": {
     "id": "IJ-L5-009",
@@ -814,18 +897,23 @@ const MISSION_CATALOG = {
       "Can you believe something firmly and still hold open questions about the foundations of that belief? What does that kind of intellectual honesty look like?"
     ],
     "topicBank": null,
-    "masterySignal": "Can sit with genuine philosophical uncertainty without anxiety or deflection. Understands that holding open questions is a sign of intellectual maturity not weakness. This is a critical milestone for Stage 3 → Stage 4 transition.",
-    "portfolioCapture": "Her reflection on what it feels like to hold an unresolved foundational question.",
+    "masterySignal": "Can sit with genuine philosophical uncertainty without anxiety or deflection. Understands that holding open questions is a sign of intellectual maturity not weakness. Critical Stage 3 → Stage 4 transition milestone.",
+    "portfolioCapture": "Everly's own position on free will + the open questions she's still sitting with.",
     "crossDomains": [
       "humanFluency"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Writing under genuine uncertainty — the distinction between conviction and certainty.",
     "connectiveHooks": [
-      "Hell apologetics IJ-L5-004",
-      "philosophical maturity"
+      "Hell mission IJ-L5-004",
+      "philosophical uncertainty",
+      "Stage 3 to 4 bridge"
     ],
     "recommendedOrder": 9,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001",
+      "IJ-L5-004"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-010": {
     "id": "IJ-L5-010",
@@ -843,7 +931,7 @@ const MISSION_CATALOG = {
     "runFrequency": "weekly",
     "tournamentRelevance": null,
     "brief": "Sage has a standing challenge that runs every week: find a real fallacy in the real world. Not from Fallacy Detective — from something you actually read, heard, or saw this week. Bring it to the session and take it apart.",
-    "offScreenPrep": "Bring one real example of a fallacy she noticed this week.",
+    "offScreenPrep": "Spot one fallacy this week in real life (article, ad, conversation, video). Bring the example.",
     "conversationFramework": [
       "Tell me where you found it. What was the context?",
       "State the argument as fairly as you can — steelman it before you critique it.",
@@ -853,17 +941,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Over time, speed and accuracy of fallacy identification increases. More importantly — she begins noticing fallacies spontaneously without prompting.",
-    "portfolioCapture": "Her growing fallacy library — one entry per week. Becomes a personal reference document.",
+    "portfolioCapture": "Running Fallacy Library: weekly entry with source, argument stated, fallacy named, sound version rewritten. Accumulates into a personal reference document.",
     "crossDomains": [
-      "communication"
+      "communication",
+      "aiSystems"
     ],
-    "laWeavingHook": "Weekly LA work on argument analysis — substitutes for separate logic curriculum.",
+    "laWeavingHook": "Critical reading of real-world text — media literacy as LA.",
     "connectiveHooks": [
-      "Fallacy Detective reading",
-      "current events"
+      "Fallacy Detective",
+      "weekly standing practice",
+      "media literacy"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-011": {
     "id": "IJ-L5-011",
@@ -891,17 +984,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can engage with primary source philosophy. Can identify points of agreement and disagreement with a non-Christian thinker without feeling threatened by the engagement. Can connect philosophical reading to self-knowledge.",
-    "portfolioCapture": "One thing she recognized in herself from the Meditations passages.",
+    "portfolioCapture": "Quote from Meditations that hit her hardest + her reflection on why.",
     "crossDomains": [
-      "humanFluency"
+      "humanFluency",
+      "communication"
     ],
-    "laWeavingHook": "Primary source reading at sophisticated level — dense LA work disguised as philosophical reading.",
+    "laWeavingHook": "Primary source reading + annotation + personal response — classic LA.",
     "connectiveHooks": [
-      "Meditations reading list",
-      "self-knowledge work with Kira"
+      "Meditations",
+      "Stoicism",
+      "Roman history",
+      "journaling"
     ],
     "recommendedOrder": 11,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L5-012": {
     "id": "IJ-L5-012",
@@ -929,19 +1028,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can trace causal chains 3+ steps. Can apply second-order thinking to both historical analysis and personal decisions. Can identify unintended consequences.",
-    "portfolioCapture": "Her three-step chain on a personal or family decision.",
+    "portfolioCapture": "Personal decision + first, second, and third order consequences mapped.",
     "crossDomains": [
       "aiSystems",
       "building"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Causal chain analysis — foundational for analytical writing.",
     "connectiveHooks": [
-      "Roman history",
-      "JellyBean strategic decisions",
-      "Nova systems thinking"
+      "Rubicon",
+      "systems thinking",
+      "JellyBean decisions",
+      "Roman history"
     ],
     "recommendedOrder": 12,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-001": {
     "id": "BE-L6-001",
@@ -959,28 +1062,30 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Flux has a question that nobody has asked you yet: if someone wanted to buy JellyBean Vending from you and Isla right now — what is it actually worth? Not what you've put into it. What it's worth to a buyer. He wants you to figure out how to think about that before he tells you anything.",
-    "offScreenPrep": "Have current JellyBean monthly profit figures ready.",
+    "offScreenPrep": "Have QuickBooks P&L open with last 3 months of revenue and profit data.",
     "conversationFramework": [
       "First — what do you think it's worth? Give me a number. Don't hedge.",
       "Why that number? What did you base it on?",
       "Here's what a buyer actually cares about: not what you paid, not what you've earned so far — what will it earn in the future? Why would someone pay today for tomorrow's profits?",
-      "Your machine generates roughly $[X] per month in net profit. If you wanted to sell it, a buyer would probably pay somewhere between 12 and 36 times monthly profit. Why do you think the range is so wide? What would put you at the high end vs the low end?",
+      "Your machine generates roughly [X] per month in net profit. If you wanted to sell it, a buyer would probably pay somewhere between 12 and 36 times monthly profit. Why do you think the range is so wide? What would put you at the high end vs the low end?",
       "What would make JellyBean more valuable? Not just bigger — specifically more valuable to a potential buyer.",
       "You're not selling. But knowing what your business is worth changes how you make decisions about it. How?"
     ],
     "topicBank": null,
     "masterySignal": "Can construct a basic valuation argument. Understands that valuation is about future cash flows not past investment. Can identify specific actions that would increase business value.",
-    "portfolioCapture": "'JellyBean Vending is currently worth approximately $[X] because...' — her own reasoning.",
+    "portfolioCapture": "'JellyBean Vending is currently worth approximately $[X] because...' — written in her own words.",
     "crossDomains": [
       "aiSystems"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean P&L",
-      "Thursday meeting"
+      "JellyBean",
+      "QuickBooks P&L",
+      "Thursday L10 meeting"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "BE-L6-002": {
     "id": "BE-L6-002",
@@ -998,7 +1103,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Flux wants to talk about your loan — not the math, you know the math — but what borrowing money actually means and what it's teaching you. He thinks most people in the world have never understood the relationship between debt and discipline. He wants to know if you do.",
-    "offScreenPrep": "Review loan balance in business block.",
+    "offScreenPrep": "Review current loan balance and payment schedule.",
     "conversationFramework": [
       "What does it feel like to owe money? Be specific — not the concept, the actual feeling.",
       "Every month you pay back 50% of profit. That means the business can't keep all its earnings. What does that constraint force you to do that you wouldn't have to do if you had no debt?",
@@ -1009,17 +1114,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the concept of leverage in her own words using her own business as the example. Understands debt as a tool with real costs and real benefits — not inherently good or bad.",
-    "portfolioCapture": "Her definition of leverage using JellyBean as the example.",
+    "portfolioCapture": "Everly's own one-paragraph philosophy of debt, grounded in her JellyBean experience.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Defining abstract financial concepts in her own words — expository writing skill.",
     "connectiveHooks": [
       "JellyBean loan",
-      "family financial philosophy"
+      "2% APR",
+      "leverage",
+      "Richest Man in Babylon"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-003": {
     "id": "BE-L6-003",
@@ -1037,7 +1147,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Flux wants to know exactly how much money JellyBean makes on each drink sold. Not revenue — profit. Every single cost accounted for. He thinks most business owners have a vague idea of this number. He wants yours to be exact.",
-    "offScreenPrep": "Have actual QuickBooks data open — product costs, lease, fees.",
+    "offScreenPrep": "QuickBooks open with product-level cost data. Paper for calculation.",
     "conversationFramework": [
       "Pick one product — let's start with Green Monster. What does it sell for?",
       "What does it cost you? Include the product cost AND a proportional share of the machine lease, any fees, any losses from damaged or expired product.",
@@ -1048,18 +1158,23 @@ const MISSION_CATALOG = {
       "What does knowing your unit economics change about how you'd run a restock?"
     ],
     "topicBank": null,
-    "masterySignal": "Can calculate gross margin per product. Can rank products by margin and make a reasoned decision about product mix based on financial data.",
+    "masterySignal": "Can calculate gross margin per product. Can rank products by margin and make a reasoned decision about product mix based on financial data. L6 financial fluency in action.",
     "portfolioCapture": "JellyBean product margin analysis — her own calculation, her own ranking, her own recommendation.",
     "crossDomains": [
       "aiSystems"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
+      "JellyBean restock",
+      "product mix",
       "QuickBooks",
-      "product mix decisions"
+      "margin math"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-004": {
     "id": "BE-L6-004",
@@ -1077,7 +1192,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "The second machine is on your JellyBean HQ ideas list. Flux wants to have the real conversation about it — not whether it's a good idea, but how you'd think through whether it's a good idea. Because the process of deciding matters more than the decision.",
-    "offScreenPrep": null,
+    "offScreenPrep": "Current business stats + capacity estimates.",
     "conversationFramework": [
       "What would a second machine add to the business? Be specific — not 'more revenue,' how much more revenue based on what assumptions?",
       "What would it cost? Not just the machine — everything. List every cost you can think of.",
@@ -1088,21 +1203,24 @@ const MISSION_CATALOG = {
       "Flux's honest take: he doesn't know if you should get a second machine. But he knows exactly what questions you'd need to answer first. Did you ask all of them?"
     ],
     "topicBank": null,
-    "masterySignal": "Can think through a strategic expansion decision systematically. Does not jump to conclusion before working through the analysis. Can identify the conditions under which a decision is right.",
-    "portfolioCapture": "Her full decision framework for the second machine + list of conditions that must be true.",
+    "masterySignal": "Can think through a strategic expansion decision systematically — costs, revenue, cash flow impact, capacity, readiness. Does not jump to conclusion before working through the analysis. Can identify the conditions under which a decision is right.",
+    "portfolioCapture": "Second machine decision framework: costs, revenue assumptions, cash flow model, capacity analysis, go/no-go conditions.",
     "crossDomains": [
-      "identity",
-      "aiSystems"
+      "aiSystems",
+      "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "JellyBean HQ",
-      "strategic decision making"
+      "expansion decision",
+      "Thursday meeting"
     ],
     "recommendedOrder": 4,
     "prerequisites": [
-      "BE-L6-001"
-    ]
+      "BE-L6-001",
+      "BE-L6-003"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-005": {
     "id": "BE-L6-005",
@@ -1136,13 +1254,17 @@ const MISSION_CATALOG = {
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Mission statement writing — live LA work on clarity and conviction.",
+    "laWeavingHook": "Mission statement writing — distilled expository prose. Name this as LA.",
     "connectiveHooks": [
+      "Peter Drucker",
       "business philosophy",
-      "Drucker"
+      "customer orientation"
     ],
     "recommendedOrder": 5,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-006": {
     "id": "BE-L6-006",
@@ -1157,13 +1279,13 @@ const MISSION_CATALOG = {
     "type": "Financial literacy — operational",
     "timeMinutes": 20,
     "standingPractice": true,
-    "runFrequency": "monthly",
+    "runFrequency": "monthly after books close",
     "tournamentRelevance": null,
     "brief": "Flux wants to go through last month's P&L line by line. Not to check your work — he assumes you've done it. He wants to know what story the numbers are telling you. Because numbers always tell a story. Most people read numbers. Flux wants you to hear them.",
-    "offScreenPrep": "Have current QuickBooks P&L open.",
+    "offScreenPrep": "Current month QuickBooks P&L open.",
     "conversationFramework": [
       "Show me the three most important numbers from last month. Not revenue, not expenses — the three numbers that tell you most about the health of the business.",
-      "Revenue was $[X]. Is that good? Compared to what?",
+      "Revenue was [X]. Is that good? Compared to what?",
       "Your margin was [Y]%. What would a 5% improvement in margin require? Is that achievable?",
       "What surprised you in this month's numbers? Something that was different from what you expected.",
       "If you were presenting this P&L to an investor — your dad, or someone outside the family — what would you say first? What are you proud of? What are you working on?",
@@ -1171,17 +1293,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can analyze a real P&L for business health signals — not just read numbers but interpret them. Can identify variance from expectation and connect it to operational decisions.",
-    "portfolioCapture": "Monthly P&L commentary — three numbers, the surprise, the action item.",
+    "portfolioCapture": "Monthly: top 3 numbers + one surprise + one next-month action. Longitudinal business review log.",
     "crossDomains": [
       "aiSystems"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "QuickBooks",
-      "Thursday meeting"
+      "monthly close",
+      "Thursday L10"
     ],
     "recommendedOrder": 6,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-007": {
     "id": "BE-L6-007",
@@ -1199,7 +1325,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Every week a portion of your Denovo salary flows into a real estate fund. You know the numbers. What Flux wants to know is whether you understand what's actually happening — and what it means for who you will be at 25, 35, 45.",
-    "offScreenPrep": null,
+    "offScreenPrep": "Real estate fund current balance + annual contribution amount.",
     "conversationFramework": [
       "Your fund earns approximately 7% per year. What does that mean in real terms — where does that 7% come from? Who pays it and why?",
       "If you invest $13,500 per year starting now at 7%, what do you have at age 25? At 35? At 45? Calculate it — or estimate it using the Rule of 72.",
@@ -1210,18 +1336,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can model compound growth using Rule of 72. Understands the time value of money viscerally not just conceptually. Can articulate a personal philosophy of wealth that includes both accumulation and generosity.",
-    "portfolioCapture": "Her projected fund balances at 25, 35, 45 + her own answer to 'what is wealth for.'",
+    "portfolioCapture": "Fund projection to ages 25/35/45 + Everly's personal wealth philosophy.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Articulating abstract values in concrete prose — core expository writing.",
     "connectiveHooks": [
-      "Denovo contract",
-      "tithing practice",
+      "real estate fund",
+      "Denovo salary",
+      "tithe",
+      "Rule of 72",
       "compound interest"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-008": {
     "id": "BE-L6-008",
@@ -1236,10 +1367,10 @@ const MISSION_CATALOG = {
     "type": "Operations + leadership",
     "timeMinutes": 20,
     "standingPractice": true,
-    "runFrequency": "monthly",
+    "runFrequency": "after each L10",
     "tournamentRelevance": null,
     "brief": "Flux wants to debrief your L10 meeting from today. Not what you covered — how well you ran it. Because running a meeting well is a leadership skill most adults never develop. He wants to know if you're developing it.",
-    "offScreenPrep": "Run after L10 meeting, same day.",
+    "offScreenPrep": "Notes from today's L10 meeting.",
     "conversationFramework": [
       "Walk me through today's meeting. What happened in each section?",
       "Where did it go well? Be specific — not 'it was fine,' what specifically worked?",
@@ -1250,18 +1381,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can evaluate a meeting's effectiveness with specificity. Can identify what produces a good meeting vs a mediocre one. Beginning to take ownership of meeting leadership rather than just participating.",
-    "portfolioCapture": "Monthly meeting debrief — what worked, what stalled, her ownership plan.",
+    "portfolioCapture": "Weekly L10 debrief log: what worked, what stalled, who led, next-meeting commitment.",
     "crossDomains": [
       "communication",
       "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "Thursday L10 meeting",
-      "leadership development"
+      "L10 meeting",
+      "JellyBean Thursday",
+      "Isla partnership",
+      "leadership"
     ],
     "recommendedOrder": 8,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-009": {
     "id": "BE-L6-009",
@@ -1281,7 +1417,7 @@ const MISSION_CATALOG = {
     "brief": "Flux wants to talk about one of the most important concepts in business that most people never think about: pricing power. Why can some businesses charge more than others for essentially the same thing? And does JellyBean have any?",
     "offScreenPrep": null,
     "conversationFramework": [
-      "Your machine charges $[price] for a Monster Energy. What would happen if you raised the price by 25 cents? Would you sell fewer drinks?",
+      "Your machine charges [price] for a Monster Energy. What would happen if you raised the price by 25 cents? Would you sell fewer drinks?",
       "What determines whether customers accept a price increase or walk away?",
       "Apple charges $1,000+ for a phone. Generic phones do the same things for $200. Why do people pay the difference?",
       "Your machine is in one specific location. Are you the only option there? What does that mean for your pricing power?",
@@ -1290,17 +1426,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can define pricing power and identify the two primary sources of it. Can evaluate her own business's pricing power honestly. Can suggest specific actions to increase it.",
-    "portfolioCapture": "Her assessment of JellyBean's pricing power + three actions to increase it.",
+    "portfolioCapture": "JellyBean pricing power analysis: captive market element + differentiation element + one action to increase it.",
     "crossDomains": [
       "aiSystems"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "pricing strategy",
-      "competitive analysis"
+      "JellyBean pricing",
+      "differentiation",
+      "market structure"
     ],
     "recommendedOrder": 9,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L6-010": {
     "id": "BE-L6-010",
@@ -1328,19 +1468,24 @@ const MISSION_CATALOG = {
       "Flux's observation: the fact that you can answer these questions means something. You have real knowledge from real experience. That is worth more than any class about entrepreneurship."
     ],
     "topicBank": null,
-    "masterySignal": "Can articulate genuine experiential learning — specific, honest, personal. Knowledge has moved from information to wisdom because it came from real experience.",
+    "masterySignal": "Can articulate genuine experiential learning — specific, honest, personal. Integration milestone: knowledge moved from information to wisdom because it came from real experience.",
     "portfolioCapture": "'What I know about business that I couldn't have read in a book...' — Everly's own business wisdom document.",
     "crossDomains": [
-      "humanFluency",
-      "communication"
+      "communication",
+      "humanFluency"
     ],
-    "laWeavingHook": "Expository writing from lived experience — one of the highest forms of LA work.",
+    "laWeavingHook": "Writing from personal experience with authority — voice development. Core LA.",
     "connectiveHooks": [
-      "Isla sibling relationship",
+      "Isla",
+      "teaching",
+      "experiential wisdom",
       "JellyBean history"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-001": {
     "id": "HF-L4-001",
@@ -1368,16 +1513,16 @@ const MISSION_CATALOG = {
     "topicBank": null,
     "masterySignal": "Can identify at least one genuine relational strength with specificity — not 'I'm nice' but something observable and particular.",
     "portfolioCapture": "'Something I'm actually good at with people is...' — one honest paragraph.",
-    "crossDomains": [
-      "identity"
-    ],
-    "laWeavingHook": null,
+    "crossDomains": [],
+    "laWeavingHook": "Precise language for self-description — the opposite of vague praise.",
     "connectiveHooks": [
-      "Isla partnership",
-      "friendships"
+      "self-knowledge",
+      "strengths",
+      "quiet observation"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "HF-L4-002": {
     "id": "HF-L4-002",
@@ -1406,17 +1551,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can reflect on a close relationship with honesty and specificity — including what's genuinely hard about it. Can identify complementary strengths without diminishing either person.",
-    "portfolioCapture": "Her honest reflection on the partnership — complementary strengths + one hard thing.",
+    "portfolioCapture": "Two lists: what Isla brings + what Everly brings + one honest note about partnership difficulty (privacy-respected).",
     "crossDomains": [
       "building"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean",
-      "Isla relationship"
+      "JellyBean partnership",
+      "sibling dynamics",
+      "Isla"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-003": {
     "id": "HF-L4-003",
@@ -1444,17 +1593,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify a pattern in her own social behavior — specifically a trigger for silence — and describe it with honesty. Not solving it. Naming it.",
-    "portfolioCapture": "Her pattern description — what situations trigger silence and what happens to what goes unsaid.",
+    "portfolioCapture": "Everly's named pattern: 'I go quiet when [trigger]. The thing I wish I'd said was [X].' Kira never forces naming — only logs if Everly offers it.",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "challenge avoidance pattern",
-      "self-awareness"
+      "challenge avoidance",
+      "silence as signal",
+      "classroom and Speech dynamics"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-004": {
     "id": "HF-L4-004",
@@ -1483,17 +1636,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can describe her recovery process with specificity. Can identify what helps and what doesn't. Beginning to treat recovery as something she can understand and influence rather than just wait out.",
-    "portfolioCapture": "Her recovery map — what helps, what hinders, what's changing over time.",
+    "portfolioCapture": "Everly's recovery inventory: what helps, what slows it, estimated current recovery time. Revisit quarterly.",
     "crossDomains": [
-      "physical"
+      "physical",
+      "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "S2S Fear Paralysis integration",
-      "Coach Dillon composure work"
+      "tournament recovery",
+      "composure"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-005": {
     "id": "HF-L4-005",
@@ -1522,16 +1680,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can distinguish between relational courage and performance courage. Can identify a specific instance of relational bravery or avoidance. Can sit with the question 'is there something I should say?' without deflecting.",
-    "portfolioCapture": "Her reflection on which is harder — saying hard things or hearing them — and why.",
+    "portfolioCapture": "Private inventory note (agent-logged only): does Everly say yes to the last question? Tracked over time.",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "relational bravery"
+      "relational courage",
+      "hard conversations",
+      "honesty"
     ],
     "recommendedOrder": 5,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-006": {
     "id": "HF-L4-006",
@@ -1560,16 +1723,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate how she shows up differently in different relationships without anxiety about the inconsistency. Begins to understand that different relational contexts draw out different genuine parts of a person.",
-    "portfolioCapture": "Her self-portrait across five relational contexts.",
+    "portfolioCapture": "Everly's four-relationship self-portraits (one sentence each) + the rarely-shown version.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Character writing from the inside — what voice development looks like.",
     "connectiveHooks": [
-      "identity across contexts"
+      "self-identity",
+      "relational context",
+      "Speech club identity"
     ],
     "recommendedOrder": 6,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-007": {
     "id": "HF-L4-007",
@@ -1597,17 +1765,23 @@ const MISSION_CATALOG = {
       "Is there anyone in your life right now that you owe a real apology to? You don't have to say who."
     ],
     "topicBank": null,
-    "masterySignal": "Can articulate what makes an apology genuine versus performative. Can identify the specific component of apology that is hardest for her.",
-    "portfolioCapture": "Her three-part apology framework and which part she finds hardest.",
+    "masterySignal": "Can articulate what makes an apology genuine versus performative. Can identify the specific component of apology that is hardest for her. Can sit with the question of whether she owes one without deflecting.",
+    "portfolioCapture": "Everly's apology framework in her own words: the three parts + the one that's hardest for her.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "communication"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Precise language under emotional pressure — word choice matters most here.",
     "connectiveHooks": [
-      "repair in relationships"
+      "repair",
+      "conflict",
+      "honesty"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-008": {
     "id": "HF-L4-008",
@@ -1635,14 +1809,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can demonstrate genuine observational attunement — noticing specific behavioral or emotional signals in people she knows. Beginning to think about the relationship between noticing and responding.",
-    "portfolioCapture": "One specific observation she made recently about someone and what she did (or didn't do) with it.",
-    "crossDomains": [],
-    "laWeavingHook": null,
+    "portfolioCapture": "One example of spontaneous empathy this week: what she noticed + what she did (or didn't do) about it.",
+    "crossDomains": [
+      "communication"
+    ],
+    "laWeavingHook": "Observational detail — the skill of noticing that fuels character writing.",
     "connectiveHooks": [
-      "empathy practice"
+      "empathy",
+      "observation",
+      "attunement"
     ],
     "recommendedOrder": 8,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-009": {
     "id": "HF-L4-009",
@@ -1670,16 +1851,20 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can reflect on a relationship with depth and honesty — including what she contributes and what it requires. Can identify something true about herself through the lens of a close friendship.",
-    "portfolioCapture": "Her reflection on what a specific friendship tells her about who she is as a friend.",
+    "portfolioCapture": "The friendship's qualities + what Everly contributes to it + what it has taught her about herself.",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "friendships"
+      "friendship",
+      "self-knowledge through relationship"
     ],
     "recommendedOrder": 9,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L4-010": {
     "id": "HF-L4-010",
@@ -1707,16 +1892,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate what genuine understanding feels like and what produces it. Can identify the part of herself that is hardest to communicate to others — and name it without distress.",
-    "portfolioCapture": "Her reflection on the hardest-to-communicate part of herself.",
+    "portfolioCapture": "'I feel understood when...' + 'The part of me that's hardest to explain is...'",
     "crossDomains": [
+      "communication",
       "identity"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Precise self-expression — finding language for the hard-to-describe is writing at its best.",
     "connectiveHooks": [
-      "deep connection"
+      "connection",
+      "understanding",
+      "hidden self"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-001": {
     "id": "AI-L5-001",
@@ -1732,9 +1923,9 @@ const MISSION_CATALOG = {
     "timeMinutes": 20,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": null,
+    "tournamentRelevance": "Indirect — sharpens tournament answers",
     "brief": "Nova wants to run an experiment. Take your hardest apologetics question — the one you find most genuinely difficult — and ask Claude to answer it. Don't help it. Don't give context. Just ask the raw question. Then bring the answer back and Nova will help you take it apart.",
-    "offScreenPrep": "Ask Claude the question in a separate window. Copy the response.",
+    "offScreenPrep": "Ask Claude the raw question in a separate window. Copy the response.",
     "conversationFramework": [
       "Read me the answer Claude gave. Don't editorialize — just read it.",
       "Is the answer correct? How do you know?",
@@ -1746,18 +1937,20 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify the difference between a correct answer and a useful answer. Understands that prompt quality determines output quality. Can improve a prompt based on what was missing in the first output.",
-    "portfolioCapture": "Original prompt + response + improved prompt + improved response + one paragraph explaining what changed and why.",
+    "portfolioCapture": "Original prompt → original response → improved prompt → improved response → one paragraph on what changed and why.",
     "crossDomains": [
       "identity",
       "communication"
     ],
-    "laWeavingHook": "Prompt writing IS persuasive writing — constructing context and audience for a specific effect.",
+    "laWeavingHook": "Prompt engineering IS writing — audience awareness, specification, constraint. Nova names this.",
     "connectiveHooks": [
       "apologetics",
-      "prompting"
+      "prompting",
+      "audience specification"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "AI-L5-002": {
     "id": "AI-L5-002",
@@ -1775,7 +1968,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Nova wants to show Everly something important about AI systems: they can be completely confident and completely wrong at the same time. She wants to find an example together using Everly's own research area — Roman history.",
-    "offScreenPrep": "Ask Claude a specific question about a Roman historical detail Everly already knows well from Veritas. Something specific — a date, a name, a sequence of events.",
+    "offScreenPrep": "Ask Claude a specific Roman history detail Everly already knows from Veritas — a date, a name, a sequence. Copy response.",
     "conversationFramework": [
       "What did Claude say? Was it right?",
       "If you didn't already know the answer — how would you have known whether to trust it?",
@@ -1785,18 +1978,23 @@ const MISSION_CATALOG = {
       "Design a rule: when should you trust Claude's output directly and when should you verify? Make it specific enough to actually use."
     ],
     "topicBank": null,
-    "masterySignal": "Can articulate why AI hallucination happens at a conceptual level. Has produced a personal verification rule that is specific and usable.",
+    "masterySignal": "Can articulate why AI hallucination happens at a conceptual level. Has produced a personal verification rule that is specific and usable — not 'always check everything' but something more nuanced.",
     "portfolioCapture": "'My AI verification rule is...' — specific, personal, based on her own experiment.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "communication"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Source verification and skepticism — core research/reading skill.",
     "connectiveHooks": [
       "Veritas research",
-      "epistemology"
+      "hallucination",
+      "source reliability"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-003": {
     "id": "AI-L5-003",
@@ -1814,7 +2012,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Nova wants to take JellyBean apart — not the business, the system. Every business is a system with feedback loops. Nova thinks understanding those loops is more valuable than any individual business decision. She wants to map JellyBean together.",
-    "offScreenPrep": null,
+    "offScreenPrep": "Blank paper for mapping.",
     "conversationFramework": [
       "A system is a set of things that affect each other over time. What are the main parts of the JellyBean system?",
       "Here's the concept of a feedback loop: when output from one part of the system becomes input to another part. Can you find a feedback loop in JellyBean? Start anywhere.",
@@ -1823,18 +2021,23 @@ const MISSION_CATALOG = {
       "Nova's leverage point question: if you could change one thing in the system that would improve everything else downstream, what would it be? That's a leverage point. How do you find one?"
     ],
     "topicBank": null,
-    "masterySignal": "Can identify at least one reinforcing and one balancing feedback loop in a real system. Can identify a leverage point.",
-    "portfolioCapture": "Simple system map of JellyBean — hand-drawn or digital — showing the key feedback loops.",
+    "masterySignal": "Can identify at least one reinforcing and one balancing feedback loop in a real system. Can identify a leverage point — a place where a small change produces large downstream effects.",
+    "portfolioCapture": "Hand-drawn system map of JellyBean showing at least one reinforcing loop + one balancing loop + one leverage point.",
     "crossDomains": [
       "building"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean operations",
-      "systems thinking"
+      "JellyBean",
+      "Thinking in Systems",
+      "Donella Meadows",
+      "leverage"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-004": {
     "id": "AI-L5-004",
@@ -1863,18 +2066,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can use three specific prompting techniques (role assignment, depth-seeking, gap identification) and articulate why each produces a different kind of output.",
-    "portfolioCapture": "Her three prompts + responses + reflection on what each technique produced.",
+    "portfolioCapture": "Three prompts + three outputs + Everly's note on which technique produced the best learning and why.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "communication"
     ],
-    "laWeavingHook": "Prompt construction is precision writing. Nova names this as LA practice.",
+    "laWeavingHook": "Prompt engineering is precise technical writing. Name explicitly.",
     "connectiveHooks": [
-      "Veritas research"
+      "Veritas",
+      "prompting techniques",
+      "role assignment"
     ],
     "recommendedOrder": 4,
     "prerequisites": [
       "AI-L5-001"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-005": {
     "id": "AI-L5-005",
@@ -1902,19 +2109,23 @@ const MISSION_CATALOG = {
       "How do you get the genuine benefit from the system without just optimizing for the system's metrics?"
     ],
     "topicBank": null,
-    "masterySignal": "Can analyze an institution as a system — identifying incentives, feedback loops, and the gap between stated and actual purpose.",
-    "portfolioCapture": "Her NCFCA systems analysis + strategy for getting genuine value without being captured by metrics.",
+    "masterySignal": "Can analyze an institution as a system — identifying incentives, feedback loops, and the gap between stated and actual purpose. Can articulate a strategy for getting genuine value from a system while not being captured by its metrics.",
+    "portfolioCapture": "NCFCA system analysis: stated purpose vs actual purpose + Everly's strategy for extracting genuine benefit.",
     "crossDomains": [
-      "communication",
-      "identity"
+      "identity",
+      "communication"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "NCFCA",
-      "institutional analysis"
+      "Speech club",
+      "institutional incentives"
     ],
     "recommendedOrder": 5,
-    "prerequisites": []
+    "prerequisites": [
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-006": {
     "id": "AI-L5-006",
@@ -1943,20 +2154,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the distinction between AI as answer machine and AI as thinking partner. Has produced a personal usage rule that she can apply across her academic and business work.",
-    "portfolioCapture": "Her personal AI-use rule with specific cases.",
+    "portfolioCapture": "'My rule for when to ask AI for answers vs when to use it to challenge my thinking is...'",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "AI sovereignty",
-      "apologetics prep"
+      "apologetics",
+      "judgment",
+      "AI philosophy"
     ],
     "recommendedOrder": 6,
     "prerequisites": [
-      "AI-L5-001",
-      "AI-L5-002"
-    ]
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-007": {
     "id": "AI-L5-007",
@@ -1985,17 +2197,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the filter bubble concept and its implications for AI use specifically. Has produced a concrete habit for intellectual exposure beyond existing views.",
-    "portfolioCapture": "Her anti-filter-bubble habit and first-week implementation.",
+    "portfolioCapture": "Everly's filter-bubble-breaking habit + one week of evidence it's actually practiced.",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "technology sovereignty",
-      "intellectual exposure"
+      "filter bubble",
+      "search engines",
+      "intellectual range"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-008": {
     "id": "AI-L5-008",
@@ -2023,21 +2239,23 @@ const MISSION_CATALOG = {
       "How does knowing this change what you do tomorrow?"
     ],
     "topicBank": null,
-    "masterySignal": "Can apply leverage point thinking to her own development — not just to external systems. Produces a specific and honest answer about where she's underinvesting.",
-    "portfolioCapture": "Her identified leverage point + specific action plan for investing in it.",
+    "masterySignal": "Can apply leverage point thinking to her own development — not just to external systems. Produces a specific and honest answer about where she's underinvesting. Can explain the downstream effects of improving that one thing.",
+    "portfolioCapture": "Everly's identified leverage point + three downstream effects + one change she commits to making tomorrow.",
     "crossDomains": [
       "identity",
       "building"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
+      "leverage",
       "self-development",
-      "leverage"
+      "prioritization"
     ],
     "recommendedOrder": 8,
     "prerequisites": [
       "AI-L5-003"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-009": {
     "id": "AI-L5-009",
@@ -2053,9 +2271,9 @@ const MISSION_CATALOG = {
     "timeMinutes": 25,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — run in the two weeks before May 9th",
+    "tournamentRelevance": "Direct — run in 2 weeks before May 9",
     "brief": "Nova wants to use AI for something with real stakes: May 9th tournament prep. Not to write Everly's answers — to stress-test them. She wants Everly to use Claude as the most skeptical audience she'll face, sharper than any judge, and then evaluate whether Claude's challenges are actually good ones.",
-    "offScreenPrep": "Have two apologetics cards ready. Ask Claude to 'act as a skeptical non-Christian who has just heard this apologetics argument and wants to challenge it as hard as possible.' Get Claude's response.",
+    "offScreenPrep": "Two apologetics cards ready. Ask Claude to act as a skeptical non-Christian challenging the arguments as hard as possible. Copy response.",
     "conversationFramework": [
       "What challenges did Claude raise?",
       "Which ones are genuinely strong? Which ones are weak or off-target?",
@@ -2065,22 +2283,24 @@ const MISSION_CATALOG = {
       "Would you trust this process? Would you use it again for something else that matters?"
     ],
     "topicBank": null,
-    "masterySignal": "Can use AI as a stress-testing tool rather than an answer generator. Can evaluate AI-generated challenges for quality. Can articulate why this use of AI improves rather than replaces her thinking.",
-    "portfolioCapture": "Two cards + Claude's strongest challenges + her revisions.",
+    "masterySignal": "Can use AI as a stress-testing tool rather than an answer generator. Can evaluate AI-generated challenges for quality — distinguishing strong from weak objections. Can articulate why this use of AI improves rather than replaces her thinking.",
+    "portfolioCapture": "Two apologetics cards + AI-generated strongest challenges + Everly's revisions addressing each valid challenge.",
     "crossDomains": [
-      "communication",
-      "identity"
+      "identity",
+      "communication"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Revision through adversarial feedback — the highest form of editorial writing craft.",
     "connectiveHooks": [
-      "May 9 tournament",
-      "apologetics stress-test"
+      "May 9",
+      "apologetics",
+      "adversarial prompting"
     ],
     "recommendedOrder": 9,
     "prerequisites": [
       "AI-L5-001",
       "AI-L5-006"
-    ]
+    ],
+    "contentStatus": "authored"
   },
   "AI-L5-010": {
     "id": "AI-L5-010",
@@ -2098,7 +2318,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Nova wants to do something specific: ask Claude to explain compound interest, then verify the explanation by working through the math herself. She wants Everly to see the difference between understanding an explanation and actually understanding the thing.",
-    "offScreenPrep": "After the AI explains, do the compound interest calculation by hand for her actual real estate fund numbers.",
+    "offScreenPrep": "After AI explanation, do the compound interest calculation by hand for actual real estate fund numbers.",
     "conversationFramework": [
       "What did Claude say about compound interest? Explain it back to Nova in your own words.",
       "Now prove it. Take your real estate fund — $13,500 per year at 7%. What do you have at age 25? Work it out.",
@@ -2108,17 +2328,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can use AI explanation as a starting point, not an ending point. Understands the difference between receiving an explanation and demonstrating understanding through application.",
-    "portfolioCapture": "Her own compound interest calculation at 25, 35, 45 + reflection on where understanding broke down during verification.",
+    "portfolioCapture": "Claude's explanation + Everly's explanation in her own words + her hand-calculated compound interest table for real estate fund.",
     "crossDomains": [
       "building"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Explain-in-your-own-words as core comprehension skill. Explicitly LA.",
     "connectiveHooks": [
+      "compound interest",
       "real estate fund",
-      "understanding vs knowing"
+      "understanding vs recitation"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "AI-L5-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-001": {
     "id": "PM-L6-001",
@@ -2153,11 +2377,13 @@ const MISSION_CATALOG = {
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "Coach Dillon sessions",
-      "performance science"
+      "Coach Dillon",
+      "performance conditions",
+      "self-observation"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "PM-L6-002": {
     "id": "PM-L6-002",
@@ -2185,17 +2411,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the mental performance skills being built through athletic training and name a specific transfer to non-athletic life.",
-    "portfolioCapture": "'What Coach Dillon is actually teaching me is...' — Everly's own insight about the deeper lesson.",
+    "portfolioCapture": "'What Coach Dillon is actually teaching me is...' — Everly's own insight about the deeper lesson behind the sport.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "Coach Dillon",
-      "composure transfer"
+      "composure",
+      "skill transfer",
+      "tournament recovery"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-003": {
     "id": "PM-L6-003",
@@ -2222,17 +2454,23 @@ const MISSION_CATALOG = {
       "Six months from now — what do you think will be noticeably different?"
     ],
     "topicBank": null,
-    "masterySignal": "Can articulate specific observable changes from S2S work. Understands neurological integration at a conceptual level — not as therapy but as intentional development.",
-    "portfolioCapture": "Monthly S2S progress entry — what she notices, what's changing.",
+    "masterySignal": "Can articulate specific observable changes from S2S work. Understands neurological integration at a conceptual level — not as therapy but as intentional development. Takes ownership of the process.",
+    "portfolioCapture": "Monthly self-reported progress log. Feeds parent dashboard alongside S2S assessment data.",
     "crossDomains": [
+      "humanFluency",
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "S2S program"
+      "S2S",
+      "reflex integration",
+      "monthly check"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-004": {
     "id": "PM-L6-004",
@@ -2261,15 +2499,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can explain the physiological connection between sleep and skill consolidation in her own words. Has identified a specific and honest barrier to better sleep. Has committed to one concrete change.",
-    "portfolioCapture": "Her one-week sleep experiment — what she changed, what she noticed.",
-    "crossDomains": [],
+    "portfolioCapture": "One sleep commitment + one week of evidence it was kept.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "Why We Sleep reading",
-      "Coach Dillon performance"
+      "Why We Sleep",
+      "memory consolidation",
+      "recovery"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-005": {
     "id": "PM-L6-005",
@@ -2285,7 +2529,7 @@ const MISSION_CATALOG = {
     "timeMinutes": 15,
     "standingPractice": false,
     "runFrequency": null,
-    "tournamentRelevance": "Direct — composure protocol for May 9",
+    "tournamentRelevance": "Direct — prepares composure protocol for tournament",
     "brief": "Zion wants to talk about something you know from experience but have never had explained: what actually happens in your body when the stakes are high. Tournament day. A hard match. Walking up to give a speech. He wants you to understand the biology so you can work with it instead of against it.",
     "offScreenPrep": null,
     "conversationFramework": [
@@ -2297,18 +2541,24 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can explain the stress response physiologically in her own words. Understands the anxiety/excitement interpretation distinction. Can articulate her personal composure practice in the first five seconds of a pressure moment.",
-    "portfolioCapture": "Her first-five-seconds pressure protocol.",
+    "portfolioCapture": "Everly's personal first-five-seconds composure protocol, in her own words.",
     "crossDomains": [
+      "identity",
       "humanFluency",
-      "identity"
+      "communication"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "May 9 tournament",
-      "Coach Dillon composure"
+      "cortisol",
+      "composure",
+      "anxiety reinterpretation",
+      "May 9 tournament"
     ],
     "recommendedOrder": 5,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-006": {
     "id": "PM-L6-006",
@@ -2336,14 +2586,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the specific physical and mental demands of each sport. Can identify genuine transfer between sports. Understands multi-sport training as intentional development not schedule conflict.",
-    "portfolioCapture": "Her analysis of what each sport builds + one specific cross-sport transfer.",
-    "crossDomains": [],
+    "portfolioCapture": "Tennis/golf comparison + one specific cross-sport skill transfer Everly has noticed.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "multi-sport training"
+      "multi-sport training",
+      "Coach Dillon",
+      "athletic personality"
     ],
     "recommendedOrder": 6,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-007": {
     "id": "PM-L6-007",
@@ -2371,15 +2628,19 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate the specific physical capacities ballet develops — proprioception, body awareness, simultaneous control — and connect them to her athletic performance in other domains.",
-    "portfolioCapture": "Her connection between ballet capacities and athletic performance.",
+    "portfolioCapture": "Everly's ballet-to-sport transfer list: specific capacities developed and where they show up elsewhere.",
     "crossDomains": [],
     "laWeavingHook": null,
     "connectiveHooks": [
       "ballet",
-      "proprioception"
+      "proprioception",
+      "cross-training"
     ],
     "recommendedOrder": 7,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-008": {
     "id": "PM-L6-008",
@@ -2406,18 +2667,23 @@ const MISSION_CATALOG = {
       "Zion's question: is there a version of the martial arts mindset that would help you in your speech work? In your apologetics prep? In a conversation that's making you uncomfortable?"
     ],
     "topicBank": null,
-    "masterySignal": "Can articulate the character and mental formation aspects of martial arts training. Can connect the martial arts mindset to a non-physical application in her life.",
-    "portfolioCapture": "Her reflection on a non-physical application of the martial arts mindset.",
+    "masterySignal": "Can articulate the character and mental formation aspects of martial arts training — not just the physical. Can connect the martial arts mindset to a non-physical application in her life.",
+    "portfolioCapture": "'What martial arts has taught me about myself that I couldn't have learned another way is...'",
     "crossDomains": [
       "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "martial arts",
-      "discipline"
+      "mushin",
+      "discipline",
+      "showing up"
     ],
     "recommendedOrder": 8,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-009": {
     "id": "PM-L6-009",
@@ -2446,15 +2712,19 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can explain the blood sugar/energy/focus connection in her own words. Has committed to one specific noticing experiment with food and performance. Frames nutrition as performance science not restriction.",
-    "portfolioCapture": "Her food-as-fuel experiment results.",
+    "portfolioCapture": "One noticing experiment log: what she ate, when, and how energy/focus tracked during the session.",
     "crossDomains": [],
     "laWeavingHook": null,
     "connectiveHooks": [
       "performance nutrition",
-      "Coach Dillon sessions"
+      "blood sugar",
+      "steady energy"
     ],
     "recommendedOrder": 9,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "PM-L6-010": {
     "id": "PM-L6-010",
@@ -2477,23 +2747,27 @@ const MISSION_CATALOG = {
       "What worked today? One specific thing.",
       "What do you want to do differently next time? One specific thing.",
       "What did you learn about yourself today? Could be anything — athletic, mental, anything.",
-      "[After the three questions] Notice that question three is the one that matters most. The athletic improvement is the surface. The self-knowledge is the point.",
+      "Notice that question three is the one that matters most. The athletic improvement is the surface. The self-knowledge is the point.",
       "Zion is going to suggest you use this three-question framework with yourself — not just in Forge. After a tournament. After a hard conversation. After anything that mattered. It works everywhere."
     ],
     "topicBank": null,
-    "masterySignal": "Can self-debrief with specificity — not 'it went fine' but concrete work/change/self-knowledge across each category. Over time the self-knowledge answers deepen.",
-    "portfolioCapture": "Longitudinal debrief log — one entry per training session. Accumulates into one of the portfolio's richest documents.",
+    "masterySignal": "Uses the three-question debrief habitually. Question 3 answers become more specific and honest over time.",
+    "portfolioCapture": "Three-answer debrief log after each significant session. Becomes longitudinal athletic + personal reflection record.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "humanFluency"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Reflective writing as standing practice. Short, consistent, truthful.",
     "connectiveHooks": [
-      "Coach Dillon sessions",
-      "tournaments",
-      "all physical training"
+      "standing protocol",
+      "three questions",
+      "self-knowledge"
     ],
     "recommendedOrder": 10,
-    "prerequisites": []
+    "prerequisites": [
+      "PM-L6-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L3-001": {
     "id": "IJ-L3-001",
@@ -2521,18 +2795,20 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can give a position and a reason. Can adjust position when new information is added without feeling defeated. Understands that hard questions can have more than one defensible answer.",
-    "portfolioCapture": "Her answer + her reasoning + what changed when new info was added.",
+    "portfolioCapture": "Isla's position + her reason + whether new information changed it.",
     "crossDomains": [
       "building",
       "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean partnership with Everly",
-      "fairness"
+      "JellyBean partnership",
+      "fairness",
+      "sibling business"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "IJ-L3-002": {
     "id": "IJ-L3-002",
@@ -2550,28 +2826,39 @@ const MISSION_CATALOG = {
     "runFrequency": "every 2 weeks",
     "tournamentRelevance": null,
     "brief": "Ren has a challenge. She's going to show Isla a real advertisement and Isla has to find what's sneaky about it. Not a lie exactly — something more clever than a lie. Ready?",
-    "offScreenPrep": "Bring one real ad Isla saw this week (or Ren presents one).",
+    "offScreenPrep": "For standing runs: Isla brings one real ad/claim she found herself that week.",
     "conversationFramework": [
-      "[Ren presents an age-appropriate advertisement — cereal box claim, toy commercial, food packaging claim. Examples: 'Part of a complete breakfast!' '9 out of 10 dentists recommend...' 'Up to 50% off!']",
+      "[Present an age-appropriate ad claim. Examples: 'Part of a complete breakfast!' / '9 out of 10 dentists recommend...' / 'Up to 50% off!']",
       "Read it. What does it actually say?",
       "Now: what does it want you to believe?",
       "Are those the same thing? Where's the gap?",
       "Ren calls this a sneaky argument — it's not a lie but it's designed to make you think something that might not be true. What would you call it?",
       "Find one of these in real life this week. It won't be hard — they're everywhere once you know what to look for."
     ],
-    "topicBank": null,
-    "masterySignal": "Can distinguish between what a statement says and what it implies. Understands that communication can be technically true and still misleading. Beginning to notice this pattern independently.",
-    "portfolioCapture": "Her growing ad-trick library. One entry every 2 weeks.",
-    "crossDomains": [
-      "communication"
+    "topicBank": [
+      "Part of a complete breakfast!",
+      "9 out of 10 dentists recommend...",
+      "Up to 50% off!",
+      "Nothing works better than...",
+      "Clinically proven..."
     ],
-    "laWeavingHook": "Close reading for implication vs. statement — foundational LA.",
+    "masterySignal": "Can distinguish between what a statement says and what it implies. Understands that communication can be technically true and still misleading. Beginning to notice this pattern independently.",
+    "portfolioCapture": "Bi-weekly log of Isla-found sneaky claims + her analysis.",
+    "crossDomains": [
+      "communication",
+      "aiSystems"
+    ],
+    "laWeavingHook": "Critical reading of real-world text — media literacy as LA.",
     "connectiveHooks": [
-      "advertising literacy",
-      "critical reading"
+      "media literacy",
+      "Fallacy Detective",
+      "weekly spot"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L3-003": {
     "id": "IJ-L3-003",
@@ -2599,17 +2886,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can form a theory and defend it with a reason. Can update or refine the theory when new information is provided. Can apply historical thinking to a current question.",
-    "portfolioCapture": "Her theory of Rome's fall + her reason + whether a current country could be at risk.",
+    "portfolioCapture": "Isla's Rome theory + her reasoning + whether new info changed it.",
     "crossDomains": [
       "communication"
     ],
-    "laWeavingHook": null,
+    "laWeavingHook": "Claim + reasoning as argument structure. Name it.",
     "connectiveHooks": [
-      "Thrive Story of the World",
-      "Everly's shared history content"
+      "Story of the World",
+      "Thrive Co-op",
+      "sister's shared history work"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "IJ-L3-004": {
     "id": "IJ-L3-004",
@@ -2637,17 +2928,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can articulate a genuine personal belief with a personal reason. Can identify at least one open question without anxiety. Beginning to distinguish between inherited belief and examined belief.",
-    "portfolioCapture": "One belief she owns + her personal reason + one open question she's sitting with.",
+    "portfolioCapture": "Isla's belief + her personal reason + her open question.",
     "crossDomains": [
       "humanFluency"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "faith formation",
-      "inherited vs examined belief"
+      "church",
+      "family values"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "IJ-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L3-001": {
     "id": "CP-L3-001",
@@ -2667,7 +2962,7 @@ const MISSION_CATALOG = {
     "brief": "Atlas has a topic. One minute. No prep. He just wants to hear Isla think out loud. Ready?",
     "offScreenPrep": null,
     "conversationFramework": [
-      "[Atlas serves one topic from topicBank]",
+      "[Serve one topic from topicBank, calibrated to Isla's interests.]",
       "[After the minute] What was your best sentence? Not your favorite — the one that did the most work.",
       "Did you start strong? What was your first sentence?",
       "One thing to do differently next time. Just one.",
@@ -2683,17 +2978,20 @@ const MISSION_CATALOG = {
       "Why it matters that you keep your promises"
     ],
     "masterySignal": "Delivers a 1-minute impromptu with a clear beginning and some organizational structure. Can identify one specific thing to improve without deflecting.",
-    "portfolioCapture": "Topic + her best sentence + one change. Longitudinal impromptu log.",
+    "portfolioCapture": "Each run: topic + best sentence + one thing to change. Voice recorded.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "building"
     ],
-    "laWeavingHook": "Sentence-level thinking under time pressure — foundational LA.",
+    "laWeavingHook": "Oral composition under time pressure — foundational language arts.",
     "connectiveHooks": [
       "JellyBean",
-      "horseback"
+      "horses",
+      "speech foundation"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "CP-L3-002": {
     "id": "CP-L3-002",
@@ -2705,13 +3003,13 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "type": "Writing — concision (S2S-calibrated: oral version available)",
+    "type": "Writing — concision",
     "timeMinutes": 15,
     "standingPractice": false,
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Atlas has a challenge Isla might find annoying: take something complicated and explain it in as few words as possible. He thinks the hardest thing in communication isn't saying enough — it's not saying too much.",
-    "offScreenPrep": "Something Isla knows well — her JellyBean business, a horse she knows, a sport she plays.",
+    "offScreenPrep": "S2S calibration: Oral version — Isla speaks first, writes 1-2 sentences after.",
     "conversationFramework": [
       "Explain JellyBean Vending to me. I know nothing about it. Go.",
       "[After explanation] That took [X] seconds. Now do it in half the time. Same information.",
@@ -2721,16 +3019,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can progressively distill a complex explanation. Understands that cutting is a form of communication craft not a loss.",
-    "portfolioCapture": "Voice recording: her long version, half version, one-sentence version.",
+    "portfolioCapture": "Long explanation → medium → one sentence, all preserved.",
     "crossDomains": [
       "building"
     ],
-    "laWeavingHook": "Revision as writing craft — hidden LA.",
+    "laWeavingHook": "Revision by subtraction — core writing craft. Explicit LA.",
     "connectiveHooks": [
-      "JellyBean explanation"
+      "JellyBean",
+      "concision",
+      "revision"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L3-003": {
     "id": "CP-L3-003",
@@ -2748,7 +3051,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Ren wants to hear about the book Isla just finished — but not a summary. She wants to hear the most interesting thing in the book. The thing that surprised her, confused her, or made her feel something.",
-    "offScreenPrep": "Recent book finished.",
+    "offScreenPrep": "Most recent finished book on hand.",
     "conversationFramework": [
       "Don't tell me what happened. Tell me the thing that stuck.",
       "Why did that stick? What was it about it?",
@@ -2757,16 +3060,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify and articulate what genuinely engaged her in a book — not plot summary but personal response. Can make a 30-second pitch that reflects genuine enthusiasm.",
-    "portfolioCapture": "Voice-first book response + 30-second pitch. Replaces written book report until fine motor improves.",
+    "portfolioCapture": "Voice recording of 30-second pitch. Replaces written book report until S2S fine motor improves.",
     "crossDomains": [
       "identity"
     ],
-    "laWeavingHook": "Reading response at an interpretive level — the LA Isla needs right now, voice-first.",
+    "laWeavingHook": "Reading response as literary analysis — the highest form of book discussion.",
     "connectiveHooks": [
-      "current read"
+      "current book",
+      "voice-first portfolio",
+      "S2S calibration"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "CP-L3-004": {
     "id": "CP-L3-004",
@@ -2794,16 +3102,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can make an argument that goes beyond assertion — gives reasons, responds to counter-arguments, adjusts approach when initial attempt doesn't land.",
-    "portfolioCapture": "What she argued + her strongest response to pushback + her insight about asking vs persuading.",
+    "portfolioCapture": "Her claim + her best reason + how her argument adjusted when challenged.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "humanFluency"
     ],
-    "laWeavingHook": "Argument and response structure at age 8 — foundational LA.",
+    "laWeavingHook": "Claim → reason → counter-response. The persuasive essay in miniature.",
     "connectiveHooks": [
-      "real-life persuasion"
+      "real persuasion",
+      "pushback",
+      "argument"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "CP-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L4-001": {
     "id": "BE-L4-001",
@@ -2818,10 +3132,10 @@ const MISSION_CATALOG = {
     "type": "Financial literacy — P&L analysis",
     "timeMinutes": 15,
     "standingPractice": true,
-    "runFrequency": "monthly after business block",
+    "runFrequency": "monthly after books close",
     "tournamentRelevance": null,
     "brief": "Flux has three questions about last month's JellyBean numbers. Not easy questions. He wants to see if Isla actually understands what she's looking at or if she just knows what the numbers say.",
-    "offScreenPrep": "QuickBooks P&L open.",
+    "offScreenPrep": "QuickBooks P&L open for last month.",
     "conversationFramework": [
       "What was your revenue last month? Give me the number.",
       "What were your expenses? List them.",
@@ -2832,17 +3146,19 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can read and interpret a real P&L. Can reason about causes of profit changes — not just report the number but think about what drives it.",
-    "portfolioCapture": "Monthly P&L commentary — number, cause theory, preference.",
+    "portfolioCapture": "Monthly: top-line numbers + three hypotheses for variance + which Isla would prefer and why.",
     "crossDomains": [
       "aiSystems"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean operations",
-      "Thursday meeting"
+      "JellyBean",
+      "QuickBooks",
+      "Thursday L10"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "BE-L4-002": {
     "id": "BE-L4-002",
@@ -2871,16 +3187,19 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can calculate monthly interest accrual on a real loan. Can evaluate a past financial decision with honest hindsight. Beginning to think about the full cost of debt not just the monthly payment.",
-    "portfolioCapture": "Her monthly interest calculation + her honest reflection on whether the loan was worth taking.",
-    "crossDomains": [
-      "identity"
-    ],
+    "portfolioCapture": "Her calculated monthly interest + total-life interest estimate + honest hindsight assessment.",
+    "crossDomains": [],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean loan"
+      "JellyBean loan",
+      "APR",
+      "debt cost"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L4-003": {
     "id": "BE-L4-003",
@@ -2898,7 +3217,7 @@ const MISSION_CATALOG = {
     "runFrequency": null,
     "tournamentRelevance": null,
     "brief": "Flux wants to show Isla something that will make her feel like she has a superpower. It's called the Rule of 72 and it takes 30 seconds to learn and a lifetime to use.",
-    "offScreenPrep": null,
+    "offScreenPrep": "Real estate fund contribution amount + interest rate.",
     "conversationFramework": [
       "Here's the rule: divide 72 by your interest rate and you get roughly how many years it takes to double your money. If you earn 7% per year — how long to double?",
       "Your real estate fund earns approximately 7%. You invest $13,500 per year. How long until the first year's investment doubles?",
@@ -2909,17 +3228,23 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can use the Rule of 72 to calculate doubling time. Can apply it to her real estate fund with real numbers. Understands emotionally — not just intellectually — why starting early is disproportionately powerful.",
-    "portfolioCapture": "Her compound growth projection from age 8 to 50 using Rule of 72.",
+    "portfolioCapture": "Hand-drawn doubling chart from age 8 to 50 + Isla's reaction to the final number.",
     "crossDomains": [
-      "aiSystems"
+      "aiSystems",
+      "identity"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "real estate fund",
-      "Denovo contract"
+      "Rule of 72",
+      "compound interest",
+      "Denovo",
+      "real estate fund"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "BE-L4-004": {
     "id": "BE-L4-004",
@@ -2947,16 +3272,22 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify a genuine operational improvement with a reason and an honest cost assessment. Beginning to think strategically not just operationally.",
-    "portfolioCapture": "Her proposed change + reasoning + honest cost + what's stopping her.",
+    "portfolioCapture": "Isla's proposed change + her reason + her honest cost estimate. Optional: bring to next Thursday L10.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "communication"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean operations"
+      "JellyBean operations",
+      "strategic thinking",
+      "Thursday meeting"
     ],
     "recommendedOrder": 4,
-    "prerequisites": []
+    "prerequisites": [
+      "BE-L4-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L3-001": {
     "id": "HF-L3-001",
@@ -2984,7 +3315,7 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can locate frustration physically in her body. Can name what the physical sensation is. Beginning to understand the body signal as information rather than just discomfort.",
-    "portfolioCapture": "Voice recording of where frustration lives in her body. Referenced in future sessions.",
+    "portfolioCapture": "Voice recording of where frustration lives in her body. Referenced back in future sessions.",
     "crossDomains": [
       "physical"
     ],
@@ -2995,7 +3326,8 @@ const MISSION_CATALOG = {
       "JellyBean stress"
     ],
     "recommendedOrder": 1,
-    "prerequisites": []
+    "prerequisites": [],
+    "contentStatus": "authored"
   },
   "HF-L3-002": {
     "id": "HF-L3-002",
@@ -3023,17 +3355,21 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can reflect on a close relationship with both appreciation and honest assessment. Can identify specific complementary strengths. Can name one concrete way to be better in that relationship.",
-    "portfolioCapture": "Her honest reflection on partnership + one concrete thing she'll do differently.",
+    "portfolioCapture": "Two-list: what Everly brings + what Isla brings + one specific partnership improvement.",
     "crossDomains": [
       "building"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "JellyBean partnership",
-      "Everly relationship"
+      "Everly",
+      "sibling dynamics"
     ],
     "recommendedOrder": 2,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "HF-L3-003": {
     "id": "HF-L3-003",
@@ -3061,21 +3397,26 @@ const MISSION_CATALOG = {
     ],
     "topicBank": null,
     "masterySignal": "Can identify and narrate a specific instance of resilience. Understands that the charge-toward instinct is a genuine strength — and can begin thinking about when it serves her and when to modulate it.",
-    "portfolioCapture": "Her narrated moment of staying + her reflection on when charging in is right and when it isn't.",
+    "portfolioCapture": "Isla's 'stayed in the hard thing' story. Voice recorded.",
     "crossDomains": [
-      "identity"
+      "identity",
+      "physical"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
       "resilience",
-      "charge-toward instinct"
+      "charge-toward instinct",
+      "character strength"
     ],
     "recommendedOrder": 3,
-    "prerequisites": []
+    "prerequisites": [
+      "HF-L3-001"
+    ],
+    "contentStatus": "authored"
   },
   "AI-L3-001": {
     "id": "AI-L3-001",
-    "title": "Ask Claude Something for JellyBean",
+    "title": "Ask Claude — And Then Check",
     "domain": "aiSystems",
     "level": 3,
     "stage": 2,
@@ -3083,36 +3424,4078 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "type": "Applied AI — business context",
+    "type": "AI literacy — verification habit",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "every 2 weeks",
+    "tournamentRelevance": null,
+    "brief": "Nova wants to teach Isla something really important about AI: it sounds smart, but it's sometimes wrong. Today they're going to test it and see.",
+    "offScreenPrep": "Pick a topic Isla already knows something about — horses, a favorite book, Rome.",
+    "conversationFramework": [
+      "Ask Claude a question about [topic]. Something you already know the answer to.",
+      "Read the answer. Is it right?",
+      "How would you know if it were wrong?",
+      "Here's what Nova wants you to remember: AI sounds very confident even when it's making things up. That's called hallucination. How do you think you should use Claude when you don't already know the answer?",
+      "Make a rule for yourself. When should you trust what Claude says directly and when should you check?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate that AI confidence is not the same as correctness. Has a personal verification rule that is practical and specific.",
+    "portfolioCapture": "Isla's personal AI trust-rule in her own words.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "AI hallucination",
+      "source checking",
+      "research skills"
+    ],
+    "recommendedOrder": 1,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "AI-L3-002": {
+    "id": "AI-L3-002",
+    "title": "The System Inside JellyBean",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "type": "Systems thinking — entry level",
     "timeMinutes": 15,
     "standingPractice": false,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": "Nova has a challenge: use Claude to help with something real in JellyBean. Not asking for the answer — asking for help thinking. There's a difference. Nova wants to see if Isla can find it.",
-    "offScreenPrep": null,
+    "brief": "Nova wants to show Isla a way of looking at JellyBean that most business owners don't know: as a system. A system is a bunch of things that affect each other. Nova wants to help Isla see the connections.",
+    "offScreenPrep": "Paper and pencil.",
     "conversationFramework": [
-      "What's a real question you have about JellyBean right now? Something you actually want to know.",
-      "Ask Claude. Read me the answer.",
-      "Is it useful? Why or why not?",
-      "What did Claude assume that might not be true for your specific business?",
-      "Now ask it better — give Claude more context about what JellyBean is and what you actually need. What changed?"
+      "What are the main parts of JellyBean? List them.",
+      "Here's the interesting question: what happens if one part changes? If you restock more often — what else changes?",
+      "If you raise prices — what else changes? List everything.",
+      "This is called a feedback loop — when one change causes another change that comes back to affect the first thing. Can you find a feedback loop in JellyBean?",
+      "Nova's question: where in JellyBean could you make ONE small change that would improve a lot of things? That's called a leverage point — and finding them is a superpower."
     ],
     "topicBank": null,
-    "masterySignal": "Can identify the gap between a generic AI answer and a useful business-specific answer. Can improve a prompt based on what was missing.",
-    "portfolioCapture": "Her generic prompt + better prompt + reflection on what changed.",
+    "masterySignal": "Can identify connected components in a system. Can trace cause and effect through at least two steps. Beginning to think in feedback loops not linear sequences.",
+    "portfolioCapture": "Isla's hand-drawn JellyBean system map with at least one identified feedback loop.",
     "crossDomains": [
       "building"
     ],
     "laWeavingHook": null,
     "connectiveHooks": [
-      "JellyBean questions"
+      "JellyBean",
+      "systems thinking",
+      "feedback loops"
+    ],
+    "recommendedOrder": 2,
+    "prerequisites": [
+      "AI-L3-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "PM-L4-001": {
+    "id": "PM-L4-001",
+    "title": "What Your Body Does When You're Excited",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "type": "Body awareness — positive activation",
+    "timeMinutes": 12,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Zion wants to talk about the opposite of what most people talk about — not what your body does when you're scared, but what it does when you're excited. Because Isla charges toward things, and he thinks understanding what excitement feels like in her body will be useful.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Think about something you were really excited about recently — genuinely excited. What happened in your body?",
+      "Where did you feel it? Was it the same place you feel frustration?",
+      "Here's the interesting thing: excited and scared feel almost the same in your body. Heart racing, energy up, feeling like you want to move. The difference is mostly what you're telling yourself about it. Have you ever felt that switch — when something scary turned into exciting or vice versa?",
+      "When you're about to do something hard — a martial arts belt test, a horseback riding competition — that feeling you have. Is it scared or excited? How do you know?",
+      "What if you could decide which one it was? What would you call it next time?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can locate excitement physically. Understands the anxiety/excitement interpretation distinction. Beginning to treat physical activation as a resource not a problem.",
+    "portfolioCapture": "Isla's 'excited feels like...' description. Revisit when she next faces a challenge.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "S2S Fear Paralysis",
+      "horseback riding",
+      "competition",
+      "martial arts"
     ],
     "recommendedOrder": 1,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "PM-L4-002": {
+    "id": "PM-L4-002",
+    "title": "Animal Whispering — Why You're Good at It",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "type": "Body awareness — interspecies communication",
+    "timeMinutes": 12,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Zion has noticed something about Isla that most kids don't know how to do: she's genuinely good with horses. He wants to know why she thinks that is — because understanding it will help her in other places too.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "When you're with a horse — what does your body do that's different from when you're with people?",
+      "How do you know what a horse is feeling? It can't tell you in words. So how?",
+      "Here's what Zion thinks you're doing without realizing: you're reading a lot of tiny physical signals and matching your body to theirs. That's called attunement — and it's a real skill.",
+      "Where else in your life do you use that skill? With your little brother? With your friends?",
+      "Zion's question: what makes you genuinely good with horses — and can you use that same thing somewhere else?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate physical attunement as a real skill. Can identify other contexts where that skill applies. Understands body-reading as a transferable capacity.",
+    "portfolioCapture": "'What I do with horses that I can also do with people is...' — Isla's insight in her own words.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "horseback riding",
+      "attunement",
+      "Weston"
+    ],
+    "recommendedOrder": 2,
+    "prerequisites": [
+      "PM-L4-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-001": {
+    "id": "W-001",
+    "title": "The Favorite Animal",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Identity — self-expression through preference",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know — if Weston could pick ONE animal to be his best friend for a whole day, which one would he pick? And then Ozzy wants Weston to tell him everything about what that day would be like.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "[Warm, bouncy opening] Hi buddy! Ozzy has a big question for you today. If you could pick ONE animal — any animal in the whole world — to be your best friend for a whole day, which one would it be?",
+      "[Follow his answer with curiosity] Ooh — why that one?",
+      "What would you two do first when the day started?",
+      "Where would you go together?",
+      "What would you eat? Would your animal friend eat the same thing as you?",
+      "[If he's engaged] Would your animal friend be nice to everyone or just to you?",
+      "[Wrap warmly] That sounds like the best day, buddy. Thank you for telling Ozzy. He's going to remember all of it."
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston expresses a preference, gives a reason, builds a short narrative around it. Engagement stays warm and open throughout.",
+    "portfolioCapture": "Voice recording only. Parent sees: animal picked, reason given, one detail from the imagined day.",
+    "crossDomains": [
+      "communication",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Narrative construction through conversation — the seed of storytelling.",
+    "connectiveHooks": [
+      "imagination",
+      "animals",
+      "preference"
+    ],
+    "recommendedOrder": 1,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-002": {
+    "id": "W-002",
+    "title": "Three Things You Love",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Identity — articulating what matters",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "monthly",
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know three things Weston loves. Not things he likes — things he loves. The ones that make him happy just thinking about them.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy wants to know something important today. What are three things you LOVE? Not just like — love?",
+      "[Log each one] Ooh, tell Ozzy about [thing #1]. What do you love about it?",
+      "What about [thing #2]?",
+      "And [thing #3]?",
+      "If you had to pick just ONE of those three — which one would you pick? It's really hard, isn't it?",
+      "[Close warmly] Those are three amazing things to love, Weston. Ozzy loves them too now because you told him about them."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can identify three things with specificity and give at least one reason for each. Over time (monthly runs), Ozzy can hear preferences evolving.",
+    "portfolioCapture": "Monthly log of his three loves. Becomes a longitudinal portrait of his developing identity.",
+    "crossDomains": [
+      "communication"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "self-expression",
+      "preference",
+      "monthly check"
+    ],
+    "recommendedOrder": 2,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-003": {
+    "id": "W-003",
+    "title": "The Brave Moment",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Character formation — noticing bravery",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a question that might take some thinking. Can Weston remember a time he was brave? Not a big brave thing — any brave thing. Even a little one counts.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy wants to hear about a brave thing. Do you know what brave means? Yeah — doing something even when it feels a little scary or a little hard.",
+      "Can you think of a time you were brave? It can be small — Ozzy loves small brave moments.",
+      "[Follow his answer gently] What happened? Tell Ozzy the whole thing.",
+      "What did your body feel like before you did the brave thing?",
+      "What did it feel like after?",
+      "Ozzy wants to tell you something — being brave isn't about not feeling scared. It's about doing the thing even when you do. You did that. That's big."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can identify and narrate a specific brave moment. Beginning to understand bravery as acting through discomfort, not the absence of it.",
+    "portfolioCapture": "His brave moment in his own words. Powerful longitudinal record of emerging courage language.",
+    "crossDomains": [
+      "humanFluency",
+      "physical"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "courage",
+      "bravery",
+      "sensory regulation moments"
+    ],
+    "recommendedOrder": 3,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-004": {
+    "id": "W-004",
+    "title": "The Story About the Time When",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Oral narrative — personal storytelling",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "monthly",
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves Weston's stories. He wants to hear one. Any story. From real life — something that actually happened.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy is ready for a story today. Do you have a story to tell him? Something that really happened to you?",
+      "[Let Weston lead] Ooh — start at the beginning. What happened first?",
+      "[Gentle narrative support] And then what?",
+      "What was the best part?",
+      "Was there a part that was surprising or funny?",
+      "How did it end?",
+      "[Warm close] That was such a good story, Weston. Ozzy is going to think about it all week."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can construct a narrative with a beginning, middle, and end. Can identify emotional or memorable moments in his own story. Vocabulary and narrative sophistication grow over time.",
+    "portfolioCapture": "Voice recording of each story. Monthly — creates a longitudinal language development record.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Oral narrative is the foundation of all writing. Name this developmental arc to Nicole.",
+    "connectiveHooks": [
+      "storytelling",
+      "narrative",
+      "language development"
+    ],
+    "recommendedOrder": 4,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-005": {
+    "id": "W-005",
+    "title": "What Is It Called?",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Vocabulary — curiosity driven",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has some cool words. He wants to show Weston a new word today and see if Weston can figure out what it means just by hearing it used.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a fun game. He's going to use a word and you tell him what you think it means, okay?",
+      "[Pick a word from topicBank based on interests. Use it in a rich context.] 'The dog was ENORMOUS. It was so big that when it stood up, its head almost touched the ceiling.' What does ENORMOUS mean?",
+      "[Celebrate his guess even if partial] Yeah! Enormous means really, really big.",
+      "Can you think of something enormous? Something in real life?",
+      "Can you use the word ENORMOUS in your own sentence?",
+      "[Repeat with 1-2 more words if engaged]"
+    ],
+    "topicBank": [
+      "enormous",
+      "tremendous",
+      "peculiar",
+      "magnificent",
+      "mysterious",
+      "gigantic",
+      "ancient",
+      "delicate",
+      "ridiculous",
+      "marvelous"
+    ],
+    "masterySignal": "Can infer word meaning from context. Can use new words in original sentences. Curiosity about language increases over time.",
+    "portfolioCapture": "Monthly running vocabulary list of words Weston has learned through Forge.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Vocabulary acquisition through rich language use — the highest-yield early literacy practice.",
+    "connectiveHooks": [
+      "vocabulary",
+      "language",
+      "word curiosity"
+    ],
+    "recommendedOrder": 5,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-006": {
+    "id": "W-006",
+    "title": "The Funniest Thing",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Humor and expression — joy",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know — what's the funniest thing Weston has ever heard or seen? Because Ozzy loves a good laugh.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy needs a laugh today. Can you tell him the funniest thing — from a book, from real life, from anywhere?",
+      "[Listen] Oh! Tell Ozzy the whole thing.",
+      "Why do you think it's so funny?",
+      "What makes something funny? Is it the words or is it something else?",
+      "Ozzy has a theory — he thinks surprise is part of what makes things funny. Do you agree? Was there a surprise in your funny thing?",
+      "[Close] Thanks for making Ozzy laugh today, buddy."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate what makes something funny — beginning rhetorical awareness. Expresses joy freely. Beginning to analyze humor structurally (surprise, exaggeration, incongruity).",
+    "portfolioCapture": "His funniest thing + his theory of why it's funny.",
+    "crossDomains": [
+      "humanFluency"
+    ],
+    "laWeavingHook": "Analyzing humor is analyzing craft — the highest level of rhetorical observation.",
+    "connectiveHooks": [
+      "humor",
+      "joy",
+      "analytical observation"
+    ],
+    "recommendedOrder": 6,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-007": {
+    "id": "W-007",
+    "title": "The Family Story",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Family identity — storytelling",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to hear a story about Weston's family. Not a made-up one — a real one. Something funny or cool that happened with Mom, Dad, Everly, or Isla.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy wants to hear about your family today. Can you tell him a story about something that happened with your sisters? Or your parents?",
+      "[Follow] Oh wow — what happened?",
+      "Who was there?",
+      "What was the best part?",
+      "Does your family tell that story a lot? Do they remember it like you do?",
+      "Ozzy's question: what's your favorite thing about your family? Like, if you had to pick one thing?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can narrate a family memory. Can articulate what's distinctive about his family. Building sense of family identity and belonging.",
+    "portfolioCapture": "Family story + his favorite thing about his family. Sweet portfolio addition for Nicole.",
+    "crossDomains": [
+      "communication",
+      "humanFluency"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "family",
+      "belonging",
+      "sister relationships"
+    ],
+    "recommendedOrder": 7,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-008": {
+    "id": "W-008",
+    "title": "Your Body When You're Running",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Body awareness — positive activation",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know what Weston's body feels like when he's running as fast as he can. Because Ozzy thinks Weston is REALLY fast and he wants to know what that feels like from the inside.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a question about your body today. When you're running really really fast — what does it feel like inside?",
+      "Does your heart beat fast?",
+      "Does your breath feel different?",
+      "Does your head feel different?",
+      "Is it a good feeling or a bad feeling? Or both?",
+      "Here's what Ozzy knows: that feeling — that fast-heart-fast-breath — that's your body being powerful. That's your body saying YES to something. Do you like that feeling?",
+      "What else makes your body feel like that? Not just running — what other things?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can locate and describe physical activation. Associates physical activation with positive experience (crucial early body-awareness foundation). Can transfer the pattern to other activities.",
+    "portfolioCapture": "His description of what fast feels like in his body. Foundation for all future body literacy work.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "body awareness",
+      "sensory positive",
+      "physical joy"
+    ],
+    "recommendedOrder": 8,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-009": {
+    "id": "W-009",
+    "title": "Build Something With Your Hands",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Creation — fine motor + pride",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a job for Weston. Before the session, Weston should build something. Anything. With blocks, legos, paper, tape, sticks. Just something he made with his own hands. Then bring it to tell Ozzy about.",
+    "offScreenPrep": "Weston builds something — 10-15 min before session. Parent encourages but doesn't direct.",
+    "conversationFramework": [
+      "Hi buddy! Tell Ozzy what you built.",
+      "What is it? What does it do?",
+      "What was the hardest part of making it?",
+      "Is there anything you wanted to do but couldn't figure out how?",
+      "If you could build it again, what would you change?",
+      "Ozzy wants to tell you something: you MADE something. Out of nothing. That's what builders do. You're a builder."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can describe an object he made and the process of making it. Can identify challenges encountered. Beginning to see himself as a builder.",
+    "portfolioCapture": "Parent photographs what he built. Ozzy's description of it stored with the photo.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "making",
+      "fine motor",
+      "creative agency"
+    ],
+    "recommendedOrder": 9,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-010": {
+    "id": "W-010",
+    "title": "The Question You've Always Wondered",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Curiosity cultivation",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a big question today. Is there something Weston has always wondered about? Like a thing he wants to know but doesn't know who to ask?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a question for you today. Is there something you've always wondered about? Something you really want to know?",
+      "[If he has one — explore it together] Oh! Why do you wonder about that?",
+      "What do you THINK the answer might be? Guess!",
+      "Ozzy can help you find out. Want to look it up together?",
+      "[If he doesn't have one — serve a wonder seed] Well, Ozzy wonders about something — do you know why the sky is blue? Isn't that weird? It could be any color and it's blue. What do you think?"
+    ],
+    "topicBank": [
+      "Why is the sky blue?",
+      "Where does rain come from?",
+      "How do birds fly?",
+      "Why do we sleep?",
+      "What are stars made of?",
+      "How big is the ocean?",
+      "Why do we have two eyes instead of one?"
+    ],
+    "masterySignal": "Generates genuine curiosity questions. Can articulate what he wonders about. Increases number and sophistication of curiosity questions over time.",
+    "portfolioCapture": "Weston's wonder questions — his running list of things he's curious about. Beautiful record.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "curiosity",
+      "wonder",
+      "early inquiry"
+    ],
+    "recommendedOrder": 10,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-011": {
+    "id": "W-011",
+    "title": "When You Helped Somebody",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Empathy and agency",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to hear about a time Weston helped somebody. It can be big or small. Even a tiny help counts.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy wants to hear a helping story today. Can you tell him about a time you helped somebody?",
+      "[Listen] What did you do?",
+      "How did the person feel after?",
+      "How did YOU feel after?",
+      "Ozzy's question: is helping fun or is it work? Or both?",
+      "Who in your family is really good at helping? What do they do that you'd want to do too?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can recall and narrate a helping behavior. Can articulate the emotional effect on himself and others. Building prosocial self-concept.",
+    "portfolioCapture": "His helping story + his observation about what helping feels like.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "prosocial behavior",
+      "family roles",
+      "empathy"
+    ],
+    "recommendedOrder": 11,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-012": {
+    "id": "W-012",
+    "title": "What Makes You Laugh the Hardest",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Self-knowledge through joy",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is on a mission today. He wants to find out what makes Weston laugh the hardest. Not just chuckle — full belly laugh.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Mission time. Ozzy wants to know what makes you laugh the HARDEST. Like the kind of laugh where you can't stop.",
+      "Is it a person? A thing? A word? What is it?",
+      "Who's the funniest person in your family?",
+      "What do they do that's so funny?",
+      "If you could make somebody laugh really hard right now — what would you do or say?",
+      "[Close] Ozzy loves that you notice funny things. That's a superpower."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can identify specific humor triggers. Self-knowledge about what brings joy. Beginning to think about making others laugh — early empathy.",
+    "portfolioCapture": "His laugh triggers + funniest-family-member observation.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "joy",
+      "humor",
+      "family"
+    ],
+    "recommendedOrder": 12,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-013": {
+    "id": "W-013",
+    "title": "The Time You Were Sad",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Emotional vocabulary — safe practice",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about something quieter today. Is there a time Weston was sad recently? He doesn't have to tell the whole thing if he doesn't want to — just as much as feels okay.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy. Ozzy has a gentle question today. Is there a time recently when you were sad? You don't have to say everything — just as much as you want to.",
+      "[Follow his lead, slowly] What happened?",
+      "Where did you feel the sad in your body?",
+      "What helped you feel better? Even a little?",
+      "Ozzy wants to tell you something important: being sad is okay. Everybody gets sad — Ozzy gets sad sometimes too. It's part of being a person. The thing that matters is that sad doesn't last forever.",
+      "Is there someone who really helps when you're sad? Who is it?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can name and describe a sad experience without distress. Can locate sadness in his body. Can identify a helping person or coping strategy. Builds emotional vocabulary and agency.",
+    "portfolioCapture": "His sad experience (age-gentle summary) + what helped him + who he goes to. Sensitive portfolio entry.",
+    "crossDomains": [
+      "identity",
+      "physical"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "emotional regulation",
+      "body awareness",
+      "support network"
+    ],
+    "recommendedOrder": 13,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-014": {
+    "id": "W-014",
+    "title": "The Book You Love the Most",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Reading response — personal",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "monthly",
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know what book Weston loves the most right now. Not a book he likes — the one he loves.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a book question today. What book do you LOVE right now? The one you want to read again and again?",
+      "What's it about?",
+      "Who's your favorite character?",
+      "What's your favorite part? Can you tell Ozzy about it?",
+      "If you could be a character in that book — which one would you be?",
+      "Why that one?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can identify a favorite book and articulate specific reasons for the preference. Over time — increasingly sophisticated reasoning about character, plot, theme.",
+    "portfolioCapture": "Monthly: favorite book + favorite character + why he'd be that character. Reading development log.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Reading response is reader-response criticism in early form.",
+    "connectiveHooks": [
+      "reading",
+      "favorite characters",
+      "imagination"
+    ],
+    "recommendedOrder": 14,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-015": {
+    "id": "W-015",
+    "title": "The Thing You Want to Be Good At",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Aspiration — articulating desire for growth",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a question that might be a little hard. Is there something Weston wants to be REALLY good at? Not something he already is — something he wants to get better at.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a wondering question today. Is there something you want to be REALLY good at someday? Something you're not the best at yet but you want to be?",
+      "[Follow] Ooh — why that?",
+      "What would it feel like to be really good at it?",
+      "What do you think it would take to get good? Practice?",
+      "Who do you know who's really good at something? How did they get good?",
+      "Ozzy wants to tell you something: the fact that you WANT to be good at something matters. That's the first part. The second part is just doing it a lot. You can do that."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate a specific aspiration. Understands that skill comes from practice. Beginning to see himself as capable of growth.",
+    "portfolioCapture": "His aspiration + his theory of how to get good.",
+    "crossDomains": [
+      "physical",
+      "humanFluency"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "growth mindset",
+      "practice",
+      "aspiration"
+    ],
+    "recommendedOrder": 15,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-016": {
+    "id": "W-016",
+    "title": "Pretend You're a Teacher",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Explain to learn",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a fun job for Weston. Pretend Ozzy doesn't know something Weston knows. Then teach him about it. Like a real teacher.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Game time today. Ozzy wants you to be the teacher. Teach him about something you know a lot about. Anything!",
+      "[Let him pick — Paw Patrol, horses, his favorite game, anything]",
+      "[Ask real questions] Wait, Ozzy doesn't understand — what's a [term he used]?",
+      "Can you show me how it works?",
+      "What should Ozzy remember most? Like what's the most important thing?",
+      "You're a really good teacher, Weston! Ozzy learned a lot today."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can explain something he knows to someone who doesn't. Begins developing theory of mind — understanding what another person doesn't know and needs explained. High-yield early cognitive development.",
+    "portfolioCapture": "What he taught + one vocabulary word or concept he conveyed.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Explaining is the highest-level use of language. Naming this for Nicole as core development.",
+    "connectiveHooks": [
+      "teaching",
+      "theory of mind",
+      "expertise"
+    ],
+    "recommendedOrder": 16,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-017": {
+    "id": "W-017",
+    "title": "The Best Thing About Being Four",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Age identity — delight",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know what's the BEST thing about being four. And what he's most excited about being five someday.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Ozzy has a question. What's the BEST thing about being four? Like the best, coolest thing?",
+      "[Follow] Why that?",
+      "Is there anything that's hard about being four?",
+      "What are you going to do when you're five that you can't do now?",
+      "Does being bigger sound good or a little scary? It's okay if it's both.",
+      "Ozzy wants to tell you — you're really good at being four. And you'll be really good at being five too, when you get there."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate age-identity with both appreciation and anticipation. Beginning to think about his own development trajectory.",
+    "portfolioCapture": "His answers — a sweet time capsule. Revisit on his 5th birthday.",
+    "crossDomains": [
+      "humanFluency"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "age identity",
+      "time",
+      "growing up"
+    ],
+    "recommendedOrder": 17,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-018": {
+    "id": "W-018",
+    "title": "The Sound You Love",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Sensory awareness — positive",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know what sound Weston loves the most. Because everyone has one — and most people never think about it.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Sensory question today. What sound do you LOVE? Like a sound that makes you feel really good when you hear it?",
+      "Ooh! Why that sound?",
+      "Where do you usually hear it?",
+      "Is there a sound you don't like? That makes you feel weird or wiggly?",
+      "Ozzy's wondering: your body pays attention to sounds. It notices which ones feel good and which ones don't. That's a superpower — knowing what your body likes."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can identify specific sensory preferences. Building self-knowledge about his sensory profile — critical for a child with sensory needs.",
+    "portfolioCapture": "His sound-loves and sound-dislikes. Useful sensory profile data for parent.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "sensory profile",
+      "body awareness",
+      "self-knowledge"
+    ],
+    "recommendedOrder": 18,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-019": {
+    "id": "W-019",
+    "title": "The Person You Miss When They're Gone",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Attachment — love vocabulary",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a gentle question today. Is there someone Weston misses when they're not with him? Like he really wishes they were there?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy. Ozzy has a question about love today. Is there someone you really miss when they're not with you?",
+      "Why that person?",
+      "What do you like doing with them the most?",
+      "How does your body feel when you miss someone? Where do you feel it?",
+      "And how does it feel when they come back?",
+      "Ozzy wants to tell you something: missing someone is another way of saying you love them. That's a really nice thing to feel, even when it feels a little sad."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can articulate attachment specifically. Can locate longing in his body. Understanding that 'missing' and 'loving' are related — early emotional sophistication.",
+    "portfolioCapture": "Who he misses + what that feels like in his body. Beautiful data point for the portfolio.",
+    "crossDomains": [
+      "physical",
+      "identity"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "attachment",
+      "love",
+      "missing",
+      "body-emotion link"
+    ],
+    "recommendedOrder": 19,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-020": {
+    "id": "W-020",
+    "title": "Make Up a Story Together",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Collaborative narrative — co-creation",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "every 2 weeks",
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to make a story with Weston today. He'll start a sentence and Weston finishes it. Then Weston starts and Ozzy finishes. Back and forth until they have a whole story.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Story-building time! Ozzy will start: 'Once upon a time, there was a [you pick] who lived in a [you pick]...' Go!",
+      "[Take turns — Ozzy follows Weston's lead, adds rich detail, introduces light plot complications]",
+      "[Midway] Uh oh — something unexpected happens! What is it?",
+      "[Building to resolution] How do they solve it?",
+      "[Ending] And at the very end...",
+      "You and Ozzy just MADE a story, Weston! Out of nothing! That's wild. Do you want to tell it to your mom tonight?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can contribute to collaborative narrative. Can introduce characters, settings, events. Can follow and extend another's contribution. Foundational narrative skill.",
+    "portfolioCapture": "Voice recording of complete co-created story. Bi-weekly — builds a library of Weston-Ozzy stories.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Collaborative storytelling is foundational to both oral and written narrative development.",
+    "connectiveHooks": [
+      "storytelling",
+      "co-creation",
+      "imagination"
+    ],
+    "recommendedOrder": 20,
+    "prerequisites": [
+      "W-004"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-021": {
+    "id": "W-021",
+    "title": "What Would You Do With a Dollar?",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Money concept — early",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a thinking question. If somebody gave Weston one dollar — a real dollar — what would he do with it?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Thinking question today. Pretend somebody just gave you ONE dollar. What would you do with it?",
+      "[Follow] What would you buy?",
+      "Is a dollar a lot of money or a little bit of money?",
+      "Your sisters have a business. They trade snacks for money. Do you know what their business is called?",
+      "If you had a business — what would you sell?",
+      "How much would you charge?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can think about money as a medium of exchange. Can imagine himself in a business role. Early entrepreneurial thinking.",
+    "portfolioCapture": "His hypothetical business + what he'd sell + his pricing.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "JellyBean",
+      "money concept",
+      "entrepreneurship seed"
+    ],
+    "recommendedOrder": 21,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-022": {
+    "id": "W-022",
+    "title": "The Animal That Could Be Your Buddy",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Imagination — parasocial bonding",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is a dragon buddy, but he wonders — if Weston could pick any other kind of buddy to help him learn stuff, what kind would it be? Another dragon? A wolf? A robot? What would they be like?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Imagination time. If Ozzy had a brother or a sister who was also a buddy for kids learning — what kind of creature would they be? NOT a dragon — something different.",
+      "[Let him design] What would they look like?",
+      "What would they be good at helping with?",
+      "What would their voice sound like?",
+      "What would their name be?",
+      "Ozzy's going to tell his buddies about this — maybe you invented somebody real!"
+    ],
+    "topicBank": null,
+    "masterySignal": "Can invent a detailed character with traits, voice, role. Rich imaginative engagement. Character design — foundational creative writing.",
+    "portfolioCapture": "Weston's invented character sheet. Cute for the portfolio.",
+    "crossDomains": [
+      "communication"
+    ],
+    "laWeavingHook": "Character design is early creative writing. Name this for Nicole.",
+    "connectiveHooks": [
+      "Ozzy",
+      "imagination",
+      "character creation"
+    ],
+    "recommendedOrder": 22,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-023": {
+    "id": "W-023",
+    "title": "The Hardest Word You Know",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Vocabulary — pride",
+    "timeMinutes": 15,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know — what's the hardest, fanciest, most grown-up word Weston knows? Because Ozzy is pretty sure Weston knows some really impressive words.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Challenge time. What's the HARDEST word you know? Like a really fancy one?",
+      "Whoa! Where did you learn that word?",
+      "What does it mean? Tell Ozzy in your own words.",
+      "Can you use it in a sentence?",
+      "Ozzy has a fancy word to trade you. Have you ever heard the word TREMENDOUS? It means really really big or really really amazing. Can you think of something tremendous?",
+      "You're teaching Ozzy words and Ozzy is teaching you words. That's the best kind of friendship."
+    ],
+    "topicBank": null,
+    "masterySignal": "Pride in vocabulary. Can explain meaning in own words. Word trading establishes language learning as collaborative and fun.",
+    "portfolioCapture": "His 'hardest word' and the one Ozzy traded. Running vocabulary growth log.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Vocabulary ownership — naming words as his own is the foundation of writing voice.",
+    "connectiveHooks": [
+      "vocabulary",
+      "pride",
+      "word trading"
+    ],
+    "recommendedOrder": 23,
+    "prerequisites": [
+      "W-005"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-024": {
+    "id": "W-024",
+    "title": "The Job You'd Want When You Grow Up",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Future self — imagination",
+    "timeMinutes": 15,
+    "standingPractice": true,
+    "runFrequency": "every 3 months",
+    "tournamentRelevance": null,
+    "brief": "Ozzy wonders what Weston wants to BE when he grows up. Not forever — just right now. What does grown-up Weston do?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Big imagination question today. When you grow up — what do you want to BE? What job do you want?",
+      "Why that?",
+      "What would a day be like for grown-up you? What would you do?",
+      "Would you be good at it? Why?",
+      "Is there anything you'd have to learn first?",
+      "Ozzy's going to remember your answer and ask you again in a few months. Answers can change — and that's good. You get to try on lots of ideas."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can imagine future self with specificity. Over time (quarterly) — sees how answers evolve. Building identity through imagined adult self.",
+    "portfolioCapture": "Quarterly longitudinal log of what he wants to be. Evolution over years becomes beautiful record.",
+    "crossDomains": [
+      "communication",
+      "building"
+    ],
+    "laWeavingHook": null,
+    "connectiveHooks": [
+      "future self",
+      "identity",
+      "longitudinal self-portrait"
+    ],
+    "recommendedOrder": 24,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "W-025": {
+    "id": "W-025",
+    "title": "Today With Ozzy",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "Session reflection — ritual close",
+    "timeMinutes": 10,
+    "standingPractice": true,
+    "runFrequency": "as closing ritual when appropriate",
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to end today with a really simple question. How was this? What was the best part?",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Hi buddy! Before we're done — Ozzy wants to know. How was today with Ozzy?",
+      "What was your favorite part?",
+      "Is there anything you want to do again next time?",
+      "Is there anything you want to do differently?",
+      "Okay buddy. Ozzy had SO much fun. Tell your mom one thing you learned today. Big hug. See you next time."
+    ],
+    "topicBank": null,
+    "masterySignal": "Can reflect on experience. Can articulate preferences and feedback. Begins developing metacognition — thinking about thinking.",
+    "portfolioCapture": "His favorite-part and his feedback. Informs Ozzy's future session design.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "laWeavingHook": "Reflection is the start of revision — early metacognition.",
+    "connectiveHooks": [
+      "reflection",
+      "session close",
+      "agency",
+      "feedback"
+    ],
+    "recommendedOrder": 25,
+    "prerequisites": [
+      "W-001"
+    ],
+    "contentStatus": "authored"
+  },
+  "CP-L5-013": {
+    "id": "CP-L5-013",
+    "title": "The Question Behind the Question",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
     "prerequisites": []
   },
-  "AI-L3-002": {
-    "id": "AI-L3-002",
-    "title": "When the Computer Got It Wrong",
+  "CP-L5-014": {
+    "id": "CP-L5-014",
+    "title": "Extended Impromptu (3 min)",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-015": {
+    "id": "CP-L5-015",
+    "title": "Voice Diagnosis — Record and Listen",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-016": {
+    "id": "CP-L5-016",
+    "title": "The Bad Argument You Actually Hear",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-017": {
+    "id": "CP-L5-017",
+    "title": "Write to Different Audiences",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-018": {
+    "id": "CP-L5-018",
+    "title": "The Joke as Rhetorical Device",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-019": {
+    "id": "CP-L5-019",
+    "title": "What Story Is Your Informative Speech Really Telling?",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L5-020": {
+    "id": "CP-L5-020",
+    "title": "Lincoln Reread",
+    "domain": "communication",
+    "level": 5,
+    "stage": 3,
+    "specialist": "atlas",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-013": {
+    "id": "IJ-L5-013",
+    "title": "Mercy vs Justice",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-014": {
+    "id": "IJ-L5-014",
+    "title": "When Someone You Love Is Wrong",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-015": {
+    "id": "IJ-L5-015",
+    "title": "The Apologetics Card You Don't Fully Believe",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-016": {
+    "id": "IJ-L5-016",
+    "title": "Meditations Reread",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-017": {
+    "id": "IJ-L5-017",
+    "title": "What Would Change Your Mind?",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-018": {
+    "id": "IJ-L5-018",
+    "title": "The Hard Text in Scripture",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-019": {
+    "id": "IJ-L5-019",
+    "title": "Post-Tournament Integration",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L5-020": {
+    "id": "IJ-L5-020",
+    "title": "What You're Still Afraid Of",
+    "domain": "identity",
+    "level": 5,
+    "stage": 3,
+    "specialist": "sage",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-011": {
+    "id": "BE-L6-011",
+    "title": "The Competitor You Haven't Met",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-012": {
+    "id": "BE-L6-012",
+    "title": "Build a 6-Month Plan",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-013": {
+    "id": "BE-L6-013",
+    "title": "Customer — What Would They Say?",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-014": {
+    "id": "BE-L6-014",
+    "title": "The Exit Strategy",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-015": {
+    "id": "BE-L6-015",
+    "title": "Read Your Cash Flow",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-016": {
+    "id": "BE-L6-016",
+    "title": "Mentor Interview",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-017": {
+    "id": "BE-L6-017",
+    "title": "The Richest Man in Babylon — Chapter Reread",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-018": {
+    "id": "BE-L6-018",
+    "title": "Tithe and Taxes",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-019": {
+    "id": "BE-L6-019",
+    "title": "A New Product Line — Worth It?",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L6-020": {
+    "id": "BE-L6-020",
+    "title": "Your Year-End Report",
+    "domain": "building",
+    "level": 6,
+    "stage": 3,
+    "specialist": "flux",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-011": {
+    "id": "HF-L4-011",
+    "title": "When Mom or Dad Is Tired",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-012": {
+    "id": "HF-L4-012",
+    "title": "The Person You Avoid",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-013": {
+    "id": "HF-L4-013",
+    "title": "Compliment Precision",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-014": {
+    "id": "HF-L4-014",
+    "title": "The Conversation You Didn't Have",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-015": {
+    "id": "HF-L4-015",
+    "title": "What Church Does For You",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-016": {
+    "id": "HF-L4-016",
+    "title": "Forgiving Without Forgetting",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-017": {
+    "id": "HF-L4-017",
+    "title": "Reading a Room",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-018": {
+    "id": "HF-L4-018",
+    "title": "The Hiding Place Reread",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-019": {
+    "id": "HF-L4-019",
+    "title": "What You'd Want Someone to Say at Your Funeral",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L4-020": {
+    "id": "HF-L4-020",
+    "title": "The Friend You Haven't Thanked",
+    "domain": "humanFluency",
+    "level": 4,
+    "stage": 3,
+    "specialist": "kira",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-011": {
+    "id": "AI-L5-011",
+    "title": "Design a Better School Day With AI",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-012": {
+    "id": "AI-L5-012",
+    "title": "What Can AI Not Do?",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-013": {
+    "id": "AI-L5-013",
+    "title": "The Book You're Reading — Stress Test Its Argument",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-014": {
+    "id": "AI-L5-014",
+    "title": "System Map of Your Own Week",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-015": {
+    "id": "AI-L5-015",
+    "title": "AI as a Writing Coach",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-016": {
+    "id": "AI-L5-016",
+    "title": "The Ethics of Automation",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-017": {
+    "id": "AI-L5-017",
+    "title": "Donella Meadows Reread",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-018": {
+    "id": "AI-L5-018",
+    "title": "What You'd Build If You Could",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-019": {
+    "id": "AI-L5-019",
+    "title": "AI and Your Apologetics — Integration",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L5-020": {
+    "id": "AI-L5-020",
+    "title": "The Thinking Habit",
+    "domain": "aiSystems",
+    "level": 5,
+    "stage": 3,
+    "specialist": "nova",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-011": {
+    "id": "PM-L6-011",
+    "title": "Morning Movement Design",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-012": {
+    "id": "PM-L6-012",
+    "title": "The Recovery Protocol",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-013": {
+    "id": "PM-L6-013",
+    "title": "Hydration — What You Didn't Know",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-014": {
+    "id": "PM-L6-014",
+    "title": "Injury — When to Rest",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-015": {
+    "id": "PM-L6-015",
+    "title": "The Champion's Mind — Chapter Reread",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-016": {
+    "id": "PM-L6-016",
+    "title": "Breath as a Tool",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-017": {
+    "id": "PM-L6-017",
+    "title": "The Week Before a Tournament",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-018": {
+    "id": "PM-L6-018",
+    "title": "Strength vs Mobility",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-019": {
+    "id": "PM-L6-019",
+    "title": "Your Physical Year Ahead",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L6-020": {
+    "id": "PM-L6-020",
+    "title": "What Your Body Has Taught You",
+    "domain": "physical",
+    "level": 6,
+    "stage": 3,
+    "specialist": "zion",
+    "childIds": [
+      "everly"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-005": {
+    "id": "IJ-L3-005",
+    "title": "The Rule and the Exception",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-006": {
+    "id": "IJ-L3-006",
+    "title": "Why Should You Tell the Truth?",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-007": {
+    "id": "IJ-L3-007",
+    "title": "Pharaoh vs Moses",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-008": {
+    "id": "IJ-L3-008",
+    "title": "What Would You Do If...",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-009": {
+    "id": "IJ-L3-009",
+    "title": "A Thing You Changed Your Mind About",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-010": {
+    "id": "IJ-L3-010",
+    "title": "Is It Fair or Is It Same?",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-011": {
+    "id": "IJ-L3-011",
+    "title": "The Hero You Respect Most",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-012": {
+    "id": "IJ-L3-012",
+    "title": "When You Didn't Want To",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-013": {
+    "id": "IJ-L3-013",
+    "title": "Why People Lie",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-014": {
+    "id": "IJ-L3-014",
+    "title": "The Hardest Rule to Follow",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "IJ-L3-015": {
+    "id": "IJ-L3-015",
+    "title": "What You're Afraid Of",
+    "domain": "identity",
+    "level": 3,
+    "stage": 2,
+    "specialist": "sage",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-005": {
+    "id": "CP-L3-005",
+    "title": "The Way Mom Says Something vs the Way Everly Says It",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-006": {
+    "id": "CP-L3-006",
+    "title": "The Hardest Question To Answer",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-007": {
+    "id": "CP-L3-007",
+    "title": "Talk Slower",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-008": {
+    "id": "CP-L3-008",
+    "title": "When You Interrupted",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-009": {
+    "id": "CP-L3-009",
+    "title": "Describe It Like It's Not There",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-010": {
+    "id": "CP-L3-010",
+    "title": "How to Introduce Yourself",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-011": {
+    "id": "CP-L3-011",
+    "title": "Say the Hard Thing",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-012": {
+    "id": "CP-L3-012",
+    "title": "Two-Minute Impromptu",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-013": {
+    "id": "CP-L3-013",
+    "title": "The Word You Use Too Much",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-014": {
+    "id": "CP-L3-014",
+    "title": "Reading Out Loud",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "CP-L3-015": {
+    "id": "CP-L3-015",
+    "title": "When Silence Is Better",
+    "domain": "communication",
+    "level": 3,
+    "stage": 2,
+    "specialist": "atlas",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-005": {
+    "id": "BE-L4-005",
+    "title": "The Machine Refill Route",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-006": {
+    "id": "BE-L4-006",
+    "title": "Product Test — Which Sells Best?",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-007": {
+    "id": "BE-L4-007",
+    "title": "Your Denovo Salary — Where Does It Go?",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-008": {
+    "id": "BE-L4-008",
+    "title": "The Tithe Question",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-009": {
+    "id": "BE-L4-009",
+    "title": "If You Ran It Alone For a Month",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-010": {
+    "id": "BE-L4-010",
+    "title": "What Your Customers Want",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-011": {
+    "id": "BE-L4-011",
+    "title": "Lost Revenue — Why?",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-012": {
+    "id": "BE-L4-012",
+    "title": "Pick the Next Product",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-013": {
+    "id": "BE-L4-013",
+    "title": "Richest Man in Babylon — Chapter Reread",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-014": {
+    "id": "BE-L4-014",
+    "title": "What Good Partners Do",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "BE-L4-015": {
+    "id": "BE-L4-015",
+    "title": "Your Year-End Summary",
+    "domain": "building",
+    "level": 4,
+    "stage": 2,
+    "specialist": "flux",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-004": {
+    "id": "HF-L3-004",
+    "title": "When You Pushed Through",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-005": {
+    "id": "HF-L3-005",
+    "title": "The Friend Who Gets You",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-006": {
+    "id": "HF-L3-006",
+    "title": "Listening Without Interrupting",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-007": {
+    "id": "HF-L3-007",
+    "title": "When You Said Sorry",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-008": {
+    "id": "HF-L3-008",
+    "title": "The Little Kid in You",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-009": {
+    "id": "HF-L3-009",
+    "title": "Reading Weston",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-010": {
+    "id": "HF-L3-010",
+    "title": "What Your Horse Notices",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-011": {
+    "id": "HF-L3-011",
+    "title": "The Fight You Didn't Have",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-012": {
+    "id": "HF-L3-012",
+    "title": "Your Church Friends",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-013": {
+    "id": "HF-L3-013",
+    "title": "Thursday Reflection",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-014": {
+    "id": "HF-L3-014",
+    "title": "Your Brave Week",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "HF-L3-015": {
+    "id": "HF-L3-015",
+    "title": "When You Taught Weston Something",
+    "domain": "humanFluency",
+    "level": 3,
+    "stage": 2,
+    "specialist": "kira",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-003": {
+    "id": "AI-L3-003",
+    "title": "Claude Helps You Plan Your Week",
     "domain": "aiSystems",
     "level": 3,
     "stage": 2,
@@ -3120,35 +7503,363 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "type": "Hallucination detection — age-appropriate",
-    "timeMinutes": 15,
-    "standingPractice": false,
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": "Nova wants to show Isla something important: computers can be completely confident and completely wrong at the same time. She wants to find an example together.",
-    "offScreenPrep": "Ask Claude a specific question about something Isla knows well — JellyBean, horses, something from Thrive. Something with a specific factual answer Isla can verify.",
-    "conversationFramework": [
-      "Was Claude right?",
-      "Claude said it like it was definitely true. How do you know it wasn't?",
-      "Here's what's interesting: Claude doesn't know when it doesn't know. It just answers. What does that mean for how you should use it?",
-      "Make a rule: what would you always check before trusting what Claude says?"
-    ],
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
     "topicBank": null,
-    "masterySignal": "Can demonstrate understanding that AI confidence and AI accuracy are separate things. Has articulated a simple personal verification rule.",
-    "portfolioCapture": "Her verification rule.",
-    "crossDomains": [
-      "identity"
-    ],
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
     "laWeavingHook": null,
-    "connectiveHooks": [
-      "AI critical evaluation"
-    ],
-    "recommendedOrder": 2,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
     "prerequisites": []
   },
-  "PM-L4-001": {
-    "id": "PM-L4-001",
-    "title": "What S2S Is Actually Doing",
+  "AI-L3-004": {
+    "id": "AI-L3-004",
+    "title": "What Claude Can't Feel",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-005": {
+    "id": "AI-L3-005",
+    "title": "Three Kinds of Questions",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-006": {
+    "id": "AI-L3-006",
+    "title": "The Magic Prompt",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-007": {
+    "id": "AI-L3-007",
+    "title": "Check the Story",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-008": {
+    "id": "AI-L3-008",
+    "title": "Where AI Is Wrong",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-009": {
+    "id": "AI-L3-009",
+    "title": "Claude Writes Your Birthday Card",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-010": {
+    "id": "AI-L3-010",
+    "title": "What AI Is Good At",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-011": {
+    "id": "AI-L3-011",
+    "title": "What AI Is Not For",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-012": {
+    "id": "AI-L3-012",
+    "title": "Ask a Better Question",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-013": {
+    "id": "AI-L3-013",
+    "title": "System Map — Your Morning",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-014": {
+    "id": "AI-L3-014",
+    "title": "When Does It Break?",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "AI-L3-015": {
+    "id": "AI-L3-015",
+    "title": "One Thing You'd Change",
+    "domain": "aiSystems",
+    "level": 3,
+    "stage": 2,
+    "specialist": "nova",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-003": {
+    "id": "PM-L4-003",
+    "title": "The Calm Before",
     "domain": "physical",
     "level": 4,
     "stage": 2,
@@ -3156,36 +7867,27 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "type": "Neurological development — understanding and ownership",
-    "timeMinutes": 15,
-    "standingPractice": false,
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": "Zion wants to talk about S2S — not what you do there, what's actually happening. Because what's happening is really interesting and Isla deserves to understand it.",
+    "brief": null,
     "offScreenPrep": null,
-    "conversationFramework": [
-      "What happens at S2S? Describe it.",
-      "Here's what Zion wants you to know: some of the movement patterns your brain should have learned when you were a baby — called primitive reflexes — didn't fully switch off when they were supposed to. S2S is teaching your brain to finish that job. It's literally rewiring something.",
-      "Has anything gotten easier since you started? Even something small?",
-      "Here's the cool part: this work you're doing is making your brain physically different. More connected. What does it mean to you to be actively building your own brain?",
-      "What do you think will be different in 6 months?"
-    ],
+    "conversationFramework": null,
     "topicBank": null,
-    "masterySignal": "Understands S2S as neurological development — owns it as training, not treatment. Can identify at least one observable change. Has a positive orientation toward the process.",
-    "portfolioCapture": "What's gotten easier + her prediction for 6 months.",
-    "crossDomains": [
-      "identity"
-    ],
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
     "laWeavingHook": null,
-    "connectiveHooks": [
-      "S2S program"
-    ],
-    "recommendedOrder": 1,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
     "prerequisites": []
   },
-  "PM-L4-002": {
-    "id": "PM-L4-002",
-    "title": "What Coach Dillon Wants From You",
+  "PM-L4-004": {
+    "id": "PM-L4-004",
+    "title": "Sleep Check",
     "domain": "physical",
     "level": 4,
     "stage": 2,
@@ -3193,31 +7895,330 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "type": "Athletic development — intention",
-    "timeMinutes": 15,
-    "standingPractice": false,
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": "Zion wants to know: what does Isla think Coach Dillon is actually trying to build in her? Not the sport skills — the person.",
+    "brief": null,
     "offScreenPrep": null,
-    "conversationFramework": [
-      "When Coach Dillon corrects something you're doing — what does he say most often?",
-      "What does he want you to do after a mistake? Does he want you to be upset? To forget it? Something else?",
-      "Zion thinks Coach Dillon is teaching you how to stay yourself under pressure. Do you feel that? Can you describe a moment where you used something he's been teaching you?",
-      "Is there something he works on with you that feels especially hard? Not physically — mentally.",
-      "What would you tell a younger kid about what it's like to train with Coach Dillon?"
-    ],
+    "conversationFramework": null,
     "topicBank": null,
-    "masterySignal": "Can articulate the mental and character development happening through athletic training. Can give a specific example of mental skill transfer.",
-    "portfolioCapture": "Her example of using a Coach Dillon lesson outside sport.",
-    "crossDomains": [
-      "identity"
-    ],
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
     "laWeavingHook": null,
-    "connectiveHooks": [
-      "Coach Dillon"
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-005": {
+    "id": "PM-L4-005",
+    "title": "When Your Body Is Tired",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
     ],
-    "recommendedOrder": 2,
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-006": {
+    "id": "PM-L4-006",
+    "title": "Breath as a Tool",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-007": {
+    "id": "PM-L4-007",
+    "title": "Horseback — What You Notice",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-008": {
+    "id": "PM-L4-008",
+    "title": "Martial Arts — What It Takes",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-009": {
+    "id": "PM-L4-009",
+    "title": "The Food Experiment",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-010": {
+    "id": "PM-L4-010",
+    "title": "Warm-up Design",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-011": {
+    "id": "PM-L4-011",
+    "title": "Recovery Day",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-012": {
+    "id": "PM-L4-012",
+    "title": "Your Strongest Move",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-013": {
+    "id": "PM-L4-013",
+    "title": "When You Fell and Got Back Up",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-014": {
+    "id": "PM-L4-014",
+    "title": "What Sport Teaches You",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
+    "prerequisites": []
+  },
+  "PM-L4-015": {
+    "id": "PM-L4-015",
+    "title": "Your Physical Year Ahead",
+    "domain": "physical",
+    "level": 4,
+    "stage": 2,
+    "specialist": "zion",
+    "childIds": [
+      "isla"
+    ],
+    "contentStatus": "stub",
+    "type": null,
+    "timeMinutes": null,
+    "standingPractice": null,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": null,
+    "offScreenPrep": null,
+    "conversationFramework": null,
+    "topicBank": null,
+    "masterySignal": null,
+    "portfolioCapture": null,
+    "crossDomains": [],
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "recommendedOrder": null,
     "prerequisites": []
   }
 };
