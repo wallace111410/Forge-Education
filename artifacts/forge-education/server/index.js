@@ -1,4 +1,5 @@
 import express from 'express';
+import MISSION_CATALOG from './missionCatalog.js';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
@@ -1661,6 +1662,38 @@ ${(() => {
   }
   if (curriculum.stuck[session.domain]) {
     missionBlock += `\nNOTE: This child has been stuck on this mission (${curriculum.stuck[session.domain].attempts} attempts). Try a different approach or angle.`;
+  }
+  const catalogEntry = MISSION_CATALOG[session.missionId];
+  if (catalogEntry && catalogEntry.contentStatus === "authored") {
+    missionBlock += "\n\n--- MISSION DESIGN ---";
+    missionBlock += "\nTitle: " + catalogEntry.title;
+    missionBlock += "\nType: " + catalogEntry.type + " | Time: " + catalogEntry.timeMinutes + " minutes | Specialist: " + catalogEntry.specialist;
+    if (catalogEntry.standingPractice) missionBlock += " | Standing practice (" + (catalogEntry.runFrequency || "recurring") + ")";
+    if (catalogEntry.tournamentRelevance) missionBlock += "\nTournament relevance: " + catalogEntry.tournamentRelevance;
+    missionBlock += "\n\nBRIEF (orient yourself to what this mission is doing): " + catalogEntry.brief;
+    if (catalogEntry.offScreenPrep) missionBlock += "\n\nOFF-SCREEN PREP: " + catalogEntry.offScreenPrep;
+    if (Array.isArray(catalogEntry.conversationFramework) && catalogEntry.conversationFramework.length) {
+      missionBlock += "\n\nCONVERSATION FRAMEWORK (use as a guide, not a script — adapt to the child in front of you):";
+      catalogEntry.conversationFramework.forEach(function(step, i) { missionBlock += "\n" + (i+1) + ". " + step; });
+    }
+    if (Array.isArray(catalogEntry.topicBank) && catalogEntry.topicBank.length) {
+      missionBlock += "\n\nTOPIC BANK (pull from these if framework needs concrete examples):";
+      catalogEntry.topicBank.forEach(function(t) { missionBlock += "\n- " + t; });
+    }
+    missionBlock += "\n\nMASTERY SIGNAL (you must observe this before marking mission complete): " + catalogEntry.masterySignal;
+    if (catalogEntry.portfolioCapture) missionBlock += "\n\nPORTFOLIO CAPTURE (what to record in the portfolio entry): " + catalogEntry.portfolioCapture;
+    if (catalogEntry.laWeavingHook) missionBlock += "\n\nLA WEAVING HOOK (name the language arts skill out loud when it surfaces): " + catalogEntry.laWeavingHook;
+    if (Array.isArray(catalogEntry.connectiveHooks) && catalogEntry.connectiveHooks.length) {
+      missionBlock += "\n\nCONNECTIVE HOOKS (weave these into conversation when natural): " + catalogEntry.connectiveHooks.join(", ");
+    }
+    if (Array.isArray(catalogEntry.crossDomains) && catalogEntry.crossDomains.length) {
+      missionBlock += "\n\nCROSS-DOMAINS this mission also touches: " + catalogEntry.crossDomains.join(", ");
+    }
+  } else if (catalogEntry && catalogEntry.contentStatus === "stub") {
+    missionBlock += "\n\n--- MISSION (NOT YET FULLY DESIGNED) ---";
+    missionBlock += "\nTitle: " + catalogEntry.title;
+    missionBlock += "\nDomain: " + catalogEntry.domain + " | Specialist: " + catalogEntry.specialist;
+    missionBlock += "\nThis mission is scaffolded but not yet fully authored by the parent. Use your knowledge of the child level, the domain, the FORGE PURPOSE block above, and the title to conduct a high-quality session in the spirit of this title. Honor the child comfort and direction. Flag in the parent brief afterward that this mission needs full authoring.";
   }
   return missionBlock;
 })()}
