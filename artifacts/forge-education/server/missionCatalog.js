@@ -1,10 +1,10 @@
 // AUTO-GENERATED MISSION CATALOG
 // 235 missions: 108 authored + 127 stubs
-// Schema: id, title, domain, level, stage, specialist, childIds, type, timeMinutes,
-//         brief, offScreenPrep, conversationFramework[], masterySignal, portfolioCapture,
-//         crossDomains[], laWeavingHook, connectiveHooks[], contentStatus
-// Stubs: contentStatus="stub", brief/framework/masterySignal are null.
-// Authored: contentStatus="authored", all fields populated.
+// Schema fields: id, title, domain, level, stage, specialist, childIds, type, timeMinutes,
+//   brief, offScreenPrep, conversationFramework[], masterySignal, portfolioCapture,
+//   crossDomains[], laWeavingHook, connectiveHooks[], contentStatus
+// Stubs have brief/conversationFramework/masterySignal as null and contentStatus="stub"
+// Authored missions have all fields populated and contentStatus="authored"
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -8223,4 +8223,4 @@ const MISSION_CATALOG = {
   }
 };
 
-module.exports = MISSION_CATALOG;
+export default MISSION_CATALOG;
