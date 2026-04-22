@@ -1828,6 +1828,100 @@ app.get('/forge-api/admin/session-logs/:childId', (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// List sessions with transcript metadata for parent transcript viewer
+app.get('/forge-api/admin/transcripts/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const sessions = (child.sessions || []).map(s => ({
+      id: s.id,
+      date: s.date,
+      startTime: s.startTime,
+      endTime: s.endTime,
+      duration: s.duration,
+      domain: s.domain,
+      missionId: s.missionId,
+      status: s.status,
+      turnCount: (s.transcript || []).length,
+      safetyFlagCount: (s.safetyFlags || []).length
+    }));
+    res.json({ childName: child.name, sessions });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Download single session transcript as plain text
+app.get('/forge-api/admin/transcript/:childId/:sessionId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const session = (child.sessions || []).find(s => s.id === req.params.sessionId);
+    if (!session) return res.status(404).json({ error: 'Session not found' });
+    const lines = [];
+    lines.push(`FORGE SESSION TRANSCRIPT`);
+    lines.push(`Child: ${child.name}`);
+    lines.push(`Session ID: ${session.id}`);
+    lines.push(`Date: ${session.date}`);
+    lines.push(`Start: ${session.startTime || 'n/a'}  End: ${session.endTime || 'n/a'}  Duration: ${session.duration || 'n/a'}s`);
+    lines.push(`Domain: ${session.domain}  Mission: ${session.missionId}  Status: ${session.status}`);
+    if ((session.safetyFlags || []).length) {
+      lines.push(`SAFETY FLAGS: ${JSON.stringify(session.safetyFlags)}`);
+    }
+    lines.push(``);
+    lines.push(`--- TRANSCRIPT (${(session.transcript||[]).length} turns) ---`);
+    lines.push(``);
+    for (const turn of (session.transcript || [])) {
+      const role = (turn.role || '').toUpperCase();
+      const ts = turn.timestamp ? `[${turn.timestamp}] ` : '';
+      lines.push(`${ts}${role}:`);
+      lines.push(turn.content || '');
+      lines.push(``);
+    }
+    const filename = `forge-transcript-${child.id}-${session.date}-${session.id}.txt`;
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    res.send(lines.join('\n'));
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Download ALL sessions for a child as one combined text file
+app.get('/forge-api/admin/transcripts-all/:childId', (req, res) => {
+  try {
+    const data = loadData();
+    const child = getChild(data, req.params.childId);
+    if (!child) return res.status(404).json({ error: 'Child not found' });
+    const sessions = (child.sessions || []).slice().sort((a,b) => (a.startTime||'').localeCompare(b.startTime||''));
+    const parts = [];
+    parts.push(`FORGE - ALL SESSION TRANSCRIPTS`);
+    parts.push(`Child: ${child.name}`);
+    parts.push(`Export date: ${new Date().toISOString()}`);
+    parts.push(`Sessions: ${sessions.length}`);
+    parts.push(``);
+    parts.push(`============================================================`);
+    parts.push(``);
+    for (const session of sessions) {
+      parts.push(`SESSION ${session.id}`);
+      parts.push(`Date: ${session.date}  Domain: ${session.domain}  Mission: ${session.missionId}  Duration: ${session.duration || 'n/a'}s  Status: ${session.status}`);
+      if ((session.safetyFlags || []).length) parts.push(`SAFETY FLAGS: ${JSON.stringify(session.safetyFlags)}`);
+      parts.push(``);
+      for (const turn of (session.transcript || [])) {
+        const role = (turn.role || '').toUpperCase();
+        const ts = turn.timestamp ? `[${turn.timestamp}] ` : '';
+        parts.push(`${ts}${role}:`);
+        parts.push(turn.content || '');
+        parts.push(``);
+      }
+      parts.push(`============================================================`);
+      parts.push(``);
+    }
+    const filename = `forge-all-transcripts-${child.id}-${new Date().toISOString().slice(0,10)}.txt`;
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    res.send(parts.join('\n'));
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 app.post('/forge-api/admin/session-logs/:childId', (req, res) => {
   try {
     const data = loadData();
