@@ -893,9 +893,65 @@ app.post('/forge-api/admin/messages/:childId', async (req, res) => {
     const recentMessages = messages.parentInbox.slice(-5).map(m =>
       `${m.from === 'parent' ? 'Parent' : child.primaryAgent.name}: ${m.content}`
     ).join('\n');
+
+    // Build grounded context so agent does NOT fabricate
+    const sessions = (child.sessions || []).slice(0, 10);
+    const sessionSummaries = sessions.map(s => {
+      const dur = s.duration ? Math.round(s.duration / 60) + 'min' : '?';
+      const flags = (s.safetyFlags || []).length ? ' FLAGS:' + s.safetyFlags.length : '';
+      return `- ${s.date} ${s.domain}/${s.missionId} (${dur}, ${(s.transcript||[]).length} turns, ${s.status}${flags})`;
+    }).join('\n') || 'No sessions yet.';
+
+    const lastSession = sessions[0];
+    let lastTranscriptExcerpt = '';
+    if (lastSession && lastSession.transcript && lastSession.transcript.length > 0) {
+      const turns = lastSession.transcript.slice(-30);
+      lastTranscriptExcerpt = `\n\nLAST SESSION TRANSCRIPT (${lastSession.date}, ${lastSession.domain}, last ${turns.length} of ${lastSession.transcript.length} turns):\n` +
+        turns.map(t => `${(t.role||'').toUpperCase()}: ${(t.content||'').substring(0, 400)}`).join('\n');
+    }
+
+    const mem = child.agentMemory || {};
+    const memBlock = `Personality: ${mem.personalityProfile || 'none'}
+Known strengths: ${(mem.knownStrengths || []).join(', ') || 'none'}
+Known challenges: ${(mem.knownChallenges || []).join(', ') || 'none'}
+Current projects: ${(mem.currentProjects || []).join(', ') || 'none'}
+Last session summary: ${mem.lastSessionSummary || 'none'}`;
+
+    const characterNotes = (child.memory && child.memory.characterNotes) || 'No notes.';
+    const recentSessionMemories = ((child.memory && child.memory.sessionMemories) || []).slice(0, 5).map((m, i) =>
+      `  ${i+1}. [${m.date}] ${m.domain}: discussed ${m.discussed}. ${m.keyMoment ? 'Key: ' + m.keyMoment : ''}`
+    ).join('\n') || '  none';
+
+    const documents = (child.resources?.documents || []).map(d => d.name || d.title || d.filename).filter(Boolean).join(', ') || 'none';
+    const assignedReading = (child.resources?.agentReadingList || []).map(r => r.title || r.name).filter(Boolean).join(', ') || 'none';
+
+    const systemPrompt = `You are ${child.primaryAgent.name}, ${child.name}'s AI learning agent. You are replying to a private message from ${child.name}'s parent.
+
+CRITICAL TRUTH-TELLING RULE: You MUST only answer based on the specific data and context shown below. If the parent asks about something NOT covered (e.g. details of a session whose transcript isn't included, contents of a document not shown, a brief you haven't been given), you MUST say so directly: "I don't have that specific information in my context right now — I can see [list what you DO have], but not [the specific thing asked]." Never invent details. Never guess what was discussed. Never paraphrase what "probably" happened. If asked to review a specific brief or document you weren't given, say you don't have it in your current context.
+
+STYLE: Warm, professional, specific, 2-4 sentences. No asterisks.
+
+=== CONTEXT YOU ACTUALLY HAVE ===
+
+RECENT SESSIONS (most recent first, up to 10):
+${sessionSummaries}
+
+AGENT MEMORY:
+${memBlock}
+
+CHARACTER NOTES: ${characterNotes}
+
+RECENT SESSION MEMORIES:
+${recentSessionMemories}
+
+PARENT-UPLOADED DOCUMENTS (names only, contents not loaded): ${documents}
+ASSIGNED READING (titles only): ${assignedReading}${lastTranscriptExcerpt}
+
+=== END CONTEXT ===`;
+
     const reply = await callClaude(
-      `You are ${child.primaryAgent.name}, ${child.name}'s AI learning agent. You are replying to a message from ${child.name}'s parent. Be warm, professional, specific, and brief (2-3 sentences). No asterisks.`,
-      `Recent conversation:\n${recentMessages}\n\nReply to the parent's latest message.`
+      systemPrompt,
+      `Recent message thread:\n${recentMessages}\n\nReply to the parent's latest message, grounding every claim in the context above. If asked about something not covered in context, say so directly.`
     );
     messages.parentInbox.push({
       id: `msg_${Date.now() + 1}`,
