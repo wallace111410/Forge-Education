@@ -581,6 +581,8 @@ function BriefsPanel({ basePath }: { basePath: string }) {
   const [digests, setDigests] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
+  const [selectedBriefId, setSelectedBriefId] = useState<string>('');
+  const [selectedDigestId, setSelectedDigestId] = useState<string>('');
 
   useEffect(() => { fetchData(selectedChild); }, [selectedChild]);
 
@@ -628,12 +630,26 @@ function BriefsPanel({ basePath }: { basePath: string }) {
               <div className="bp-empty">No weekly digests yet. Click "Generate This Week" to create one.</div>
             ) : (
               <div className="bp-digest-list">
-                {digests.slice(0, 5).map((d: any) => (
-                  <div key={d.id} className="bp-digest-card">
-                    <div className="bp-digest-date">{d.date}</div>
-                    <div className="bp-digest-content" dangerouslySetInnerHTML={{ __html: formatMarkdown(d.content) }} />
-                  </div>
-                ))}
+                {[...digests].sort((a: any, b: any) => (b.date || '').localeCompare(a.date || '')).map((d: any) => {
+                  const isOpen = selectedDigestId === d.id;
+                  return (
+                    <div key={d.id} className="bp-digest-card" style={{ marginBottom: '0.4rem' }}>
+                      <div
+                        onClick={() => setSelectedDigestId(isOpen ? '' : d.id)}
+                        style={{ cursor: 'pointer', padding: '0.6rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.75rem', background: isOpen ? '#1a1a1a' : 'transparent' }}
+                      >
+                        <div style={{ color: '#aaa', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', minWidth: '110px' }}>{d.date}</div>
+                        <div style={{ flex: 1, color: '#ccc', fontSize: '0.9rem' }}>Weekly Digest</div>
+                        <div style={{ color: '#888', fontSize: '0.85rem' }}>{isOpen ? 'Hide' : 'View'}</div>
+                      </div>
+                      {isOpen && (
+                        <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid #222' }}>
+                          <div className="bp-digest-content" dangerouslySetInnerHTML={{ __html: formatMarkdown(d.content) }} />
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -643,22 +659,47 @@ function BriefsPanel({ basePath }: { basePath: string }) {
               <div className="bp-empty">No session briefs yet. Briefs are generated automatically after each session.</div>
             ) : (
               <div className="bp-brief-list">
-                {briefs.map((b: any) => (
-                  <div key={b.id} className="bp-brief-card">
-                    <div className="bp-brief-header">
-                      <div className="bp-brief-domain" style={{ color: DOMAIN_COLORS[b.domain] || '#888' }}>{DOMAIN_LABELS[b.domain] || b.domain}</div>
-                      <div className="bp-brief-date">{b.date}</div>
-                      <div className="bp-brief-duration">{b.duration}m</div>
+                {(() => {
+                  const sorted = [...briefs].sort((a: any, b: any) => (b.date || '').localeCompare(a.date || ''));
+                  const byDate: Record<string, any[]> = {};
+                  for (const b of sorted) {
+                    const k = b.date || 'unknown';
+                    if (!byDate[k]) byDate[k] = [];
+                    byDate[k].push(b);
+                  }
+                  const dateKeys = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+                  return dateKeys.map(dateKey => (
+                    <div key={dateKey} style={{ marginBottom: '1rem' }}>
+                      <div style={{ fontSize: '0.8rem', color: '#aaa', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem' }}>{dateKey}</div>
+                      {byDate[dateKey].map((b: any) => {
+                        const isOpen = selectedBriefId === b.id;
+                        return (
+                          <div key={b.id} className="bp-brief-card" style={{ marginBottom: '0.4rem' }}>
+                            <div
+                              onClick={() => setSelectedBriefId(isOpen ? '' : b.id)}
+                              style={{ cursor: 'pointer', padding: '0.6rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.75rem', background: isOpen ? '#1a1a1a' : 'transparent' }}
+                            >
+                              <div style={{ color: DOMAIN_COLORS[b.domain] || '#888', fontWeight: 600, minWidth: '110px' }}>{DOMAIN_LABELS[b.domain] || b.domain}</div>
+                              <div style={{ flex: 1, color: '#ccc', fontSize: '0.9rem' }}>{b.duration}m session</div>
+                              <div style={{ color: '#888', fontSize: '0.85rem' }}>{isOpen ? 'Hide' : 'View'}</div>
+                            </div>
+                            {isOpen && (
+                              <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid #222' }}>
+                                <div className="bp-brief-content" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.content) }} />
+                                {b.continueAtHome && (
+                                  <div className="bp-continue-home">
+                                    <div className="bp-continue-home-label">How to continue this at home</div>
+                                    <div className="bp-continue-home-text" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.continueAtHome) }} />
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
-                    <div className="bp-brief-content" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.content) }} />
-                    {b.continueAtHome && (
-                      <div className="bp-continue-home">
-                        <div className="bp-continue-home-label">How to continue this at home</div>
-                        <div className="bp-continue-home-text" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.continueAtHome) }} />
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  ));
+                })()}
               </div>
             )}
           </div>
