@@ -409,6 +409,33 @@ app.post('/forge-api/child/:childId/rename-agent', (req, res) => {
   res.json({ success: true, agentName: cleanName });
 });
 
+app.post('/forge-api/admin/patch-domain-missions/:childId', (req, res) => {
+  const { childId } = req.params;
+  const { domainMissions } = req.body;
+  if (!domainMissions || typeof domainMissions !== 'object') {
+    return res.status(400).json({ error: 'domainMissions object required' });
+  }
+  const data = readData();
+  const child = data.children[childId];
+  if (!child) return res.status(404).json({ error: 'Child not found' });
+  Object.entries(domainMissions).forEach(([domain, missionIds]) => {
+    if (!child.domains[domain]) return;
+    const existing = child.domains[domain].missionsAvailable || [];
+    const combined = [...new Set([...existing, ...missionIds])];
+    combined.sort((a, b) => {
+      const na = parseInt(a.split('-').pop()); const nb = parseInt(b.split('-').pop());
+      return na - nb;
+    });
+    child.domains[domain].missionsAvailable = combined;
+    if (!child.domains[domain].currentMission) {
+      child.domains[domain].currentMission = combined[0];
+    }
+  });
+  writeData(data);
+  const summary = Object.fromEntries(Object.entries(child.domains).map(([d,v]) => [d, v.missionsAvailable?.length || 0]));
+  res.json({ success: true, summary });
+});
+
 const AGENT_VOICE_MAP = {
   vera: '21m00Tcm4TlvDq8ikWAM',
   ren: 'pFZP5JQG7iQjIQuC4Bku',
