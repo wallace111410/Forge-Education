@@ -416,7 +416,7 @@ app.post('/forge-api/admin/patch-domain-missions/:childId', (req, res) => {
     return res.status(400).json({ error: 'domainMissions object required' });
   }
   const data = readData();
-  const child = data.children[childId];
+  const child = data.forge.children[childId];
   if (!child) return res.status(404).json({ error: 'Child not found' });
   Object.entries(domainMissions).forEach(([domain, missionIds]) => {
     if (!child.domains[domain]) return;
@@ -796,7 +796,7 @@ async function generateSessionMemory(childId, session) {
 async function assessAndAdvanceMission(childId, session) {
   try {
     const data = readData();
-    const child = data.children[childId];
+    const child = data.forge.children[childId];
     if (!child) return;
     const curriculum = ensureCurriculum(child);
     const { missionId, domain } = session;
