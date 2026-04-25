@@ -24,6 +24,9 @@ export default function AvatarCustomizer({ child, onSaved, basePath }: { child: 
   const [config, setConfig] = useState(child.avatarConfig || DEFAULT_AVATAR);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [agentNameInput, setAgentNameInput] = useState(child.agentName || child.primaryAgent?.name || '');
+  const [nameSaving, setNameSaving] = useState(false);
+  const [nameSaved, setNameSaved] = useState(false);
   const [activeSection, setActiveSection] = useState('style');
 
   const childColor = getChildColor(child.id);
@@ -71,7 +74,36 @@ export default function AvatarCustomizer({ child, onSaved, basePath }: { child: 
         <div className="ac-preview-avatar">
           <AgentAvatar config={config} size={140} stage={child.stage} />
         </div>
-        <div className="ac-preview-name">{child.agentName}</div>
+        <div className="ac-preview-name" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+          <input
+            type="text"
+            value={agentNameInput}
+            onChange={e => { setAgentNameInput(e.target.value); setNameSaved(false); }}
+            maxLength={30}
+            style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '6px', color: '#fff', fontSize: '1rem', fontWeight: 600, textAlign: 'center', padding: '4px 10px', width: '160px' }}
+            placeholder="Agent name..."
+          />
+          <button
+            onClick={async () => {
+              if (!agentNameInput.trim() || agentNameInput.trim().length < 2) return;
+              setNameSaving(true);
+              try {
+                const r = await fetch(`${basePath}/forge-api/child/${child.id}/rename-agent`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ agentName: agentNameInput.trim() })
+                });
+                const d = await r.json();
+                if (d.success) { setNameSaved(true); setTimeout(() => setNameSaved(false), 2000); }
+              } catch(err) { console.error('Rename error:', err); }
+              finally { setNameSaving(false); }
+            }}
+            disabled={nameSaving || agentNameInput.trim().length < 2}
+            style={{ fontSize: '0.75rem', padding: '3px 12px', background: nameSaved ? '#1a5c38' : '#2a2a2a', border: '1px solid #444', borderRadius: '4px', color: nameSaved ? '#4ade80' : '#ccc', cursor: 'pointer' }}
+          >
+            {nameSaving ? 'Saving...' : nameSaved ? 'Saved!' : 'Save name'}
+          </button>
+        </div>
         {saved && (
           <div className="ac-saved-badge">Saved</div>
         )}
