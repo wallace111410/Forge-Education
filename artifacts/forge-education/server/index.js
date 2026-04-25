@@ -436,6 +436,24 @@ app.post('/forge-api/admin/patch-domain-missions/:childId', (req, res) => {
   res.json({ success: true, summary });
 });
 
+app.post('/forge-api/admin/confirm-advancement/:childId/:domain', (req, res) => {
+  const { childId, domain } = req.params;
+  const data = readData();
+  const child = data.forge.children[childId];
+  if (!child) return res.status(404).json({ error: 'Child not found' });
+  const domainData = child.domains[domain];
+  if (!domainData) return res.status(404).json({ error: 'Domain not found' });
+  domainData.advancementConfirmed = true;
+  domainData.advancementConfirmedDate = new Date().toISOString();
+  domainData.currentLevel = (domainData.currentLevel || 1) + 1;
+  // Remove from pending list
+  if (child.agentMemory.advancementPending) {
+    child.agentMemory.advancementPending = child.agentMemory.advancementPending.filter(d => d !== domain);
+  }
+  writeData(data);
+  res.json({ success: true, newLevel: domainData.currentLevel, domain });
+});
+
 const AGENT_VOICE_MAP = {
   vera: '21m00Tcm4TlvDq8ikWAM',
   ren: 'pFZP5JQG7iQjIQuC4Bku',
@@ -694,6 +712,12 @@ Session time: ${(() => { const start = session.startTimeISO ? new Date(session.s
   const data = readData();
   const child = getChild(data, childId);
   const reports = ensureReports(child);
+  // Check for advancement pending alerts to include in brief
+  const advancementPending = child.agentMemory.advancementPending || [];
+  const advancementAlert = advancementPending.length > 0
+    ? "\n\n🎯 ADVANCEMENT ALERT: " + child.name + " has completed all missions in: " + advancementPending.join(', ') + ". Review and confirm level advancement in the Progress tab."
+    : "";
+
   reports.dailyBriefs.unshift({
     id: `brief_${Date.now()}`,
     date: session.date,
@@ -701,8 +725,9 @@ Session time: ${(() => { const start = session.startTimeISO ? new Date(session.s
     domain: session.domain,
     missionId: session.missionId,
     duration: session.duration,
-    content: briefText,
+    content: briefText + advancementAlert,
     continueAtHome,
+    advancementPending: advancementPending.length > 0 ? [...advancementPending] : undefined,
     generatedAt: new Date().toISOString()
   });
   if (reports.dailyBriefs.length > 50) reports.dailyBriefs = reports.dailyBriefs.slice(0, 50);
@@ -868,6 +893,16 @@ async function assessAndAdvanceMission(childId, session) {
         const nextIdx = (domainData.missionsAvailable || []).indexOf(missionId) + 1;
         if (nextIdx > 0 && domainData.missionsAvailable[nextIdx]) {
           domainData.currentMission = domainData.missionsAvailable[nextIdx];
+        }
+        // Check if all available missions in this domain are now completed — flag for level advancement
+        const allCompleted = (domainData.missionsAvailable || []).every(mid => domainData.missionsCompleted.includes(mid));
+        if (allCompleted && domainData.missionsAvailable.length > 0 && !domainData.advancementFlagged) {
+          domainData.advancementFlagged = true;
+          domainData.advancementFlaggedDate = new Date().toISOString();
+          child.agentMemory.advancementPending = (child.agentMemory.advancementPending || []);
+          if (!child.agentMemory.advancementPending.includes(domain)) {
+            child.agentMemory.advancementPending.push(domain);
+          }
         }
       }
       if (curriculum.stuck[domain] && curriculum.stuck[domain].missionId === missionId) {
