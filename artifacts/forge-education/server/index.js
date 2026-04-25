@@ -1257,7 +1257,7 @@ app.put('/forge-api/admin/advancement/:childId/:domain', (req, res) => {
 
   // Clear advancement pending from agentMemory
   if (child.agentMemory && child.agentMemory.advancementPending) {
-    child.agentMemory.advancementPending = child.agentMemory.advancementPending.filter((d: string) => d !== domainKey);
+    child.agentMemory.advancementPending = child.agentMemory.advancementPending.filter(d => d !== domainKey);
   }
   writeData(data);
   res.json({ success: true, newLevel: domain.currentLevel });
