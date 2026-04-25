@@ -751,59 +751,94 @@ async function generateSessionMemory(childId, session) {
 }
 
 async function assessAndAdvanceMission(childId, session) {
-  const transcript = session.transcript.map(t => `${t.role}: ${t.content}`).join('\n');
-  const data = readData();
-  const child = getChild(data, childId);
-  const curriculum = ensureCurriculum(child);
-  const missionId = session.missionId;
-  const domain = session.domain;
+  try {
+    const data = readData();
+    const child = data.children[childId];
+    if (!child) return;
+    const curriculum = ensureCurriculum(child);
+    const { missionId, domain } = session;
+    if (!missionId) return;
 
-  if (!curriculum.missionProgress[missionId]) {
-    curriculum.missionProgress[missionId] = { attempts: 0, completed: false, completedDate: null, masteryLevel: 0 };
-  }
-  const progress = curriculum.missionProgress[missionId];
-  progress.attempts += 1;
+    const transcript = session.transcript.map(t => t.role + ": " + (typeof t.content === "string" ? t.content : JSON.stringify(t.content))).join("\n");
+    if (!transcript || transcript.length < 50) return;
 
-  const assessment = await callClaude(
-    'You assess student mastery for an education platform. Respond with ONLY a number (1, 2, or 3) on the first line, then a brief one-sentence rationale on the second line. Nothing else.',
-    `Assess mastery level for this session:\nChild: ${child.name} (age ${child.age})\nDomain: ${domain}\nMission: ${missionId}\nAttempt #${progress.attempts}\n\nTranscript:\n${transcript.slice(0, 4000)}\n\nMastery scale:\n1 = Needs more work (child struggled, didn't grasp core concepts, or was disengaged)\n2 = Partial mastery (child showed understanding but needs reinforcement)\n3 = Mastered (child demonstrated clear understanding and could apply concepts)\n\nRespond with the number (1, 2, or 3) on line 1, then a brief rationale on line 2.`,
-    150
-  );
+    if (!curriculum.missionProgress[missionId]) {
+      curriculum.missionProgress[missionId] = { masteryLayer: 0, layerNotes: "", nextSessionEntry: "", attempts: 0, stuckFlag: false, lastSessionId: null, lastAssessment: "", completedDate: null };
+    }
+    const progress = curriculum.missionProgress[missionId];
+    progress.attempts = (progress.attempts || 0) + 1;
+    progress.lastSessionId = session.id;
 
-  const masteryMatch = assessment.match(/^[123]/);
-  const mastery = masteryMatch ? parseInt(masteryMatch[0]) : 1;
-  const rationale = assessment.split('\n').slice(1).join(' ').trim();
-  progress.masteryLevel = mastery;
-
-  if (mastery >= 2 && !progress.completed) {
-    progress.completed = true;
-    progress.completedDate = session.date;
-
-    const domainData = child.domains[domain];
-    if (domainData) {
-      if (!domainData.missionsCompleted.includes(missionId)) {
-        domainData.missionsCompleted.push(missionId);
-      }
-      const currentIdx = domainData.missionsAvailable.indexOf(missionId);
-      if (currentIdx >= 0 && currentIdx < domainData.missionsAvailable.length - 1) {
-        domainData.currentMission = domainData.missionsAvailable[currentIdx + 1];
-      }
+    // Build layer descriptions from catalog
+    const catalogEntry = MISSION_CATALOG[missionId];
+    let layerContext = "";
+    if (catalogEntry && catalogEntry.masteryLayers) {
+      const ml = catalogEntry.masteryLayers;
+      layerContext = `MISSION-SPECIFIC MASTERY LAYERS:\nLayer 1: ${ml.layer1}\nLayer 2: ${ml.layer2}\nLayer 3: ${ml.layer3}\n\nCurrent layer reached so far: ${progress.masteryLayer}\n`;
+    } else {
+      layerContext = `MASTERY LAYERS (generic):\nLayer 1: Child showed basic engagement and restated the concept.\nLayer 2: Child applied the concept with a real example.\nLayer 3: Child integrated the concept with genuine insight.\n\nCurrent layer reached so far: ${progress.masteryLayer}\n`;
     }
 
-    if (curriculum.stuck[domain]) {
-      delete curriculum.stuck[domain];
+    const systemPrompt = "You are an expert educational assessor for a homeschool mentorship platform. Your job is to assess what mastery layer a child reached in a Socratic learning session. Be honest and precise. Respond ONLY in this exact JSON format with no other text:\n{\"masteryLayer\": <0|1|2|3>, \"layerNotes\": \"<one sentence describing what the child actually demonstrated>\", \"nextSessionEntry\": \"<one sentence telling the next agent where to pick up>\", \"stuckSignal\": <true|false>}\n\nmasteryLayer 0 = session happened but no mastery layer was reached (disengaged, off-topic, or no signal).\nmasteryLayer 1/2/3 = the highest layer description the child clearly demonstrated.\nstuckSignal = true if the child was genuinely stuck and the same approach is unlikely to work next time.";
+
+    const userPrompt = `Assess this learning session.\nChild: ${child.name} (age ${child.age}, Stage ${child.stage || 2})\nDomain: ${domain}\nMission: ${missionId} — ${catalogEntry ? catalogEntry.title : "unknown"}\nAttempt #${progress.attempts}\n\n${layerContext}\nTRANSCRIPT (last 3000 chars):\n${transcript.slice(-3000)}`;
+
+    const assessment = await callClaude(systemPrompt, userPrompt, 300);
+
+    let parsed = null;
+    try {
+      const clean = assessment.replace(/```json|```/g, "").trim();
+      parsed = JSON.parse(clean);
+    } catch(e) {
+      // Fallback: try to extract number
+      const m = assessment.match(/masteryLayer[": ]+([0-3])/);
+      parsed = { masteryLayer: m ? parseInt(m[1]) : 0, layerNotes: assessment.slice(0, 200), nextSessionEntry: "", stuckSignal: false };
     }
-  }
 
-  if (progress.attempts >= 3 && mastery < 2 && !progress.completed) {
-    curriculum.stuck[domain] = { missionId, attempts: progress.attempts, since: session.date };
-  }
+    const newLayer = Math.max(progress.masteryLayer || 0, parsed.masteryLayer || 0);
+    progress.masteryLayer = newLayer;
+    progress.layerNotes = parsed.layerNotes || "";
+    progress.nextSessionEntry = parsed.nextSessionEntry || "";
+    progress.lastAssessment = `Layer ${newLayer} | ${parsed.layerNotes || ""}`;
 
-  progress.lastAssessment = rationale;
-  progress.lastAttemptDate = session.date;
-  writeData(data);
+    // Stage-based stuck thresholds
+    const stage = child.stage || 2;
+    const l1Threshold = stage === 3 ? 2 : stage === 2 ? 4 : 99; // Weston: no flag
+    const l3Threshold = stage === 3 ? 4 : stage === 2 ? 7 : 99;
+
+    if (parsed.stuckSignal || (progress.attempts >= l1Threshold && progress.masteryLayer === 0)) {
+      progress.stuckFlag = true;
+      if (!curriculum.stuck[domain]) curriculum.stuck[domain] = { missionId, attempts: progress.attempts, since: new Date().toISOString(), reason: "Layer 1 not reached after " + progress.attempts + " attempts" };
+    } else if (progress.attempts >= l3Threshold && progress.masteryLayer < 3) {
+      progress.stuckFlag = true;
+      if (!curriculum.stuck[domain]) curriculum.stuck[domain] = { missionId, attempts: progress.attempts, since: new Date().toISOString(), reason: "Layer 3 not reached after " + progress.attempts + " attempts (currently at Layer " + progress.masteryLayer + ")" };
+    }
+
+    // Mission complete at Layer 3
+    if (newLayer >= 3) {
+      progress.completedDate = new Date().toISOString();
+      const domainData = child.domains[domain];
+      if (domainData) {
+        if (!domainData.missionsCompleted.includes(missionId)) {
+          domainData.missionsCompleted.push(missionId);
+        }
+        const nextIdx = (domainData.missionsAvailable || []).indexOf(missionId) + 1;
+        if (nextIdx > 0 && domainData.missionsAvailable[nextIdx]) {
+          domainData.currentMission = domainData.missionsAvailable[nextIdx];
+        }
+      }
+      if (curriculum.stuck[domain] && curriculum.stuck[domain].missionId === missionId) {
+        delete curriculum.stuck[domain];
+      }
+      progress.stuckFlag = false;
+    }
+
+    child.agentMemory.lastMissionAssessment = `${missionId}: Layer ${newLayer}/3 — ${parsed.layerNotes || ""}`;
+    writeData(data);
+  } catch(err) {
+    console.error("assessAndAdvanceMission error:", err);
+  }
 }
-
 app.get('/forge-api/admin/briefs/:childId', (req, res) => {
   const data = readData();
   const child = getChild(data, req.params.childId);
@@ -1714,6 +1749,16 @@ ${(() => {
     missionBlock += "\nTitle: " + catalogEntry.title;
     missionBlock += "\nDomain: " + catalogEntry.domain + " | Specialist: " + catalogEntry.specialist;
     missionBlock += "\nThis mission is scaffolded but not yet fully authored by the parent. Use your knowledge of the child level, the domain, the FORGE PURPOSE block above, and the title to conduct a high-quality session in the spirit of this title. Honor the child comfort and direction. Flag in the parent brief afterward that this mission needs full authoring.";
+  }
+  // Inject prior mastery layer context if session has been attempted before
+  const priorProgress = curriculum.missionProgress && curriculum.missionProgress[session.missionId];
+  if (priorProgress && priorProgress.masteryLayer > 0) {
+    missionBlock += "\n\n--- PRIOR SESSION CONTEXT ---";
+    missionBlock += "\nThis child has attempted this mission " + priorProgress.attempts + " time(s) before.";
+    missionBlock += "\nHighest layer reached: Layer " + priorProgress.masteryLayer + " of 3.";
+    if (priorProgress.layerNotes) missionBlock += "\nWhat was observed: " + priorProgress.layerNotes;
+    if (priorProgress.nextSessionEntry) missionBlock += "\nWhere to pick up: " + priorProgress.nextSessionEntry;
+    if (priorProgress.stuckFlag) missionBlock += "\nFLAG: This child has been stuck on this mission. Try a substantially different approach — new angle, new example, new entry point.";
   }
   return missionBlock;
 })()}
