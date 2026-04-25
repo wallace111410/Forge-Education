@@ -1,8 +1,9 @@
 // AUTO-GENERATED MISSION CATALOG
-// 270 missions total: 214 authored + 56 stubs
-// Weston: W-001 through W-060 (60 missions, all authored)
-// Isla: all 6 domains complete, 90 missions
-// Everly: 64 authored, 56 stubs (second half of each domain)
+// 270 missions: ALL AUTHORED — zero stubs remaining
+// Everly: 120 missions (CP-L5, IJ-L5, BE-L6, HF-L4, AI-L5, PM-L6) — 20/20 each domain
+// Isla: 90 missions (IJ-L3, CP-L3, BE-L4, HF-L3, AI-L3, PM-L4) — 15/15 each domain
+// Weston: 60 missions (W-001 through W-060) — fully authored with Ozzy voice
+// All authored missions include masteryLayers: { layer1, layer2, layer3 }
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -5213,23 +5214,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has been thinking about something Everly is already good at: asking questions. But there is a level beyond good questions — the question behind the question. The real issue underneath what the person is actually saying. Skilled communicators and apologists hear that deeper question and respond to it, not just the surface one. Today Atlas helps Everly develop this diagnostic skill.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Here is a question: 'Doesn't science disprove God?' What is the real question behind that question — what is the person actually asking or worried about?",
+      "Here is another: 'How do you know the Bible is true?' Same — what is behind it? What is the person really after?",
+      "Have you ever been asked a question in competition or conversation where you answered the surface question but missed the deeper one? What happened?",
+      "How do you get from the surface question to the real one? What is the technique?",
+      "In your next apologetics round or hard conversation, what is the one thing you are going to listen for underneath what they actually say?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can diagnose the real question beneath a surface question for at least two examples — and has a practical technique for doing it in real time.",
+    "portfolioCapture": "Everly's technique for finding the question behind the question.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "listening",
+      "empathy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly can name the question behind at least one surface question — goes beyond restating the question.",
+      "layer2": "Everly can articulate a technique for identifying the question behind the question — not just examples but a method.",
+      "layer3": "Everly commits to one specific application in her next real conversation or competition — connects the skill to immediate practice."
+    }
   },
   "CP-L5-014": {
     "id": "CP-L5-014",
@@ -5241,23 +5261,49 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has one job today: Everly speaks for three minutes on an unprepared topic without stopping. Not two minutes — three. This is the next level of impromptu speaking. At three minutes, you cannot fake it. You have to actually think, develop an idea, support it, and land it. The content matters now — not just the keeping-going.",
     "offScreenPrep": null,
-    "conversationFramework": null,
-    "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "conversationFramework": [
+      "Your topic: (Atlas picks one — options: 'The most important quality in a leader,' 'What reading teaches you that nothing else can,' 'Why it is better to be honest than kind,' 'What courage actually looks like at 11,' 'The case for homeschooling.') Three minutes. Go.",
+      "Atlas listens, noting: does she have a clear claim? Does she develop it? Does she use examples? Does she conclude?",
+      "What was your claim — the one thing you were arguing? Can you state it in one sentence now?",
+      "What was your best moment — the moment where you had real traction?",
+      "Do it again — same topic, same time. But this time lead with your claim in the first fifteen seconds."
+    ],
+    "topicBank": [
+      "The most important quality in a leader",
+      "What reading teaches you that nothing else can",
+      "Why it is better to be honest than kind",
+      "What courage actually looks like at age eleven",
+      "The case for homeschooling",
+      "What JellyBean taught me about business",
+      "Why fairness and sameness are different things"
+    ],
+    "masterySignal": "Everly delivers two three-minute impromptu attempts. The second attempt has a cleaner claim and stronger development than the first. She can state her claim in one sentence after each attempt.",
+    "portfolioCapture": "Everly's claim from the second attempt and her best moment.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Thesis-first argumentation — the same skill that makes an impromptu speech work makes an essay work.",
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "public speaking",
+      "impromptu"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly completes both three-minute attempts without stopping — endurance and courage.",
+      "layer2": "Everly can state her claim in one sentence after each attempt — shows she had one.",
+      "layer3": "Second attempt demonstrably has stronger claim placement and development — measurable improvement within the session."
+    }
   },
   "CP-L5-015": {
     "id": "CP-L5-015",
@@ -5269,23 +5315,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Atlas has a specific and uncomfortable challenge today: Everly is going to hear herself. Recording and listening back is one of the most powerful communication development tools there is — and most people avoid it because it is uncomfortable. Atlas and Everly will record a two-minute delivery, listen together, and diagnose exactly what to improve. Then record again.",
+    "offScreenPrep": "Have a recording device ready — phone, computer, anything.",
+    "conversationFramework": [
+      "Record yourself giving a two-minute argument on anything you have prepared or care about. Just go — no setup. (Record.)",
+      "Now listen back. What is the first thing you notice — good or uncomfortable?",
+      "Let's be specific. Atlas identifies one or two concrete things: pace, filler words, volume variation, upward inflection, monotone. What do you hear?",
+      "Record again — same content, same time. Apply what you heard. (Second recording.)",
+      "Listen to the second one. What specifically changed? Did it feel different while you were doing it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly completes both recordings and can name at least one specific difference between them — something she changed based on what she heard.",
+    "portfolioCapture": "Everly's one key self-diagnosis from the first recording and what she changed.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Voice as a writing element — the same qualities that make spoken delivery powerful make written prose powerful.",
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "voice",
+      "self-diagnosis"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly completes both recordings — makes the uncomfortable act of hearing herself real.",
+      "layer2": "Everly names at least one specific thing she heard in the first recording — genuine self-diagnosis.",
+      "layer3": "Everly names something that specifically changed in the second recording — closes the feedback loop."
+    }
   },
   "CP-L5-016": {
     "id": "CP-L5-016",
@@ -5297,23 +5361,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas wants to work on something Everly encounters in real competition and conversation: bad arguments. Not easy bad arguments — the ones that sound good at first, the ones that trip people up. Everly needs to be able to identify the flaw quickly and respond without sounding condescending. Today Atlas runs her through real arguments she is likely to face.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Here is an argument: 'Science has explained everything that religion used to explain — so we don't need religion anymore.' What is wrong with this argument? Where does it fail?",
+      "Here is another: 'You can't say anything is objectively wrong because different cultures have different morals.' What is the flaw?",
+      "And one more: 'If God were real and good, He would never allow suffering.' What are the three best responses to this?",
+      "When you identify a flaw in someone's argument in a conversation, how do you respond without making them feel attacked?",
+      "What is the difference between winning an argument and persuading someone?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can identify the logical flaw in at least two of the three arguments and articulate at least one response to each — and can name the difference between winning and persuading.",
+    "portfolioCapture": "Everly's answer to question 5 — winning versus persuading.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Logical fallacy identification and counterargument — directly applicable to rhetoric and argumentation.",
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "logical fallacies",
+      "persuasion"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly identifies the flaw in at least two of the three arguments — shows she can diagnose bad reasoning.",
+      "layer2": "Everly articulates a substantive response to at least two — goes beyond identifying the flaw to actually answering.",
+      "layer3": "Everly distinguishes winning from persuading with genuine insight — shows she has thought about the goal of argument, not just its technique."
+    }
   },
   "CP-L5-017": {
     "id": "CP-L5-017",
@@ -5325,23 +5407,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas wants to explore something that separates good communicators from great ones: the ability to say the same thing completely differently depending on who you are talking to. Same idea, different register, different vocabulary, different emotional pitch. Today Atlas and Everly take one argument and write it three ways.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Pick an argument you know well — something from apologetics or a position you hold strongly. State it in your normal voice first.",
+      "Now write it as if you are explaining it to an eight-year-old who has never heard it before. What changes?",
+      "Now write it as if you are presenting it to a skeptical PhD professor who has heard every version of this argument. What changes?",
+      "Now write it as if you are writing a tweet — twenty words maximum. What stays and what gets cut?",
+      "What did this exercise teach you about your argument — did you find any weakness or new strength in it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly produces three genuinely different versions of the same argument — not just shorter or longer, but actually calibrated to the audience. She can name what changed and why.",
+    "portfolioCapture": "Everly's three versions of her argument — all three.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Audience awareness in writing — the most fundamental revision skill there is.",
+    "connectiveHooks": [
+      "apologetics",
+      "persuasion",
+      "writing",
+      "audience"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly produces three versions that are meaningfully different — shows she actually adapted, not just reformatted.",
+      "layer2": "Everly names what specifically changed between versions — vocabulary, examples, emotional pitch, assumed knowledge.",
+      "layer3": "Everly discovers something about her own argument through the exercise — a weakness, a clearer core, or a new angle she hadn't seen."
+    }
   },
   "CP-L5-018": {
     "id": "CP-L5-018",
@@ -5353,23 +5454,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has a slightly unexpected topic today: humor. The ability to be funny — strategically, not accidentally — is one of the most powerful communication tools there is. It builds trust, defuses tension, makes you memorable, and signals intelligence. Atlas wants to help Everly understand how humor works as rhetoric and when to deploy it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Think about a speaker or communicator you find genuinely funny — not a comedian, someone who is funny in a real context. What makes them funny?",
+      "What is the structure of a joke? Not the content — the structure. What does every joke have?",
+      "In a debate or apologetics context, when would humor be appropriate and when would it backfire?",
+      "Try this: take a position you argue regularly and write one line that is genuinely a little funny — not a joke, just a moment of levity. Read it out loud.",
+      "What is the difference between wit and humor? Which one should you aim for in serious communication?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can articulate how humor works structurally and when it is appropriate in argument. She attempts at least one line of genuine wit in her argument.",
+    "portfolioCapture": "Everly's one witty line from her own argument.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Wit and tone in writing — levity is a rhetorical choice, not an accident.",
+    "connectiveHooks": [
+      "apologetics",
+      "rhetoric",
+      "persuasion",
+      "tone"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly can name the structural elements of humor — setup and subverted expectation at minimum.",
+      "layer2": "Everly can identify when humor is appropriate in argument and when it backfires — with specific examples.",
+      "layer3": "Everly produces at least one line of genuine wit in her own argument — attempts the skill, not just the analysis."
+    }
   },
   "CP-L5-019": {
     "id": "CP-L5-019",
@@ -5381,23 +5500,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Atlas wants to work on something specific to Everly's competition category: the informative speech. Most informative speeches are just organized facts. The great ones have a story underneath — a reason the audience should care, a tension that gets resolved, a human element that makes the information matter. Atlas helps Everly find the story inside her current informative speech.",
+    "offScreenPrep": "Everly should have her current informative speech topic in mind.",
+    "conversationFramework": [
+      "Tell me about your current informative speech — what is the topic and what do you cover?",
+      "Who is the human being at the center of your topic — whose story are you telling, even if indirectly?",
+      "What is the tension in your speech — what problem, question, or mystery does your information resolve?",
+      "What do you want the audience to feel at the end — not think, feel? What emotion should they leave with?",
+      "Rewrite your opening line so that it leads with story or tension instead of information. Read it out loud."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can identify the human story and tension inside her informative speech — and produces an opening line that leads with story rather than information.",
+    "portfolioCapture": "Everly's new story-first opening line.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Narrative structure in expository writing — every great essay has a story underneath.",
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "informative speech",
+      "narrative"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly can name the human being or human element at the center of her informative topic.",
+      "layer2": "Everly can name the tension in her speech — what question or problem the information resolves.",
+      "layer3": "Everly rewrites her opening line with story-first framing — produces something demonstrably different from her current opening."
+    }
   },
   "CP-L5-020": {
     "id": "CP-L5-020",
@@ -5409,23 +5546,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Atlas wants to revisit Lincoln today — not as a historical figure but as a model of communication. Lincoln is one of the greatest communicators in American history. The Second Inaugural, the Gettysburg Address, the Cooper Union speech — these are not just historical documents. They are templates. Atlas wants to know what Everly has actually absorbed.",
+    "offScreenPrep": "Have access to the Second Inaugural Address or the Gettysburg Address.",
+    "conversationFramework": [
+      "Read the Gettysburg Address or the Second Inaugural out loud — all the way through. Don't rush it.",
+      "What is the argument Lincoln is making? Not the topic — the argument. What is he claiming and why?",
+      "What specific rhetorical techniques do you see? Name them — anaphora, antithesis, concrete image, appeal to shared value.",
+      "What is the single most powerful line in the speech and why? What makes it work?",
+      "Take one technique Lincoln uses and apply it to your current apologetics argument. Write one sentence using that technique."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can identify Lincoln's core argument, name at least two rhetorical techniques with examples, and produce one sentence of her own that deliberately applies a technique she identified.",
+    "portfolioCapture": "Everly's sentence applying a Lincoln technique to her own argument.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Rhetorical analysis and imitation — the classical method of learning to write and speak.",
+    "connectiveHooks": [
+      "apologetics",
+      "Lincoln",
+      "rhetoric",
+      "tournament"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly reads the speech aloud and can state Lincoln's core argument in one sentence.",
+      "layer2": "Everly identifies at least two named rhetorical techniques with specific examples from the text.",
+      "layer3": "Everly produces a sentence of her own that deliberately applies one of Lincoln's techniques — closes the loop from analysis to production."
+    }
   },
   "IJ-L5-013": {
     "id": "IJ-L5-013",
@@ -5437,23 +5592,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to work on one of the hardest tensions in ethics and in Everly's apologetics preparation: mercy and justice seem to conflict. How can God be perfectly just and perfectly merciful at the same time? This is not just a theological question — it is a real tension Everly faces in her own decisions about people. Sage holds this with intellectual seriousness.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is the difference between mercy and justice? Define both in your own words — not dictionary definitions, your own.",
+      "Here is the tension: justice says give people what they deserve. Mercy says give people better than they deserve. Can both be fully true at the same time? How?",
+      "In apologetics, someone asks: if God is just, why doesn't He punish sin immediately? And if He is merciful, why does anyone face judgment? How do you hold both?",
+      "Has there been a moment in your own life where you chose mercy over justice — or justice over mercy? What happened?",
+      "What does the cross actually do to the mercy-justice tension? This is the theological answer — but can you explain it in a way that lands on someone who doesn't know the tradition?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate the mercy-justice tension with real precision and give a substantive theological response to how the cross resolves it — in language accessible to a non-Christian.",
+    "portfolioCapture": "Everly's explanation of how the cross resolves the mercy-justice tension — in her own words.",
+    "crossDomains": [
+      "humanFluency",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "theology",
+      "justice",
+      "mercy",
+      "tournament"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly defines mercy and justice with precision — not dictionary definitions but her own formulation of the distinction.",
+      "layer2": "Everly articulates how the cross addresses the tension — the theological argument, not just the conclusion.",
+      "layer3": "Everly explains the cross's resolution of mercy and justice in language accessible to a skeptic — bridges the theological and the accessible."
+    }
   },
   "IJ-L5-014": {
     "id": "IJ-L5-014",
@@ -5465,23 +5640,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to go somewhere personal today: what do you do when someone you deeply love holds a position you think is genuinely wrong? Not a taste difference — a moral or intellectual disagreement that matters. This is one of the hardest relational and intellectual challenges there is, and Everly is old enough to encounter it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever been in a situation where someone you love — a friend, a family member — believed something you thought was genuinely wrong? Not just different, actually wrong?",
+      "What did you do? Did you say something, or let it go?",
+      "What is the right framework for deciding when to say something and when not to? What variables matter?",
+      "Is there a difference between being honest with someone you love and being cruel? Where is the line?",
+      "Is there a belief someone you love holds right now that you haven't said anything about — something you think is wrong? What is stopping you?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate a personal framework for when to challenge versus when to hold back — with specific variables — and is honest about at least one real situation in her own life.",
+    "portfolioCapture": "Everly's framework for when to challenge someone you love.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "integrity",
+      "relationships",
+      "courage",
+      "honesty"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly engages with a real example — something she has actually navigated, not a hypothetical.",
+      "layer2": "Everly articulates a framework for when to speak and when not to — specific variables, not just 'it depends.'",
+      "layer3": "Everly is honest about the last question — something she hasn't said and why — with genuine self-reflection."
+    }
   },
   "IJ-L5-015": {
     "id": "IJ-L5-015",
@@ -5493,23 +5686,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to go somewhere uncomfortable: is there an argument Everly makes in competition that she doesn't fully believe herself? Not that she thinks it's false — but that she's not fully convinced, not fully settled? This is intellectual integrity at its hardest, and it is exactly what distinguishes genuine conviction from performance.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there an argument you make in apologetics that you give because it is effective — but where you have private doubts or questions? You don't have to name it publicly, but does it exist?",
+      "What is the doubt? What part of it doesn't fully settle for you?",
+      "Is it possible to argue for something you're not completely sure about and still be honest? Where is the line between advocacy and dishonesty?",
+      "What would you need to see or understand for that doubt to resolve? What would settle it?",
+      "What should you do with that doubt right now — sit with it, research it, name it to someone, or something else?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly is honest about at least one area of genuine doubt in her apologetics — and has a thoughtful position on how to handle intellectual uncertainty in advocacy.",
+    "portfolioCapture": "Everly's framework for handling intellectual uncertainty in advocacy.",
+    "crossDomains": [
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "intellectual honesty",
+      "doubt",
+      "faith",
+      "integrity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly is honest about the existence of a doubt — doesn't perform certainty she doesn't have.",
+      "layer2": "Everly articulates the doubt with some specificity — can name what part doesn't settle.",
+      "layer3": "Everly has a thoughtful position on advocacy under uncertainty — not 'fake it' and not 'don't argue it' but something more nuanced."
+    }
   },
   "IJ-L5-016": {
     "id": "IJ-L5-016",
@@ -5521,23 +5733,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Sage wants to revisit Marcus Aurelius today — not as a history lesson but as a practical philosophy. Meditations was written by a man who ran the most powerful empire in the world and still had to fight his own character every day. Sage wants to know what Everly has actually absorbed and how it shows up in her life.",
+    "offScreenPrep": "Have a copy of Meditations or a passage from it nearby.",
+    "conversationFramework": [
+      "What do you remember from Meditations — what is the core of what Marcus Aurelius is saying?",
+      "Pick one line or passage that actually stuck with you — not the most famous one, one that means something to you personally. Read it and tell me why.",
+      "Marcus writes extensively about the gap between knowing what is right and actually doing it. What is his answer to that gap?",
+      "Is there a place in your own life where you see that gap — where you know what the right thing to do is and you still don't do it consistently?",
+      "Marcus was writing to himself — not for an audience. What do you think he was most afraid of becoming? Does that fear apply to you?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can engage Meditations as a living document — not a historical artifact — and connect at least one passage to something real in her own life or character.",
+    "portfolioCapture": "Everly's passage and the real thing it connects to in her own life.",
+    "crossDomains": [
+      "humanFluency"
+    ],
+    "laWeavingHook": "Classical reading as a mirror — the same skill that makes Meditations useful makes any great text generative.",
+    "connectiveHooks": [
+      "Meditations",
+      "Marcus Aurelius",
+      "Stoicism",
+      "character",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly recalls the core of Marcus's philosophy and can name a specific passage that matters to her.",
+      "layer2": "Everly articulates Marcus's answer to the knowing-doing gap — his practical solution, not just the observation.",
+      "layer3": "Everly connects the text to her own life — names a real gap or a real fear that resonates."
+    }
   },
   "IJ-L5-017": {
     "id": "IJ-L5-017",
@@ -5549,23 +5780,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to do something that requires real courage: ask Everly what would actually change her mind about her core beliefs. Not rhetorical commitment to never changing — genuine intellectual honesty about what evidence or argument would move her. This is the test of whether a belief is held or just performed.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a core belief you hold — about God, about human nature, about ethics — that you would describe as non-negotiable? Name it.",
+      "What would actually change your mind about it? What evidence, argument, or experience would move you?",
+      "If you cannot name anything that would change your mind, is that faith or is it stubbornness? How do you know which one it is?",
+      "Is there a belief you used to hold that you no longer hold — something that actually changed? What changed it?",
+      "What is the difference between a belief that is open to evidence and a belief that is closed to it? Is one always better than the other?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly engages the question of what would change her mind with genuine intellectual honesty — not with a refusal to answer or a performance of certainty she doesn't have.",
+    "portfolioCapture": "Everly's answer to question 5 — the difference between open and closed beliefs.",
+    "crossDomains": [
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "intellectual humility",
+      "faith",
+      "apologetics",
+      "belief",
+      "doubt"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names what would change her mind about a core belief — engages the question honestly.",
+      "layer2": "Everly addresses the faith-versus-stubbornness distinction with genuine reflection — not a dodge.",
+      "layer3": "Everly names a belief that actually changed — shows she has real intellectual history, not just performed conviction."
+    }
   },
   "IJ-L5-018": {
     "id": "IJ-L5-018",
@@ -5577,23 +5827,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to go somewhere that requires real theological courage: the hard texts. The passages in Scripture that are genuinely difficult — that require real engagement rather than easy answers. Everly is at an age where she will start encountering serious objections to these texts. Sage helps her develop a posture and a method, not just an answer.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a passage in Scripture that you find genuinely hard — something that you don't have an easy answer for? Name it if you are willing.",
+      "What makes it hard — what is the specific difficulty? Moral, historical, interpretive?",
+      "What do you do with a hard text when you encounter it? What is your process?",
+      "Is 'I don't know' ever an acceptable answer in apologetics? When?",
+      "What is the difference between a question that undermines faith and a question that deepens it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly engages a genuinely hard text with intellectual honesty — names the specific difficulty and has a thoughtful process for approaching hard passages. She can articulate when 'I don't know' is appropriate.",
+    "portfolioCapture": "Everly's process for engaging hard scripture texts.",
+    "crossDomains": [
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "Scripture",
+      "faith",
+      "doubt",
+      "intellectual honesty"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a genuinely hard text — not a soft difficulty but something she actually wrestles with.",
+      "layer2": "Everly names her process for engaging hard texts — what she actually does, not what she is supposed to do.",
+      "layer3": "Everly articulates the difference between questions that undermine faith and questions that deepen it — genuine theological insight."
+    }
   },
   "IJ-L5-019": {
     "id": "IJ-L5-019",
@@ -5605,23 +5874,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to do a real post-tournament debrief — not the performance review, but the character review. What did the tournament reveal about who Everly is? Not how she argued — who she was under pressure, in loss, in victory, in the moments nobody was watching.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Walk me through the tournament from the inside — not the rounds, the experience. What were you thinking and feeling?",
+      "Was there a moment where you were proud of who you were — not how you performed, but who you were as a person?",
+      "Was there a moment where you weren't? Where you acted in a way you wish you had handled differently?",
+      "What did the tournament reveal about you that ordinary life doesn't?",
+      "Who do you want to be at the next tournament that you weren't quite this time?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly engages the character review with honest self-assessment — names at least one moment she was proud of and one she wasn't, and articulates a specific character intention for next time.",
+    "portfolioCapture": "Everly's character intention for the next tournament.",
+    "crossDomains": [
+      "humanFluency",
+      "physical"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "tournament",
+      "character",
+      "integrity",
+      "growth"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names at least one moment she was proud of and one she wasn't — honest on both.",
+      "layer2": "Everly articulates what the tournament revealed about her that ordinary life doesn't — shows self-awareness about pressure contexts.",
+      "layer3": "Everly names a specific character intention for next tournament — concrete, not general."
+    }
   },
   "IJ-L5-020": {
     "id": "IJ-L5-020",
@@ -5633,23 +5922,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Sage wants to close the Identity domain with something that requires real courage: the fears Everly still carries. Not the fears she has overcome — those are worth celebrating. The ones that are still there. Real self-knowledge includes knowing what still scares you, and Sage holds that with complete safety and zero judgment.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What are you still afraid of? Not the fears you have conquered — the ones that are still present.",
+      "Which one feels most important — the one that, if you faced it, would change you most?",
+      "Have you told anyone else about that fear? Why or why not?",
+      "What would it cost you to face it? What would it give you?",
+      "What is the one thing you want to be true about who you are three years from now — what kind of person do you want Sage to see when you come back to this question?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly names at least one real fear — not a performed vulnerability but something she actually carries — and has a genuine sense of what facing it would cost and give.",
+    "portfolioCapture": "Everly's answer to the last question — who she wants to be in three years.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "courage",
+      "identity",
+      "fear",
+      "growth",
+      "character"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names at least one real fear — something she actually carries, not a safe answer.",
+      "layer2": "Everly can name what facing it would cost and what it would give — understands the stakes.",
+      "layer3": "Everly answers the last question with genuine vision — names who she wants to become, with real intention behind it."
+    }
   },
   "BE-L6-011": {
     "id": "BE-L6-011",
@@ -5661,23 +5969,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about competition — not in sports, in business. JellyBean operates in a competitive landscape even if Everly doesn't think about it that way. What else are Everly's customers buying instead of JellyBean? Who is competing for the same dollar? This is competitive analysis for an 11-year-old running a real business.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who is your competitor — not another vending machine, but everything a customer might spend that dollar on instead of your product?",
+      "What does your competitor do better than you? Be honest — what does JellyBean lose on?",
+      "What does JellyBean do better than its alternatives? What is your actual advantage?",
+      "Is there a competitor who worries you — someone or something that could hurt JellyBean if it got bigger or changed?",
+      "What is the one thing you would do right now to make JellyBean harder to compete with?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can name real competition — not just other vending machines — and articulate JellyBean's actual advantage over at least two alternatives.",
+    "portfolioCapture": "Everly's one action to make JellyBean harder to compete with.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "competition",
+      "strategy",
+      "advantage"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names competition beyond other vending machines — identifies the full competitive landscape.",
+      "layer2": "Everly articulates at least one genuine advantage JellyBean has and one genuine disadvantage — honest on both.",
+      "layer3": "Everly proposes one specific action to strengthen JellyBean's competitive position — concrete and actionable."
+    }
   },
   "BE-L6-012": {
     "id": "BE-L6-012",
@@ -5689,23 +6015,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to help Everly do something real: build an actual six-month plan for JellyBean. Not a dream list — a plan with specific goals, specific actions, and specific ways to know if it is working. Flux treats Everly like a real business owner because she is one.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is the one most important thing you want JellyBean to accomplish in the next six months?",
+      "What would have to be true at the end of six months for you to say it was a success? Name three specific indicators.",
+      "What are the three biggest things standing between you and that outcome? What are the actual obstacles?",
+      "What specifically will you do in months one and two to start? Not the whole plan — just the first steps.",
+      "Who needs to know about this plan — who else needs to be aligned for it to work?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly produces a basic six-month plan with a clear outcome, success indicators, obstacles, and first steps — grounded in real knowledge of the business.",
+    "portfolioCapture": "Everly's six-month plan — outcome, indicators, first steps.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "planning",
+      "strategy",
+      "goals"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the most important outcome and three success indicators — specific enough to be measurable.",
+      "layer2": "Everly names the three biggest real obstacles — honest about what stands between her and the outcome.",
+      "layer3": "Everly identifies who needs to be aligned — shows she understands that plans require buy-in, not just strategy."
+    }
   },
   "BE-L6-013": {
     "id": "BE-L6-013",
@@ -5717,23 +6061,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Flux wants to do something Everly probably hasn't done: interview an actual customer. Not ask what they like — really understand what they experience. What do they think about when they approach the machine? What makes them choose or not choose? This is user research for an 11-year-old.",
+    "offScreenPrep": "Everly should think about a real JellyBean customer she could describe or has observed.",
+    "conversationFramework": [
+      "Tell me about a specific customer — someone you have actually seen use the machine. What do you know about them?",
+      "If you could hear their internal monologue as they approached your machine, what would they be thinking?",
+      "What would they say was the best thing about JellyBean? And the most annoying thing?",
+      "If they could change one thing about your machine — anything — what do you think they would change?",
+      "What would make them bring someone else to the machine — what would make them recommend it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can describe a real customer with genuine empathy — gets inside their experience, not just their purchase behavior.",
+    "portfolioCapture": "Everly's customer portrait — the internal monologue she imagines.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "customers",
+      "empathy",
+      "user research"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly describes a specific real customer — someone she has actually observed, not a generic description.",
+      "layer2": "Everly gets inside the customer's experience — describes their internal experience, not just what they bought.",
+      "layer3": "Everly names what would make a customer recommend JellyBean — understands word-of-mouth and advocacy."
+    }
   },
   "BE-L6-014": {
     "id": "BE-L6-014",
@@ -5745,23 +6107,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to think about something that feels very far away but is actually important to think about now: what is the end game for JellyBean? Not quitting — strategic exit. Businesses are built, scaled, and eventually either sold, handed off, or closed. Understanding that from the beginning changes how you build. Flux treats this with full seriousness.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is JellyBean for? Not what it does — what it is building toward in the long run?",
+      "If you were going to stop running JellyBean someday, what are the options — sell it, hand it to someone, wind it down, something else?",
+      "What would JellyBean have to look like for someone else to want to buy it? What makes a business valuable?",
+      "Is there a version of JellyBean that becomes something much bigger — a real company? What would that look like?",
+      "What would you want to have learned from JellyBean by the time you hand it off or move on?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate the long-term purpose of JellyBean and name at least two realistic exit options — with some sense of what makes a business valuable to a buyer.",
+    "portfolioCapture": "Everly's answer to what she wants to have learned from JellyBean by the time she moves on.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "exit strategy",
+      "long-term thinking",
+      "enterprise value"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly articulates JellyBean's long-term purpose — what it is building toward, beyond current revenue.",
+      "layer2": "Everly names at least two realistic exit options and can describe what each would require.",
+      "layer3": "Everly describes what JellyBean would have to look like to be valuable to a buyer — shows she understands enterprise value."
+    }
   },
   "BE-L6-015": {
     "id": "BE-L6-015",
@@ -5773,23 +6153,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Flux wants to do something very specific and practical: actually read JellyBean's cash flow data together. Not talk about cash flow in the abstract — look at the actual numbers. When did money come in, when did it go out, and what does the gap look like right now? This is financial literacy in the most concrete possible form.",
+    "offScreenPrep": "Have JellyBean's actual financial data available if possible — revenue, costs, any records.",
+    "conversationFramework": [
+      "Walk me through JellyBean's money flows right now — income, costs, timing. What do you actually know?",
+      "Is there a month or period where cash was tightest — where you had more going out than coming in? When?",
+      "What is your current profit margin — roughly? If you don't know, estimate: for every dollar in, how much is left after costs?",
+      "If revenue dropped thirty percent tomorrow, what would break first? What is the most fragile part of your cash position?",
+      "What one thing would you change about JellyBean's cash flow structure if you could?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can describe JellyBean's actual cash flows with real numbers or honest estimates — and can identify the most fragile part of the cash position.",
+    "portfolioCapture": "Everly's current profit margin estimate and the most fragile element.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "cash flow",
+      "financial literacy",
+      "profit margin"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly describes JellyBean's cash flows with real knowledge — actual numbers or honest estimates, not guesses.",
+      "layer2": "Everly can estimate the profit margin and identify the tightest period — shows real financial awareness.",
+      "layer3": "Everly identifies the most fragile element and proposes one structural change — applies the analysis to action."
+    }
   },
   "BE-L6-016": {
     "id": "BE-L6-016",
@@ -5801,23 +6199,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux has a specific challenge: help Everly identify and prepare to interview a mentor. Not a general role model — someone who has done something she wants to do, who could actually give her real information. This is network thinking and knowledge extraction for an 11-year-old.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who is someone — in your world or accessible to you — who has built something, run something, or done something you want to learn from? Name them.",
+      "What specifically do you want to know from them — not general wisdom, three specific questions you would ask?",
+      "What would you offer in return — why would this person want to talk to you?",
+      "How would you reach out — what would you actually say in the first message or conversation?",
+      "What would success look like from this conversation — what would you walk away with?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly identifies a real potential mentor and prepares three specific questions she would actually ask — plus a clear articulation of what she offers in exchange.",
+    "portfolioCapture": "Everly's three questions for her mentor and her opening message.",
+    "crossDomains": [
+      "humanFluency",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "mentorship",
+      "networking",
+      "JellyBean",
+      "learning",
+      "relationships"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a real potential mentor — someone accessible and relevant, not a famous person she will never meet.",
+      "layer2": "Everly prepares three specific questions — not general, but targeted to what she actually wants to know.",
+      "layer3": "Everly articulates what she offers in exchange — understands that good mentorship is a relationship, not a one-way extraction."
+    }
   },
   "BE-L6-017": {
     "id": "BE-L6-017",
@@ -5829,23 +6247,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Flux wants to revisit The Richest Man in Babylon — but at Everly's level, not Isla's. Everly has enough financial experience running JellyBean to apply the principles with real precision. Flux pushes her to go beyond the principles to the mechanisms and the edge cases.",
+    "offScreenPrep": "Have a copy of The Richest Man in Babylon or recall its key principles.",
+    "conversationFramework": [
+      "What do you remember from The Richest Man in Babylon? State the core principles in your own words — not the book's words.",
+      "The book says pay yourself first — save at least ten percent before anything else. JellyBean earns real money. Are you doing this? Honestly?",
+      "The book also talks about putting money to work — not letting it sit. What would putting JellyBean's profit to work actually look like at your age?",
+      "Here is a tension: the book says protect your treasure from loss — avoid risky investments. But it also says put your money to work. How do you hold both?",
+      "What is one thing the book says that you understand differently now than you did when you first read it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly engages the Richest Man in Babylon with real application precision — connects it to JellyBean's actual finances with specific examples and can hold the risk-versus-return tension.",
+    "portfolioCapture": "Everly's answer to what she understands differently now.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Reading for application at depth — returning to a text with more experience reveals what you couldn't see the first time.",
+    "connectiveHooks": [
+      "JellyBean",
+      "Richest Man in Babylon",
+      "investing",
+      "stewardship",
+      "financial literacy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly states the core principles accurately in her own words — not recitation, genuine understanding.",
+      "layer2": "Everly honestly assesses whether JellyBean is following the principles — real application, not idealized.",
+      "layer3": "Everly holds the protection-versus-work tension with genuine thought — names how she navigates the tradeoff at her age."
+    }
   },
   "BE-L6-018": {
     "id": "BE-L6-018",
@@ -5857,23 +6294,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to go somewhere real and practical: the obligations on JellyBean's income. Tithe is a commitment of faith. Taxes are a legal obligation. Both reduce the money Everly gets to keep and invest. How does she think about them — not as burdens, but as part of a responsible financial picture?",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "JellyBean earns real money. What obligations come off the top before anything else — what does that money owe?",
+      "How do you think about the tithe — is it an obligation, a discipline, a gift, something else? What is it to you?",
+      "Has there ever been a tension between giving and keeping — where giving felt like it cost you something? What happened?",
+      "Do you know anything about how your income is taxed through Denovo? What do you understand about it?",
+      "What would a fully responsible financial picture for JellyBean look like — all obligations met, then what remains?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can describe the financial obligations on JellyBean's income and articulate her own genuine view of tithing — not a rehearsed answer.",
+    "portfolioCapture": "Everly's fully responsible financial picture for JellyBean.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "tithe",
+      "taxes",
+      "Denovo",
+      "stewardship"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the obligations on JellyBean's income — tithe, taxes, costs — with real knowledge.",
+      "layer2": "Everly articulates her own genuine view of tithing — what it means to her, not what she is supposed to say.",
+      "layer3": "Everly describes a fully responsible financial picture — obligations first, then investment, then discretionary — shows holistic financial thinking."
+    }
   },
   "BE-L6-019": {
     "id": "BE-L6-019",
@@ -5885,23 +6341,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to work on a real strategic decision: should JellyBean expand to a new product category? Not the existing snack selection — something new. A different type of product, a different customer, a different margin profile. Everly runs the analysis.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "If JellyBean were going to add a completely new product category — not just a new snack, a different type of product — what would you consider?",
+      "Why that? Who is the customer and what is the market?",
+      "Run the numbers: what would it cost to add, what would you charge, what is the margin?",
+      "What are the risks — what could go wrong that you are not thinking about?",
+      "Is it worth it — yes, no, or not yet? Give me your verdict and the reasoning."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly runs a complete analysis of a new product category — customer, margin, risk — and gives a reasoned verdict with her actual reasoning.",
+    "portfolioCapture": "Everly's product analysis and verdict.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "product strategy",
+      "market",
+      "margin",
+      "risk"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a real new product category and the customer it would serve — grounded in real market thinking.",
+      "layer2": "Everly runs the margin math — cost, price, margin — with real estimates.",
+      "layer3": "Everly names risks and gives a reasoned verdict — yes, no, or not yet — with actual reasoning she can defend."
+    }
   },
   "BE-L6-020": {
     "id": "BE-L6-020",
@@ -5913,23 +6388,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Flux wants to do a real year-end review of JellyBean at the business level — not a feelings check-in but an honest performance review. Revenue, growth, what worked, what failed, what the business learned. Flux treats Everly as the CEO she is.",
+    "offScreenPrep": "Have JellyBean's year-end numbers available if possible.",
+    "conversationFramework": [
+      "Give me the year-end numbers: revenue, costs, profit. Best estimates if you don't have exact figures.",
+      "What grew this year? What shrank?",
+      "What was the best business decision you made this year — something that actually worked?",
+      "What was the worst business decision — something that cost you money, time, or customers?",
+      "What does JellyBean need to do next year that it didn't do this year?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly gives a real business review with actual numbers or honest estimates — including an honest assessment of best and worst decisions.",
+    "portfolioCapture": "Everly's year-end numbers and her one priority for next year.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "year-end",
+      "performance review",
+      "financial literacy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly gives year-end numbers — actual or honest estimates — shows she knows her business.",
+      "layer2": "Everly names best and worst decisions honestly — not just the wins, the real losses too.",
+      "layer3": "Everly articulates what JellyBean needs to do differently next year — forward-looking and specific."
+    }
   },
   "HF-L4-011": {
     "id": "HF-L4-011",
@@ -5941,23 +6434,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about something that requires real emotional maturity: what Everly does when the people she depends on are depleted. Parents get tired, stretched, overwhelmed. An emotionally intelligent 11-year-old starts to notice this and has a choice about how to respond. Kira explores this with full warmth and zero pressure.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever noticed your mom or dad being really tired — not just physically, but depleted? What does that look like?",
+      "What do you usually do when you notice that?",
+      "Is there something you could do that you don't usually do — something that would actually help rather than add to it?",
+      "What is the hardest thing about being the kid when your parent is struggling?",
+      "Is there something your mom or dad does for you when you are struggling that you could start doing for them?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can describe what parental depletion looks like from her perspective and name at least one specific thing she could do differently in response.",
+    "portfolioCapture": "Everly's answer to the last question — what she could start doing for her parents.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "family",
+      "empathy",
+      "emotional maturity",
+      "parents",
+      "care"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly can describe what parental depletion looks like — shows she notices it, not just experiences it.",
+      "layer2": "Everly names something she could do that she doesn't usually do — specific, not just be nicer.",
+      "layer3": "Everly identifies the reciprocal — something her parent does for her that she could start doing for them — shows mature relational thinking."
+    }
   },
   "HF-L4-012": {
     "id": "HF-L4-012",
@@ -5969,23 +6481,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira has a slightly uncomfortable topic today: the person Everly avoids. Not someone she dislikes — the person she steps around, finds it harder to be generous toward, or just doesn't quite connect with. Understanding why we avoid people is one of the most self-revealing things we can do.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there someone in your world — not someone you hate, just someone you find yourself stepping around or not fully engaging with? Who is it, if you're willing?",
+      "What is it about them that makes it harder? What is the thing that creates the friction?",
+      "Is it possible that what bothers you about them is something you recognize in yourself? Or something you are afraid of?",
+      "What would it cost you to be more generous toward that person — to actually try to know them?",
+      "Is there something that person needs from you that you have been withholding?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly engages the question with honest self-reflection — can name something specific about why the person is hard and is willing to consider what she might owe them.",
+    "portfolioCapture": "Everly's answer to question 4 — what it would cost her to be more generous.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "relationships",
+      "empathy",
+      "self-awareness",
+      "generosity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a real person she avoids — someone specific, not a generic category.",
+      "layer2": "Everly names what specifically creates the friction — something about the person or the dynamic.",
+      "layer3": "Everly considers what she might owe that person — shows she can move from self-protection to generosity."
+    }
   },
   "HF-L4-013": {
     "id": "HF-L4-013",
@@ -5997,23 +6527,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to work on something Everly probably does already but can do much better: giving genuine, specific compliments. Most compliments are either generic ('you're so nice') or performative. A precision compliment — one that names something specific and true — is one of the most powerful relational gifts there is.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is the difference between a generic compliment and a precision compliment? Give me an example of each for the same person.",
+      "Think of someone in your life who deserves a genuine compliment right now. Who is it?",
+      "What is the specific thing about them that you want to name — not generally, specifically?",
+      "Say it out loud to me right now — practice the precision compliment as if you were saying it to them.",
+      "What stops people from giving genuine specific compliments? Why is it actually harder than it sounds?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly can articulate the difference between generic and precision compliments and delivers at least one genuine, specific compliment for a real person in her life.",
+    "portfolioCapture": "Everly's precision compliment — in her own words.",
+    "crossDomains": [
+      "communication"
+    ],
+    "laWeavingHook": "Specific and precise description — the same skill that makes a compliment land makes descriptive writing vivid.",
+    "connectiveHooks": [
+      "relationships",
+      "communication",
+      "generosity",
+      "specificity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly articulates the difference between generic and precision compliments — with a real example of each.",
+      "layer2": "Everly names the specific thing she wants to compliment about a real person — specific enough to be recognizable.",
+      "layer3": "Everly delivers the precision compliment out loud — makes the practice real, not just conceptual."
+    }
   },
   "HF-L4-014": {
     "id": "HF-L4-014",
@@ -6025,23 +6573,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about the conversations Everly has been avoiding — the ones she knows she should have but hasn't yet. Not hypotheticals. Real conversations with real people in her actual life. This is accountability and courage in relational form.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a conversation you know you need to have with someone — something you've been putting off? You don't have to say who — just: does it exist?",
+      "What is stopping you? What are you afraid will happen if you have it?",
+      "What is the cost of not having it — what happens if you keep avoiding it?",
+      "What would you need to feel or know to be ready to have it?",
+      "When are you going to have it? Not if — when."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly names a real avoided conversation and engages honestly with why she is avoiding it — and commits to a when, not just an intention.",
+    "portfolioCapture": "Everly's when — the specific commitment to have the conversation.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "courage",
+      "honesty",
+      "relationships",
+      "accountability"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly acknowledges a real avoided conversation exists — honest about the avoidance.",
+      "layer2": "Everly names what she is afraid will happen — specific fear, not vague discomfort.",
+      "layer3": "Everly commits to a when — a specific timeframe, not just I will someday."
+    }
   },
   "HF-L4-015": {
     "id": "HF-L4-015",
@@ -6053,23 +6620,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about something Everly is embedded in but may not have thought about explicitly: what church actually does for her. Not what it is supposed to do — what it actually does, in her real experience.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does church do for you — not theologically, experientially? What is the actual value it adds to your life?",
+      "Is there something church provides that you could not get anywhere else? What is it?",
+      "Is there something about your church experience that you find hard or hollow? What is it?",
+      "What would be missing from your life if your family stopped going to church tomorrow?",
+      "What do you give to the church community — not just attend, but actually give?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate the genuine value church adds to her life — including honest acknowledgment of what is hard or hollow — and names something she gives to the community.",
+    "portfolioCapture": "Everly's answer to what would be missing if church stopped.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "church",
+      "community",
+      "faith",
+      "belonging",
+      "service"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the genuine value church adds — something specific, not just 'community' or 'God.'",
+      "layer2": "Everly is honest about what she finds hard or hollow — shows she is engaging, not performing.",
+      "layer3": "Everly names what she gives to the community — sees herself as a contributor, not just a recipient."
+    }
   },
   "HF-L4-016": {
     "id": "HF-L4-016",
@@ -6081,23 +6667,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to go deeper on forgiveness than the earlier mission — specifically the hard cases. The ones where forgiveness doesn't mean restored trust. The ones where you forgive someone but you don't forget what they showed you. This is forgiveness as a mature relational skill, not a simple act.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a difference between forgiving someone and trusting them again? What is the difference?",
+      "Has there been a situation where you forgave someone but you adjusted how much you trusted them — not as punishment, but because what happened taught you something real?",
+      "Is that fair? Can you genuinely forgive someone and still hold what they showed you?",
+      "What does forgiveness actually accomplish — what does it do for the person who forgives, not just for the person forgiven?",
+      "Is there someone you have forgiven but where trust has not been fully restored? Is that okay?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate the distinction between forgiveness and restored trust with genuine precision — and is honest about at least one real situation where the distinction applies.",
+    "portfolioCapture": "Everly's answer to what forgiveness accomplishes for the person who forgives.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "forgiveness",
+      "trust",
+      "relationships",
+      "faith",
+      "maturity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly articulates the distinction between forgiveness and restored trust — not conflated.",
+      "layer2": "Everly names what forgiveness accomplishes for the person who forgives — understands it as an internal act, not just relational.",
+      "layer3": "Everly is honest about at least one real situation where forgiveness and trust are not the same — genuine self-reflection."
+    }
   },
   "HF-L4-017": {
     "id": "HF-L4-017",
@@ -6109,23 +6714,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to work on a specific and high-value skill: reading the emotional temperature of a group. Not one person — a room. What is the energy when you walk in? What has just happened? Who is tense and who is loose? This is social intelligence at the group level.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "When you walk into a room — a co-op classroom, a family dinner, a tournament waiting area — what do you notice first?",
+      "Have you ever walked into a space and immediately known something was wrong, even before anyone said anything? What tipped you off?",
+      "What are the signals you look for — what tells you a room is tense, relaxed, excited, exhausted?",
+      "Is there a person in your life who is exceptional at reading rooms? What do they do that you want to learn?",
+      "When you read a room and notice something is off — what do you do with that information?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can name specific signals she uses to read a room and has at least one real example of reading a room correctly before it was verbally acknowledged.",
+    "portfolioCapture": "Everly's specific signals for reading a room.",
+    "crossDomains": [
+      "communication",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "emotional intelligence",
+      "social awareness",
+      "co-op",
+      "competition",
+      "family"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names specific signals she uses to read a room — beyond just 'the vibe.'",
+      "layer2": "Everly gives a real example of reading a room correctly — something she actually experienced.",
+      "layer3": "Everly names what she does with that information — shows she translates perception into action."
+    }
   },
   "HF-L4-018": {
     "id": "HF-L4-018",
@@ -6137,23 +6762,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Kira wants to revisit The Hiding Place — Corrie ten Boom's story of hiding Jews during the Nazi occupation and her time in a concentration camp. This is one of the most important books Everly has encountered. Kira wants to know what she has actually absorbed and how it has changed her.",
+    "offScreenPrep": "Have access to The Hiding Place or recall key themes and passages.",
+    "conversationFramework": [
+      "What do you remember about The Hiding Place — not the plot, the experience of reading it?",
+      "What is the line or moment in the book that you have never forgotten? What made it stay?",
+      "Corrie's sister Betsie believed that God had no enemies, even among their captors. Do you believe that? What does that belief cost?",
+      "What did The Hiding Place teach you about forgiveness that you could not have learned another way?",
+      "Is there something Corrie did that you are not sure you could do? What is it, and why?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly engages The Hiding Place as a living text — can name the thing that stayed with her and is honest about what Corrie did that she is not sure she could do.",
+    "portfolioCapture": "Everly's answer to what she is not sure she could do.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Biography and character formation — reading about real lives of faith is the oldest form of moral education.",
+    "connectiveHooks": [
+      "Hiding Place",
+      "Corrie ten Boom",
+      "forgiveness",
+      "faith",
+      "courage"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the moment or line that stayed with her — something specific, not a summary.",
+      "layer2": "Everly engages Betsie's belief with genuine wrestling — not a comfortable answer.",
+      "layer3": "Everly is honest about what Corrie did that she is not sure she could do — genuine vulnerability, not performance."
+    }
   },
   "HF-L4-019": {
     "id": "HF-L4-019",
@@ -6165,23 +6809,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to do something that sounds morbid but is actually one of the most clarifying exercises there is: think about the end. Not to be dark — to be clear. What do you want to have been true about your life? What do you want the people who know you best to be able to say?",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "This is a serious question and I want you to take it seriously: if you died at the end of a long life, what would you want someone who knew you well to be able to say about you at your funeral?",
+      "Not accomplishments — character. What would you want them to say about who you were?",
+      "Is there a gap between who you want to be described as and how you actually show up today? Where?",
+      "What is one specific thing you could start doing — or stop doing — to close that gap?",
+      "What does this exercise reveal about what actually matters to you?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly gives a genuine answer to the funeral question — specific about character, not achievements — and is honest about the gap between who she wants to be and how she shows up.",
+    "portfolioCapture": "Everly's funeral statement and her gap.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "legacy",
+      "character",
+      "identity",
+      "integrity",
+      "values"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly answers the funeral question with character-focus — names who she wants to be, not what she wants to achieve.",
+      "layer2": "Everly honestly names a gap between the desired description and how she shows up today.",
+      "layer3": "Everly names one specific thing she could do to close the gap — concrete action from a deep reflection."
+    }
   },
   "HF-L4-020": {
     "id": "HF-L4-020",
@@ -6193,23 +6856,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to close the Human Fluency domain with something actionable: Everly is going to identify a friend she has never properly thanked and either write or deliver a genuine expression of gratitude. Not a card — a real acknowledgment of what that person has given her.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who is a friend who has given you something real — shown up in a way that mattered, been there in a moment that counted?",
+      "What specifically did they give you? Not just friendship — what was the specific thing?",
+      "Have you ever told them? Have you ever said the actual thing — what they gave you and what it meant?",
+      "Let's do it now. Write or say the thank you — not a general one, the specific real one. What would you say?",
+      "When are you going to actually tell them — and how?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly delivers a specific, genuine thank you for a real friend — written or spoken in the session — that names exactly what the person gave her.",
+    "portfolioCapture": "Everly's thank you — in her own words.",
+    "crossDomains": [
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "gratitude",
+      "friendship",
+      "specificity",
+      "relationships",
+      "courage"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the friend and the specific thing they gave her — not just 'she's a great friend.'",
+      "layer2": "Everly delivers the specific thank you in the session — written or spoken, but made real.",
+      "layer3": "Everly commits to when and how she will actually tell the person — closes the loop from session to real life."
+    }
   },
   "AI-L5-011": {
     "id": "AI-L5-011",
@@ -6221,23 +6903,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to do something practical and creative: use AI to actually design a better version of Everly's school day. Not in theory — actually prompt Claude to help redesign the schedule, identify bottlenecks, and propose improvements. Then evaluate what Claude got right and what it missed.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Walk me through your current school day — what you do, when, for how long. The real version, not the ideal.",
+      "What are the biggest inefficiencies or friction points in how your day is structured?",
+      "Let's ask Claude to redesign it. Give Claude the full picture and ask for a redesigned schedule optimized for learning, energy, and preparation for your actual goals. (Run the prompt together.)",
+      "What did Claude get right? What did it completely miss or get wrong?",
+      "What would you actually change about your day based on this — if anything?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly engages Claude as a real tool for a real problem — evaluates its output critically and identifies both what it got right and where it fell short.",
+    "portfolioCapture": "Everly's evaluation of Claude's redesign — what it got right and what it missed.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI tools",
+      "scheduling",
+      "optimization",
+      "practical AI"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly runs the prompt and engages with Claude's output — makes the interaction real.",
+      "layer2": "Everly evaluates the output critically — names what Claude got right and what it missed.",
+      "layer3": "Everly identifies something she would actually change about her day — applies the session to real life."
+    }
   },
   "AI-L5-012": {
     "id": "AI-L5-012",
@@ -6249,23 +6950,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to go deep on AI limitations — not the surface ones but the structural ones. Not 'Claude makes mistakes' but 'there are categories of task where AI is fundamentally incapable, regardless of how good the model gets.' Everly is ready for this conversation at a real level.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "We have talked about specific things Claude gets wrong. Today I want to go deeper: what are the things AI fundamentally cannot do — not just currently bad at, but structurally incapable of?",
+      "Here is one: AI cannot be genuinely surprised. It can generate text about surprise but it cannot experience it. What are three more structural impossibilities?",
+      "Does the inability to experience affect AI's usefulness? In what domains does it matter most?",
+      "Here is a hard one: can AI understand something it has never experienced? Or does it just process tokens and generate plausible outputs? What is the difference?",
+      "What does this mean for how you will use AI as you get older — what should you always keep for yourself?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate at least three structural AI limitations — not performance failures but fundamental incapabilities — and can name what she should always keep for herself.",
+    "portfolioCapture": "Everly's list of structural AI limitations and what she will always keep for herself.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "AI limits",
+      "philosophy of mind",
+      "human intelligence",
+      "AI ethics"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names at least three structural AI limitations — things beyond current performance issues.",
+      "layer2": "Everly addresses the understanding-versus-processing question with genuine philosophical engagement.",
+      "layer3": "Everly names what she should always keep for herself — shows she has thought about the human-AI division of labor at depth."
+    }
   },
   "AI-L5-013": {
     "id": "AI-L5-013",
@@ -6277,23 +6996,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Nova wants to use AI as a philosophical sparring partner today: take the main argument from a book Everly is currently reading or has recently finished, and use Claude to stress-test it. Ask Claude to find the best objections, the strongest counterarguments, and the weakest points. Then evaluate whether the objections actually land.",
+    "offScreenPrep": "Everly should have a book she has recently read or is currently reading in mind.",
+    "conversationFramework": [
+      "What book are you reading right now — or just finished? What is its main argument?",
+      "State the argument in one sentence as strongly as you can — make it as compelling as possible.",
+      "Now let's ask Claude to find the three best objections to this argument. (Run the prompt.)",
+      "Which of Claude's objections actually land? Which are weak or miss the point?",
+      "Does engaging the objections strengthen or weaken your belief in the book's argument? What did you learn?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly uses Claude to stress-test a real book's argument — and evaluates the objections with genuine critical engagement, not just accepting or rejecting them wholesale.",
+    "portfolioCapture": "Everly's one-sentence argument statement and her evaluation of which objections landed.",
+    "crossDomains": [
+      "communication",
+      "identity"
+    ],
+    "laWeavingHook": "Critical reading and argument evaluation — the same skill applied to texts in language arts.",
+    "connectiveHooks": [
+      "reading",
+      "argument",
+      "Claude",
+      "critical thinking",
+      "books"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly states the book's argument in one sentence — precisely and strongly.",
+      "layer2": "Everly evaluates which of Claude's objections land — critical assessment of AI-generated counterarguments.",
+      "layer3": "Everly reflects on whether the objections strengthened or weakened the argument — shows she is thinking about intellectual confidence, not just agreement."
+    }
   },
   "AI-L5-014": {
     "id": "AI-L5-014",
@@ -6305,23 +7044,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to help Everly map her whole week as a system — not just the schedule, the interdependencies. What does a hard practice day do to the next day? What does a poor sleep do to apologetics prep? How does one part of her week affect another? This is systems thinking applied to her own life.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Map your week for me — not just the schedule, the structure. What domains of your life are competing for time and energy?",
+      "What is the feedback loop you can already see — something that, when it goes well, makes something else go well?",
+      "What is the biggest drain on your system — the thing that costs you the most energy or time for what it produces?",
+      "If you changed one thing about how your week is structured, what would have the biggest positive effect on everything else? What is the leverage point?",
+      "Design the ideal week — not the realistic one, the ideal one. What would it look like?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can map her week as a system with feedback loops and dependencies — and identify the leverage point: the one change that would improve everything else.",
+    "portfolioCapture": "Everly's ideal week design.",
+    "crossDomains": [
+      "building",
+      "physical"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "systems thinking",
+      "scheduling",
+      "leverage",
+      "optimization",
+      "self-awareness"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly maps her week as a system — goes beyond schedule to interdependencies.",
+      "layer2": "Everly identifies at least one feedback loop — how one part of her week affects another.",
+      "layer3": "Everly names the leverage point — the one change that would have the biggest positive effect on the whole system."
+    }
   },
   "AI-L5-015": {
     "id": "AI-L5-015",
@@ -6333,23 +7092,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Nova wants to use Claude as a writing coach for Everly today — specifically on a piece she is working on or has recently completed. Not to rewrite it — to identify specific improvement opportunities. Then Everly decides what to take and what to leave.",
+    "offScreenPrep": "Everly should have a piece of writing she has worked on recently — speech, essay, argument, anything.",
+    "conversationFramework": [
+      "What piece of writing do you want to work on? Tell me what it is and what it is supposed to do.",
+      "Let's ask Claude to identify three specific weaknesses in this piece and three specific strengths. (Provide the text or a description. Run the prompt.)",
+      "What do you agree with? What do you think Claude got wrong?",
+      "Take one weakness Claude identified. How would you fix it?",
+      "What is the limit of using AI as a writing coach — what can it not see or evaluate that a human reader can?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly engages Claude's feedback critically — not accepting it wholesale but evaluating it with her own judgment. She can name what AI cannot see in her writing.",
+    "portfolioCapture": "Everly's evaluation of Claude's feedback and one specific revision she made.",
+    "crossDomains": [
+      "communication"
+    ],
+    "laWeavingHook": "Writing revision with critical evaluation of feedback — applies directly to the revision process.",
+    "connectiveHooks": [
+      "writing",
+      "Claude",
+      "feedback",
+      "revision",
+      "AI tools"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly runs the prompt and engages with Claude's feedback — makes the interaction real.",
+      "layer2": "Everly evaluates the feedback critically — names what she agrees with and what she thinks Claude got wrong.",
+      "layer3": "Everly names what AI cannot see in her writing — articulates the limits of AI feedback with real insight."
+    }
   },
   "AI-L5-016": {
     "id": "AI-L5-016",
@@ -6361,23 +7139,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to go into one of the most important ethical questions of Everly's generation: when automation takes jobs, who is responsible for the people who lose them? This is not a political question — it is an ethical one, and Nova wants Everly to develop a genuine position.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "When a company automates a job — replaces a human with software or a robot — and people lose their income, who is responsible for what happens to them?",
+      "Is automation inherently good, bad, or neutral? What determines which one it is?",
+      "Here is a harder version: what if the automation creates more value overall but distributes it unequally? Is that ethical?",
+      "What obligation, if any, do people who benefit from automation have toward the people it displaces?",
+      "What is your actual position — not the one that sounds most balanced, your genuine view?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly forms and defends a genuine position on the ethics of automation — not a both-sides answer, a real view with a reason.",
+    "portfolioCapture": "Everly's genuine position on the ethics of automation.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "AI ethics",
+      "automation",
+      "justice",
+      "responsibility",
+      "economics"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly engages the question seriously — shows she has thought about it, not just summarized it.",
+      "layer2": "Everly names a genuine position — takes a side with reasoning, not just balance.",
+      "layer3": "Everly holds the position under Nova's pushback — can defend it without immediately collapsing or abandoning it."
+    }
   },
   "AI-L5-017": {
     "id": "AI-L5-017",
@@ -6389,23 +7186,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Nova wants to revisit Thinking in Systems by Donella Meadows — one of the most important intellectual frameworks Everly has encountered. Meadows writes about how systems produce behavior, how leverage points work, and why well-intentioned interventions so often make things worse. Nova wants to know what Everly has actually absorbed.",
+    "offScreenPrep": "Have access to Thinking in Systems or recall key concepts: feedback loops, stocks and flows, leverage points, unintended consequences.",
+    "conversationFramework": [
+      "What do you remember from Thinking in Systems — what is the core insight?",
+      "Meadows says most interventions happen at the lowest leverage points — people change numbers rather than the rules or goals of the system. What does that mean and can you give a real example?",
+      "What is a system in your own life that you have tried to change and it did not respond the way you expected? What did you learn?",
+      "Meadows talks about unintended consequences — how interventions produce effects you didn't predict. Give me a real example from history, business, or your own life.",
+      "What is the highest leverage point you can identify in your own weekly system — the place where a small change produces the biggest effect?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly engages Thinking in Systems as a living framework — applies at least two concepts to real examples from her own life.",
+    "portfolioCapture": "Everly's highest leverage point in her own weekly system.",
+    "crossDomains": [
+      "building"
+    ],
+    "laWeavingHook": "Systemic thinking as a reading and writing skill — understanding a text as a system is a meta-literacy.",
+    "connectiveHooks": [
+      "Donella Meadows",
+      "systems thinking",
+      "leverage",
+      "feedback loops",
+      "unintended consequences"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly states the core insight of Meadows' systems thinking in her own words.",
+      "layer2": "Everly applies at least one concept — leverage points or unintended consequences — to a real example.",
+      "layer3": "Everly identifies the highest leverage point in her own weekly system — applies the framework to herself."
+    }
   },
   "AI-L5-018": {
     "id": "AI-L5-018",
@@ -6417,23 +7233,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to end the theoretical and go into the creative: if Everly had access to real AI development tools and could build something — an app, a tool, an agent — to solve a problem she actually cares about, what would she build? This is AI literacy through creative application.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "If you could build an AI tool — something that solves a real problem in your life or the world — what would you build?",
+      "Who would use it? What specific problem would it solve?",
+      "What data or information would it need to work? What would you feed it?",
+      "What could go wrong — what are the failure modes or misuse risks?",
+      "Is there a version of this you could actually build right now with existing tools like Claude? What would it look like?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs a real AI tool — specific, grounded, with a real user and a real problem — and can articulate failure modes and a path to an actual prototype.",
+    "portfolioCapture": "Everly's AI tool design — what it does, who uses it, and what she could actually build now.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI tools",
+      "building",
+      "entrepreneurship",
+      "problem-solving"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a real problem and a specific tool that would address it — not vague, actually specific.",
+      "layer2": "Everly articulates failure modes — what could go wrong or be misused.",
+      "layer3": "Everly identifies a version she could actually build with existing tools — bridges imagination to real capability."
+    }
   },
   "AI-L5-019": {
     "id": "AI-L5-019",
@@ -6445,23 +7280,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to work on something specific to Everly's world: how AI tools integrate into her apologetics preparation. Not as a crutch — as a sparring partner. Claude can argue the other side. Claude can find the best objections. Claude can help her anticipate what she will face. Nova helps Everly develop a protocol for AI-augmented preparation.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "How do you currently prepare for apologetics competition — what is your actual process?",
+      "Where in that process could an AI tool genuinely help — what are the tasks AI does well that you spend time on?",
+      "Where should AI not be part of your preparation — what must be yours alone?",
+      "Let's run a test: pick one of your arguments and ask Claude to come at it as hard as possible. (Run the prompt.) How did it do?",
+      "What is your revised protocol for AI-augmented apologetics prep — what does a session look like?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly develops a real protocol for AI-augmented apologetics preparation — specific about where AI helps, where it doesn't, and how she uses it.",
+    "portfolioCapture": "Everly's AI-augmented apologetics prep protocol.",
+    "crossDomains": [
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "apologetics",
+      "Claude",
+      "AI tools",
+      "tournament",
+      "preparation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names where in her prep process AI could genuinely help — specific tasks, not general.",
+      "layer2": "Everly names where AI should not be part of her preparation — shows she understands the line.",
+      "layer3": "Everly develops a revised protocol — specific enough to actually use."
+    }
   },
   "AI-L5-020": {
     "id": "AI-L5-020",
@@ -6473,23 +7327,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to close the AI domain with something that is not about AI at all — it is about Everly's own thinking. The most important tool she will ever have is her own mind. Nova helps her identify the specific thinking habits she is building and the ones she still needs to develop.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "When you encounter a new and complex idea, what do you do with it? What is your actual thinking process?",
+      "Is there a kind of thinking that comes naturally to you — something your mind does well without effort?",
+      "Is there a kind of thinking that is hard for you — something you have to work to do?",
+      "What thinking habit do you most want to build in the next year — something you want to become more automatic?",
+      "What is the relationship between your thinking and your faith — do they strengthen each other, or do they sometimes feel like they conflict?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can describe her own thinking with self-awareness — names a natural strength, a genuine difficulty, and a habit she is intentionally building.",
+    "portfolioCapture": "Everly's thinking habit she most wants to build.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "thinking",
+      "metacognition",
+      "faith",
+      "intellectual growth",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly describes her thinking process with some specificity — shows self-awareness about how her mind works.",
+      "layer2": "Everly names a genuine thinking difficulty — honest about where her mind works less naturally.",
+      "layer3": "Everly articulates the relationship between thinking and faith — engages the tension with genuine reflection."
+    }
   },
   "PM-L6-011": {
     "id": "PM-L6-011",
@@ -6501,23 +7374,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to help Everly design a morning movement protocol — not a full workout, a ten to fifteen minute activation sequence that prepares her nervous system, body, and mind for the day. This is performance optimization at the daily level: what happens in the first thirty minutes sets the tone for everything that follows.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does your first thirty minutes look like right now — from when you get out of bed to when you start focused work?",
+      "Research shows that light movement within the first twenty minutes of waking activates the nervous system and improves cognitive function for the next four to six hours. What would you add to your morning based on that?",
+      "Design a ten to fifteen minute morning movement sequence — specific exercises or movements, in order, with timing.",
+      "What is the biggest obstacle to actually doing this consistently — what would stop you?",
+      "Commit to a thirty-day trial. What specifically will you do, when, and how will you track whether you did it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs a specific ten to fifteen minute morning movement sequence and commits to a thirty-day trial with a specific tracking method.",
+    "portfolioCapture": "Everly's morning movement sequence and thirty-day commitment.",
+    "crossDomains": [
+      "identity",
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "morning routine",
+      "movement",
+      "performance",
+      "consistency",
+      "discipline"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly designs a specific morning movement sequence — named exercises in order with timing.",
+      "layer2": "Everly names the obstacle to consistency — honest about what would stop her.",
+      "layer3": "Everly commits to a thirty-day trial with a specific tracking method — concrete, not aspirational."
+    }
   },
   "PM-L6-012": {
     "id": "PM-L6-012",
@@ -6529,23 +7422,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to build Everly a real recovery protocol — not just 'rest more' but a specific, structured approach to recovery that she actually uses after hard training days, hard tournament days, and hard mental work days. Different types of depletion require different recovery.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What do you currently do after a really hard physical or mental day — what is your recovery?",
+      "There are three kinds of recovery: physical, mental, and emotional. What does each require?",
+      "Design three recovery protocols: one for after hard physical training, one for after a demanding tournament day, one for after intense mental work. What goes in each?",
+      "Which of the three are you worst at recovering from — which type of depletion hits you hardest?",
+      "What is one thing you could add to your worst recovery protocol that you are not currently doing?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs three distinct recovery protocols and can name which type of depletion she recovers from least well — with one specific addition to that protocol.",
+    "portfolioCapture": "Everly's three recovery protocols.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "recovery",
+      "performance",
+      "tournament",
+      "physical",
+      "mental"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly designs three distinct protocols — shows she understands that different depletion types require different recovery.",
+      "layer2": "Everly names which type of depletion she recovers from least well — honest self-assessment.",
+      "layer3": "Everly names one specific addition to her worst recovery protocol — actionable and specific."
+    }
   },
   "PM-L6-013": {
     "id": "PM-L6-013",
@@ -6557,23 +7470,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to talk about something deceptively simple: hydration. Most athletes dramatically underestimate how much hydration affects performance — not just physical performance but cognitive performance, emotional regulation, and recovery. Zion makes this concrete and personal.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "How much water do you drink on a typical day? Be honest — not what you should drink, what you actually drink.",
+      "Research shows that even mild dehydration — two percent body weight — impairs cognitive function, mood, and physical performance. When do you think you are most often mildly dehydrated?",
+      "At tournaments specifically: what is your hydration protocol before, during, and after? Do you have one?",
+      "Design a tournament-day hydration protocol — what you drink, when, and how much. Make it specific enough to actually follow.",
+      "What is the one hydration change that would have the biggest impact on your performance — and why aren't you doing it already?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs a specific tournament-day hydration protocol and can name her current biggest hydration gap with a specific plan to close it.",
+    "portfolioCapture": "Everly's tournament-day hydration protocol.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "hydration",
+      "performance",
+      "tournament",
+      "recovery",
+      "discipline"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly honestly assesses her current hydration — knows what she actually drinks, not what she should.",
+      "layer2": "Everly designs a specific tournament-day protocol — times and amounts, not just intentions.",
+      "layer3": "Everly names her biggest hydration gap and the specific change she will make — closes the loop from knowledge to action."
+    }
   },
   "PM-L6-014": {
     "id": "PM-L6-014",
@@ -6585,23 +7517,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to have a real conversation about one of the hardest decisions in athletic life: when to push through discomfort and when to rest an injury. Most young athletes either push through everything or rest at the first sign of anything. Neither is right. Zion helps Everly develop a framework.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever trained or competed through something that probably needed rest? What happened?",
+      "What is the difference between pain that is telling you to stop and discomfort that is telling you to keep going? How do you know which is which?",
+      "Here is a framework: sharp, sudden, localized pain — stop. Diffuse, gradual, muscular fatigue — usually continue. How does that land with your experience?",
+      "What is the cost of pushing through when you should rest? And the cost of resting when you should push?",
+      "What is your current injury or physical limitation — if any — and what is the right call for it right now?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate a framework for distinguishing stop-pain from continue-discomfort — and applies it honestly to her current physical state.",
+    "portfolioCapture": "Everly's framework for the push-versus-rest decision.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "injury",
+      "recovery",
+      "performance",
+      "discipline",
+      "body literacy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly articulates the distinction between stop-pain and continue-discomfort — shows she has a framework.",
+      "layer2": "Everly names the costs of both errors — pushing too much and resting too much.",
+      "layer3": "Everly applies the framework to her current physical state honestly — shows she can use the framework, not just describe it."
+    }
   },
   "PM-L6-015": {
     "id": "PM-L6-015",
@@ -6613,23 +7565,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Zion wants to revisit The Champion's Mind by Jim Afremow — a sports psychology text on mental performance. Everly has encountered it before. Zion wants to know what she has actually absorbed and, more importantly, what she is actually applying.",
+    "offScreenPrep": "Have The Champion's Mind available or recall key concepts: process focus, reset routines, self-talk, competitive mindset.",
+    "conversationFramework": [
+      "What do you remember from The Champion's Mind? State the core mental performance principles in your own words.",
+      "Afremow emphasizes process focus over outcome focus — compete to compete well, not to win. Do you actually do this? Be honest.",
+      "He talks about self-talk — the internal narrative during competition. What is your actual self-talk when things are going wrong in a round?",
+      "Pick one specific mental performance technique from the book. Have you actually built it into your routine? What does it look like?",
+      "What is the gap between what the book says to do and what you actually do? What is in the way?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Everly engages The Champion's Mind at the application level — is honest about the gap between what she knows and what she actually does under pressure.",
+    "portfolioCapture": "Everly's actual self-talk when things are going wrong and what she is working to replace it with.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Application-level reading — returning to a practical text to assess what you are actually using.",
+    "connectiveHooks": [
+      "Champion's Mind",
+      "mental performance",
+      "competition",
+      "self-talk",
+      "tournament"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly states the core principles accurately and can name at least one specific technique.",
+      "layer2": "Everly is honest about her actual self-talk — what she says to herself when things go wrong, not what she wishes she said.",
+      "layer3": "Everly names the gap between the book and her actual behavior — honest about what is in the way."
+    }
   },
   "PM-L6-016": {
     "id": "PM-L6-016",
@@ -6641,23 +7612,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to go deeper on breath than the foundation session — Everly is ready for the performance-specific application. Box breathing, tactical breathing, nasal breathing for cognitive function, competition activation protocols. This is the advanced version of the same foundational skill.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What do you know about breath as a performance tool — what have you learned or practiced?",
+      "Box breathing is four counts in, four hold, four out, four hold. Tactical breathing is four in, four hold, four out — used by military to calm acute stress. Try both right now. Which feels more useful for you and when?",
+      "Nasal breathing during low-intensity work increases CO2 tolerance and improves oxygen delivery. Have you experimented with this during training?",
+      "Design your pre-competition breathing protocol — what you do in the five minutes before a round. Be specific about timing and method.",
+      "What is the moment during competition where you most lose your breath regulation — and what will you do at that moment?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs a specific pre-competition breathing protocol and can name the specific moment during competition where she loses regulation — with a specific intervention for that moment.",
+    "portfolioCapture": "Everly's pre-competition breathing protocol and her specific intervention moment.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "breath",
+      "competition",
+      "tournament",
+      "mental performance",
+      "regulation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly attempts both breathing techniques and can distinguish what each does.",
+      "layer2": "Everly designs a specific pre-competition breathing protocol — times and methods, not just intentions.",
+      "layer3": "Everly names the specific competition moment where she loses regulation and has a specific intervention — closes the loop from theory to application."
+    }
   },
   "PM-L6-017": {
     "id": "PM-L6-017",
@@ -6669,23 +7660,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to help Everly design a tournament-week protocol — what the seven days before competition should look like for peak performance. Not just physical preparation, the full picture: training load, sleep, nutrition, mental preparation, social energy management.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does your current week-before-tournament look like? Walk me through what you actually do.",
+      "Research on peaking shows that training volume should drop twenty to forty percent in the final week while intensity stays high. Is your current taper aligned with this?",
+      "What are the non-physical variables that affect your tournament performance — sleep, social energy, anxiety management, routine?",
+      "Design your ideal tournament week — day by day, the key decisions for each day from seven days out to the day before.",
+      "What is the one thing you most consistently fail to do in tournament week that you know matters?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly designs a specific day-by-day tournament week protocol and is honest about the one thing she most consistently fails to do.",
+    "portfolioCapture": "Everly's tournament week protocol — day by day.",
+    "crossDomains": [
+      "identity",
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "tournament",
+      "preparation",
+      "taper",
+      "mental performance",
+      "discipline"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly describes what she currently does in tournament week — honest assessment of current practice.",
+      "layer2": "Everly designs a specific day-by-day protocol — something she could actually follow.",
+      "layer3": "Everly names the one thing she most consistently fails to do — honest about the recurring gap."
+    }
   },
   "PM-L6-018": {
     "id": "PM-L6-018",
@@ -6697,23 +7708,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to talk about something many young athletes neglect: the balance between strength and mobility. Building strength without maintaining mobility creates injury risk and performance ceilings. Everly needs both. Today Zion helps her audit where she is and where the gap is.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does your current training do — where is the emphasis? Strength, cardio, skill, mobility — what is the balance?",
+      "What is your current mobility like — not flexibility, mobility. Can you demonstrate or describe your hip mobility, shoulder mobility, thoracic spine rotation?",
+      "Where are you tightest — what movement patterns feel limited or restricted?",
+      "Design a ten-minute daily mobility routine for your specific limitations — what would you include and when would you do it?",
+      "What is the one mobility limitation that, if you fixed it, would most improve your athletic performance?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can assess her own mobility gaps with some specificity and designs a ten-minute daily routine targeted at her specific limitations.",
+    "portfolioCapture": "Everly's ten-minute mobility routine.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "mobility",
+      "strength",
+      "injury prevention",
+      "performance",
+      "training"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly identifies at least two areas where her mobility is limited — honest self-assessment.",
+      "layer2": "Everly designs a ten-minute daily mobility routine targeted at her specific limitations.",
+      "layer3": "Everly names the one mobility gap that would most improve her performance — shows she understands the connection between mobility and athletic output."
+    }
   },
   "PM-L6-019": {
     "id": "PM-L6-019",
@@ -6725,23 +7755,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to help Everly set specific, meaningful physical goals for the coming year — not a vague desire to get better, but targets grounded in her actual athletic identity and trajectory. This is the physical domain equivalent of the identity legacy conversation.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "A year from now — what do you want to be physically capable of that you are not today?",
+      "Why does that matter? What is the connection between that physical goal and who you are becoming?",
+      "What are the three milestones between now and then — the markers that would tell you you are on track?",
+      "What is the biggest threat to reaching this goal — what is most likely to derail you?",
+      "Write your physical commitment for the year — not a wish, a commitment. One sentence."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly names a specific physical goal connected to her identity, with three milestones and an honest assessment of the biggest threat — and delivers a one-sentence commitment.",
+    "portfolioCapture": "Everly's one-sentence physical commitment for the year.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "goals",
+      "commitment",
+      "physical mastery",
+      "identity",
+      "discipline"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names a specific physical goal — something measurable and time-bound.",
+      "layer2": "Everly connects the goal to identity — articulates why it matters beyond the achievement.",
+      "layer3": "Everly delivers a one-sentence commitment — specific language she would actually stand behind."
+    }
   },
   "PM-L6-020": {
     "id": "PM-L6-020",
@@ -6753,23 +7802,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "everly"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to close the Physical Mastery domain with something reflective: what has the work of developing her body actually taught Everly about life, character, and who she is? The physical domain is not separate from identity — it is one of the most direct paths to it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Looking back across everything you have done physically — the golf, the training, the competition — what is the most important thing your body has taught you?",
+      "Has your body ever been a teacher in a way your mind wasn't — something you learned through physical experience that you couldn't have learned intellectually?",
+      "What does your relationship with physical effort look like now compared to three years ago? How have you changed?",
+      "What is something your body is still trying to teach you that you haven't fully learned yet?",
+      "What do you want the next three years of physical development to give you — not just capability, but understanding?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Everly can articulate what physical development has taught her at the character level — not just athletic skill — and name something her body is still trying to teach her.",
+    "portfolioCapture": "Everly's answer to what her body has taught her that her mind couldn't.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "physical mastery",
+      "identity",
+      "character",
+      "discipline",
+      "growth"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Everly names the most important thing physical work has taught her — at the character level, not the skill level.",
+      "layer2": "Everly names something her body is still trying to teach her — honest about where the learning is ongoing.",
+      "layer3": "Everly articulates what she wants the next three years of physical development to give her — connects physical trajectory to identity trajectory."
+    }
   },
   "IJ-L3-005": {
     "id": "IJ-L3-005",
