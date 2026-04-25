@@ -2164,7 +2164,10 @@ app.get('/{*splat}', (req, res) => {
 app.get('/forge-api/admin/export', async (req, res) => {
   try {
     const data = readData();
-    res.json(data);
+    const filename = 'forge-backup-' + new Date().toISOString().slice(0,10) + '.json';
+    res.setHeader('Content-Disposition', 'attachment; filename="' + filename + '"');
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(data, null, 2));
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
