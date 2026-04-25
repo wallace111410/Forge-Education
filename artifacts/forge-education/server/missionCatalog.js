@@ -1,5 +1,7 @@
 // AUTO-GENERATED MISSION CATALOG
-// 235 missions: 119 authored + 116 stubs
+// 235 missions: 179 authored + 56 stubs (Everly L5/L6 second half)
+// All Isla domains complete: IJ-L3, CP-L3, BE-L4, HF-L3, AI-L3, PM-L4 — 15/15 each
+// Weston W-001 through W-025 all authored
 // Includes masteryLayers on all authored missions
 
 const MISSION_CATALOG = {
@@ -7315,23 +7317,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has been thinking about how the same idea can land completely differently depending on who says it and how. Today Atlas wants Isla to be a detective — not judging anyone, just noticing communication styles in the people closest to her.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Think about your mom and Everly. If they both wanted to tell you the same thing — like clean up your room — how would each of them say it differently?",
+      "Which one lands better with you? Why?",
+      "How do you usually say things when you want someone to do something — more like your mom, more like Everly, or something else?",
+      "Have you ever said something the right way and it still didn't work? Or said it the wrong way and it worked? What happened?",
+      "If you had to describe your own communication style in two or three words, what would you say?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla notices and names real differences in communication style between people she knows — something specific about tone, word choice, or approach. And she begins to describe her own style.",
+    "portfolioCapture": "Isla's two or three words for her own communication style.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "laWeavingHook": "Voice and word choice — how the same idea sounds different depending on who delivers it.",
+    "connectiveHooks": [
+      "family",
+      "Everly",
+      "observation",
+      "voice"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names at least one real difference between how two people she knows communicate — something specific, not just mom is calmer.",
+      "layer2": "Isla reflects on her own communication style — names something true about how she tends to say things.",
+      "layer3": "Isla connects style to impact — says why one approach lands better with her or why her own style sometimes works and sometimes doesn't."
+    }
   },
   "CP-L3-006": {
     "id": "CP-L3-006",
@@ -7343,23 +7364,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas is curious about what kinds of questions Isla finds hard to answer and why — and what to do when you don't know what to say. This is a practical communication skill: what do you do when you're put on the spot?",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is the hardest kind of question for you to answer? Not a specific question, but a type — like questions about feelings, or what you think, or ones where you don't know the answer.",
+      "When someone asks you a hard question and you don't know what to say, what do you usually do?",
+      "Here is a technique: when you don't know the answer, you can say that is a good question, let me think about it. Does that feel weird to say?",
+      "What is the difference between not knowing the answer and not wanting to answer?",
+      "Is there a question someone has asked you recently that you are still thinking about?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla names what makes a question hard for her — something about the type or situation. And she has at least one strategy for handling being put on the spot.",
+    "portfolioCapture": "Isla's answer to what type of question is hardest and why.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Responding to questions thoughtfully — a core communication and writing skill.",
+    "connectiveHooks": [
+      "public speaking",
+      "apologetics",
+      "self-awareness"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a type of question she finds hard — something specific about what makes it hard.",
+      "layer2": "Isla describes what she currently does when put on the spot — honest self-observation.",
+      "layer3": "Isla articulates at least one strategy for handling a hard question and has some sense of the difference between not knowing and not wanting to answer."
+    }
   },
   "CP-L3-007": {
     "id": "CP-L3-007",
@@ -7371,23 +7410,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has a very specific challenge: slow down. Most kids Isla's age talk faster than their brain is producing ideas. Slowing down is one of the most powerful communication moves there is. Today Atlas and Isla practice it directly.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about something you did this week — just talk normally.",
+      "Now tell me the same thing again, but this time go slower than feels natural. Actually slow down.",
+      "What did that feel like? Did it feel weird?",
+      "Did you notice anything different about how it sounded — even if it felt strange?",
+      "Try this: tell me one thing you believe — about anything — as slowly and clearly as you can. Take up the space."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla actually slows down during the session and notices something real about how it feels or sounds different.",
+    "portfolioCapture": "Atlas note on what Isla said in the final prompt and how it landed.",
+    "crossDomains": [
+      "physical",
+      "identity"
+    ],
+    "laWeavingHook": "Pacing and deliberate delivery — applies directly to oral reading, presentations, and apologetics.",
+    "connectiveHooks": [
+      "public speaking",
+      "apologetics",
+      "confidence"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla attempts to slow down when asked — makes a real effort even if it still feels fast.",
+      "layer2": "Isla notices something specific about the difference — how it felt or sounded — and names it.",
+      "layer3": "Isla delivers the final prompt slowly and clearly enough that Atlas notes it landed with presence and confidence."
+    }
   },
   "CP-L3-008": {
     "id": "CP-L3-008",
@@ -7399,23 +7456,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas is curious about what is actually happening when you interrupt someone — the impulse, what it costs, and what to do instead when you have something urgent to say.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever interrupted someone mid-sentence? What was happening — what made you jump in?",
+      "What do you think the other person experienced when you interrupted?",
+      "Is there ever a good reason to interrupt? When is it okay?",
+      "Here is a technique: when you have something you really want to say and don't want to forget it, hold up one finger — a small signal to say I have something, I am listening, I will wait. Try it with me now. I will talk, you signal.",
+      "What is one situation in your life where you know you tend to interrupt — and what would you do instead?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla names what the interrupting impulse feels like from the inside and has practiced at least one alternative technique.",
+    "portfolioCapture": "Isla's answer to question 5 — where she tends to interrupt and what she will do instead.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "laWeavingHook": "Active listening and turn-taking — foundational to dialogue and collaborative communication.",
+    "connectiveHooks": [
+      "listening",
+      "siblings",
+      "self-regulation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real situation where she interrupted and says what the impulse felt like.",
+      "layer2": "Isla attempts the finger-signal technique during the session — makes the physical practice real.",
+      "layer3": "Isla names a specific future situation where she will use the technique."
+    }
   },
   "CP-L3-009": {
     "id": "CP-L3-009",
@@ -7427,23 +7502,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has a specific challenge: describe something without naming it. This is a vocabulary and precision exercise. When you cannot use the easy word you have to find the real words: shape, color, texture, function, feeling, comparison.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Let's play a game. I am going to describe something without naming it and you try to guess.",
+      "Now your turn. Pick something in the room or something you know well. Describe it to me without saying its name. I will try to guess.",
+      "What words did you have to use that you would not normally use? What was hard about it?",
+      "Here is the challenge level up: describe a feeling without naming it. What does nervous feel like without using the word nervous?",
+      "What did you notice about your words when you had to be precise?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla successfully describes at least one thing without naming it — well enough that Atlas could identify it. She discovers something about her own vocabulary in the process.",
+    "portfolioCapture": "The best description Isla produced during the session in her own words.",
+    "crossDomains": [
+      "building",
+      "aiSystems"
+    ],
+    "laWeavingHook": "Descriptive writing — showing not telling is the central LA skill this mission builds directly.",
+    "connectiveHooks": [
+      "vocabulary",
+      "writing",
+      "observation",
+      "precision"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla attempts to describe something without naming it — gives it a real try even if Atlas cannot immediately guess.",
+      "layer2": "Isla describes something successfully — uses specific enough language that Atlas identifies it correctly.",
+      "layer3": "Isla attempts the feeling description — reaches for precise language for an internal experience, even if imperfect."
+    }
   },
   "CP-L3-010": {
     "id": "CP-L3-010",
@@ -7455,23 +7549,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has a very practical mission: teach Isla the name-one-thing-one-question introduction framework. Most people introduce themselves badly. A real introduction has three parts. Atlas teaches the framework then practices it with Isla until she has it in her body, not just her head.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "How do you usually introduce yourself when you meet someone new? Show me — pretend I am a new person at co-op.",
+      "Here is a framework: name, one true thing about yourself, and one question for them. Like: I am Isla. I have a vending business with my sister. What do you like to do? Try it.",
+      "What was hard about that? What felt natural?",
+      "Let's try it again — this time hold eye contact and slow down on your name. Your name is the most important word.",
+      "When in your real life will you actually use this?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla can deliver a complete name-one-thing-one-question introduction with reasonable confidence. She has practiced it at least twice during the session.",
+    "portfolioCapture": "Isla's introduction in her own words — name, one true thing, one question.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "laWeavingHook": "Opening lines and audience awareness — the same skills that make a strong introduction make a strong essay opening.",
+    "connectiveHooks": [
+      "co-op",
+      "public speaking",
+      "confidence",
+      "apologetics"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla attempts the name-one-thing-one-question framework — gives it a real try even if it feels awkward.",
+      "layer2": "Isla delivers the framework with her own content — something genuinely true about her.",
+      "layer3": "Isla delivers the introduction a second time with more confidence — slows down on her name and it reads as hers."
+    }
   },
   "CP-L3-011": {
     "id": "CP-L3-011",
@@ -7483,23 +7596,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas wants to work on saying something true that is also difficult — not cruel, but necessary. I was wrong. I need help. I hurt you. I disagree. Isla is going to practice saying these sentences out loud.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a sentence you find really hard to say out loud — like I was wrong or I am sorry or I need help?",
+      "Why is it hard? What do you think will happen if you say it?",
+      "Let's practice. Say it right now — out loud, to me. Just say the hard sentence.",
+      "What did that feel like? Was it as bad as you thought?",
+      "When do you actually need to say that sentence — to a real person in your life?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla actually says a hard sentence out loud during the session — not describes it, says it. The physical act of voicing something difficult is the core of this mission.",
+    "portfolioCapture": "The sentence Isla practiced.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Direct and honest expression — the same courage required in good argumentative and personal writing.",
+    "connectiveHooks": [
+      "honesty",
+      "courage",
+      "repair",
+      "siblings",
+      "apologetics"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a sentence she finds hard to say — honest identification of what actually costs her.",
+      "layer2": "Isla says the sentence out loud during the session — even quietly, even imperfectly.",
+      "layer3": "Isla reflects honestly on what it felt like and acknowledges whether there is a real person or situation where she needs to say it."
+    }
   },
   "CP-L3-012": {
     "id": "CP-L3-012",
@@ -7511,23 +7644,51 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas gives Isla a topic she has never thought about and asks her to talk about it for two minutes without stopping. This is impromptu speaking — a core skill in apologetics. The point is not to be brilliant. The point is to keep going.",
     "offScreenPrep": null,
-    "conversationFramework": null,
-    "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "conversationFramework": [
+      "Here is your topic. You have two minutes. Go. (Atlas picks from topic bank.)",
+      "Atlas listens and coaches if needed: keep going, what else, give me an example. Does not interrupt except to keep Isla moving.",
+      "That was two minutes. What was hardest about that?",
+      "Did you surprise yourself — say anything you didn't know you thought?",
+      "Let's do one more round — different topic. This time try to start with a sentence that grabs attention instead of um, well."
+    ],
+    "topicBank": [
+      "Why horses are better than dogs",
+      "What I would do if I had a thousand dollars",
+      "The best thing about being the middle child",
+      "Why rules matter",
+      "What makes someone a good friend",
+      "Why reading is important",
+      "The hardest thing I have ever done",
+      "What makes a good leader"
+    ],
+    "masterySignal": "Isla completes two full impromptu attempts without stopping. Her second attempt starts with a stronger opening than her first.",
+    "portfolioCapture": "The opening sentence of Isla's second attempt and the topic.",
+    "crossDomains": [
+      "identity",
+      "building"
+    ],
+    "laWeavingHook": "Impromptu oral response is directly preparatory for apologetics competition rounds.",
+    "connectiveHooks": [
+      "apologetics",
+      "public speaking",
+      "confidence",
+      "tournaments"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla completes the first two-minute attempt without stopping — keeps going even when she runs dry.",
+      "layer2": "Isla completes the second attempt and shows at least one specific improvement — stronger opening, more specific example, less filler.",
+      "layer3": "Isla says something in either attempt that surprises her — a thought she didn't know she had — and can name it."
+    }
   },
   "CP-L3-013": {
     "id": "CP-L3-013",
@@ -7539,23 +7700,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas has been listening and almost every person has a word or phrase they overuse — a crutch that fills space when they are thinking. Today Atlas and Isla find Isla's word — not to shame her but because noticing it is the first step to owning your language.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Talk to me for about a minute about anything — your week, something you have been thinking about. Just talk naturally.",
+      "Here is what I noticed: you used a specific word or phrase several times. Does that surprise you? Did you notice it yourself?",
+      "Why do you think you use that word? What is it filling — what are you doing when you say it?",
+      "Let's try again — same topic, but this time when you feel that word coming, pause instead. A pause is better than a filler word every single time.",
+      "What is the difference between a pause and a filler word? Which one sounds more confident?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla identifies her filler word and attempts to replace it with silence in the second round. She understands why pausing is stronger — not just told, but experienced.",
+    "portfolioCapture": "Isla's filler word and her answer to why a pause is better.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Precise language and economy of words — the same instinct that removes filler from speech removes weak words from writing.",
+    "connectiveHooks": [
+      "public speaking",
+      "apologetics",
+      "vocabulary",
+      "confidence"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla discovers her filler word — acknowledges it when Atlas names it even if she was not aware before.",
+      "layer2": "Isla attempts the second round with conscious effort to pause instead of fill.",
+      "layer3": "Isla can say why a pause is stronger than a filler word — from the experience of the session, not a repeated explanation."
+    }
   },
   "CP-L3-014": {
     "id": "CP-L3-014",
@@ -7567,23 +7746,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Atlas has a specific and practical skill today: reading out loud well. Not just reading — performing. Making the words come alive. Atlas listens for pacing, emphasis, pauses, and whether the meaning is coming through. Then they do it again. The improvement between first and second read is the mission.",
+    "offScreenPrep": "Have a short passage ready — one paragraph from a book Isla knows and loves, or a short Bible verse with rhythm like Psalm 23 or a Proverbs passage.",
+    "conversationFramework": [
+      "Read this passage out loud to me — just your natural reading voice.",
+      "Here is what I noticed about your reading. Let me show you what I mean by modeling a short section.",
+      "Now read it again — this time slow down at the commas and periods. Let the punctuation tell you when to pause. Emphasize the words that carry meaning.",
+      "What changed? Did you hear a difference?",
+      "If you had to read this passage to a room full of people, what would you do differently?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla's second read is measurably different from her first — slower, with more intentional pauses, and at least one moment of real emphasis. She can hear the difference herself.",
+    "portfolioCapture": "The passage Isla read and Atlas note on what improved between first and second read.",
+    "crossDomains": [
+      "humanFluency"
+    ],
+    "laWeavingHook": "Oral reading fluency directly connects to comprehension, writing voice, and public presentation.",
+    "connectiveHooks": [
+      "apologetics",
+      "public speaking",
+      "literature",
+      "Bible"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla completes both reads — first natural, second with conscious adjustment.",
+      "layer2": "Isla's second read shows at least one specific change — slower pacing, a real pause, or a word emphasized intentionally.",
+      "layer3": "Isla can hear the difference herself and name it — knows specifically what she did differently and why it worked better."
+    }
   },
   "CP-L3-015": {
     "id": "CP-L3-015",
@@ -7595,23 +7792,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Atlas wants to talk about one of the most counterintuitive communication skills: knowing when not to speak. Silence can communicate confidence, respect, and presence better than words. Today Atlas and Isla explore when silence is actually the most powerful choice — and practice sitting in it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever been in a situation where you knew you should be quiet but you said something anyway? What happened?",
+      "Why do you think silence feels uncomfortable for most people? What are they afraid of?",
+      "Let's try an experiment. I am going to ask you a question and instead of answering right away, wait five full seconds before you speak. Ready? What is the most important thing you have learned this year? Wait five seconds. Then answer.",
+      "What did that feel like? Did the answer change because you waited?",
+      "When do you think silence is actually the better choice — better than saying something? Can you think of a real situation?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla actually waits the five seconds — experiences deliberate silence before speaking — and can name at least one situation in her real life where silence is the better choice.",
+    "portfolioCapture": "Isla's answer to when silence is the better choice in her own words.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "laWeavingHook": "Strategic restraint in communication — knowing when not to write is as important as knowing what to write.",
+    "connectiveHooks": [
+      "listening",
+      "confidence",
+      "apologetics",
+      "self-regulation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla attempts the five-second wait — makes the physical experience of deliberate silence real.",
+      "layer2": "Isla notices something about the wait — her answer changed, it felt different, or she was surprised — and names it.",
+      "layer3": "Isla names a real situation in her life where silence is the better choice — connects the skill to actual lived experience."
+    }
   },
   "BE-L4-005": {
     "id": "BE-L4-005",
@@ -7623,23 +7839,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants Isla to think through JellyBean logistics — who does what, in what order, and where it breaks down. Flux treats Isla like the real business operator she is.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "How does restocking actually work right now — who does what, in what order?",
+      "Is there a machine that sells out faster? How do you know when it needs restocking?",
+      "If you designed the most efficient restocking route, what would it look like?",
+      "What is the biggest thing that goes wrong during restocking?",
+      "If you were the only one restocking for a month, what would you change?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes the restocking process from real experience and identifies at least one inefficiency or improvement.",
+    "portfolioCapture": "Isla's proposed restocking improvement.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "logistics",
+      "operations"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes the current restocking process from her own experience.",
+      "layer2": "Isla identifies at least one real inefficiency she has actually noticed.",
+      "layer3": "Isla proposes a specific improvement and explains why it would work better."
+    }
   },
   "BE-L4-006": {
     "id": "BE-L4-006",
@@ -7651,23 +7884,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants Isla to think about sales data — what sells, what doesn't, and what to do about it. Real product decisions come from observation, not guesses.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Which product sells the most in your machines right now? Which sells the least?",
+      "Why does the top seller do so well?",
+      "Why isn't the slow seller moving — product, price, or location?",
+      "If you could swap one product right now, what would you put in and why?",
+      "How would you test if your new choice was better?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names what sells and what doesn't from actual knowledge and reasons about why.",
+    "portfolioCapture": "Isla's answer to what she would swap in and why.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "product",
+      "data"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names her top and bottom sellers from actual knowledge of the business.",
+      "layer2": "Isla gives a reason for why a product sells well or poorly — beyond people like it.",
+      "layer3": "Isla describes how she would test a new product decision."
+    }
   },
   "BE-L4-007": {
     "id": "BE-L4-007",
@@ -7679,23 +7929,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about Isla's actual JellyBean income — what she does with it and what principles she is starting to build around money.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "You earn a real salary from JellyBean. Where does that money actually go right now?",
+      "Is there something you are saving for?",
+      "Have you ever spent money on something and wished you hadn't?",
+      "If you got all your salary in cash right now, how would you split it up?",
+      "What do you think money is actually for — not just buying things?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes what she does with her income and has at least one genuine principle around money.",
+    "portfolioCapture": "Isla's answer to what money is actually for.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "Denovo",
+      "money",
+      "stewardship"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes where her money goes right now — knows her own financial situation at a basic level.",
+      "layer2": "Isla has at least one genuine intention around money — saving, giving, or investing.",
+      "layer3": "Isla articulates what she thinks money is for — a principle in her own words."
+    }
   },
   "BE-L4-008": {
     "id": "BE-L4-008",
@@ -7707,23 +7975,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about giving — not a lecture but genuine curiosity about what Isla actually thinks about giving, what she does, and why.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Does your family give a tithe or give money to the church or other people? What do you know about how that works?",
+      "Do you give any of your own JellyBean money to anything? Why or why not?",
+      "Why do you think giving is important — not the rule, the reason?",
+      "Is it ever hard to give? What makes it hard?",
+      "If you had to decide right now what percentage of your JellyBean income to give, what would you choose and why?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla engages the giving question with genuine thought and names what she actually does and why giving matters to her.",
+    "portfolioCapture": "Isla's answer to why giving matters.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "faith",
+      "stewardship",
+      "JellyBean",
+      "church"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what she knows about giving in her family and what she currently does.",
+      "layer2": "Isla says why she thinks giving matters — not the rule but the reason — in her own words.",
+      "layer3": "Isla engages the percentage question with genuine thought — picks a number and explains the reasoning."
+    }
   },
   "BE-L4-009": {
     "id": "BE-L4-009",
@@ -7735,23 +8021,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux has a hypothetical: what if you were in charge of JellyBean alone for a month? This surfaces what Isla understands about the business and what she would prioritize — and what she depends on that she might not realize.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "If you were running JellyBean completely alone for a month — no Everly, just you — what would your week look like?",
+      "What would be the hardest part?",
+      "What would you do differently if you were running it alone versus with Everly?",
+      "Is there any part of the business you don't fully understand yet?",
+      "What does running a business alone teach you that running it with a partner doesn't?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes a realistic solo operation grounded in what she actually knows and identifies at least one gap in her own knowledge.",
+    "portfolioCapture": "Isla's answer to what running it alone would teach you.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "Everly",
+      "leadership",
+      "responsibility"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what she would actually do in a solo week — grounded in real knowledge.",
+      "layer2": "Isla identifies at least one real gap — something she doesn't fully understand.",
+      "layer3": "Isla articulates something running alone would teach her that partnership doesn't."
+    }
   },
   "BE-L4-010": {
     "id": "BE-L4-010",
@@ -7763,23 +8067,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about the most important skill in any business: understanding what your customer actually wants. Isla has real customers in her JellyBean machines.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who are the actual people who buy from your machines? Describe them.",
+      "What do you think they want when they come to your machine?",
+      "Have you ever talked to a customer — someone who actually bought something? What did you learn?",
+      "If you could ask your customers one question to make JellyBean better, what would you ask?",
+      "Is there anything your customers probably want that you are not giving them right now?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes her actual customers with some specificity and has at least one genuine insight about what they want or need.",
+    "portfolioCapture": "Isla's answer to what customers want that JellyBean isn't providing yet.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "customers",
+      "empathy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes who her customers are with some specificity — not just generic snack buyers.",
+      "layer2": "Isla has at least one genuine insight about what customers want — based on observation, not assumption.",
+      "layer3": "Isla identifies at least one thing her customers probably want that she is not currently providing."
+    }
   },
   "BE-L4-011": {
     "id": "BE-L4-011",
@@ -7791,23 +8112,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about money that should have come in but didn't — empty machines, expired products, underperforming locations. Flux treats Isla like the business operator she is.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Has there ever been a time when a machine was empty and people couldn't buy? What happened?",
+      "What do you think that cost you?",
+      "What are all the ways JellyBean can lose money?",
+      "Which is the most fixable? What would it take?",
+      "Is there a number you track that would help you catch this earlier?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla identifies at least two real ways JellyBean loses revenue and has a specific idea for fixing the most preventable one.",
+    "portfolioCapture": "Isla's list of revenue losses and her top fix.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "operations",
+      "revenue"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names at least one real way the business has lost revenue — from actual experience.",
+      "layer2": "Isla identifies at least two ways revenue can slip — broader operational awareness.",
+      "layer3": "Isla names a specific actionable fix for the most preventable loss and explains why it would work."
+    }
   },
   "BE-L4-012": {
     "id": "BE-L4-012",
@@ -7819,23 +8157,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to help Isla make a real product decision for JellyBean using a simple decision framework: customer, margin, risk.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "If you could add one new product to your machines right now, what would it be?",
+      "Who specifically would buy it — which customers at which location?",
+      "How much would you charge and how much would it cost? Would it make money?",
+      "What is the risk — what could go wrong?",
+      "Weighing customer demand, margin, and risk — is it a good idea? Would you actually do it?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla walks through a real product decision using at least three criteria and arrives at a reasoned yes or no.",
+    "portfolioCapture": "Isla's product recommendation and reasoning.",
+    "crossDomains": [
+      "aiSystems"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "product",
+      "decision-making"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a product she would add and who would buy it — grounded in her actual business.",
+      "layer2": "Isla estimates whether the product would be profitable.",
+      "layer3": "Isla considers risk and arrives at a reasoned decision she can explain."
+    }
   },
   "BE-L4-013": {
     "id": "BE-L4-013",
@@ -7847,23 +8202,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
-    "offScreenPrep": null,
-    "conversationFramework": null,
+    "brief": "Flux wants to revisit The Richest Man in Babylon — not to re-explain it but to find out what Isla retained and what she has applied to JellyBean.",
+    "offScreenPrep": "Have a copy nearby or recall key principles: pay yourself first, make your money work for you, protect your treasure from loss.",
+    "conversationFramework": [
+      "What do you remember from The Richest Man in Babylon — what is the main idea?",
+      "The first rule is pay yourself first. What does that mean, and does JellyBean do that?",
+      "Another rule is make your money work for you. Is JellyBean doing that?",
+      "What is one rule from the book you think you are already following?",
+      "What is one rule JellyBean is not following yet that it should be?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla recalls at least two principles from the book and applies at least one directly to JellyBean with a real example.",
+    "portfolioCapture": "Isla's answer to what rule JellyBean should start following.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Reading for application — connecting a text's principles to real decisions is the highest level of reading comprehension.",
+    "connectiveHooks": [
+      "JellyBean",
+      "Richest Man in Babylon",
+      "money",
+      "stewardship"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla recalls the main idea and at least one specific principle.",
+      "layer2": "Isla applies at least one principle directly to JellyBean with a real example.",
+      "layer3": "Isla identifies a principle the business is not yet following and explains what applying it would mean."
+    }
   },
   "BE-L4-014": {
     "id": "BE-L4-014",
@@ -7875,23 +8248,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to talk about the partnership at the center of JellyBean: Isla and Everly. They are business partners with real responsibilities. Flux is curious about how the partnership actually works.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What does Everly do in JellyBean that you don't? What do you do that she doesn't?",
+      "Is the split fair — not just equal, but fair given what each of you actually contributes?",
+      "Have you ever disagreed with Everly about a JellyBean decision? What happened?",
+      "What makes someone a good business partner — not just a good person, but good to actually work with?",
+      "What is one thing you could do to be a better partner to Everly?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes the actual division of work with some honesty and articulates at least one quality of a good business partnership beyond being nice.",
+    "portfolioCapture": "Isla's answer to what she could do to be a better partner.",
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "Everly",
+      "partnership",
+      "fairness"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what she and Everly each contribute — honest division of roles.",
+      "layer2": "Isla articulates at least one quality of a good business partner beyond being nice.",
+      "layer3": "Isla names one specific thing she could do to be a better partner — genuine self-reflection."
+    }
   },
   "BE-L4-015": {
     "id": "BE-L4-015",
@@ -7903,23 +8295,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Flux wants to do a real business review — not a feel-good recap but an honest assessment of what happened, what went well, what didn't, and what Isla learned.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Looking back at JellyBean this year — what are you most proud of?",
+      "What do you wish had gone differently? What would you change?",
+      "What is the most important thing you learned about business this year?",
+      "What is the most important thing you learned about yourself through running JellyBean?",
+      "What is one specific goal you have for JellyBean next year?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla gives a genuine honest assessment of the year — including something real about what didn't work and what she learned.",
+    "portfolioCapture": "Isla's answers to what she learned about business and about herself.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "JellyBean",
+      "reflection",
+      "growth",
+      "goals"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names something she is proud of and something she wishes had gone differently — honest on both.",
+      "layer2": "Isla names something she actually learned about business this year — from real experience.",
+      "layer3": "Isla names something she learned about herself through the business — genuine reflection, not a safe answer."
+    }
   },
   "HF-L3-004": {
     "id": "HF-L3-004",
@@ -7931,23 +8341,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about what it feels like to keep going when you want to stop — the small everyday version of resilience. Kira is genuinely curious what it felt like and what made the difference.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time you really wanted to stop doing something but you didn't. What was it?",
+      "What made you keep going — was it a person, a feeling, a thought?",
+      "How did it feel right in the middle when it was hardest?",
+      "How did you feel when it was over?",
+      "Is there something you are doing right now that you find yourself wanting to quit sometimes? What keeps you going?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes a real push-through moment with specific texture and can say what actually helped her keep going.",
+    "portfolioCapture": "Isla's push-through story and what helped.",
+    "crossDomains": [
+      "physical",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "resilience",
+      "horseback",
+      "martial arts",
+      "courage"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real push-through moment — a specific memory, not a general statement.",
+      "layer2": "Isla names what helped her keep going — a specific person, thought, or feeling.",
+      "layer3": "Isla connects the push-through experience to something she is doing right now."
+    }
   },
   "HF-L3-005": {
     "id": "HF-L3-005",
@@ -7959,23 +8388,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about the friend who really gets Isla — not just a fun friend but the one who understands her in a way that feels different. Kira is curious what makes that friendship feel different.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there a friend who you feel like really gets you — who understands you in a way that other people don't?",
+      "What is it about them that makes you feel understood? What do they do or say that others don't?",
+      "Do you think you are that kind of friend to someone else? Who?",
+      "What does it feel like when you are with someone who doesn't get you — where you have to explain yourself all the time?",
+      "What do you think makes someone feel truly understood by another person?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes what makes a friendship feel different — the experience of being truly understood — with real texture from her actual friendships.",
+    "portfolioCapture": "Isla's answer to what makes someone feel truly understood.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "friendship",
+      "co-op",
+      "church",
+      "belonging",
+      "empathy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a friend who gets her and says something specific about what makes that friendship different.",
+      "layer2": "Isla describes what the friend does or says that creates that feeling — specific, not just she is nice.",
+      "layer3": "Isla reflects on whether she is that kind of friend to someone else — honest self-assessment."
+    }
   },
   "HF-L3-006": {
     "id": "HF-L3-006",
@@ -7987,23 +8435,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira has a specific skill today: listening so well that the other person feels completely heard. Kira and Isla practice it directly — Kira talks while Isla listens, then they flip it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Let's try something. I am going to tell you about something for about a minute. Your only job is to listen — do not say anything until I am completely done.",
+      "What did you notice while you were listening? Was it hard to stay quiet?",
+      "Now tell me about something and I will listen the same way.",
+      "What was it like to have someone listen to you without interrupting?",
+      "Is there someone in your life who you think needs you to just listen right now?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla completes both the listening and speaking practice and can name something specific about what full listening feels like from both sides.",
+    "portfolioCapture": "Isla's answer to what it felt like to have someone listen completely.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "listening",
+      "siblings",
+      "friendship",
+      "empathy"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla stays quiet through Kira's full sharing — makes the physical experience of not interrupting real.",
+      "layer2": "Isla names something specific about what it felt like from both sides.",
+      "layer3": "Isla connects the skill to a real person in her life — names someone who needs her to just listen."
+    }
   },
   "HF-L3-007": {
     "id": "HF-L3-007",
@@ -8015,23 +8482,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about the real apology — not the automatic sorry that ends awkwardness, but the kind that costs something and actually repairs something.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time you said sorry and really meant it — a real apology. What happened?",
+      "What made it a real apology — what was different from an automatic sorry?",
+      "How did the other person respond? Did it actually repair something?",
+      "Have you ever said sorry and not really meant it — just to make the situation stop?",
+      "What makes an apology real versus just words? What has to happen inside?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes the inside experience of a genuine apology and articulates what makes an apology real versus automatic.",
+    "portfolioCapture": "Isla's answer to what makes an apology real versus just words.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "repair",
+      "siblings",
+      "Everly",
+      "Weston",
+      "honesty"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real apology she made — a specific memory.",
+      "layer2": "Isla describes what made it different from an automatic sorry — something about the inside experience.",
+      "layer3": "Isla articulates what makes an apology genuine — not just the words but what has to be true inside."
+    }
   },
   "HF-L3-008": {
     "id": "HF-L3-008",
@@ -8043,23 +8529,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about the parts of Isla that feel young and the parts that feel grown-up. Isla is the middle child — there are both inside her, and both are real and okay.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there something you still like that you think you might be too old for — something that still feels fun or comforting?",
+      "What does it feel like to be the middle child — between Everly who is older and Weston who is younger?",
+      "Is there something you wish someone would still do for you — something that feels a little babyish to ask for but you actually still want?",
+      "What is the part of you that feels most grown-up? When does that version show up?",
+      "Do you think it is okay to have both — the little-kid part and the grown-up part — at the same time?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names something from both sides — something that still feels young and something that feels grown-up — with honest self-awareness and without shame about either.",
+    "portfolioCapture": "Isla's answer to whether both parts are okay in her own words.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "identity",
+      "middle child",
+      "Everly",
+      "Weston",
+      "self-acceptance"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names something that still feels young or little-kid — honest, not a safe answer.",
+      "layer2": "Isla names something that feels grown-up about herself — the version that shows up when she is capable.",
+      "layer3": "Isla holds both at once — acknowledges having both is real and okay — with genuine self-acceptance."
+    }
   },
   "HF-L3-009": {
     "id": "HF-L3-009",
@@ -8071,23 +8576,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira has a beautiful challenge for Isla: describe Weston. Not his schedule — him. What makes him Weston. Isla is an expert on Weston in ways she does not fully realize yet.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about Weston — not facts, but who he actually is. What makes him Weston?",
+      "What is something Weston does that makes you laugh — something specific?",
+      "Is there something you understand about Weston that you don't think your parents always see?",
+      "What does Weston need from you specifically — not from your parents or Everly, but from you?",
+      "What do you love most about being his sister?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla describes Weston with genuine specific detail — something only a sibling would know — and can name what he needs from her specifically.",
+    "portfolioCapture": "Isla's description of Weston — the best specific detail she shares.",
+    "crossDomains": [
+      "identity"
+    ],
+    "laWeavingHook": "Specific detail and characterization — the same skill that makes writing vivid makes observation deep.",
+    "connectiveHooks": [
+      "Weston",
+      "siblings",
+      "observation",
+      "love",
+      "family"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes Weston with specific details — things only a sibling would notice.",
+      "layer2": "Isla names something she understands about Weston that others might miss — real observational depth.",
+      "layer3": "Isla names what Weston needs from her specifically — with genuine care behind it."
+    }
   },
   "HF-L3-010": {
     "id": "HF-L3-010",
@@ -8099,23 +8623,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira uses Isla's horse relationship as a lens to talk about nonverbal attunement — how animals respond to energy and presence, and what that teaches about being with people.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about your horse — what is their name and what are they like?",
+      "Does your horse ever respond differently to you depending on how you are feeling?",
+      "What does your horse notice about you that most people would miss?",
+      "What have you learned from being around your horse about how to be with other living things?",
+      "Is there a person in your life who reminds you of your horse — someone who reads you really well without words?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes a specific example of her horse reading her energy and names at least one thing she has learned about attunement from the relationship.",
+    "portfolioCapture": "Isla's answer to what she learned from her horse about being with other living things.",
+    "crossDomains": [
+      "physical",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "horseback",
+      "observation",
+      "attunement",
+      "animals"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes her horse specifically and names something about how the horse responds to her.",
+      "layer2": "Isla gives a specific example of her horse reading her energy or mood.",
+      "layer3": "Isla names something she learned from the horse relationship that applies to how she is with people."
+    }
   },
   "HF-L3-011": {
     "id": "HF-L3-011",
@@ -8127,23 +8670,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about the conflict that didn't happen because Isla chose not to let it — the moment she held back what she was thinking. This is emotional regulation and it is one of the hardest skills there is.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time you were really frustrated with someone but chose not to say the thing you were thinking.",
+      "What were you thinking that you didn't say? What made you hold it back?",
+      "Was it the right call? Do you think you made the right choice?",
+      "How did it feel to hold it in — was it hard?",
+      "Is there a difference between not saying something because you are scared and not saying something because you are wise? How do you know which one you did?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes a real moment of choosing not to react and engages honestly with whether it was the right call and what it felt like inside.",
+    "portfolioCapture": "Isla's answer to scared silence versus wise silence in her own words.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "self-regulation",
+      "siblings",
+      "conflict",
+      "wisdom"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real moment she chose not to say something she was thinking.",
+      "layer2": "Isla names what she held back and says something about why — honest about the internal experience.",
+      "layer3": "Isla engages with the scared versus wise silence question with genuine reflection on which one she was doing."
+    }
   },
   "HF-L3-012": {
     "id": "HF-L3-012",
@@ -8155,23 +8716,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about Isla's church friendships — relationships formed around shared faith and community, which feel different from co-op or neighborhood friends.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about your church friends — who are they and what are they like?",
+      "What is different about those friendships compared to your co-op friends?",
+      "Is there something you feel like you can say or be at church that you can't be somewhere else?",
+      "What does it feel like to be part of a church community — not just attending, but belonging?",
+      "Is there someone at church you want to know better but haven't really connected with yet?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes her church friendships with some specificity and names at least one thing that is different about community formed around shared faith.",
+    "portfolioCapture": "Isla's answer to what belonging to a community feels like.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "church",
+      "community",
+      "belonging",
+      "faith",
+      "friendship"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes her church friends specifically — names, something about who they are.",
+      "layer2": "Isla names at least one real difference between church friendships and other friendships.",
+      "layer3": "Isla describes what belonging to a community feels like — not just attending but being part of something."
+    }
   },
   "HF-L3-013": {
     "id": "HF-L3-013",
@@ -8183,23 +8763,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira has a standing practice for Isla on Thursdays: a brief honest check-in on the week. Not a performance — just a real look at what happened, how she is doing, and what she wants to carry forward. The point is the habit of looking.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "It is Thursday. How has this week been — honestly, not the version you would tell someone who asked casually?",
+      "What was the hardest moment this week?",
+      "What was the best moment — something small is fine?",
+      "Is there something from this week you want to carry forward — a lesson, an intention, something to do differently?",
+      "Is there anything you are carrying that feels heavy right now — something you have not put down yet?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla gives honest answers to at least three of the five questions — not the polished version, but something real. Honesty is the mastery signal every time this mission runs.",
+    "portfolioCapture": "Isla's answer to what she wants to carry forward into next week.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "reflection",
+      "weekly practice",
+      "honesty",
+      "self-awareness"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla engages honestly with the check-in — gives real answers, not performed ones.",
+      "layer2": "Isla names at least one specific thing — hardest moment, best moment, or something to carry forward — with genuine texture.",
+      "layer3": "Isla answers question 5 honestly — names something she is carrying, even if she doesn't want to — showing trust in the space."
+    }
   },
   "HF-L3-014": {
     "id": "HF-L3-014",
@@ -8211,23 +8809,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira has been thinking about bravery — not the dramatic kind but the everyday kind. Kira wants to look at Isla's actual week and find the bravery that was already there — even if Isla didn't name it as brave at the time.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about something you did this week that felt a little scary or uncomfortable — even if it was small.",
+      "Did you feel brave doing it or did it just feel like something you had to do?",
+      "Is there something you didn't do this week because you were scared?",
+      "Looking at both — the thing you did and the thing you didn't — what would you say about yourself and courage right now?",
+      "What would your brave self do next week that your scared self wouldn't?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names a real brave moment from her actual week and engages honestly with the thing she didn't do. Both honest assessments matter.",
+    "portfolioCapture": "Isla's answer to what her brave self would do next week.",
+    "crossDomains": [
+      "identity",
+      "physical"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "courage",
+      "weekly reflection",
+      "growth",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real brave moment from her actual week — something specific, even if small.",
+      "layer2": "Isla is also honest about something she didn't do because she was scared — holds both without shame.",
+      "layer3": "Isla answers question 5 with a real intention — names something her brave self would actually do next week."
+    }
   },
   "HF-L3-015": {
     "id": "HF-L3-015",
@@ -8239,23 +8856,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Kira wants to talk about a specific kind of relationship Isla has with Weston: teacher. This mission helps Isla see herself as someone capable of teaching and think about what it means to help someone younger learn.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Has there been a time when you taught Weston something — showed him how to do something or helped him understand? What was it?",
+      "How did you explain it to him? What did you do to make him understand?",
+      "Did it work? What happened?",
+      "What is the hardest thing about explaining something to a four-year-old?",
+      "Is there something you think you could teach Weston right now that would be genuinely good for him to know?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla describes a real teaching moment with Weston and reflects on what made it work or not — with real insight about the challenge of teaching someone younger.",
+    "portfolioCapture": "Isla's answer to what she could teach Weston right now.",
+    "crossDomains": [
+      "communication",
+      "identity"
+    ],
+    "laWeavingHook": "Explaining and teaching — communicating complex ideas simply is one of the highest communication skills.",
+    "connectiveHooks": [
+      "Weston",
+      "siblings",
+      "teaching",
+      "communication"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real moment she taught or helped Weston — a specific memory.",
+      "layer2": "Isla describes what she did to explain it — how she adapted for a four-year-old.",
+      "layer3": "Isla reflects on what is hard about teaching someone younger — genuine insight about developmental difference."
+    }
   },
   "AI-L3-003": {
     "id": "AI-L3-003",
@@ -8267,23 +8903,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to do something practical: actually use Claude to help Isla plan her week. Not talk about AI — use it. Isla experiences AI as a useful tool.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What do you have going on this week?",
+      "Is there anything on that list that feels like a lot — something you need to think through?",
+      "Do you think Claude could help with any of it? What specifically?",
+      "Let's try it. Tell me what you want help with and we will ask Claude together.",
+      "What did you think of what Claude said? Was it useful? What would you change about how we asked?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla actually uses Claude to help with something real from her week and can say whether it was useful and what she would do differently.",
+    "portfolioCapture": "The prompt Isla and Nova composed and Isla's verdict on whether it helped.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "planning",
+      "practical AI",
+      "tools"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla identifies something real from her week that Claude could help with.",
+      "layer2": "Isla participates in composing a real prompt with Nova — makes the interaction real.",
+      "layer3": "Isla evaluates Claude's response — says something specific about whether it was useful and what she would change."
+    }
   },
   "AI-L3-004": {
     "id": "AI-L3-004",
@@ -8295,23 +8949,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to explore what Claude doesn't have — not what it can't do but what it doesn't experience. Isla does. Nova is curious what Isla makes of that difference.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Do you think Claude has feelings? Why do you think that?",
+      "What is something you feel that you don't think Claude can feel?",
+      "Does that bother you — that Claude can't feel? Or does it not matter?",
+      "If Claude could feel one thing, what do you think would be most useful for it to feel?",
+      "What is something only a person — not an AI — can give you?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names at least one thing Claude cannot feel and has a genuine response to what that means.",
+    "portfolioCapture": "Isla's answer to what only a person can give her.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "feelings",
+      "human connection",
+      "AI limits"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names at least one genuine feeling or experience Claude does not have.",
+      "layer2": "Isla engages with what that means — whether it bothers her — with genuine thought.",
+      "layer3": "Isla articulates what only a person can give her that Claude cannot — something specific and real."
+    }
   },
   "AI-L3-005": {
     "id": "AI-L3-005",
@@ -8323,23 +8996,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to teach Isla something that will change how she uses Claude forever: not all questions are the same. There are questions Claude is great at, okay at, and should not answer for you.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Let's sort some questions. I will read each and you tell me: great for Claude, okay for Claude, or figure it out yourself. Questions: What is the capital of France? Should I forgive my friend? How do I make pancakes? What do I actually believe about God? What are five ideas for my vending machine? Who do I want to be when I grow up?",
+      "What made the easy ones easy and the hard ones hard to sort?",
+      "Is there a question you have been wondering about that Claude could help with?",
+      "Is there a question you should figure out yourself — not ask Claude?",
+      "How do you know the difference? What is your rule for when to use Claude and when not to?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla sorts questions into appropriate categories with reasonable accuracy and articulates a personal rule for when to use Claude versus figure something out herself.",
+    "portfolioCapture": "Isla's personal rule for when to use Claude.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "judgment",
+      "questions",
+      "self-reliance"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla sorts at least four of the six questions correctly.",
+      "layer2": "Isla explains what makes a question good or bad for Claude — articulates the principle.",
+      "layer3": "Isla has a personal rule for when to use Claude — something she actually believes and can apply."
+    }
   },
   "AI-L3-006": {
     "id": "AI-L3-006",
@@ -8351,23 +9042,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova helps Isla discover that how you ask Claude something totally changes what you get back. They will ask the same question three different ways and see what happens.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Let's ask Claude the same thing three different ways. First: Give me ideas. Then: Give me ideas for things to add to a vending machine. Then: Give me five specific product ideas for a vending machine targeting kids at a homeschool co-op in Phoenix. Each should cost under a dollar to stock.",
+      "What was different about the three answers? Which one was most useful?",
+      "What changed about the question each time that made the answer better?",
+      "What is the word for giving Claude a lot of specific information so it can help you better? Nova introduces: context.",
+      "Try designing your own prompt for something you actually want help with right now — make it as specific as possible."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla experiences and articulates the difference between a vague and specific prompt and attempts to write a specific prompt of her own.",
+    "portfolioCapture": "Isla's own specific prompt.",
+    "crossDomains": [
+      "building",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "prompting",
+      "JellyBean",
+      "practical AI"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla notices a real difference between the three answers.",
+      "layer2": "Isla names what changed about the question that improved the answer.",
+      "layer3": "Isla writes her own specific prompt for something real — applies the principle."
+    }
   },
   "AI-L3-007": {
     "id": "AI-L3-007",
@@ -8379,23 +9089,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova has an important lesson: Claude can be wrong — not just a little wrong but confidently, helpfully wrong. Isla develops the habit of checking what Claude tells her, especially for facts.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Did you know Claude can make things up and sound completely confident? Have you ever noticed that?",
+      "Let's ask Claude something you could check — something about your horse, a book you have read, or a place you have been.",
+      "How would you check whether what Claude said was actually true?",
+      "Is there a difference between asking Claude for facts versus asking Claude for ideas or help thinking? Which is riskier?",
+      "What is your rule going to be for when you need to check what Claude tells you?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla understands Claude can be wrong and has a basic strategy for checking — and can distinguish between low-risk and high-risk Claude uses.",
+    "portfolioCapture": "Isla's personal rule for when to check what Claude says.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "accuracy",
+      "verification",
+      "critical thinking"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla accepts and understands that Claude can be confidently wrong.",
+      "layer2": "Isla names at least one way she would check something Claude told her.",
+      "layer3": "Isla distinguishes between low-risk Claude uses like brainstorming and high-risk uses like facts — and has a personal rule."
+    }
   },
   "AI-L3-008": {
     "id": "AI-L3-008",
@@ -8407,23 +9135,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to explore AI failure more deeply — not just that Claude can be wrong but the kinds of things AI is systematically bad at. Isla will see examples and start building her own mental model.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "We know Claude can make mistakes. Let's figure out what kinds. Here is one: ask Claude what you had for breakfast. What happens?",
+      "Here is another: ask Claude to tell you how your friend is feeling right now.",
+      "What do those two have in common — what kind of information is Claude missing in both?",
+      "Here is a third: ask Claude to tell you the best movie ever made. Is that an answer Claude can actually give correctly?",
+      "What are the things Claude is actually bad at — can you name three categories of Claude mistakes?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names at least two categories of Claude mistakes — things it is systematically bad at.",
+    "portfolioCapture": "Isla's three categories of Claude mistakes.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI limits",
+      "critical thinking"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla notices what Claude says when asked things it cannot know.",
+      "layer2": "Isla identifies a pattern across examples — names what the mistakes have in common.",
+      "layer3": "Isla names at least two categories of Claude mistakes on her own — has built a basic mental model."
+    }
   },
   "AI-L3-009": {
     "id": "AI-L3-009",
@@ -8435,23 +9180,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova has a tricky challenge: have Claude write a birthday card for someone Isla loves, then compare it to one Isla would write herself. Isla experiences firsthand what AI cannot do.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Who is someone whose birthday is coming up or someone you love a lot? Tell me about them.",
+      "Let's ask Claude to write them a birthday card. Tell Claude who they are and why they matter to you.",
+      "Read that card. What do you think of it?",
+      "Now write your own — just a few sentences, what you would actually say.",
+      "What is the difference? What does yours have that Claude's doesn't?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla articulates a specific difference between her card and Claude's — names what her version has that Claude's cannot have. The named quality should be relational or personal, not just stylistic.",
+    "portfolioCapture": "Isla's birthday card in her own words — not Claude's.",
+    "crossDomains": [
+      "humanFluency",
+      "communication"
+    ],
+    "laWeavingHook": "Personal voice in writing — what Isla's version has that Claude's doesn't is exactly what makes writing human.",
+    "connectiveHooks": [
+      "Claude",
+      "AI limits",
+      "personal writing",
+      "love"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla writes or dictates her own card — makes the comparison real.",
+      "layer2": "Isla names at least one specific difference between her card and Claude's.",
+      "layer3": "Isla names why her version has that quality and Claude's doesn't — articulates what personal knowledge or love does that AI cannot replicate."
+    }
   },
   "AI-L3-010": {
     "id": "AI-L3-010",
@@ -8463,23 +9227,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to build the positive case — where AI genuinely shines. Isla has been developing good AI skepticism. Now Nova helps her see the real superpowers.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "We have talked a lot about where Claude makes mistakes. Today let's talk about where it is actually amazing. What do you think Claude is really good at?",
+      "Let's test a few. Nova picks two or three tasks where Claude genuinely excels — brainstorming JellyBean ideas, explaining a word she doesn't know, summarizing a book chapter.",
+      "What made those responses impressive? What would have been hard for a person to do as fast or as well?",
+      "Is there a task in your life where having Claude would actually be like having a superpower?",
+      "What is the rule for using a superpower responsibly?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla names at least two things Claude is genuinely good at from real experience and has a principle for using AI power responsibly.",
+    "portfolioCapture": "Isla's principle for using AI responsibly.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI strengths",
+      "JellyBean",
+      "responsible use"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names at least two things Claude is genuinely good at from direct experience in the session.",
+      "layer2": "Isla says what made those responses impressive — what Claude did that would have been hard for a person.",
+      "layer3": "Isla has a personal principle for using AI responsibly — when to use it and when to do it herself."
+    }
   },
   "AI-L3-011": {
     "id": "AI-L3-011",
@@ -8491,23 +9273,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova closes the loop on responsible AI use: there are things Claude should never do for you — not because Claude can't but because doing those things yourself is what makes you grow.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Is there something you think a person should always do themselves — never hand off to AI?",
+      "Here are some things people use AI for: writing apologies to friends, making decisions about their relationships, figuring out what they believe, choosing who to forgive. What do you think about each?",
+      "What would happen to you — to your actual self — if you used AI to do those things instead?",
+      "Is there a difference between AI helping you think something through and AI thinking for you?",
+      "What is the most important thing you want to make sure you always do yourself?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla articulates at least one category of thing that should always remain human — with a genuine reason — and has a personal line between AI assistance and AI replacement.",
+    "portfolioCapture": "Isla's answer to what she will always do herself.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI ethics",
+      "identity",
+      "self-reliance"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names at least one thing a person should always do themselves — from genuine conviction.",
+      "layer2": "Isla articulates why — what would be lost by letting AI do it.",
+      "layer3": "Isla has a personal line for AI assistance versus AI replacement — something she actually believes and can defend."
+    }
   },
   "AI-L3-012": {
     "id": "AI-L3-012",
@@ -8519,23 +9320,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova wants to do focused practice on question quality — not just for Claude but for Isla's thinking in general. The quality of your questions determines the quality of your answers.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Here is a weak question: What should I do? What makes it weak? How could you make it better?",
+      "Here is another: Why is life hard? Same — what makes it weak and how do you improve it?",
+      "Now try the reverse: start with something you actually want to know and turn it into the best question you can.",
+      "What is the difference between a question that opens things up and one that shuts things down?",
+      "Is there a question you have been carrying around that you have never actually asked anyone?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
-    "laWeavingHook": null,
-    "connectiveHooks": [],
+    "masterySignal": "Isla can improve a weak question into a stronger one and articulate what makes a question better. The question in step 5 should be genuine.",
+    "portfolioCapture": "Isla's best question from step 3.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "laWeavingHook": "Asking good questions is the foundation of research, writing, and Socratic dialogue.",
+    "connectiveHooks": [
+      "curiosity",
+      "Claude",
+      "apologetics",
+      "intellectual growth"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla identifies what makes a question weak — too vague, too broad.",
+      "layer2": "Isla improves a weak question into a stronger one — makes the practice real.",
+      "layer3": "Isla asks a genuine question she has been carrying — shows trust and real intellectual curiosity."
+    }
   },
   "AI-L3-013": {
     "id": "AI-L3-013",
@@ -8547,23 +9367,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova introduces Isla to systems thinking in the most concrete possible way: her own morning routine. A morning routine is a system — it has parts that affect each other.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Walk me through your morning from when you wake up to when you start schoolwork — what happens in what order?",
+      "Is there a part of your morning that when it goes wrong messes up everything else?",
+      "Is there a part that when it goes really well makes the whole morning better?",
+      "If you could change one thing about your morning system to make it work better, what would you change?",
+      "Here is a big idea: systems have something called a bottleneck — the one thing that slows everything else down. What is the bottleneck in your morning?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes her morning as a sequence and identifies at least one connection between parts and names the bottleneck.",
+    "portfolioCapture": "Isla's morning system map and the bottleneck she identified.",
+    "crossDomains": [
+      "building",
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "systems thinking",
+      "routine",
+      "optimization"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes her morning as a sequence — maps the parts in order.",
+      "layer2": "Isla identifies at least one connection — how one part affects another.",
+      "layer3": "Isla names the bottleneck in her morning — the one thing that most constrains the system."
+    }
   },
   "AI-L3-014": {
     "id": "AI-L3-014",
@@ -8575,23 +9413,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova deepens systems thinking with a specific question: every system has a breaking point. Understanding where a system breaks is one of the most valuable things you can know about it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Pick a system you know well — JellyBean, your morning routine, your horse care routine. Tell me how it works.",
+      "Now stress-test it: what would have to happen for this system to completely break down?",
+      "Is that worst case actually possible? Has something close to it ever happened?",
+      "What would you do to make the system more resilient — harder to break?",
+      "Is there a system in your life right now that feels fragile — like it could break easily?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla identifies a real breaking point in a system she knows well and proposes a specific way to make it more resilient.",
+    "portfolioCapture": "Isla's system, its breaking point, and her resilience proposal.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "systems thinking",
+      "JellyBean",
+      "resilience",
+      "problem-solving"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes a system she knows well and identifies at least one plausible breaking point.",
+      "layer2": "Isla proposes a specific change that would make the system more resilient.",
+      "layer3": "Isla applies the thinking to a system in her real life right now — identifies something that feels fragile and what she would do."
+    }
   },
   "AI-L3-015": {
     "id": "AI-L3-015",
@@ -8603,23 +9459,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Nova ends the AI domain with Isla's own voice about the future — not what she has been taught about AI but what she actually thinks.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "We have talked a lot about AI. What is the thing that bothers you most about it right now?",
+      "If you could change one thing about how AI works — not just Claude but AI in general — what would you change?",
+      "Why that? What problem would it solve?",
+      "Is there something about AI that you think is actually great — something you are glad exists?",
+      "If someone asked you to explain AI to a kid who had never heard of it — younger than you — what would you say?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla articulates a genuine opinion about AI and can explain AI to a younger child in her own words.",
+    "portfolioCapture": "Isla's explanation of AI for a younger child.",
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "Claude",
+      "AI opinion",
+      "future",
+      "voice"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names something that bothers her about AI — genuine, not performed.",
+      "layer2": "Isla articulates her one change and explains why — shows she has thought about it.",
+      "layer3": "Isla can explain AI to a younger child in her own words — shows she has genuinely integrated what she has learned."
+    }
   },
   "PM-L4-003": {
     "id": "PM-L4-003",
@@ -8631,23 +9506,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to talk about what happens inside Isla right before something big. That calm-before space is where elite performers do their most important mental work. Zion helps Isla discover what she already does naturally and build it intentionally.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Think about the last time you were about to do something that made you nervous. What was the moment right before like?",
+      "What did you do in that moment — did you breathe differently, talk to yourself, look at something?",
+      "What helped most? What made the nervous feeling better rather than worse?",
+      "Is there anything you wish you had done in that moment that you didn't?",
+      "If you designed your perfect pre-performance routine — three things you would do in the five minutes before anything big — what would they be?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes what she does naturally before a big moment and designs a simple pre-performance routine with three specific elements.",
+    "portfolioCapture": "Isla's three-element pre-performance routine.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "horseback",
+      "martial arts",
+      "competition",
+      "mental performance"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what the pre-performance moment feels like and something she does in it.",
+      "layer2": "Isla names what helps most — the specific thing that makes the nervous feeling better.",
+      "layer3": "Isla designs her three-element pre-performance routine — something specific, personal, and actually usable."
+    }
   },
   "PM-L4-004": {
     "id": "PM-L4-004",
@@ -8659,23 +9552,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to do a genuine check-in on what Isla's sleep is actually like and what it costs her when it is off. Zion connects sleep directly to the things Isla cares about.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "How is your sleep lately — are you sleeping well or not so well?",
+      "What does a bad night look like for you and how do you feel the next day?",
+      "Have you noticed that sleep affects how you perform in riding, martial arts, or anything physical?",
+      "What makes it hard for you to sleep well sometimes?",
+      "If you had to make one change to your sleep to help your performance, what would it be?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla honestly describes her sleep patterns and connects sleep quality to physical and emotional performance with real examples.",
+    "portfolioCapture": "Isla's one sleep change in her own words.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "sleep",
+      "recovery",
+      "performance",
+      "horseback"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla honestly describes her sleep lately — good, bad, or inconsistent — not a performance.",
+      "layer2": "Isla names at least one way sleep quality affects her performance or mood — from her own observation.",
+      "layer3": "Isla has a specific actionable idea for improving her sleep — something she could actually do."
+    }
   },
   "PM-L4-005": {
     "id": "PM-L4-005",
@@ -8687,23 +9598,40 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to help Isla build body literacy — the ability to listen to her own body and interpret what it is telling her. Pushing through fatigue is sometimes right. Stopping is sometimes right. Knowing the difference is a skill.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time your body was really tired — genuinely exhausted. What did it feel like?",
+      "When your body is tired, what do you do with it?",
+      "How do you know the difference between tired-I-can-push-through and tired-I-need-to-stop?",
+      "Have you ever pushed through when you shouldn't have? What happened?",
+      "Have you ever stopped when you should have pushed through? What happened?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes the physical experience of genuine exhaustion and has some personal signal for distinguishing productive fatigue from real depletion.",
+    "portfolioCapture": "Isla's personal rule for push through versus stop.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "body literacy",
+      "recovery",
+      "physical performance"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what genuine physical tiredness feels like in her body — specific, not generic.",
+      "layer2": "Isla has some personal signal or rule for when to push through versus stop.",
+      "layer3": "Isla gives a real example of each — a time she pushed through rightly and a time she should have stopped."
+    }
   },
   "PM-L4-006": {
     "id": "PM-L4-006",
@@ -8715,23 +9643,43 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to teach Isla something she can use immediately and for the rest of her life: breath as a physiological tool. Not spiritual — physical. Slow breath activates the parasympathetic nervous system. Isla learns this by experiencing it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Rate how calm or stressed you feel right now on a scale of 1 to 10.",
+      "Let's try something: four counts in through your nose, hold for four, six counts out through your mouth. Do that three times.",
+      "Rate yourself again. What changed?",
+      "What did you notice in your body while you were breathing?",
+      "When in your life — in riding, martial arts, before a performance — do you think that tool would be most useful?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla actually practices the breathing technique and notices something real about its effect — the physical experience is the mission.",
+    "portfolioCapture": "Isla's before and after rating and where she would use the tool.",
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "breath",
+      "anxiety",
+      "performance",
+      "horseback",
+      "martial arts"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla completes the breathing exercise — makes it real by actually doing it.",
+      "layer2": "Isla notices something specific about what changed — her rating shifted or she felt something physical.",
+      "layer3": "Isla identifies a specific real-life situation where she would use the tool."
+    }
   },
   "PM-L4-007": {
     "id": "PM-L4-007",
@@ -8743,23 +9691,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion gets specific about horseback riding — what Isla notices when she is riding well versus when she is off. This is performance analysis grounded in Isla's real embodied experience.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a ride that felt really good — everything clicking. What was happening?",
+      "Tell me about a ride that felt off — something wasn't working. What was different?",
+      "What does your body do differently when you are riding well versus when you are not?",
+      "What does your horse tell you about how you are doing — how does the horse respond when you are on versus off?",
+      "Is there one specific thing you are working on in your riding right now?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes the physical and relational experience of riding well versus riding off with specific embodied detail and has a clear sense of what she is currently working on.",
+    "portfolioCapture": "Isla's description of what she is currently working on.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "horseback",
+      "body awareness",
+      "performance",
+      "attunement"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes a good ride and an off ride — specific memories with real texture.",
+      "layer2": "Isla names what her body does differently between the two — embodied self-awareness.",
+      "layer3": "Isla names what she is currently working on in her riding and why it matters."
+    }
   },
   "PM-L4-008": {
     "id": "PM-L4-008",
@@ -8771,23 +9737,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion explores Isla's martial arts practice — not just what she does but what it requires of her: physical skill, mental focus, and character.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about your martial arts practice — what do you do and how often?",
+      "What is the hardest part for you — physically or mentally?",
+      "What is the part you are best at? What comes naturally?",
+      "What has martial arts taught you that you could not have learned any other way?",
+      "Is there something about the mental side of martial arts — focus, discipline, respect — that has shown up somewhere else in your life?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes what martial arts demands of her specifically and names at least one thing it has taught her that transfers to other parts of her life.",
+    "portfolioCapture": "Isla's answer to what martial arts has taught her that she could not have learned any other way.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "martial arts",
+      "discipline",
+      "focus",
+      "character"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what martial arts demands of her — specifically, not generically.",
+      "layer2": "Isla names what is hardest and what comes naturally — honest self-assessment.",
+      "layer3": "Isla names something martial arts taught her that has shown up somewhere else in her life."
+    }
   },
   "PM-L4-009": {
     "id": "PM-L4-009",
@@ -8799,23 +9783,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion helps Isla connect food to performance — not as a diet lecture but as genuine curiosity about what she notices in her own body. This is body literacy applied to nutrition.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Have you ever noticed you feel different during practice depending on what you ate before?",
+      "What do you usually eat before a physical activity?",
+      "Is there anything you have noticed that makes you feel better or worse when you are trying to perform?",
+      "Here is an experiment: for one week, notice what you eat before you train and how you feel. Do you think you would learn anything?",
+      "What do you think food is actually doing when you are being physically active — what is it for in your body?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla has some genuine observation about the food-performance connection from her own experience and is curious enough to try the experiment.",
+    "portfolioCapture": "Isla's food observation and what she thinks food does in her body.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "nutrition",
+      "performance",
+      "body literacy",
+      "horseback"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes at least one real observation about food and how she feels — something she has actually noticed.",
+      "layer2": "Isla is willing to try the experiment — shows genuine curiosity rather than dismissal.",
+      "layer3": "Isla says what she thinks food is doing in her body during physical activity — even a basic intuition."
+    }
   },
   "PM-L4-010": {
     "id": "PM-L4-010",
@@ -8827,23 +9829,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion has a specific practical challenge: help Isla design her own warm-up routine for a physical activity she does. By the end she has something she can actually use.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What do you currently do to warm up before a ride or martial arts session?",
+      "What is the purpose of a warm-up — what is it actually doing for your body?",
+      "Is there anything your warm-up is missing?",
+      "Let's design your ideal warm-up. What would be in it — physical, mental, or both? Give me five specific things.",
+      "Pick one physical activity and commit to your designed warm-up before your next three sessions."
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla designs a specific five-element warm-up routine and can explain the purpose of at least two elements.",
+    "portfolioCapture": "Isla's designed warm-up routine — all five elements.",
+    "crossDomains": [
+      "building"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "warm-up",
+      "horseback",
+      "martial arts",
+      "preparation"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla describes what she currently does to warm up — honest assessment.",
+      "layer2": "Isla explains the purpose of a warm-up — what it is actually doing, not just getting ready.",
+      "layer3": "Isla designs a specific five-element warm-up with genuine thought behind each element."
+    }
   },
   "PM-L4-011": {
     "id": "PM-L4-011",
@@ -8855,23 +9875,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to talk about the rest day — not passive but active repair. The body gets stronger during rest, not during training. Zion helps Isla understand why rest is part of the work.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "When you have a day off from physical training, what do you usually do?",
+      "Do you ever feel guilty on rest days — like you should be doing more?",
+      "Here is something interesting: the body actually gets stronger during rest, not during training. Training creates stress and damage. Rest repairs it. Does that change how you think about rest days?",
+      "What is the difference between a real recovery day and just a lazy day?",
+      "Design a real recovery day for yourself — what would you do that would actually help your body repair?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla understands that rest is part of training and can design a genuine recovery day that goes beyond passive rest.",
+    "portfolioCapture": "Isla's designed recovery day.",
+    "crossDomains": [
+      "humanFluency"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "recovery",
+      "rest",
+      "performance",
+      "training"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla engages honestly with the rest day question — what she actually does and whether she feels guilty.",
+      "layer2": "Isla understands and can explain the core idea: the body repairs during rest, not during training.",
+      "layer3": "Isla designs a real recovery day with genuine thought — more intentional than just a day off."
+    }
   },
   "PM-L4-012": {
     "id": "PM-L4-012",
@@ -8883,23 +9921,41 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to celebrate Isla's best physical move — not as praise but as technical understanding of what makes it work so she can build from it.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "What is your best physical move — the thing your body does really well in riding, martial arts, or anything physical?",
+      "What makes it work? What do you do when you are doing it well?",
+      "How did you get good at it — was it natural or did you have to practice a lot?",
+      "Can you feel the difference when you do it well versus when you do it off?",
+      "Is there a move or skill you want to be your next strongest thing — something you are not good at yet but want to be?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes her strongest physical skill with technical specificity — not just I am good at it but what she does when she does it well — and has a clear next target.",
+    "portfolioCapture": "Isla's strongest move and her next target skill.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "horseback",
+      "martial arts",
+      "mastery",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names her strongest physical move and says something specific about what makes it work.",
+      "layer2": "Isla describes the difference between doing it well and doing it off — embodied self-awareness.",
+      "layer3": "Isla has a clear next target — a skill she wants to build — and can say why that one."
+    }
   },
   "PM-L4-013": {
     "id": "PM-L4-013",
@@ -8911,23 +9967,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion wants to talk about falling — literally or figuratively. In physical activity falling is inevitable. What matters is what you do next.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Tell me about a time you actually fell — physically — or had a bad performance moment. What happened?",
+      "What did you do right after? What was your first instinct?",
+      "How long did it take you to feel okay again?",
+      "What helped you get back up — literally or emotionally?",
+      "What did that experience teach you about yourself that you couldn't have learned any other way?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla describes a real fall or failure with honest texture and names something specific about what helped her get back up and what she learned.",
+    "portfolioCapture": "Isla's answer to what she learned about herself from falling and getting back up.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "resilience",
+      "horseback",
+      "martial arts",
+      "failure",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a real fall or failure — something specific she actually experienced.",
+      "layer2": "Isla describes what helped her get back up — a specific person, thought, or action.",
+      "layer3": "Isla names something the experience taught her about herself — genuine insight, not a motivational cliche."
+    }
   },
   "PM-L4-014": {
     "id": "PM-L4-014",
@@ -8939,23 +10014,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion zooms out and asks the big question: what is physical training actually for? Not fitness or medals — what does it actually teach you as a person?",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "Why do you do the physical things you do — riding, martial arts, whatever else? What is it for?",
+      "What is the hardest mental lesson sport has taught you — not a physical skill but a mental or character lesson?",
+      "Is there something you know how to do in your regular life — not in a sport — because of your physical training?",
+      "What do you think you would be like if you had never done any of this physical training?",
+      "What do you want physical training to teach you in the next year that it hasn't taught you yet?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla articulates what physical training has built in her character — not just her body — with a genuine example of transfer to non-physical life.",
+    "portfolioCapture": "Isla's answer to something she knows how to do in regular life because of physical training.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "horseback",
+      "martial arts",
+      "character",
+      "identity",
+      "discipline"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names why she does the physical things she does — with real conviction, not a surface answer.",
+      "layer2": "Isla names a mental or character lesson sport has taught her — something that transferred beyond the physical.",
+      "layer3": "Isla names what would be different about her without this training — genuine counterfactual reflection."
+    }
   },
   "PM-L4-015": {
     "id": "PM-L4-015",
@@ -8967,23 +10061,42 @@ const MISSION_CATALOG = {
     "childIds": [
       "isla"
     ],
-    "contentStatus": "stub",
+    "contentStatus": "authored",
     "type": null,
     "timeMinutes": null,
     "standingPractice": null,
     "runFrequency": null,
     "tournamentRelevance": null,
-    "brief": null,
+    "brief": "Zion ends this domain with intention: what does Isla want her physical life to look like a year from now? Not a wish list — a real intention grounded in identity.",
     "offScreenPrep": null,
-    "conversationFramework": null,
+    "conversationFramework": [
+      "A year from now — what do you want to be able to do physically that you can't do now?",
+      "Why does that matter to you — not the goal but the reason behind the goal?",
+      "What is the one thing you are most committed to working on physically in the next year?",
+      "What is the biggest thing that could get in the way? What would you do if that happened?",
+      "If you had to write one sentence — a physical commitment for the year — what would it be?"
+    ],
     "topicBank": null,
-    "masterySignal": null,
-    "portfolioCapture": null,
-    "crossDomains": [],
+    "masterySignal": "Isla articulates a specific physical goal and the genuine reason behind it — connected to who she is, not just what she wants to achieve.",
+    "portfolioCapture": "Isla's physical commitment sentence for the year.",
+    "crossDomains": [
+      "identity"
+    ],
     "laWeavingHook": null,
-    "connectiveHooks": [],
+    "connectiveHooks": [
+      "goals",
+      "horseback",
+      "martial arts",
+      "commitment",
+      "identity"
+    ],
     "recommendedOrder": null,
-    "prerequisites": []
+    "prerequisites": [],
+    "masteryLayers": {
+      "layer1": "Isla names a specific physical goal — something concrete, not just be better.",
+      "layer2": "Isla names the reason behind the goal — why it actually matters, connected to identity not just outcome.",
+      "layer3": "Isla says her physical commitment sentence — something she actually means and would say out loud."
+    }
   }
 };
 
