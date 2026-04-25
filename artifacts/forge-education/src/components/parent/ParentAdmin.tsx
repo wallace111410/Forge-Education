@@ -583,6 +583,7 @@ function BriefsPanel({ basePath }: { basePath: string }) {
   const [generating, setGenerating] = useState(false);
   const [selectedBriefId, setSelectedBriefId] = useState<string>('');
   const [selectedDigestId, setSelectedDigestId] = useState<string>('');
+  const [selectedMissionId, setSelectedMissionId] = useState<string>('');
 
   useEffect(() => { fetchData(selectedChild); }, [selectedChild]);
 
@@ -869,18 +870,32 @@ function ProgressPanel({ basePath }: { basePath: string }) {
                       const isCompleted = completed.includes(mid) || mp?.completed;
                       const mastery = mp?.masteryLevel || 0;
                       return (
-                        <div key={mid} className={`pp-mission-item ${isCompleted ? 'completed' : ''}`}>
-                          <span className="pp-mission-id">{getMissionTitle(mid)}</span>
-                          {mp && (
-                            <span className="pp-mission-meta">
-                              {mp.attempts} {mp.attempts === 1 ? 'attempt' : 'attempts'}
-                              {(mastery > 0 || (mp && mp.attempts > 0)) && (
-                                <span className="pp-mastery-badge" style={{ color: MASTERY_COLORS[mastery], background: MASTERY_BG[mastery], padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 }}>{MASTERY_LABELS[mastery]}</span>
-                              )}
-                              {mp && mp.stuckFlag && (
-                                <span className="pp-stuck-badge" style={{ color: '#ff4444', background: '#2d0a0a', padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600, marginLeft: '4px' }}>Stuck</span>
-                              )}
-                            </span>
+                        <div key={mid} className={`pp-mission-item ${isCompleted ? 'completed' : ''}`} style={{ cursor: 'pointer' }}>
+                          <div onClick={() => setSelectedMissionId(selectedMissionId === mid ? '' : mid)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2px 0' }}>
+                            <span className="pp-mission-id">{getMissionTitle(mid)}</span>
+                            {mp && (
+                              <span className="pp-mission-meta">
+                                {mp.attempts} {mp.attempts === 1 ? 'attempt' : 'attempts'}
+                                {(mastery > 0 || (mp && mp.attempts > 0)) && (
+                                  <span className="pp-mastery-badge" style={{ color: MASTERY_COLORS[mastery], background: MASTERY_BG[mastery], padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 }}>{MASTERY_LABELS[mastery]}</span>
+                                )}
+                                {mp && mp.stuckFlag && (
+                                  <span className="pp-stuck-badge" style={{ color: '#ff4444', background: '#2d0a0a', padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600, marginLeft: '4px' }}>Stuck</span>
+                                )}
+                                <span style={{ color: '#555', marginLeft: '6px', fontSize: '11px' }}>{selectedMissionId === mid ? '▲' : '▼'}</span>
+                              </span>
+                            )}
+                          </div>
+                          {selectedMissionId === mid && mp && (
+                            <div style={{ marginTop: '8px', padding: '10px 12px', background: '#111', borderRadius: '6px', fontSize: '12px', lineHeight: '1.6', borderLeft: '3px solid ' + (mp.stuckFlag ? '#ff4444' : MASTERY_COLORS[mastery] || '#555') }}>
+                              <div style={{ color: '#888', marginBottom: '6px' }}><strong style={{ color: '#ccc' }}>Mission:</strong> {mid}</div>
+                              <div style={{ color: '#888', marginBottom: '4px' }}><strong style={{ color: '#ccc' }}>Layer:</strong> {mp.masteryLayer || 0}/3 — {MASTERY_LABELS[mp.masteryLayer || 0]}</div>
+                              <div style={{ color: '#888', marginBottom: '4px' }}><strong style={{ color: '#ccc' }}>Attempts:</strong> {mp.attempts || 0}</div>
+                              {mp.layerNotes && <div style={{ color: '#aaa', marginBottom: '4px' }}><strong style={{ color: '#ccc' }}>Last observed:</strong> {mp.layerNotes}</div>}
+                              {mp.nextSessionEntry && <div style={{ color: '#aaa', marginBottom: '4px' }}><strong style={{ color: '#ccc' }}>Next session:</strong> {mp.nextSessionEntry}</div>}
+                              {mp.stuckFlag && <div style={{ color: '#ff6666', marginTop: '6px', fontWeight: 600 }}>⚠ Flagged as stuck — try a different approach</div>}
+                              {mp.completedDate && <div style={{ color: '#4ade80', marginTop: '4px' }}>✓ Completed {mp.completedDate.slice(0,10)}</div>}
+                            </div>
                           )}
                           {isCompleted && <span className="pp-mission-check">—</span>}
                         </div>
