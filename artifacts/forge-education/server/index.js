@@ -393,6 +393,22 @@ app.put('/forge-api/child/:childId/avatar', (req, res) => {
   res.json({ success: true, avatarConfig: child.avatarConfig });
 });
 
+app.post('/forge-api/child/:childId/rename-agent', (req, res) => {
+  const { childId } = req.params;
+  const { agentName } = req.body;
+  if (!agentName || typeof agentName !== 'string' || agentName.trim().length < 2 || agentName.trim().length > 30) {
+    return res.status(400).json({ error: 'Agent name must be 2-30 characters' });
+  }
+  const data = readData();
+  const child = data.children[childId];
+  if (!child) return res.status(404).json({ error: 'Child not found' });
+  const cleanName = agentName.trim();
+  child.primaryAgent.name = cleanName;
+  child.agentName = cleanName;
+  writeData(data);
+  res.json({ success: true, agentName: cleanName });
+});
+
 const AGENT_VOICE_MAP = {
   vera: '21m00Tcm4TlvDq8ikWAM',
   ren: 'pFZP5JQG7iQjIQuC4Bku',
