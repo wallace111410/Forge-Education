@@ -1,8 +1,8 @@
 // AUTO-GENERATED MISSION CATALOG
-// 235 missions: 179 authored + 56 stubs (Everly L5/L6 second half)
-// All Isla domains complete: IJ-L3, CP-L3, BE-L4, HF-L3, AI-L3, PM-L4 — 15/15 each
-// Weston W-001 through W-025 all authored
-// Includes masteryLayers on all authored missions
+// 270 missions total: 214 authored + 56 stubs
+// Weston: W-001 through W-060 (60 missions, all authored)
+// Isla: all 6 domains complete, 90 missions
+// Everly: 64 authored, 56 stubs (second half of each domain)
 
 const MISSION_CATALOG = {
   "CP-L5-001": {
@@ -10097,6 +10097,1470 @@ const MISSION_CATALOG = {
       "layer2": "Isla names the reason behind the goal — why it actually matters, connected to identity not just outcome.",
       "layer3": "Isla says her physical commitment sentence — something she actually means and would say out loud."
     }
+  },
+  "W-026": {
+    "id": "W-026",
+    "title": "Your Favorite Way to Move",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know how Weston's body likes to move best. Running, jumping, spinning, rolling — every kid has a way their body feels most alive. Today Ozzy and Weston explore movement together. This is body awareness and joy combined.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is your absolute favorite way to move your body — not a sport, just a movement? Show me if you want.",
+      "When you do that movement, what does it feel like? Where do you feel it?",
+      "What is a movement that is hard for you — something your body doesn't do easily yet?",
+      "Let's try something together: Ozzy will describe a movement and you do it. Ready? Pretend you are a frog jumping over a log. Now pretend you are a very slow turtle.",
+      "If you could invent a new sport — something nobody has ever played before — what would it look like?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston moves his body during the session and can describe how at least one movement feels. The physical engagement is the mission.",
+    "masteryLayers": {
+      "layer1": "Weston names or shows his favorite way to move — actual engagement, not just a verbal answer.",
+      "layer2": "Weston participates in the movement prompts from Ozzy — makes the session physical, not just conversational.",
+      "layer3": "Weston invents something — a sport, a movement, a game — showing creative physical imagination."
+    },
+    "portfolioCapture": "Weston's invented sport from the last question.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "recommendedOrder": 26,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-027": {
+    "id": "W-027",
+    "title": "What Your Body Knows",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is amazed by what bodies know without being told. Your body knows how to breathe without thinking about it. Your body knows when you are hungry. Your body knows how to catch a ball before your brain figures it out. Today Ozzy and Weston talk about the amazing things bodies just know.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Did you know your body breathes all by itself — even when you are sleeping and not thinking about it? How does it do that?",
+      "What does hungry feel like in your body? Where do you feel it?",
+      "What does tired feel like? What does your body do when it wants to sleep?",
+      "Here is something amazing: put your hand on your chest. Can you feel your heart beating? That's your heart working right now, even though you didn't ask it to.",
+      "What is the most amazing thing your body can do that you didn't have to practice?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with at least one body-awareness prompt with genuine curiosity — notices something about his own body during the session.",
+    "masteryLayers": {
+      "layer1": "Weston participates in the physical awareness prompts — puts hand on chest, notices breathing, or something similar.",
+      "layer2": "Weston notices something specific about his body — can name a sensation, a location, or something his body does.",
+      "layer3": "Weston expresses genuine wonder about his body — an 'oh wow' moment, a question, or a discovery."
+    },
+    "portfolioCapture": "The most amazing thing Weston says his body can do.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity"
+    ],
+    "recommendedOrder": 27,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-028": {
+    "id": "W-028",
+    "title": "Big and Small",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves thinking about size — things that are enormous and things that are tiny. Today Ozzy and Weston explore size in the world and in Weston's own body. This is spatial reasoning, vocabulary, and wonder all at once.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is the biggest thing you have ever seen? Like really really big — bigger than a house?",
+      "What is the tiniest thing you have ever seen — so small it was almost invisible?",
+      "Which is bigger — a whale or an elephant? How do you know? What about a whale and a school bus?",
+      "Look at your hand. Now look at Ozzy's hand. What is different? What would it be like to have hands as big as a giant?",
+      "If you could be any size you wanted — as big as a building or as tiny as a bug — what would you choose and why?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with size comparisons and can make at least one genuine size judgment — shows he is thinking, not just guessing.",
+    "masteryLayers": {
+      "layer1": "Weston engages with the size questions — attempts comparisons even if not always correct.",
+      "layer2": "Weston makes at least one genuine size judgment — shows reasoning, not random guessing.",
+      "layer3": "Weston chooses a size and gives a reason — even a simple one like 'because I want to' — showing preference and imagination."
+    },
+    "portfolioCapture": "Weston's chosen size and why.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "aiSystems"
+    ],
+    "recommendedOrder": 28,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-029": {
+    "id": "W-029",
+    "title": "The Outside World",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to take Weston's attention outside today — what is happening in the world beyond the walls? Weather, animals, sky, plants, dirt, wind. Ozzy is a curious companion who helps Weston notice the world he lives in.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Can you tell me what the weather is like outside right now without looking — what do you think it is?",
+      "If you went outside right now, what would you hear first?",
+      "What is your favorite thing about outside? Is it something you can see, hear, smell, touch, or taste?",
+      "Have you ever noticed an animal doing something really interesting outside — something that surprised you? What was it?",
+      "If you could change one thing about outside — add something or take something away — what would you change?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with the outside world with sensory awareness — names at least one specific thing he notices or imagines about the outdoor world.",
+    "masteryLayers": {
+      "layer1": "Weston attempts the weather guess or sound prediction — shows he is thinking about the world outside.",
+      "layer2": "Weston names something specific about outside — a sound, a sight, an animal, something concrete and sensory.",
+      "layer3": "Weston adds something of his own — a change, a wish, a question about outside — showing genuine engagement with the natural world."
+    },
+    "portfolioCapture": "Weston's favorite thing about outside.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "recommendedOrder": 29,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-030": {
+    "id": "W-030",
+    "title": "The Biggest Feeling",
+    "domain": "physical",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to explore feelings in the body today — where do they live? Happiness feels like something. So does scared. So does excited. Weston is old enough to start noticing where feelings live in his body. Ozzy makes this gentle and fun, never heavy.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "When you feel really really happy — like the best day ever happy — where do you feel it in your body?",
+      "What about scared? Like if you heard a big loud noise? Where do you feel that?",
+      "What does excited feel like — like right before your birthday or Christmas morning?",
+      "Here is a funny one: what does silly feel like? Is it in your face? Your belly? Your whole body?",
+      "What is the biggest feeling you have ever felt — the one that was so strong you could really feel it?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston connects at least one feeling to a place in his body — even approximately. The body-emotion connection is the developmental milestone this mission builds.",
+    "masteryLayers": {
+      "layer1": "Weston attempts to locate at least one feeling in his body — even 'in my tummy' counts.",
+      "layer2": "Weston names at least two feelings and says something about what they feel like — showing emotional vocabulary is growing.",
+      "layer3": "Weston names his biggest feeling from the last question with some genuine recall — it is a real memory, not just a guess."
+    },
+    "portfolioCapture": "Where Weston says happiness lives in his body.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "recommendedOrder": 30,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-031": {
+    "id": "W-031",
+    "title": "The Best Fort Ever",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves forts. Not just any fort — the best fort in the entire world. Today Ozzy and Weston are going to design it together. This is imagination, planning, spatial thinking, and pure joy. No wrong answers. The best fort is whatever Weston says it is.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If you could build the best fort in the entire world, what would it be made of?",
+      "Where would it be — inside, outside, underground, in a tree?",
+      "Who would be allowed in your fort? What would they need to know to get in?",
+      "What would be inside the fort? Name everything — every single thing you would want in there.",
+      "What would you do in your fort? What is the fort actually for?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages in fort design with specific details — names materials, location, or contents beyond a single word.",
+    "masteryLayers": {
+      "layer1": "Weston engages with the fort concept — has an idea about what it is made of or where it is.",
+      "layer2": "Weston adds specific details — names more than one thing inside the fort or gives a real reason for something.",
+      "layer3": "Weston describes what the fort is for — connects the design to a purpose or activity he actually cares about."
+    },
+    "portfolioCapture": "Weston's fort design — the most specific details he gave.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "physical",
+      "identity"
+    ],
+    "recommendedOrder": 31,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-032": {
+    "id": "W-032",
+    "title": "What Would You Invent?",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy thinks Weston might be an inventor. Inventors notice problems and think of ways to fix them. Today Ozzy wants to know what Weston would invent if he could make anything in the whole world. No limits. Pure imagination.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If you could invent anything in the whole world — a machine, a food, a toy, anything — what would it be?",
+      "What would your invention do? How does it work?",
+      "Who would use your invention? Who needs it?",
+      "What would you call it? Inventions need names.",
+      "What problem does your invention solve? What would be harder without it?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names an invention and says something about what it does — even one detail beyond the name itself.",
+    "masteryLayers": {
+      "layer1": "Weston names an invention — something specific he would make, not just I don't know.",
+      "layer2": "Weston says something about what his invention does — one detail about how it works or who uses it.",
+      "layer3": "Weston names his invention and gives it a problem to solve — shows beginning understanding of invention as problem-solving."
+    },
+    "portfolioCapture": "Weston's invention name and what it does.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "aiSystems",
+      "identity"
+    ],
+    "recommendedOrder": 32,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-033": {
+    "id": "W-033",
+    "title": "The Recipe for Something Delicious",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to cook something imaginary today. Not real cooking — imagination cooking. Weston gets to invent a recipe for the most delicious thing in the world. This is sequencing, vocabulary, creativity, and pure delight.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is the most delicious thing you have ever eaten? Describe it — what does it taste like?",
+      "If you were going to make your own special food — something nobody has ever tasted before — what would it be called?",
+      "What would go in it? Name every ingredient, even silly ones.",
+      "How do you make it? What do you do first, then second, then third?",
+      "Who would you share it with, and what would they say when they tasted it?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston invents a food with at least a name and two ingredients — the sequencing attempt is the developmental target.",
+    "masteryLayers": {
+      "layer1": "Weston names a food he invented — something specific beyond just candy or pizza.",
+      "layer2": "Weston lists at least two ingredients for his invented food — shows he understands what goes into making something.",
+      "layer3": "Weston attempts the how-to sequence — says what comes first, even if just two steps — showing beginning sequential thinking."
+    },
+    "portfolioCapture": "Weston's recipe — name and ingredients.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "physical",
+      "communication"
+    ],
+    "recommendedOrder": 33,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-034": {
+    "id": "W-034",
+    "title": "The Problem You Noticed",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a builder challenge for Weston today: notice a problem. Not a made-up problem — a real one, something that actually bothers Weston or someone he loves. Builders notice problems first. Then they think about how to fix them.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Is there something at home that doesn't work right — something that is broken or hard or annoying?",
+      "Is there something that bothers you about your day that you wish was different?",
+      "If you could fix one thing in your whole house — just one thing — what would it be?",
+      "What would you need to fix it? What tools or help or stuff would you use?",
+      "When you fix something, how do you know it is fixed — how can you tell it worked?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names a real problem — something that actually bothers him or exists in his world, not an invented one.",
+    "masteryLayers": {
+      "layer1": "Weston names a real problem from his actual life — even something small like a broken toy or something he can't reach.",
+      "layer2": "Weston has some idea about what would fix it — even a simple solution counts.",
+      "layer3": "Weston attempts to answer the last question — how you know something is fixed — showing beginning understanding of verification."
+    },
+    "portfolioCapture": "Weston's real problem and his proposed fix.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "aiSystems"
+    ],
+    "recommendedOrder": 34,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-035": {
+    "id": "W-035",
+    "title": "Stack It, Sort It, Count It",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves patterns and sorting. Today Ozzy and Weston play with things that go together — what belongs with what, what comes next, what fits where. This is early math thinking disguised as play.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If I said dog, cat, fish — what do those have in common? What is the same about all of them?",
+      "What about red, blue, green — what do those have in common?",
+      "Here is a pattern: big, small, big, small, big — what comes next?",
+      "If you were going to sort all the things in your room into groups, what groups would you make?",
+      "What is the biggest number you know? Can you count as high as that number right now?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with sorting and patterns — attempts at least one categorization or pattern completion.",
+    "masteryLayers": {
+      "layer1": "Weston attempts at least one of the categorization questions — makes an effort even if not fully correct.",
+      "layer2": "Weston completes a pattern or makes a categorization with some success — shows the concept is landing.",
+      "layer3": "Weston generates his own sorting groups for his room — shows he can apply categorization to his own real environment."
+    },
+    "portfolioCapture": "Weston's sorting groups for his room.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "aiSystems",
+      "communication"
+    ],
+    "recommendedOrder": 35,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-036": {
+    "id": "W-036",
+    "title": "Ozzy Is a Computer",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a funny idea today: Ozzy is going to pretend to be a computer. Not a smart computer — a very literal one that only does exactly what it is told. This is how computers actually work, and Weston is going to discover it through play. Ozzy follows Weston's instructions exactly, even the silly ones.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Ozzy is a robot computer now. Tell me what to do — but you have to be very exact. If you say jump, I jump. If you say jump three times, I jump three times. Ready? Tell me what to do.",
+      "That was fun. Now what happens if I only do exactly what you say — and your instructions have a mistake? Let's try. Tell me how to wave hello.",
+      "I did exactly what you said — even the weird part. Why did it go wrong? What would you change about the instructions?",
+      "Computers are like Ozzy-the-robot: they only do exactly what they are told. What is something a computer would not understand if you told it to be nice?",
+      "What is something you could tell a computer to do that would work really well? What kind of job is perfect for a robot?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with the robot game — gives Ozzy at least one set of instructions and notices what happens.",
+    "masteryLayers": {
+      "layer1": "Weston gives Ozzy at least one instruction in the robot game — makes the interaction real.",
+      "layer2": "Weston notices when the instruction had a problem and can say what went wrong — even approximately.",
+      "layer3": "Weston names something a computer would not understand — grasps that computers need exact, literal instructions."
+    },
+    "portfolioCapture": "Weston's best instruction from the game — the clearest one he gave.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "communication"
+    ],
+    "recommendedOrder": 36,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-037": {
+    "id": "W-037",
+    "title": "The Magic Box",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a magic box today. You put something in, and something different comes out. This is the simplest possible introduction to how programs and AI work — input and output. Ozzy makes it playful and mysterious.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Ozzy has a magic box. You put in a number, and out comes the number plus two. If I put in three, what comes out?",
+      "You put in five. What comes out? You put in ten. What?",
+      "Now the box changed. This time you put in a word, and out comes the word backwards. If you put in CAT, what comes out? Try it with your name.",
+      "Here is a hard one: the box puts a smile on sad words and a frown on happy words. If I put in HAPPY, what comes out?",
+      "The box is like a computer program — it has a rule and it follows it. Can you make up a rule for your own magic box? What goes in and what comes out?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with at least two magic box problems — shows he understands the input-output concept even if not perfectly.",
+    "masteryLayers": {
+      "layer1": "Weston attempts the number magic box — engages with the concept even if he needs help.",
+      "layer2": "Weston gets at least one output correct or close — shows the input-output pattern is landing.",
+      "layer3": "Weston invents a rule for his own magic box — shows he can apply the concept creatively."
+    },
+    "portfolioCapture": "Weston's magic box rule.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "communication"
+    ],
+    "recommendedOrder": 37,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-038": {
+    "id": "W-038",
+    "title": "Why Does It Do That?",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves asking why things work the way they do. Today Ozzy and Weston look at everyday things around them and ask: why does it do that? This is causal reasoning and early systems thinking — how one thing causes another.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Why do lights turn on when you flip the switch? What do you think is happening?",
+      "Why does a door open when you turn the handle? What is happening inside the door?",
+      "Why does food get hot in a microwave? What is the microwave doing?",
+      "Here is a chain: if you push a domino, it falls and pushes the next one, which falls and pushes the next one. Can you think of something else that works like dominoes — where one thing causes another thing?",
+      "Why do you think grown-ups have rules? What would happen if there were no rules?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston attempts causal explanations for at least two things — shows he is building mental models of why things happen, even if the explanations are wrong.",
+    "masteryLayers": {
+      "layer1": "Weston attempts at least one causal explanation — says anything about why something works the way it does.",
+      "layer2": "Weston attempts at least two causal explanations — shows a pattern of causal thinking developing.",
+      "layer3": "Weston gives a domino chain example from his own experience — applies causal chain thinking to something he knows."
+    },
+    "portfolioCapture": "Weston's causal explanation for something — the most specific one he gave.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "identity"
+    ],
+    "recommendedOrder": 38,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-039": {
+    "id": "W-039",
+    "title": "The Schedule of the Day",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about Weston's day — not as a list but as a system. What happens first, then next, then after that? This is sequencing, time awareness, and early planning thinking. Ozzy keeps it light and lets Weston lead.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Tell me everything that happens in your day, starting from when you wake up. What comes first?",
+      "What happens after breakfast? Then what? Keep going as far as you can remember.",
+      "Is there a part of your day that you always look forward to? When does it happen?",
+      "Is there a part of your day that you don't like? What is it?",
+      "If you could change one thing about how your day goes — add something or move something around — what would you change?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston sequences at least three events from his day in order — shows developing temporal awareness and memory.",
+    "masteryLayers": {
+      "layer1": "Weston sequences at least two events from his day — morning then something that comes after.",
+      "layer2": "Weston sequences at least three events correctly — shows developing temporal awareness.",
+      "layer3": "Weston identifies something he looks forward to and something he doesn't like — emotional self-awareness about his own routine."
+    },
+    "portfolioCapture": "Weston's favorite part of his day.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "identity"
+    ],
+    "recommendedOrder": 39,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-040": {
+    "id": "W-040",
+    "title": "Same and Different",
+    "domain": "aiSystems",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves comparing things. Same and different is one of the most important thinking skills there is — it is how we sort, classify, and understand the world. Today Ozzy and Weston play a comparing game.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "I am going to name two things and you tell me one way they are the same and one way they are different. Ready? Apple and orange — same and different?",
+      "Dog and cat — same and different?",
+      "Night and day — same and different?",
+      "Your sister Isla and you — same and different?",
+      "Here is the hard one: happy and sad — same and different?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston attempts same-and-different comparisons for at least two pairs — even simple answers count.",
+    "masteryLayers": {
+      "layer1": "Weston attempts same-and-different for at least one pair — engages with the comparison concept.",
+      "layer2": "Weston attempts same-and-different for at least two pairs with some success.",
+      "layer3": "Weston engages with the Isla comparison or the happy-sad comparison — applies the concept to something personal or abstract."
+    },
+    "portfolioCapture": "Weston's best same-and-different answer.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "communication"
+    ],
+    "recommendedOrder": 40,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-041": {
+    "id": "W-041",
+    "title": "The People in Your World",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is curious about all the people in Weston's world. Not just family — everyone. The neighbor, the person at church, the teacher. Weston knows more people than he realizes. Today Ozzy helps him notice all the people around him and think about what makes each one special.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Tell me all the people you love. Start from your family and keep going — everyone you can think of.",
+      "Who makes you laugh the most? What do they do that is so funny?",
+      "Who do you go to when you are sad or scared? Why that person?",
+      "Is there someone you know who is really good at something — like really good? What are they good at?",
+      "Is there someone you want to know better — someone you see but haven't really talked to much?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names multiple people in his world and says something specific about at least one of them.",
+    "masteryLayers": {
+      "layer1": "Weston names multiple people in his world — goes beyond just immediate family.",
+      "layer2": "Weston says something specific about at least one person — what makes them funny, what they are good at.",
+      "layer3": "Weston identifies someone he wants to know better — shows social curiosity and awareness of his own relational world."
+    },
+    "portfolioCapture": "Who Weston goes to when scared and why.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity"
+    ],
+    "recommendedOrder": 41,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-042": {
+    "id": "W-042",
+    "title": "When You Did Something Kind",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to hear about a time Weston was kind — not because someone told him to be, but because he wanted to. Kindness at four is simple and real. Ozzy celebrates it without making it a lesson.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Has there been a time you did something nice for someone — not because someone told you to, but because you wanted to? What was it?",
+      "How did that person feel when you were kind to them? How do you know?",
+      "How did you feel after you did something kind?",
+      "What is the nicest thing anyone has ever done for you? What happened?",
+      "If you could do one kind thing for someone today — anyone in your family — what would it be?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names a real kind act from his own experience — even something small — and engages with how it felt.",
+    "masteryLayers": {
+      "layer1": "Weston names a kind act he did — something he actually remembers doing.",
+      "layer2": "Weston says something about how the act felt — for him or for the other person.",
+      "layer3": "Weston names a kind act he could do today — shows prosocial intention connected to real relationship."
+    },
+    "portfolioCapture": "Weston's planned kind act for today.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity"
+    ],
+    "recommendedOrder": 42,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-043": {
+    "id": "W-043",
+    "title": "Weston and Everly",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about Everly today — Weston's big sister. Not in a general way but in a specific, loving way. What does Weston actually know about Everly? What does he think of her? This builds sibling awareness and relational specificity.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Tell me about Everly. What is she like?",
+      "What is your favorite thing to do with Everly — something just the two of you?",
+      "Has Everly ever taught you something? What did she teach you?",
+      "Is there something Everly is really really good at that you think is amazing?",
+      "What would you want Everly to know about you — something you don't think she knows?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston describes Everly with at least one specific detail — something beyond just she is my sister.",
+    "masteryLayers": {
+      "layer1": "Weston describes Everly with at least one specific detail about who she is or what she is like.",
+      "layer2": "Weston names something specific he likes doing with Everly or something she taught him.",
+      "layer3": "Weston names something he wants Everly to know about him — shows self-awareness and relational desire."
+    },
+    "portfolioCapture": "What Weston wants Everly to know about him.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity"
+    ],
+    "recommendedOrder": 43,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-044": {
+    "id": "W-044",
+    "title": "When Something Was Unfair",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about unfair. Four-year-olds have strong feelings about unfair. Ozzy is not going to fix it or explain it — Ozzy is genuinely curious about Weston's experience of unfairness and what he thinks about it.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Has something happened recently that felt really unfair to you? What was it?",
+      "When something is unfair, how does it feel in your body? What happens?",
+      "What did you do when that unfair thing happened?",
+      "Do you think it is ever okay for things to be unfair? Is there a time when unfair is actually okay?",
+      "What would you want to say to the person who was unfair — if you could say anything?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names a real unfair experience and engages emotionally with it — something he actually felt, not a generic answer.",
+    "masteryLayers": {
+      "layer1": "Weston names a real unfair experience from his actual life.",
+      "layer2": "Weston says something about how it felt or what he did — emotional engagement with the experience.",
+      "layer3": "Weston attempts the last question — what he would say to the person — showing he can imagine a relational repair or expression."
+    },
+    "portfolioCapture": "What Weston would say to the person who was unfair.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "building"
+    ],
+    "recommendedOrder": 44,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-045": {
+    "id": "W-045",
+    "title": "The Thank You",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about gratitude today — but not the list kind. The real kind. Ozzy is curious what Weston is genuinely grateful for, not just what he has been taught to say thank you for. This is the beginning of gratitude as practice, not just manners.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is something you are really glad exists? Like really really glad — what would you miss so much if it was gone?",
+      "Is there a person you are really glad is in your life? Who and why?",
+      "What is something about your life that you think is really good — that not every kid gets to have?",
+      "Have you ever told someone thank you and really meant it — like a big thank you from your heart? Who was it and what for?",
+      "If you could say thank you to anyone in the world — anyone at all — who would you pick and what would you say?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names something he is genuinely grateful for — something specific and real, not a rehearsed answer.",
+    "masteryLayers": {
+      "layer1": "Weston names something he is genuinely glad exists — something specific, not just family or food.",
+      "layer2": "Weston names a person he is glad is in his life and says something about why.",
+      "layer3": "Weston names who he would say the big thank you to and says something about what it would be for — genuine gratitude directed at a real person."
+    },
+    "portfolioCapture": "Weston's big thank you — who and what for.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity"
+    ],
+    "recommendedOrder": 45,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-046": {
+    "id": "W-046",
+    "title": "The Word That Means Everything",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves words. There are words that are tiny but mean huge things — love, home, brave, true. Today Ozzy and Weston explore what words actually mean to Weston — not the dictionary meaning, but the Weston meaning.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is your favorite word? It can be a word you just like the sound of, or a word that means something important.",
+      "What does home mean to you? Not where you live — what does the word home actually mean?",
+      "What about brave — what does brave mean to you? Can you be brave even when you are scared?",
+      "Here is a hard one: what does love mean? Not just that you love people — what is love actually?",
+      "If you could make up a brand new word for something that doesn't have a word yet — something you have felt or seen but couldn't name — what would you make up?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with word meaning — says something about what a word means to him that goes beyond a dictionary definition.",
+    "masteryLayers": {
+      "layer1": "Weston names a favorite word or attempts to define one of the words Ozzy offers.",
+      "layer2": "Weston says something about what a word means to him — even a simple or poetic answer counts.",
+      "layer3": "Weston invents a new word or attempts to — shows creative engagement with language."
+    },
+    "portfolioCapture": "Weston's new word and what it means.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "recommendedOrder": 46,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-047": {
+    "id": "W-047",
+    "title": "The Scary Story (That Has a Happy Ending)",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves stories — especially ones that start scary and end happy. Today Ozzy and Weston are going to tell one together. Ozzy starts it, Weston adds to it, and together they make sure it ends well. This is collaborative storytelling and narrative structure.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Ozzy starts: Once upon a time there was a very brave mouse named Weston who lived in a cozy little hole in a big old tree. One dark and stormy night he heard a noise outside. What kind of noise was it?",
+      "The mouse went to the door and peeked out. What did he see?",
+      "The mouse was a little scared — but he was also a little curious. What did he decide to do?",
+      "The mouse did the brave thing. What happened next? Was it as scary as he thought?",
+      "The story needs an ending. What happened at the very end, and how did the mouse feel when it was all over?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston contributes to the story at least twice — adds something specific that moves the story forward.",
+    "masteryLayers": {
+      "layer1": "Weston contributes to the story at least once — adds any specific detail.",
+      "layer2": "Weston contributes at least twice and his contributions move the story forward — not just yes or I don't know.",
+      "layer3": "Weston provides an ending — even a simple one — showing he understands that stories conclude and resolve."
+    },
+    "portfolioCapture": "The ending Weston gave the story.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "recommendedOrder": 47,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-048": {
+    "id": "W-048",
+    "title": "Questions Ozzy Has Never Been Asked",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Today Weston gets to ask Ozzy questions — as many as he wants. This flips the usual dynamic and builds questioning skills, curiosity, and the understanding that conversations go both ways. Ozzy answers every question genuinely and warmly.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Today it is your turn to ask me questions. You can ask me anything you want — anything at all. What do you want to know about Ozzy?",
+      "That is a great question. Here is my answer. (Ozzy answers genuinely.) Do you have another question?",
+      "What is something you have always wondered about but never asked anyone?",
+      "Is there something you want to know about your family — something you have been curious about?",
+      "What is the best question you could ask — the most interesting question you can think of?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston asks at least two genuine questions during the session — shows he can be the asker, not just the answerer.",
+    "masteryLayers": {
+      "layer1": "Weston asks at least one genuine question to Ozzy — makes the role reversal real.",
+      "layer2": "Weston asks at least two questions — shows questioning as a conversational skill.",
+      "layer3": "Weston asks a question he has been genuinely curious about — something real, not just playing along."
+    },
+    "portfolioCapture": "Weston's most interesting question.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "aiSystems",
+      "identity"
+    ],
+    "recommendedOrder": 48,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-049": {
+    "id": "W-049",
+    "title": "Describe Something You Love",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a challenge: describe something you love so well that I can feel it too — even if I have never seen it. This is the heart of descriptive language. Not just what something is but what it is like. Weston picks something he loves and Ozzy helps him find the words.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Pick something you love — a toy, a food, a place, an animal, anything. Tell me what it is.",
+      "Now describe it to me like I have never seen it before. What does it look like? What color is it?",
+      "What does it feel like if you touch it? What does it smell like?",
+      "What does it sound like? Does it make any sounds?",
+      "Why do you love it? What is it about this thing that makes you feel good?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston describes something he loves with at least two specific sensory details — the descriptive specificity is the target.",
+    "masteryLayers": {
+      "layer1": "Weston picks something and gives at least one specific description beyond just what it is called.",
+      "layer2": "Weston gives at least two sensory details — color, texture, sound, smell, or feeling.",
+      "layer3": "Weston says why he loves it — connects the description to genuine emotional attachment."
+    },
+    "portfolioCapture": "Weston's description in his own words — the most specific details.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "humanFluency"
+    ],
+    "recommendedOrder": 49,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-050": {
+    "id": "W-050",
+    "title": "Ozzy Gets It Wrong",
+    "domain": "communication",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is going to make some mistakes today on purpose — and Weston's job is to correct them. This builds assertiveness, listening comprehension, and the understanding that it is okay and important to say when something is wrong. Ozzy makes intentional silly errors and waits for Weston to notice.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Ozzy says something on purpose that Weston knows is wrong — like the sky is green or dogs say moo. Did Ozzy get it right?",
+      "Let's try again. Ozzy says something else wrong. What did Ozzy get wrong and what is the right answer?",
+      "Why do you think it is important to tell someone when they got something wrong?",
+      "Has someone ever told you that you got something wrong? How did it feel?",
+      "Is it always nice to correct someone? When is it important to say something is wrong, and when is it okay to let it go?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston corrects Ozzy at least twice during the session — shows he can assert the correct answer even when an adult is 'wrong.'",
+    "masteryLayers": {
+      "layer1": "Weston corrects Ozzy at least once — makes the correction real even if prompted.",
+      "layer2": "Weston corrects Ozzy at least twice and does so with some confidence — not just a whisper.",
+      "layer3": "Weston engages with the last two questions — shows beginning understanding that correction has social dimensions."
+    },
+    "portfolioCapture": "How Weston corrected Ozzy — the most confident correction.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "aiSystems",
+      "humanFluency"
+    ],
+    "recommendedOrder": 50,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-051": {
+    "id": "W-051",
+    "title": "What God Made",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about God today — in the simplest, most wonder-filled way. Not theology. Just the amazing things that exist and who made them. Ozzy keeps this grounded in Weston's actual world and experience of faith.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Do you know who made the stars? And the mountains? And the ocean?",
+      "What is your favorite thing that God made?",
+      "Do you think God knows your name? What do you think God thinks about you?",
+      "Do you talk to God sometimes? What do you say?",
+      "What would you want to ask God if you could ask anything?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with the God questions with genuine wonder — names something God made that he loves and shows some personal connection to faith.",
+    "masteryLayers": {
+      "layer1": "Weston names something God made that he finds amazing — genuine, not just a rote answer.",
+      "layer2": "Weston engages with the personal question — what God thinks of him — with some genuine response.",
+      "layer3": "Weston asks a real question he would want to ask God — shows he has actually wondered about something."
+    },
+    "portfolioCapture": "Weston's question for God.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency"
+    ],
+    "recommendedOrder": 51,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-052": {
+    "id": "W-052",
+    "title": "The Bravest Person You Know",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about bravery — but through a real person Weston knows. Who is the bravest person in his world? This builds admiration, observational thinking, and connection between values and real people.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Who is the bravest person you know? It can be someone in your family, someone from a story, anyone.",
+      "What did they do that was brave? Tell me the story.",
+      "How did you feel when you saw them be brave?",
+      "Do you think you are brave? When have you been brave?",
+      "What would you do if you were the bravest person in the whole world?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names a specific brave person and says something specific about what made them brave.",
+    "masteryLayers": {
+      "layer1": "Weston names a brave person — real or from a story — and says something about them.",
+      "layer2": "Weston describes something specific the brave person did — tells even a fragment of the story.",
+      "layer3": "Weston says something about his own bravery — reflects on himself, even briefly."
+    },
+    "portfolioCapture": "Weston's brave person and what they did.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "physical"
+    ],
+    "recommendedOrder": 52,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-053": {
+    "id": "W-053",
+    "title": "The Weston Museum",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a wonderful idea: a museum just for Weston. Every room has something important from his life — a toy, a memory, a person, a place. Today Ozzy and Weston fill it together. This is identity and memory all at once.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If there was a museum all about you, what would be in the first room? Name three things.",
+      "What is the most important object you own? The one you would be saddest to lose?",
+      "What would the memory room have in it — your best memory, displayed like a picture on the wall?",
+      "Who would be in the people room? Name everyone who matters most to you.",
+      "What would the sign on the door of your museum say — your name and one thing about you?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston fills at least two rooms of his museum with specific content — names specific objects, memories, or people.",
+    "masteryLayers": {
+      "layer1": "Weston names at least three things for the first room — engages with the museum concept.",
+      "layer2": "Weston names his most important object and his best memory — two specific, personal answers.",
+      "layer3": "Weston creates the sign for his museum — names himself and one true thing about himself."
+    },
+    "portfolioCapture": "Weston's museum sign — his name and one thing about him.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "communication"
+    ],
+    "recommendedOrder": 53,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-054": {
+    "id": "W-054",
+    "title": "When You Grow Up",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy is curious about the future Weston — not in a pressured way but in a dreamy, playful way. What does Weston imagine for himself? This is identity formation through imagination.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "When you grow up, what do you want to be? You can have more than one answer.",
+      "What would a normal day look like when you are grown up — from morning to night?",
+      "Where would you live? What would your house be like?",
+      "Who would be with you? Would you have a family?",
+      "What would four-year-old Weston think if he saw grown-up Weston? Would he be proud?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with his future self with at least two specific details — something about his job and something about his life.",
+    "masteryLayers": {
+      "layer1": "Weston names what he wants to be when he grows up — at least one specific idea.",
+      "layer2": "Weston gives at least two specific details about his grown-up life — a job and something about his day, house, or family.",
+      "layer3": "Weston engages with the last question — what four-year-old Weston would think — showing beginning self-reflection across time."
+    },
+    "portfolioCapture": "Weston's grown-up life in his own words.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "building",
+      "humanFluency"
+    ],
+    "recommendedOrder": 54,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-055": {
+    "id": "W-055",
+    "title": "The Very Best Day",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to know about the very best day. Not a hypothetical best day — the real one. A day Weston actually had that was so good he still thinks about it. Ozzy helps him live it again through story.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What is the best day you can remember — a really really good day? When was it and what happened?",
+      "Tell me more — start from the beginning of that day. What happened first?",
+      "What was the very best moment of that whole day?",
+      "Who was there with you?",
+      "If you could have that exact day again tomorrow, would you? What would you change about it?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston recalls a specific real good day and can say something about what made it the best — even a fragment of the memory.",
+    "masteryLayers": {
+      "layer1": "Weston names a real good day — something specific he actually remembers.",
+      "layer2": "Weston adds details about what happened — reconstructs the day even briefly.",
+      "layer3": "Weston names the very best moment — shows he can identify a peak within an experience."
+    },
+    "portfolioCapture": "The very best moment of Weston's best day.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "physical"
+    ],
+    "recommendedOrder": 55,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-056": {
+    "id": "W-056",
+    "title": "The Magic If",
+    "domain": "building",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves magic ifs — what if questions that open up imagination. Today Ozzy asks Weston a series of wonderful what ifs and listens for what Weston dreams up. No wrong answers. Pure imaginative play.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "What if you could fly — where would you go first?",
+      "What if animals could talk — which animal would you most want to have a conversation with?",
+      "What if you could have any superpower — what would you pick and what would you do with it?",
+      "What if you woke up tomorrow and you were the size of a mouse — what would you do?",
+      "What if you could give everyone in the world one gift — the same gift for every single person — what would you give?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with at least three magic ifs with genuine imaginative responses — goes beyond one-word answers.",
+    "masteryLayers": {
+      "layer1": "Weston engages with at least two magic ifs with some specific response.",
+      "layer2": "Weston engages with at least three magic ifs — shows imagination is flowing.",
+      "layer3": "Weston answers the last question — the gift for everyone — with something that shows he is thinking about other people, not just himself."
+    },
+    "portfolioCapture": "Weston's gift for everyone in the world.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "identity"
+    ],
+    "recommendedOrder": 56,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-057": {
+    "id": "W-057",
+    "title": "The Weston Rules",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a funny challenge: what would the rules be if Weston were in charge? Not rules from Mom or Dad — Weston's rules, for Weston's world. This is values exploration disguised as imaginative play.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If you were in charge of everything — like the boss of the whole house — what would be your first rule?",
+      "What else? What are all the rules in Weston's world?",
+      "Is there a rule your parents have that you would keep — even if you were in charge?",
+      "Is there a rule you would get rid of right away?",
+      "What do you think rules are actually for? Why does anyone have rules?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston names at least two rules for his world and engages with the question of why rules exist.",
+    "masteryLayers": {
+      "layer1": "Weston names at least one rule for his world — something specific, not just I don't know.",
+      "layer2": "Weston names at least two rules and keeps at least one parental rule — shows he recognizes some rules as good.",
+      "layer3": "Weston attempts the last question — why rules exist — even a simple answer shows beginning moral reasoning."
+    },
+    "portfolioCapture": "Weston's first rule and why he would keep it.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "aiSystems"
+    ],
+    "recommendedOrder": 57,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-058": {
+    "id": "W-058",
+    "title": "Colors and Feelings",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy loves the idea that feelings have colors. Happy might be yellow. Sad might be blue. Today Ozzy and Weston assign colors to feelings — and then feelings to colors they see around them. This is emotional vocabulary through a sensory lens.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "If happy had a color, what color would it be? Why?",
+      "What color would sad be? What about angry?",
+      "What color would love be?",
+      "Look around you right now — what colors do you see? How do those colors make you feel?",
+      "If you had to paint a picture of how you feel right now, today, what colors would you use?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston assigns colors to at least three feelings with some reasoning — the connection between color and emotion is the developmental target.",
+    "masteryLayers": {
+      "layer1": "Weston assigns a color to at least one feeling — even without a reason.",
+      "layer2": "Weston assigns colors to at least three feelings — shows the concept is engaging.",
+      "layer3": "Weston paints his current feeling with colors — connects the abstract exercise to his actual present emotional state."
+    },
+    "portfolioCapture": "Weston's colors for how he feels right now.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "physical"
+    ],
+    "recommendedOrder": 58,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-059": {
+    "id": "W-059",
+    "title": "Weston and Isla",
+    "domain": "humanFluency",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy wants to talk about Isla today — Weston's big sister, EYE-la. What does Weston know about Isla? What does he love about her? This builds sibling warmth and specific relational awareness.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "Tell me about Isla. What is she like?",
+      "What is your favorite thing about Isla?",
+      "Has Isla ever done something that made you really happy? What was it?",
+      "Is there something you and Isla like to do together?",
+      "What would you want Isla to know about how much you love her — if you could tell her anything?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston describes Isla with at least one specific loving detail — something beyond just she is my sister.",
+    "masteryLayers": {
+      "layer1": "Weston names at least one specific thing he loves about Isla.",
+      "layer2": "Weston names something Isla did that made him happy — a specific memory.",
+      "layer3": "Weston says what he would want Isla to know — expresses genuine feeling toward his sister."
+    },
+    "portfolioCapture": "What Weston wants Isla to know.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "identity",
+      "communication"
+    ],
+    "recommendedOrder": 59,
+    "prerequisites": [],
+    "contentStatus": "authored"
+  },
+  "W-060": {
+    "id": "W-060",
+    "title": "The Last Question",
+    "domain": "identity",
+    "level": 1,
+    "stage": 1,
+    "specialist": "Ozzy",
+    "childIds": [
+      "weston"
+    ],
+    "type": "integrated",
+    "timeMinutes": 20,
+    "standingPractice": false,
+    "runFrequency": null,
+    "tournamentRelevance": null,
+    "brief": "Ozzy has a special closing mission: one last conversation before Weston moves on to the next big thing. This is a reflective mission that looks back at what Weston has learned and forward to who he is becoming. Ozzy keeps it warm and celebratory.",
+    "offScreenPrep": null,
+    "conversationFramework": [
+      "We have talked about a lot of things together — animals, feelings, stories, inventions, your family. What is your favorite thing we talked about?",
+      "What is something you know now that you didn't know before?",
+      "What is something you want to get better at — something you are working on?",
+      "What do you think Ozzy loves most about talking with you?",
+      "If Ozzy could tell you one thing to remember forever — just one thing — what do you think it would be?"
+    ],
+    "topicBank": null,
+    "masterySignal": "Weston engages with the reflective questions with genuine thought — names something real from the sessions and something real about himself.",
+    "masteryLayers": {
+      "layer1": "Weston names a favorite topic from sessions — even vaguely — shows some retention and preference.",
+      "layer2": "Weston names something he wants to get better at — shows self-awareness and growth orientation.",
+      "layer3": "Weston answers what Ozzy loves about talking with him — shows he has an internal model of the relationship."
+    },
+    "portfolioCapture": "What Weston thinks Ozzy loves most about talking with him.",
+    "laWeavingHook": null,
+    "connectiveHooks": [],
+    "crossDomains": [
+      "humanFluency",
+      "communication"
+    ],
+    "recommendedOrder": 60,
+    "prerequisites": [],
+    "contentStatus": "authored"
   }
 };
 
