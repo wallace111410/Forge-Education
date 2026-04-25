@@ -35,8 +35,8 @@ function getChildColor(childId: string) {
 }
 
 function getChildEmoji(childId: string) {
-  const emojis: Record<string, string> = { everly: 'â¡', isla: 'ð¥', weston: 'â³' };
-  return emojis[childId] || 'â¨';
+  const emojis: Record<string, string> = { everly: '—¡', isla: '🔥', weston: '—³' };
+  return emojis[childId] || '—¨';
 }
 
 function getDefaultMission(child: any, domain: string) {
@@ -246,7 +246,7 @@ export default function SessionRoom({ child, domain, missionId, onEnd, basePath,
       setSessionId(startData.sessionId);
 
       const openingMessage = isFirstLogin
-        ? `[ONBOARDING â FIRST EVER SESSION] Introduce yourself to ${child.name} for the very first time. This is your genuine first meeting. Use the onboarding system prompt.`
+        ? `[ONBOARDING — FIRST EVER SESSION] Introduce yourself to ${child.name} for the very first time. This is your genuine first meeting. Use the onboarding system prompt.`
         : buildOpeningPrompt(child, domain, missionId);
 
       const openRes = await fetch(`${basePath}/forge-api/session/message`, {
@@ -609,7 +609,7 @@ Return ONLY the JSON object. No other text.`;
               onClick={stopAudio}
               title="Stop speaking"
             >
-              â¹
+              —¹
             </button>
           )}
         </div>
@@ -654,7 +654,7 @@ Return ONLY the JSON object. No other text.`;
         <div className="sr-agent-label">
           <div className="sr-agent-name">{child.agentName}</div>
           <div className="sr-agent-meta" style={{ color: isFirstLogin ? 'rgba(255,255,255,0.3)' : domainColor }}>
-            {isFirstLogin ? 'First session' : `${specialistName} Â· ${domainLabel}`}
+            {isFirstLogin ? 'First session' : `${specialistName} · ${domainLabel}`}
           </div>
         </div>
         {loading && (
@@ -721,7 +721,7 @@ Return ONLY the JSON object. No other text.`;
               disabled={!input.trim() || loading || !sessionStarted || isListening}
               style={{ '--send-color': childColor } as any}
             >
-              â
+              —
             </button>
           </div>
         </div>
