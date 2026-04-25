@@ -763,9 +763,9 @@ function ProgressPanel({ basePath }: { basePath: string }) {
     }
   };
 
-  const data = chartData();
-  const MASTERY_LABELS: Record<number, string> = { 1: 'Needs work', 2: 'Partial', 3: 'Mastered' };
-  const MASTERY_COLORS: Record<number, string> = { 1: '#ef4444', 2: '#f59e0b', 3: '#22c55e' };
+  const MASTERY_COLORS: Record<number, string> = { 0: '#555', 1: '#c9922a', 2: '#e07b20', 3: '#2a9d5c' };
+  const MASTERY_LABELS: Record<number, string> = { 0: 'No signal', 1: 'L1 reached', 2: 'L2 reached', 3: 'Mastered' };
+  const MASTERY_BG: Record<number, string> = { 0: '#2a2a2a', 1: '#3d2e10', 2: '#4a2e08', 3: '#0d3320' };
   const MISSION_TITLES: Record<string, string> = {
     'IJ-L5-001': 'What Do I Actually Believe?',
     'IJ-L5-002': 'When the Crowd Is Wrong',
@@ -874,8 +874,11 @@ function ProgressPanel({ basePath }: { basePath: string }) {
                           {mp && (
                             <span className="pp-mission-meta">
                               {mp.attempts} {mp.attempts === 1 ? 'attempt' : 'attempts'}
-                              {mastery > 0 && (
-                                <span className="pp-mastery-badge" style={{ color: MASTERY_COLORS[mastery] }}>{MASTERY_LABELS[mastery]}</span>
+                              {(mastery > 0 || (mp && mp.attempts > 0)) && (
+                                <span className="pp-mastery-badge" style={{ color: MASTERY_COLORS[mastery], background: MASTERY_BG[mastery], padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 }}>{MASTERY_LABELS[mastery]}</span>
+                              )}
+                              {mp && mp.stuckFlag && (
+                                <span className="pp-stuck-badge" style={{ color: '#ff4444', background: '#2d0a0a', padding: '1px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: 600, marginLeft: '4px' }}>Stuck</span>
                               )}
                             </span>
                           )}
