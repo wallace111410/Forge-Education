@@ -433,7 +433,7 @@ function OverviewPanel({ data, onChildSelect }: any) {
     <div className="overview-panel">
       {urgentSafety.length > 0 && (
         <div className="safety-alert">
-          <div className="alert-icon">— ï¸</div>
+          <div className="alert-icon">— ️</div>
           <div className="alert-content">
             <div className="alert-title">Safety events need your attention</div>
             <div className="alert-sub">{urgentSafety.length} recent event{urgentSafety.length > 1 ? 's' : ''} &mdash; review Safety Log</div>
@@ -824,7 +824,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
       {loading ? <div className="detail-empty" style={{ padding: '2rem 1.25rem' }}>Loading...</div> : (
         <>
           <div className="pp-current-levels">
-            {Object.entries(currentDomains).map(([key, domain]: [string, any]) => (
+            {Object.entries(currentDomains).map(([key, domain]: [string, any]) => !domain ? null : (
               <div key={key} className="pp-level-chip" style={{ borderColor: DOMAIN_COLORS[key] || '#555' }}>
                 <span className="pp-level-label">{DOMAIN_LABELS[key] || key}</span>
                 <span className="pp-level-value" style={{ color: DOMAIN_COLORS[key] }}>L{domain.currentLevel}</span>
@@ -836,7 +836,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
             <div className="pp-stuck-alerts">
               {Object.entries(stuck).map(([domain, info]: [string, any]) => (
                 <div key={domain} className="pp-stuck-alert">
-                  <span className="pp-stuck-icon">— ï¸</span>
+                  <span className="pp-stuck-icon">— ️</span>
                   <span>Stuck on <strong>{getMissionTitle(info.missionId)}</strong> in {DOMAIN_LABELS[domain] || domain} — {info.attempts} attempts since {info.since}</span>
                 </div>
               ))}
