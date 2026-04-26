@@ -846,6 +846,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
           <div className="pp-missions-section">
             <div className="detail-section-title">Mission Progress</div>
             {Object.entries(currentDomains).map(([domainKey, domain]: [string, any]) => {
+              if (!domain) return null;
               const missions = domain.missionsAvailable || [];
               const completed = domain.missionsCompleted || [];
               if (missions.length === 0) return null;
@@ -862,7 +863,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
                     </span>
                   </div>
                   <div className="pp-mission-bar">
-                    <div className="pp-mission-fill" style={{ width: `${(completed.length / missions.length) * 100}%`, background: DOMAIN_COLORS[domainKey] }} />
+                    <div className="pp-mission-fill" style={{ width: `${missions.length > 0 ? (completed.length / missions.length) * 100 : 0}%`, background: DOMAIN_COLORS[domainKey] }} />
                   </div>
                   <div className="pp-mission-list">
                     {missions.map((mid: string) => {
