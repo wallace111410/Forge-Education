@@ -35,8 +35,8 @@ function getChildColor(childId: string) {
 }
 
 function getChildEmoji(childId: string) {
-  const emojis: Record<string, string> = { everly: '—¡', isla: '🔥', weston: '—³' };
-  return emojis[childId] || '—¨';
+  const emojis: Record<string, string> = { everly: '⚡', isla: '🔥', weston: '⛳' };
+  return emojis[childId] || '✨';
 }
 
 function getDefaultMission(child: any, domain: string) {
@@ -609,7 +609,7 @@ Return ONLY the JSON object. No other text.`;
               onClick={stopAudio}
               title="Stop speaking"
             >
-              —¹
+              ↓
             </button>
           )}
         </div>
@@ -721,7 +721,7 @@ Return ONLY the JSON object. No other text.`;
               disabled={!input.trim() || loading || !sessionStarted || isListening}
               style={{ '--send-color': childColor } as any}
             >
-              —
+              →
             </button>
           </div>
         </div>
