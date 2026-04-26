@@ -80,7 +80,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
         <div className="admin-wordmark">For<span>ge</span><span className="admin-label">Parent Admin</span></div>
         <button className="admin-logout" onClick={onLogout}>— Exit</button>
       </header>
-      <nav className="admin-nav">
+      <nav className="admin-nav" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
         {[{ id: 'overview', label: 'Overview' }, { id: 'briefs', label: 'Briefs' }, { id: 'progress', label: 'Progress' }, { id: 'messages', label: 'Messages' }, { id: 'children', label: 'Children' }, { id: 'resources', label: 'Resources' }, { id: 'life-schedule', label: 'Life Schedule' }, { id: 'schedule', label: 'Forge Schedule' }, { id: 'safety', label: 'Safety' }, { id: 'settings', label: 'Settings' }, { id: 'transcripts', label: 'Transcripts' }, { id: 'profiles', label: 'Profiles & Progress' }].map(item => (
           <button key={item.id} className={`admin-nav-btn ${view === item.id ? 'active' : ''}`} onClick={() => handleNavClick(item.id)}>{item.label}</button>
         ))}
@@ -518,7 +518,7 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
               <div key={i} className="session-row">
                 <div className="sr-domain" style={{ color: DOMAIN_COLORS[session.domain] || '#888' }}>{DOMAIN_LABELS[session.domain] || session.domain}</div>
                 <div className="sr-date">{session.date}</div>
-                <div className="sr-duration">{session.duration ? `${session.duration}m` : 'In progress'}</div>
+                <div className="sr-duration">{session.duration ? `${Math.round(session.duration/60)}m` : 'In progress'}</div>
                 <div className={`sr-status ${session.status}`}>{session.status === 'locked' ? 'ð' : session.status === 'complete' ? '—' : '—'}</div>
               </div>
             ))}
@@ -681,18 +681,12 @@ function BriefsPanel({ basePath }: { basePath: string }) {
                               style={{ cursor: 'pointer', padding: '0.6rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.75rem', background: isOpen ? '#1a1a1a' : 'transparent' }}
                             >
                               <div style={{ color: DOMAIN_COLORS[b.domain] || '#888', fontWeight: 600, minWidth: '110px' }}>{DOMAIN_LABELS[b.domain] || b.domain}</div>
-                              <div style={{ flex: 1, color: '#ccc', fontSize: '0.9rem' }}>{b.duration}m session</div>
+                              <div style={{ flex: 1, color: '#ccc', fontSize: '0.9rem' }}>{b.duration ? Math.round(b.duration/60) : '?'}m session</div>
                               <div style={{ color: '#888', fontSize: '0.85rem' }}>{isOpen ? 'Hide' : 'View'}</div>
                             </div>
                             {isOpen && (
                               <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid #222' }}>
                                 <div className="bp-brief-content" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.content) }} />
-                                {b.continueAtHome && (
-                                  <div className="bp-continue-home">
-                                    <div className="bp-continue-home-label">How to continue this at home</div>
-                                    <div className="bp-continue-home-text" dangerouslySetInnerHTML={{ __html: formatMarkdown(b.continueAtHome) }} />
-                                  </div>
-                                )}
                               </div>
                             )}
                           </div>
