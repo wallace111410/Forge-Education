@@ -855,13 +855,13 @@ function ProgressPanel({ basePath }: { basePath: string }) {
               const missions = domain.missionsAvailable || [];
               const completed = domain.missionsCompleted || [];
               if (missions.length === 0) return null;
-              const domainData = child.domains?.[domainKey] || {};
+              const domainData = (child.domains && child.domains[domainKey]) || {};
               return (
                 <div key={domainKey} className="pp-domain-missions">
                   <div className="pp-domain-missions-header">
                     <span className="pp-domain-name" style={{ color: DOMAIN_COLORS[domainKey] }}>{DOMAIN_LABELS[domainKey] || domainKey}</span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      {domainData.advancementFlagged && !domainData.advancementConfirmed && (
+                      {domainData?.advancementFlagged && !domainData?.advancementConfirmed && (
                         <span style={{ fontSize: '11px', background: '#1a3a1a', color: '#4ade80', padding: '1px 8px', borderRadius: '4px', fontWeight: 600, cursor: 'pointer' }} title="All missions complete — click Advance in child detail to confirm level up">🎯 Ready to advance</span>
                       )}
                       <span className="pp-domain-count">{completed.length}/{missions.length}</span>
