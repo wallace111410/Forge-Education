@@ -28,15 +28,6 @@ function formatMarkdown(text: string): string {
 
 interface ParentAdminProps { onLogout: () => void; basePath: string; }
 
-
-class ProgressErrorBoundary extends React.Component<{children: React.ReactNode}, {error: string | null}> {
-  constructor(props: any) { super(props); this.state = { error: null }; }
-  componentDidCatch(error: Error) { this.setState({ error: error.message + '\n' + error.stack?.slice(0,300) }); }
-  render() {
-    if (this.state.error) return <div style={{color:'red',padding:'20px',whiteSpace:'pre-wrap',fontSize:'12px'}}><strong>Progress Error:</strong>\n{this.state.error}</div>;
-    return this.props.children;
-  }
-}
 export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
   const [view, setView] = useState('overview');
   const [overview, setOverview] = useState<any>(null);
@@ -98,7 +89,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
         {view === 'overview' && overview && <OverviewPanel data={overview} onChildSelect={handleChildSelect} />}
         {view === 'child' && selectedChild && <ChildDetailPanel child={selectedChild} onBack={() => setView('overview')} onConfirmAdvancement={confirmAdvancement} />}
         {view === 'briefs' && <BriefsPanel basePath={basePath} />}
-        {view === 'progress' && <ProgressErrorBoundary><ProgressPanel basePath={basePath} /></ProgressErrorBoundary>}
+        {view === 'progress' && <ProgressPanel basePath={basePath} />}
         {view === 'messages' && <MessagesPanel basePath={basePath} />}
         {view === 'children' && <ChildrenEditorPanel basePath={basePath} />}
         {view === 'safety' && <SafetyPanel events={safetyLog} />}
