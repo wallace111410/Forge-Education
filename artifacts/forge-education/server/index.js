@@ -653,6 +653,8 @@ app.post('/forge-api/session/end', async (req, res) => {
     domains: Object.fromEntries(Object.entries(child.domains).map(([k, d]) => [k, d.currentLevel]))
   });
 
+  // Check content runway and post system alerts if any (child, domain) crosses threshold
+  try { checkRunwayAlertsForChild(data, child); } catch (err) { console.error('Runway check error:', err); }
   writeData(data);
   res.json({ success: true, duration: session.duration });
 
@@ -903,6 +905,153 @@ app.get('/forge-api/admin/progress/:childId', (req, res) => {
     stuck: curriculum.stuck
   });
 });
+
+// ============================================================
+// CONTENT RUNWAY — mission catalog depth monitoring
+// ============================================================
+// Constants tunable here:
+const RUNWAY_WEEKS_PER_MISSION = 1.5;   // 1 mission ≈ 1.5 weeks (3 mastery layers, ~1 session/week per domain)
+const RUNWAY_THRESHOLD_RED = 8;          // < 8 weeks = critical
+const RUNWAY_THRESHOLD_YELLOW = 12;      // < 12 weeks = plan ahead
+const RUNWAY_ALERT_COOLDOWN_DAYS = 14;   // don't re-alert same domain for 14 days
+
+const DOMAIN_LABELS_RUNWAY = {
+  identity: 'Identity & Judgment',
+  communication: 'Communication',
+  building: 'Building',
+  humanFluency: 'Human Fluency',
+  aiSystems: 'AI & Systems',
+  physical: 'Physical'
+};
+
+function computeRunwayForChild(child) {
+  if (!child || !child.domains) return null;
+  const curriculum = ensureCurriculum(child);
+  const completedSet = new Set();
+  if (curriculum.missionProgress) {
+    for (const [mid, mp] of Object.entries(curriculum.missionProgress)) {
+      if (mp && mp.completed) completedSet.add(mid);
+    }
+  }
+
+  const domainResults = {};
+  for (const [domainKey, domainState] of Object.entries(child.domains)) {
+    if (!domainState) continue;
+    const currentLevel = domainState.currentLevel || 1;
+
+    // Find available missions: catalog entry where domain matches, childIds includes this child,
+    // level >= currentLevel, and id is NOT in completedSet
+    let missionsRemaining = 0;
+    let nextLevelHasMissions = false;
+    let totalAtCurrentLevel = 0;
+    let remainingAtCurrentLevel = 0;
+
+    for (const [mid, m] of Object.entries(MISSION_CATALOG)) {
+      if (!m || m.domain !== domainKey) continue;
+      if (!m.childIds || !m.childIds.includes(child.id)) continue;
+      if (m.level < currentLevel) continue; // skip past-level
+      if (m.level === currentLevel) totalAtCurrentLevel++;
+      if (completedSet.has(mid)) continue;
+      missionsRemaining++;
+      if (m.level === currentLevel) remainingAtCurrentLevel++;
+      if (m.level === currentLevel + 1) nextLevelHasMissions = true;
+    }
+
+    const weeksRemaining = Math.round(missionsRemaining * RUNWAY_WEEKS_PER_MISSION * 10) / 10;
+    let status = 'green';
+    if (weeksRemaining < RUNWAY_THRESHOLD_RED) status = 'red';
+    else if (weeksRemaining < RUNWAY_THRESHOLD_YELLOW) status = 'yellow';
+
+    domainResults[domainKey] = {
+      domain: domainKey,
+      label: DOMAIN_LABELS_RUNWAY[domainKey] || domainKey,
+      currentLevel,
+      missionsRemaining,
+      remainingAtCurrentLevel,
+      totalAtCurrentLevel,
+      weeksRemaining,
+      status,
+      nextLevelHasMissions,
+      blockedAdvancement: !nextLevelHasMissions && remainingAtCurrentLevel < 3
+    };
+  }
+
+  return domainResults;
+}
+
+function checkRunwayAlertsForChild(data, child) {
+  // Called after each session ends; auto-posts a system message to parentInbox
+  // when a (child, domain) crosses into yellow or red and we haven't alerted in cooldown window.
+  const runway = computeRunwayForChild(child);
+  if (!runway) return;
+  const messages = ensureMessages(child);
+  if (!messages.parentInbox) messages.parentInbox = [];
+  const now = Date.now();
+  const cooldownMs = RUNWAY_ALERT_COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
+
+  for (const [domainKey, r] of Object.entries(runway)) {
+    if (r.status === 'green') continue;
+    const alertKey = `runway:${child.id}:${domainKey}:${r.status}`;
+    // Look back through recent system messages for the same alertKey
+    const recentSystem = messages.parentInbox.filter(m =>
+      m && m.from === 'system' && m.alertKey === alertKey &&
+      m.timestamp && (now - new Date(m.timestamp).getTime()) < cooldownMs
+    );
+    if (recentSystem.length > 0) continue; // already alerted recently
+
+    let body;
+    if (r.blockedAdvancement) {
+      body = `⚠️ BLOCKED ADVANCEMENT: ${child.name} is at ${r.label} L${r.currentLevel} with only ${r.remainingAtCurrentLevel} mission(s) left and no L${r.currentLevel + 1} content available. Author the next level before advancement.`;
+    } else if (r.status === 'red') {
+      body = `🔴 CRITICAL: ${child.name}'s ${r.label} runway is ${r.weeksRemaining} weeks (${r.missionsRemaining} missions left). Time to author more content.`;
+    } else {
+      body = `🟡 PLAN AHEAD: ${child.name}'s ${r.label} runway is ${r.weeksRemaining} weeks (${r.missionsRemaining} missions left). Start drafting more missions soon.`;
+    }
+    messages.parentInbox.push({
+      id: `msg_${now}_${Math.random().toString(36).slice(2,8)}`,
+      from: 'system',
+      content: body,
+      timestamp: new Date().toISOString(),
+      read: false,
+      alertKey
+    });
+  }
+}
+
+app.get('/forge-api/admin/runway', (req, res) => {
+  const data = readData();
+  if (!data || !data.children) return res.json({ children: [], summary: { anyRed: false, anyYellow: false } });
+
+  const childIds = ['everly', 'isla', 'weston'];
+  const out = [];
+  let anyRed = false, anyYellow = false, redCount = 0, blockedCount = 0;
+
+  for (const cid of childIds) {
+    const child = getChild(data, cid);
+    if (!child) continue;
+    const runway = computeRunwayForChild(child);
+    if (!runway) continue;
+    const domains = Object.values(runway);
+    for (const d of domains) {
+      if (d.status === 'red') { anyRed = true; redCount++; }
+      if (d.status === 'yellow') anyYellow = true;
+      if (d.blockedAdvancement) blockedCount++;
+    }
+    out.push({ childId: cid, name: child.name, domains });
+  }
+  res.json({
+    children: out,
+    summary: {
+      anyRed, anyYellow, redCount, blockedCount,
+      thresholds: {
+        red: RUNWAY_THRESHOLD_RED,
+        yellow: RUNWAY_THRESHOLD_YELLOW,
+        weeksPerMission: RUNWAY_WEEKS_PER_MISSION
+      }
+    }
+  });
+});
+
 
 app.post('/forge-api/admin/weekly-digest/:childId', async (req, res) => {
   const data = readData();
