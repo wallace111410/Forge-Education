@@ -1020,7 +1020,7 @@ function checkRunwayAlertsForChild(data, child) {
 
 app.get('/forge-api/admin/runway', (req, res) => {
   const data = readData();
-  if (!data || !data.children) return res.json({ children: [], summary: { anyRed: false, anyYellow: false } });
+  if (!data || !data.forge || !data.forge.children) return res.json({ children: [], summary: { anyRed: false, anyYellow: false } });
 
   const childIds = ['everly', 'isla', 'weston'];
   const out = [];
