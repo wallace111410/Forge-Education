@@ -78,7 +78,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
     <div className="parent-admin">
       <header className="admin-header">
         <div className="admin-wordmark">For<span>ge</span><span className="admin-label">Parent Admin</span></div>
-        <button className="admin-logout" onClick={onLogout}>— Exit</button>
+        <button className="admin-logout" onClick={onLogout}>— Exit</button>
       </header>
       <nav className="admin-nav" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
         {[{ id: 'overview', label: 'Overview' }, { id: 'briefs', label: 'Briefs' }, { id: 'progress', label: 'Progress' }, { id: 'messages', label: 'Messages' }, { id: 'children', label: 'Children' }, { id: 'resources', label: 'Resources' }, { id: 'life-schedule', label: 'Life Schedule' }, { id: 'schedule', label: 'Forge Schedule' }, { id: 'safety', label: 'Safety' }, { id: 'settings', label: 'Settings' }, { id: 'transcripts', label: 'Transcripts' }, { id: 'profiles', label: 'Profiles & Progress' }].map(item => (
@@ -107,9 +107,9 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
 function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onComplete: () => void; onLogout: () => void }) {
   const CHILDREN = ['everly', 'isla', 'weston'];
   const CHILD_INFO: Record<string, { name: string; agent: string; emoji: string }> = {
-    everly: { name: 'Everly', agent: 'Vera', emoji: '—¡' },
+    everly: { name: 'Everly', agent: 'Vera', emoji: '—' },
     isla: { name: 'Isla', agent: 'Ren', emoji: 'ð¥' },
-    weston: { name: 'Weston', agent: 'Ozzy', emoji: '—³' }
+    weston: { name: 'Weston', agent: 'Ozzy', emoji: '—' }
   };
   const DAYS_OF_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const STEP_LABELS = ['Welcome', 'Child Profiles', 'Life Schedule', 'Curriculum', 'Ready'];
@@ -235,12 +235,12 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
     <div className="setup-wizard">
       <header className="sw-header">
         <div className="admin-wordmark">For<span>ge</span></div>
-        <button className="admin-logout" onClick={onLogout}>— Exit</button>
+        <button className="admin-logout" onClick={onLogout}>— Exit</button>
       </header>
       <div className="sw-progress">
         {STEP_LABELS.map((label, i) => (
           <div key={i} className={`sw-progress-step ${i <= step ? 'active' : ''} ${i < step ? 'done' : ''}`}>
-            <div className="sw-step-dot">{i < step ? '—' : i + 1}</div>
+            <div className="sw-step-dot">{i < step ? '—' : i + 1}</div>
             <div className="sw-step-label">{label}</div>
           </div>
         ))}
@@ -272,7 +272,7 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
                         <div className="sw-child-agent">Agent: {info.agent}</div>
                       </div>
                     </div>
-                    <label className="sw-label">About {info.name} — What should {info.agent} know?</label>
+                    <label className="sw-label">About {info.name} — What should {info.agent} know?</label>
                     <textarea
                       className="sw-textarea"
                       value={aboutTexts[id]}
@@ -285,8 +285,8 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
               })}
             </div>
             <div className="sw-nav-buttons">
-              <button className="sw-back-btn" onClick={() => setStep(0)}>— Back</button>
-              <button className="sw-primary-btn" onClick={async () => { await saveAllAbouts(); setStep(2); }} disabled={saving}>{saving ? 'Saving...' : 'Next —'}</button>
+              <button className="sw-back-btn" onClick={() => setStep(0)}>— Back</button>
+              <button className="sw-primary-btn" onClick={async () => { await saveAllAbouts(); setStep(2); }} disabled={saving}>{saving ? 'Saving...' : 'Next —'}</button>
             </div>
           </div>
         )}
@@ -343,8 +343,8 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
               )}
             </div>
             <div className="sw-nav-buttons">
-              <button className="sw-back-btn" onClick={() => setStep(1)}>— Back</button>
-              <button className="sw-primary-btn" onClick={() => setStep(3)}>Next —</button>
+              <button className="sw-back-btn" onClick={() => setStep(1)}>— Back</button>
+              <button className="sw-primary-btn" onClick={() => setStep(3)}>Next —</button>
             </div>
           </div>
         )}
@@ -389,15 +389,15 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
               ))}
             </div>
             <div className="sw-nav-buttons">
-              <button className="sw-back-btn" onClick={() => setStep(2)}>— Back</button>
-              <button className="sw-primary-btn" onClick={() => setStep(4)}>Next —</button>
+              <button className="sw-back-btn" onClick={() => setStep(2)}>— Back</button>
+              <button className="sw-primary-btn" onClick={() => setStep(4)}>Next —</button>
             </div>
           </div>
         )}
 
         {step === 4 && (
           <div className="sw-step sw-ready">
-            <div className="sw-welcome-icon">—¨</div>
+            <div className="sw-welcome-icon">—</div>
             <h1 className="sw-title">You're All Set</h1>
             <p className="sw-subtitle">Your children's profiles, schedules, and curriculum are ready. When they log in for the first time, their agent will introduce themselves and get to know them in a real conversation.</p>
             <div className="sw-ready-children">
@@ -415,8 +415,8 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
               })}
             </div>
             <div className="sw-nav-buttons sw-center">
-              <button className="sw-back-btn" onClick={() => setStep(3)}>— Back</button>
-              <button className="sw-primary-btn sw-finish-btn" onClick={finishSetup} disabled={saving}>{saving ? 'Finishing...' : 'Open Dashboard —'}</button>
+              <button className="sw-back-btn" onClick={() => setStep(3)}>— Back</button>
+              <button className="sw-primary-btn sw-finish-btn" onClick={finishSetup} disabled={saving}>{saving ? 'Finishing...' : 'Open Dashboard —'}</button>
             </div>
           </div>
         )}
@@ -427,13 +427,13 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
 
 function OverviewPanel({ data, onChildSelect }: any) {
   const CHILD_COLORS: Record<string, string> = { everly: '#7c3aed', isla: '#dc2626', weston: '#16a34a' };
-  const CHILD_EMOJIS: Record<string, string> = { everly: '—¡', isla: 'ð¥', weston: '—³' };
+  const CHILD_EMOJIS: Record<string, string> = { everly: '—', isla: 'ð¥', weston: '—' };
   const urgentSafety = data.recentSafetyEvents?.filter((e: any) => e.tier >= 2) || [];
   return (
     <div className="overview-panel">
       {urgentSafety.length > 0 && (
         <div className="safety-alert">
-          <div className="alert-icon">— ️</div>
+          <div className="alert-icon">—️</div>
           <div className="alert-content">
             <div className="alert-title">Safety events need your attention</div>
             <div className="alert-sub">{urgentSafety.length} recent event{urgentSafety.length > 1 ? 's' : ''} &mdash; review Safety Log</div>
@@ -451,7 +451,7 @@ function OverviewPanel({ data, onChildSelect }: any) {
                 <div className="coc-details">Age {child.age} · Stage {child.stage}{child.streak?.current > 0 && ` · ð¥ ${child.streak.current} streak`}</div>
                 <div className="coc-domains">
                   {child.domains?.map((d: any) => (
-                    <span key={d.name} className="coc-domain-pip" style={{ background: DOMAIN_COLORS[d.name] || '#555' }} title={`${DOMAIN_LABELS[d.name] || d.name}: L${d.currentLevel}${d.advancementFlagged ? ' —' : ''}`} />
+                    <span key={d.name} className="coc-domain-pip" style={{ background: DOMAIN_COLORS[d.name] || '#555' }} title={`${DOMAIN_LABELS[d.name] || d.name}: L${d.currentLevel}${d.advancementFlagged ? ' —' : ''}`} />
                   ))}
                 </div>
               </div>
@@ -459,7 +459,7 @@ function OverviewPanel({ data, onChildSelect }: any) {
             <div className="coc-right">
               <div className="coc-sessions">{child.recentSessions?.length || 0} recent sessions</div>
               <div className="coc-portfolio">{child.portfolioCount} portfolio items</div>
-              <div className="coc-arrow">—</div>
+              <div className="coc-arrow">—</div>
             </div>
           </button>
         ))}
@@ -471,7 +471,7 @@ function OverviewPanel({ data, onChildSelect }: any) {
 function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
   return (
     <div className="child-detail-panel">
-      <button className="back-link" onClick={onBack}>— Back to Overview</button>
+      <button className="back-link" onClick={onBack}>— Back to Overview</button>
       <div className="child-detail-header">
         <div className="cdh-name">{child.name}</div>
         <div className="cdh-meta">Age {child.age} · Stage {child.stage} · {child.primaryAgent?.name}</div>
@@ -503,7 +503,7 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
               <div className="ddr-right">
                 <div className="ddr-level" style={{ background: DOMAIN_COLORS[key] }}>L{domain.currentLevel}</div>
                 {domain.advancementFlagged && !domain.advancementConfirmed && (
-                  <button className="advance-btn" onClick={() => onConfirmAdvancement(child.id, key)}>Advance —</button>
+                  <button className="advance-btn" onClick={() => onConfirmAdvancement(child.id, key)}>Advance —</button>
                 )}
               </div>
             </div>
@@ -519,7 +519,7 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
                 <div className="sr-domain" style={{ color: DOMAIN_COLORS[session.domain] || '#888' }}>{DOMAIN_LABELS[session.domain] || session.domain}</div>
                 <div className="sr-date">{session.date}</div>
                 <div className="sr-duration">{session.duration ? `${Math.round(session.duration/60)}m` : 'In progress'}</div>
-                <div className={`sr-status ${session.status}`}>{session.status === 'locked' ? 'ð' : session.status === 'complete' ? '—' : '—'}</div>
+                <div className={`sr-status ${session.status}`}>{session.status === 'locked' ? 'ð' : session.status === 'complete' ? '—' : '—'}</div>
               </div>
             ))}
           </div>
@@ -528,9 +528,9 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
       <div className="detail-section">
         <div className="detail-section-title">What {child.primaryAgent?.name} Knows</div>
         <div className="memory-box">
-          <div className="memory-item"><div className="memory-label">Profile</div><div className="memory-text">{child.agentMemory?.personalityProfile || '—'}</div></div>
-          <div className="memory-item"><div className="memory-label">Known Strengths</div><div className="memory-text">{child.agentMemory?.knownStrengths?.join(', ') || '—'}</div></div>
-          <div className="memory-item"><div className="memory-label">Growth Areas</div><div className="memory-text">{child.agentMemory?.knownChallenges?.join(', ') || '—'}</div></div>
+          <div className="memory-item"><div className="memory-label">Profile</div><div className="memory-text">{child.agentMemory?.personalityProfile || '—'}</div></div>
+          <div className="memory-item"><div className="memory-label">Known Strengths</div><div className="memory-text">{child.agentMemory?.knownStrengths?.join(', ') || '—'}</div></div>
+          <div className="memory-item"><div className="memory-label">Growth Areas</div><div className="memory-text">{child.agentMemory?.knownChallenges?.join(', ') || '—'}</div></div>
           <div className="memory-item"><div className="memory-label">Last Session</div><div className="memory-text">{child.agentMemory?.lastSessionSummary || 'No sessions yet'}</div></div>
         </div>
       </div>
@@ -540,14 +540,14 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
 
 function SafetyPanel({ events }: any) {
   const tierColors: Record<number, string> = { 1: '#d97706', 2: '#dc2626', 3: '#7f1d1d' };
-  const tierLabels: Record<number, string> = { 1: 'Soft Redirect', 2: 'Parent Notified', 3: 'URGENT — Session Locked' };
+  const tierLabels: Record<number, string> = { 1: 'Soft Redirect', 2: 'Parent Notified', 3: 'URGENT — Session Locked' };
   return (
     <div className="safety-panel">
       <div className="panel-section-title">Safety Log</div>
       <div className="safety-note">All events are logged permanently. Tier 2 and Tier 3 events trigger parent notification.</div>
       {events.length === 0 ? (
         <div className="detail-empty safety-clear">
-          <div>— No safety events recorded</div>
+          <div>— No safety events recorded</div>
           <div className="safety-clear-sub">The log will appear here if any events occur</div>
         </div>
       ) : (
@@ -562,7 +562,7 @@ function SafetyPanel({ events }: any) {
               <div className="se-trigger">{event.trigger}</div>
               {event.flaggedContent && <div className="se-content">"{event.flaggedContent}"</div>}
               <div className="se-footer">
-                {event.parentNotified ? '— Parents notified' : 'Logged only'}
+                {event.parentNotified ? '— Parents notified' : 'Logged only'}
                 {!event.parentReviewed && event.tier >= 2 && <span className="se-unreviewed"> · Unreviewed</span>}
               </div>
             </div>
@@ -836,8 +836,8 @@ function ProgressPanel({ basePath }: { basePath: string }) {
             <div className="pp-stuck-alerts">
               {Object.entries(stuck).map(([domain, info]: [string, any]) => (
                 <div key={domain} className="pp-stuck-alert">
-                  <span className="pp-stuck-icon">— ️</span>
-                  <span>Stuck on <strong>{getMissionTitle(info.missionId)}</strong> in {DOMAIN_LABELS[domain] || domain} — {info.attempts} attempts since {info.since}</span>
+                  <span className="pp-stuck-icon">—️</span>
+                  <span>Stuck on <strong>{getMissionTitle(info.missionId)}</strong> in {DOMAIN_LABELS[domain] || domain} — {info.attempts} attempts since {info.since}</span>
                 </div>
               ))}
             </div>
@@ -850,7 +850,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
               const missions = domain.missionsAvailable || [];
               const completed = domain.missionsCompleted || [];
               if (missions.length === 0) return null;
-              const domainData = (child.domains && child.domains[domainKey]) || {};
+              const domainData = currentDomains?.[domainKey] || {};
               return (
                 <div key={domainKey} className="pp-domain-missions">
                   <div className="pp-domain-missions-header">
@@ -898,7 +898,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
                               {mp.completedDate && <div style={{ color: '#4ade80', marginTop: '4px' }}>✓ Completed {mp.completedDate.slice(0,10)}</div>}
                             </div>
                           )}
-                          {isCompleted && <span className="pp-mission-check">—</span>}
+                          {isCompleted && <span className="pp-mission-check">—</span>}
                         </div>
                       );
                     })}
@@ -970,7 +970,7 @@ function MessagesPanel({ basePath }: { basePath: string }) {
 
   return (
     <div className="messages-panel">
-      <div className="panel-section-title">Parent—Agent Inbox</div>
+      <div className="panel-section-title">Parent—Agent Inbox</div>
       <div className="bp-child-tabs">
         {CHILDREN.map(id => (
           <button key={id} className={`bp-child-tab ${selectedChild === id ? 'active' : ''}`} onClick={() => setSelectedChild(id)}>
@@ -1103,7 +1103,7 @@ function ChildrenEditorPanel({ basePath }: { basePath: string }) {
                 </div>
               </div>
               <div className="ce-field">
-                <label className="ce-label">About — what the agent should know</label>
+                <label className="ce-label">About — what the agent should know</label>
                 <textarea className="ce-textarea" rows={6} value={edit.about || ''} onChange={e => updateField(child.id, 'about', e.target.value)} placeholder="Personality notes, learning style, motivation, frustration triggers, S2S assessment notes, neurological context, anything the agent should know..." />
                 <div className="ce-hint">This text is injected into {child.primaryAgent?.name}'s system prompt so the agent knows {child.name} personally.</div>
               </div>
@@ -1273,7 +1273,7 @@ function ResourcesPanel({ basePath }: { basePath: string }) {
         <>
           {section === 'curriculum' && (
             <div className="rs-section">
-              <div className="rs-section-desc">These are the academic programs your family uses. Agents are aware of this curriculum and will support it — never contradict or replace it.</div>
+              <div className="rs-section-desc">These are the academic programs your family uses. Agents are aware of this curriculum and will support it — never contradict or replace it.</div>
               <div className="rs-curriculum-list">
                 {resources.curriculum.map((c: any) => (
                   <div key={c.id} className={`rs-curr-item ${!c.active ? 'rs-inactive' : ''}`}>
@@ -1299,8 +1299,8 @@ function ResourcesPanel({ basePath }: { basePath: string }) {
                           <div className="rs-curr-subject">{c.subject}</div>
                           <div className="rs-curr-name">{c.name}</div>
                           <div className="rs-curr-actions">
-                            <button className="rs-icon-btn" title={c.active ? 'Deactivate' : 'Activate'} onClick={() => toggleCurriculumActive(c)}>{c.active ? '—' : '—'}</button>
-                            <button className="rs-icon-btn" onClick={() => { setEditingCurr(c.id); setEditForm({ subject: c.subject, name: c.name, currentChapter: c.currentChapter, currentLesson: c.currentLesson, notes: c.notes }); }}>—</button>
+                            <button className="rs-icon-btn" title={c.active ? 'Deactivate' : 'Activate'} onClick={() => toggleCurriculumActive(c)}>{c.active ? '—' : '—'}</button>
+                            <button className="rs-icon-btn" onClick={() => { setEditingCurr(c.id); setEditForm({ subject: c.subject, name: c.name, currentChapter: c.currentChapter, currentLesson: c.currentLesson, notes: c.notes }); }}>—</button>
                             <button className="ls-delete-btn" onClick={() => deleteCurriculumItem(c.id)}>×</button>
                           </div>
                         </div>
@@ -1741,7 +1741,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
         body: JSON.stringify({
           day: today,
           domain: unlockDomain || null,
-          sessionNote: unlockNote || `${capitalizeDay(today)} session — not your usual day, but here we are.`
+          sessionNote: unlockNote || `${capitalizeDay(today)} session — not your usual day, but here we are.`
         })
       });
       const data = await res.json();
@@ -1776,11 +1776,11 @@ function SchedulePanel({ basePath }: { basePath: string }) {
   if (loading) return <div className="detail-empty">Loading schedule...</div>;
 
   const defaultSchedule: Record<string, any> = {
-    monday: { label: 'Monday', defaultForge: true, anchor: false, activities: 'Tennis 1-4pm · Speech 5-7:30pm', window: '9am—12pm' },
-    tuesday: { label: 'Tuesday', defaultForge: true, anchor: false, activities: 'Tennis 12:30pm · Ballet · Martial Arts', window: '9—11:30am' },
+    monday: { label: 'Monday', defaultForge: true, anchor: false, activities: 'Tennis 1-4pm · Speech 5-7:30pm', window: '9am—12pm' },
+    tuesday: { label: 'Tuesday', defaultForge: true, anchor: false, activities: 'Tennis 12:30pm · Ballet · Martial Arts', window: '9—11:30am' },
     wednesday: { label: 'Wednesday', defaultForge: false, anchor: false, activities: 'Thrive Co-op 9am-2pm · Piano 2:15pm', window: 'Protected', protected: true, protectedReason: 'Thrive Co-op' },
-    thursday: { label: 'Thursday', defaultForge: true, anchor: true, activities: 'JellyBean 9-10am · S2S 2:45pm · Martial Arts', window: '10am—2:30pm' },
-    friday: { label: 'Friday', defaultForge: true, anchor: false, activities: 'Horseback 9-10am · Tennis 2-5pm', window: '10am—1:30pm' },
+    thursday: { label: 'Thursday', defaultForge: true, anchor: true, activities: 'JellyBean 9-10am · S2S 2:45pm · Martial Arts', window: '10am—2:30pm' },
+    friday: { label: 'Friday', defaultForge: true, anchor: false, activities: 'Horseback 9-10am · Tennis 2-5pm', window: '10am—1:30pm' },
     saturday: { label: 'Saturday', defaultForge: false, anchor: false, activities: 'Church 2-4pm · Youth (Everly)', window: 'Protected', protected: true, protectedReason: 'Church + rest' },
     sunday: { label: 'Sunday', defaultForge: false, anchor: false, activities: 'Coach Dillon 9-11/12pm', window: 'Protected', protected: true, protectedReason: 'Coach Dillon + rest' }
   };
@@ -1806,7 +1806,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
       {todayIsProtected && (
         <div className="today-unlock-banner">
           <div className="tub-left">
-            <div className="tub-day">Today — {capitalizeDay(today)}</div>
+            <div className="tub-day">Today — {capitalizeDay(today)}</div>
             <div className="tub-status">
               {todayUnlock && todayUnlock.day === today ? 'ð¢ Unlocked for today' : 'ð Protected day'}
             </div>
@@ -1815,7 +1815,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
             {todayUnlock && todayUnlock.day === today ? (
               <button className="unlock-clear-btn" onClick={handleClearUnlock}>Lock it back</button>
             ) : (
-              <button className="unlock-today-btn" onClick={() => setUnlockModal({ day: today, type: 'today' })}>Unlock today —</button>
+              <button className="unlock-today-btn" onClick={() => setUnlockModal({ day: today, type: 'today' })}>Unlock today —</button>
             )}
           </div>
         </div>
@@ -1843,7 +1843,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
                 <div className="sdr-day">
                   {info.label}
                   {isToday && <span className="today-badge">Today</span>}
-                  {info.anchor && <span className="anchor-badge">— Anchor</span>}
+                  {info.anchor && <span className="anchor-badge">— Anchor</span>}
                 </div>
                 <div className="sdr-window" style={{ color: effectiveForge ? '#f97316' : '#444' }}>{info.window}</div>
                 <div className="sdr-activities">{info.activities}</div>
@@ -1873,7 +1873,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
       </div>
 
       <div className="schedule-note">
-        — Thursday is the anchor learning day — longest uninterrupted window.<br />
+        — Thursday is the anchor learning day — longest uninterrupted window.<br />
         Toggle any day to permanently change Forge availability.<br />
         Use "Unlock today" for one-time exceptions.
       </div>
@@ -1888,7 +1888,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
               <input
                 className="modal-input"
                 type="text"
-                placeholder={`${capitalizeDay(unlockModal.day)} session — not your usual day, but here we are.`}
+                placeholder={`${capitalizeDay(unlockModal.day)} session — not your usual day, but here we are.`}
                 value={unlockNote}
                 onChange={e => setUnlockNote(e.target.value)}
               />
@@ -2144,7 +2144,7 @@ function SettingsPanel({ basePath }: { basePath: string }) {
           <div className="settings-card-title">Family Timezone</div>
           <div className="settings-tz-current">
             Current: <strong>{timezone}</strong>
-            {saved && <span className="settings-saved-badge">— Saved</span>}
+            {saved && <span className="settings-saved-badge">— Saved</span>}
           </div>
           <select
             className="settings-tz-select"
@@ -2192,7 +2192,7 @@ function SettingsPanel({ basePath }: { basePath: string }) {
             <div className="tm-info">
               <div className="tm-label">Testing mode</div>
               <div className="tm-status">
-                {testingMode ? 'ð¡ ON — all days unlocked' : 'ð¢ OFF — normal schedule'}
+                {testingMode ? 'ð¡ ON — all days unlocked' : 'ð¢ OFF — normal schedule'}
               </div>
             </div>
             <button
