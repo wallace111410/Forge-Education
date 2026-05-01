@@ -908,13 +908,16 @@ function ProgressPanel({ basePath }: { basePath: string }) {
             })}
           </div>
 
-          {data ? (
-            <div className="pp-chart-container">
-              <Line data={data} options={chartOptions} />
-            </div>
-          ) : (
-            <div className="bp-empty">No progress history yet. Data is recorded after each session.</div>
-          )}
+          {(() => {
+            const chart = chartData();
+            return chart ? (
+              <div className="pp-chart-container">
+                <Line data={chart} options={chartOptions} />
+              </div>
+            ) : (
+              <div className="bp-empty">No progress history yet. Data is recorded after each session.</div>
+            );
+          })()}
         </>
       )}
     </div>
