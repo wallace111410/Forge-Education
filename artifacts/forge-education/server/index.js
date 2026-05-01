@@ -939,21 +939,20 @@ function computeRunwayForChild(child) {
     if (!domainState) continue;
     const currentLevel = domainState.currentLevel || 1;
 
-    // Find available missions: catalog entry where domain matches, childIds includes this child,
-    // level >= currentLevel, and id is NOT in completedSet
-    let missionsRemaining = 0;
-    let nextLevelHasMissions = false;
-    let totalAtCurrentLevel = 0;
-    let remainingAtCurrentLevel = 0;
+    // Use the system's actual mission queue as source of truth (handles single-track + level-track curricula)
+    const queue = Array.isArray(domainState.missionsAvailable) ? domainState.missionsAvailable : [];
+    const remainingIds = queue.filter(mid => !completedSet.has(mid));
+    const missionsRemaining = remainingIds.length;
+    const remainingAtCurrentLevel = missionsRemaining; // queue is the active set for current level
 
+    // Look up the catalog to count totalAtCurrentLevel (for "x of y consumed" displays)
+    // and to check if next-level content has been authored.
+    let totalAtCurrentLevel = 0;
+    let nextLevelHasMissions = false;
     for (const [mid, m] of Object.entries(MISSION_CATALOG)) {
       if (!m || m.domain !== domainKey) continue;
       if (!m.childIds || !m.childIds.includes(child.id)) continue;
-      if (m.level < currentLevel) continue; // skip past-level
       if (m.level === currentLevel) totalAtCurrentLevel++;
-      if (completedSet.has(mid)) continue;
-      missionsRemaining++;
-      if (m.level === currentLevel) remainingAtCurrentLevel++;
       if (m.level === currentLevel + 1) nextLevelHasMissions = true;
     }
 
@@ -972,7 +971,7 @@ function computeRunwayForChild(child) {
       weeksRemaining,
       status,
       nextLevelHasMissions,
-      blockedAdvancement: !nextLevelHasMissions && remainingAtCurrentLevel < 3
+      blockedAdvancement: missionsRemaining === 0 && !nextLevelHasMissions
     };
   }
 
