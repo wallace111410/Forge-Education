@@ -86,7 +86,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
         ))}
       </nav>
       <main className="admin-main">
-        {view === 'overview' && overview && <OverviewPanel data={overview} onChildSelect={handleChildSelect} />}
+        {view === 'overview' && overview && <OverviewPanel data={overview} onChildSelect={handleChildSelect} basePath={basePath} />}
         {view === 'child' && selectedChild && <ChildDetailPanel child={selectedChild} onBack={() => setView('overview')} onConfirmAdvancement={confirmAdvancement} />}
         {view === 'briefs' && <BriefsPanel basePath={basePath} />}
         {view === 'progress' && <ProgressPanel basePath={basePath} />}
@@ -425,8 +425,15 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
   );
 }
 
-function OverviewPanel({ data, onChildSelect }: any) {
+function OverviewPanel({ data, onChildSelect, basePath }: any) {
   const CHILD_COLORS: Record<string, string> = { everly: '#7c3aed', isla: '#dc2626', weston: '#16a34a' };
+  const [runway, setRunway] = useState<any>(null);
+  useEffect(() => {
+    fetch(`${basePath || ''}/forge-api/admin/runway`)
+      .then(r => r.json())
+      .then(setRunway)
+      .catch(err => console.error('Runway fetch error:', err));
+  }, [basePath]);
   const CHILD_EMOJIS: Record<string, string> = { everly: '—', isla: 'ð¥', weston: '—' };
   const urgentSafety = data.recentSafetyEvents?.filter((e: any) => e.tier >= 2) || [];
   return (
@@ -440,6 +447,53 @@ function OverviewPanel({ data, onChildSelect }: any) {
           </div>
         </div>
       )}
+      {runway && runway.children && runway.children.length > 0 && (() => {
+        const summary = runway.summary || {};
+        const STATUS_COLORS: Record<string, string> = { red: '#ff4444', yellow: '#f59e0b', green: '#4ade80' };
+        const STATUS_BG: Record<string, string> = { red: '#2d0a0a', yellow: '#3d2e10', green: '#0d3320' };
+        const showBanner = summary.anyRed || summary.blockedCount > 0;
+        return (
+          <>
+            {showBanner && (
+              <div className="safety-alert" style={{ background: '#2d0a0a', borderColor: '#ff4444' }}>
+                <div className="alert-icon">⚠️</div>
+                <div className="alert-content">
+                  <div className="alert-title" style={{ color: '#ff8888' }}>Content runway critical</div>
+                  <div className="alert-sub">
+                    {summary.redCount > 0 && `${summary.redCount} domain${summary.redCount > 1 ? 's' : ''} below ${summary.thresholds?.red || 8} weeks of runway. `}
+                    {summary.blockedCount > 0 && `${summary.blockedCount} domain${summary.blockedCount > 1 ? 's' : ''} blocked from advancement. `}
+                    Time to author more content.
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="panel-section-title">Content Runway</div>
+            <div style={{ background: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: '8px', padding: '14px 16px', marginBottom: '16px' }}>
+              <div style={{ fontSize: '12px', color: '#888', marginBottom: '12px' }}>
+                Weeks of mission content remaining per child × domain. Green ≥ {summary.thresholds?.yellow || 12}wk · Yellow {summary.thresholds?.red || 8}–{summary.thresholds?.yellow || 12}wk · Red &lt; {summary.thresholds?.red || 8}wk.
+              </div>
+              {runway.children.map((c: any) => (
+                <div key={c.childId} style={{ marginBottom: '10px' }}>
+                  <div style={{ fontWeight: 600, fontSize: '13px', color: '#ddd', marginBottom: '6px' }}>{c.name}</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '6px' }}>
+                    {c.domains.map((d: any) => (
+                      <div key={d.domain} style={{ background: STATUS_BG[d.status] || '#1a1a1a', border: `1px solid ${STATUS_COLORS[d.status] || '#333'}`, borderRadius: '6px', padding: '6px 10px', fontSize: '11px' }}>
+                        <div style={{ color: '#aaa', marginBottom: '2px' }}>{d.label} <span style={{ color: '#666' }}>L{d.currentLevel}</span></div>
+                        <div style={{ color: STATUS_COLORS[d.status], fontWeight: 600, fontSize: '13px' }}>
+                          {d.weeksRemaining}wk <span style={{ color: '#777', fontWeight: 400, fontSize: '11px' }}>({d.missionsRemaining} missions)</span>
+                        </div>
+                        {d.blockedAdvancement && (
+                          <div style={{ color: '#ff8888', fontSize: '10px', marginTop: '2px' }}>⚠ No L{d.currentLevel + 1} content</div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        );
+      })()}
       <div className="panel-section-title">Children</div>
       <div className="children-list">
         {(data.children || []).map((child: any) => (
