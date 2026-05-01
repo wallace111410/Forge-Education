@@ -541,6 +541,7 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
 function SafetyPanel({ events }: any) {
   const tierColors: Record<number, string> = { 1: '#d97706', 2: '#dc2626', 3: '#7f1d1d' };
   const tierLabels: Record<number, string> = { 1: 'Soft Redirect', 2: 'Parent Notified', 3: 'URGENT — Session Locked' };
+  const [selectedMissionId, setSelectedMissionId] = useState<string>('');
   return (
     <div className="safety-panel">
       <div className="panel-section-title">Safety Log</div>
@@ -583,7 +584,6 @@ function BriefsPanel({ basePath }: { basePath: string }) {
   const [generating, setGenerating] = useState(false);
   const [selectedBriefId, setSelectedBriefId] = useState<string>('');
   const [selectedDigestId, setSelectedDigestId] = useState<string>('');
-  const [selectedMissionId, setSelectedMissionId] = useState<string>('');
 
   useEffect(() => { fetchData(selectedChild); }, [selectedChild]);
 
