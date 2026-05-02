@@ -981,6 +981,8 @@ function computeRunwayForChild(child) {
 function checkRunwayAlertsForChild(data, child) {
   // Called after each session ends; auto-posts a system message to parentInbox
   // when a (child, domain) crosses into yellow or red and we haven't alerted in cooldown window.
+  // Also auto-prunes stale runway alerts that no longer reflect the current state,
+  // and emits a "RESOLVED" notice when a previously-alerted domain returns to green.
   const runway = computeRunwayForChild(child);
   if (!runway) return;
   const messages = ensureMessages(child);
@@ -988,6 +990,52 @@ function checkRunwayAlertsForChild(data, child) {
   const now = Date.now();
   const cooldownMs = RUNWAY_ALERT_COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
 
+  // STEP 1: auto-prune stale runway alerts
+  // For each existing runway alert in inbox, check if current state still matches.
+  // If current is green, or status changed (e.g., red->yellow after content authored),
+  // remove the stale alert. If a previously-alerted domain has returned to green,
+  // post a one-time RESOLVED notice (and prune the stale alert).
+  const toRemove = new Set();
+  const resolvedDomains = new Set();
+  for (const m of messages.parentInbox) {
+    if (!m || !m.alertKey || !m.alertKey.startsWith('runway:' + child.id + ':')) continue;
+    const parts = m.alertKey.split(':');
+    const domainKey = parts[2];
+    const alertedStatus = parts[3];
+    const currentDomain = runway[domainKey];
+    if (!currentDomain) continue;
+    if (currentDomain.status === 'green' && (alertedStatus === 'yellow' || alertedStatus === 'red' || alertedStatus === 'blocked')) {
+      // Domain was non-green when alerted, now green. Mark stale.
+      toRemove.add(m.id);
+      resolvedDomains.add(domainKey);
+    } else if (currentDomain.status !== alertedStatus) {
+      // Status changed (e.g., red -> yellow). Remove old alert so a fresh one can fire.
+      toRemove.add(m.id);
+    }
+  }
+  if (toRemove.size > 0) {
+    messages.parentInbox = messages.parentInbox.filter(m => !toRemove.has(m.id));
+  }
+  // Post one resolved message per resolved domain
+  for (const domainKey of resolvedDomains) {
+    const r = runway[domainKey];
+    if (!r) continue;
+    const resolvedKey = 'runway:' + child.id + ':' + domainKey + ':resolved';
+    // Don't double-post resolved messages
+    const alreadyResolved = messages.parentInbox.some(m => m.alertKey === resolvedKey &&
+      m.timestamp && (now - new Date(m.timestamp).getTime()) < cooldownMs);
+    if (alreadyResolved) continue;
+    messages.parentInbox.push({
+      id: `msg_${now}_${Math.random().toString(36).slice(2,8)}`,
+      from: 'system',
+      content: `✅ RESOLVED: ${child.name}'s ${r.label} runway is healthy again (${r.weeksRemaining} weeks, ${r.missionsRemaining} missions). Thank you for authoring more content.`,
+      timestamp: new Date().toISOString(),
+      read: false,
+      alertKey: resolvedKey
+    });
+  }
+
+  // STEP 2: post fresh alerts for current non-green domains
   for (const [domainKey, r] of Object.entries(runway)) {
     if (r.status === 'green') continue;
     const alertKey = `runway:${child.id}:${domainKey}:${r.status}`;
@@ -1000,7 +1048,7 @@ function checkRunwayAlertsForChild(data, child) {
 
     let body;
     if (r.blockedAdvancement) {
-      body = `⚠️ BLOCKED ADVANCEMENT: ${child.name} is at ${r.label} L${r.currentLevel} with only ${r.remainingAtCurrentLevel} mission(s) left and no L${r.currentLevel + 1} content available. Author the next level before advancement.`;
+      body = `🚫 BLOCKED ADVANCEMENT: ${child.name} is at ${r.label} L${r.currentLevel} with only ${r.remainingAtCurrentLevel} mission(s) left and no L${r.currentLevel + 1} content authored. Author next-level missions to unblock.`;
     } else if (r.status === 'red') {
       body = `🔴 CRITICAL: ${child.name}'s ${r.label} runway is ${r.weeksRemaining} weeks (${r.missionsRemaining} missions left). Time to author more content.`;
     } else {
