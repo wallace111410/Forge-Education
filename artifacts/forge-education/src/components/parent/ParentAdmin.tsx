@@ -107,7 +107,7 @@ export default function ParentAdmin({ onLogout, basePath }: ParentAdminProps) {
 function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onComplete: () => void; onLogout: () => void }) {
   const CHILDREN = ['everly', 'isla', 'weston'];
   const CHILD_INFO: Record<string, { name: string; agent: string; emoji: string }> = {
-    everly: { name: 'Everly', agent: 'Vera', emoji: '—' },
+    everly: { name: 'Everly', agent: 'Zoe', emoji: '—' },
     isla: { name: 'Isla', agent: 'Ren', emoji: 'ð¥' },
     weston: { name: 'Weston', agent: 'Ozzy', emoji: '—' }
   };
@@ -1001,7 +1001,7 @@ function ProgressPanel({ basePath }: { basePath: string }) {
 function MessagesPanel({ basePath }: { basePath: string }) {
   const CHILDREN = ['everly', 'isla', 'weston'];
   const CHILD_NAMES: Record<string, string> = { everly: 'Everly', isla: 'Isla', weston: 'Weston' };
-  const AGENT_NAMES: Record<string, string> = { everly: 'Vera', isla: 'Ren', weston: 'Ozzy' };
+  const AGENT_NAMES: Record<string, string> = { everly: 'Zoe', isla: 'Ren', weston: 'Ozzy' };
   const [selectedChild, setSelectedChild] = useState('everly');
   const [messages, setMessages] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -1151,7 +1151,7 @@ function ChildrenEditorPanel({ basePath }: { basePath: string }) {
   return (
     <div className="children-editor-panel">
       <div className="panel-section-title">Child Profiles</div>
-      <div className="ce-subtitle">Edit each child's profile. The About text is sent to the agent so Vera, Ren, and Ozzy know the child personally.</div>
+      <div className="ce-subtitle">Edit each child's profile. The About text is sent to the agent so Zoe, Ren, and Ozzy know the child personally.</div>
       <div className="ce-cards">
         {children.map((child: any) => {
           const edit = edits[child.id] || {};
