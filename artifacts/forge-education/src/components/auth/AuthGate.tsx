@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './AuthGate.css';
 
 const CHILDREN = [
-  { id: 'everly', name: 'Everly', age: 11, agentName: 'Vera', stage: 3, color: '#7c3aed', colorLight: '#ede9fe', emoji: '⚡', greeting: 'Vera is ready' },
+  { id: 'everly', name: 'Everly', age: 11, agentName: 'Zoe', stage: 3, color: '#7c3aed', colorLight: '#ede9fe', emoji: '⚡', greeting: 'Zoe is ready' },
   { id: 'isla', name: 'Isla', age: 8, agentName: 'Ren', stage: 2, color: '#dc2626', colorLight: '#fee2e2', emoji: '🔥', greeting: 'Ren is here' },
   { id: 'weston', name: 'Weston', age: 4, agentName: 'Ozzy', stage: 1, color: '#16a34a', colorLight: '#dcfce7', emoji: '⛳', greeting: 'Ozzy is waiting' }
 ];
