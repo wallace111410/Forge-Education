@@ -911,8 +911,8 @@ app.get('/forge-api/admin/progress/:childId', (req, res) => {
 // ============================================================
 // Constants tunable here:
 const RUNWAY_WEEKS_PER_MISSION = 1.5;   // 1 mission ≈ 1.5 weeks (3 mastery layers, ~1 session/week per domain)
-const RUNWAY_THRESHOLD_RED = 8;          // < 8 weeks = critical
-const RUNWAY_THRESHOLD_YELLOW = 12;      // < 12 weeks = plan ahead
+const RUNWAY_THRESHOLD_RED = 16;     // TEMPORARY TEST VALUE — revert to 8 after debug          // < 8 weeks = critical
+const RUNWAY_THRESHOLD_YELLOW = 25;  // TEMPORARY TEST VALUE — revert to 12 after debug      // < 12 weeks = plan ahead
 const RUNWAY_ALERT_COOLDOWN_DAYS = 14;   // don't re-alert same domain for 14 days
 
 const DOMAIN_LABELS_RUNWAY = {
