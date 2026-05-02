@@ -1466,6 +1466,30 @@ app.put('/forge-api/admin/advancement/:childId/:domain', (req, res) => {
     domain.targetLevel = domain.currentLevel + 1;
     domain.advancementFlagged = false;
     domain.advancementConfirmed = false;
+
+    // Populate missionsAvailable with new-level missions from the catalog
+    // (preserves any existing queue items, dedupes)
+    const domainKey = req.params.domain;
+    const newLevelMissions = [];
+    for (const [mid, m] of Object.entries(MISSION_CATALOG)) {
+      if (!m || m.domain !== domainKey) continue;
+      if (!m.childIds || !m.childIds.includes(child.id)) continue;
+      if (m.level !== domain.currentLevel) continue;
+      newLevelMissions.push(mid);
+    }
+    // Sort by recommendedOrder if present, otherwise by id
+    newLevelMissions.sort((a, b) => {
+      const ra = MISSION_CATALOG[a].recommendedOrder;
+      const rb = MISSION_CATALOG[b].recommendedOrder;
+      if (ra != null && rb != null) return ra - rb;
+      return a.localeCompare(b);
+    });
+    if (!Array.isArray(domain.missionsAvailable)) domain.missionsAvailable = [];
+    const existing = new Set(domain.missionsAvailable);
+    for (const mid of newLevelMissions) {
+      if (!existing.has(mid)) domain.missionsAvailable.push(mid);
+    }
+    console.log('[advance] ' + child.id + '/' + domainKey + ' -> L' + domain.currentLevel + ', added ' + newLevelMissions.length + ' new-level missions to queue');
   } else {
     domain.advancementFlagged = false;
   }
