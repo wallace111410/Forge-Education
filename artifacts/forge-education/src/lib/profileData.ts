@@ -2,7 +2,7 @@ export const CHILD_PROFILES: Record<string, any> = {
   everly: {
     identityFile: {
       age: 11,
-      agentName: 'Vera',
+      agentName: 'Zoe',
       developmentalStage: 3,
       stageLabel: 'Challenger',
       stageDescription: 'Names avoidance directly. Holds expectation. Never rescues. One eyebrow raised.',
