@@ -11,7 +11,7 @@ const DOMAINS = [
 ];
 
 const CHILDREN = [
-  { id: 'everly', name: 'Everly', agent: 'Vera', color: '#7c3aed' },
+  { id: 'everly', name: 'Everly', agent: 'Zoe', color: '#7c3aed' },
   { id: 'isla', name: 'Isla', agent: 'Ren', color: '#dc2626' },
   { id: 'weston', name: 'Weston', agent: 'Ozzy', color: '#16a34a' },
 ];
@@ -217,7 +217,7 @@ export default function ProfilesProgress({ basePath }: { basePath: string }) {
 
       {!loading && activeSection === 'progressions' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-          <p style={{ fontSize: 13, color: '#6b7280', marginBottom: 4 }}>Set quarterly destinations and current units for each domain. These feed directly into what Vera, Ren, and Ozzy build toward each session.</p>
+          <p style={{ fontSize: 13, color: '#6b7280', marginBottom: 4 }}>Set quarterly destinations and current units for each domain. These feed directly into what Zoe, Ren, and Ozzy build toward each session.</p>
           {DOMAINS.map(domain => (
             <div key={domain.key} style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: 10, padding: 16 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
