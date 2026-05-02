@@ -1051,6 +1051,25 @@ app.get('/forge-api/admin/runway', (req, res) => {
   });
 });
 
+app.post('/forge-api/admin/runway-check-now', (req, res) => {
+  // Manual trigger: run runway alert check across all children right now.
+  // Useful for the parent to "test" alerts or refresh after authoring new content.
+  const data = readData();
+  if (!data || !data.forge || !data.forge.children) return res.status(404).json({ error: 'No data' });
+  const childIds = ['everly', 'isla', 'weston'];
+  let alertsPosted = 0;
+  for (const cid of childIds) {
+    const child = getChild(data, cid);
+    if (!child) continue;
+    const beforeCount = (child.messages?.parentInbox || []).filter(m => m.from === 'system').length;
+    try { checkRunwayAlertsForChild(data, child); } catch (err) { console.error('Manual runway check error:', err); }
+    const afterCount = (child.messages?.parentInbox || []).filter(m => m.from === 'system').length;
+    alertsPosted += (afterCount - beforeCount);
+  }
+  writeData(data);
+  res.json({ success: true, alertsPosted });
+});
+
 
 app.post('/forge-api/admin/weekly-digest/:childId', async (req, res) => {
   const data = readData();
