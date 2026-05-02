@@ -2416,39 +2416,41 @@ app.post('/forge-api/admin/progressions/:childId', (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.get('/{*splat}', (req, res) => {
-    if (!req.path.startsWith('/forge-api')) {
-      res.sendFile(path.join(staticDir, 'index.html'));
+  app.get('/forge-api/admin/ping', (req, res) => {
+    res.json({ ok: true, ts: Date.now(), cacheLoaded: !!_cache });
+  });
+
+  app.get('/forge-api/admin/export', (req, res) => {
+    // Synchronous handler — Express handles async writes via streams.
+    // Skip async/await wrapping that may cause Express body-parser issues.
+    console.log('[export] route entered at ' + new Date().toISOString());
+    try {
+      if (!_cache) {
+        console.error('[export] _cache is null');
+        res.status(503).json({ error: 'Data not loaded yet' });
+        return;
+      }
+      console.log('[export] _cache keys:', Object.keys(_cache).join(','));
+      const body = JSON.stringify(_cache);
+      console.log('[export] serialized body bytes:', body.length);
+      res.set('Content-Type', 'application/json; charset=utf-8');
+      res.set('Cache-Control', 'no-store');
+      res.status(200).send(body);
+      console.log('[export] response sent');
+    } catch (e) {
+      console.error('[export] error:', e && e.message ? e.message : e);
+      if (!res.headersSent) res.status(500).json({ error: String(e && e.message || e) });
     }
   });
-}
 
-app.get('/forge-api/admin/ping', (req, res) => {
-  res.json({ ok: true, ts: Date.now(), cacheLoaded: !!_cache });
-});
-
-app.get('/forge-api/admin/export', (req, res) => {
-  // Synchronous handler — Express handles async writes via streams.
-  // Skip async/await wrapping that may cause Express body-parser issues.
-  console.log('[export] route entered at ' + new Date().toISOString());
-  try {
-    if (!_cache) {
-      console.error('[export] _cache is null');
-      res.status(503).json({ error: 'Data not loaded yet' });
-      return;
+app.get('/{*splat}', (req, res, next) => {
+    if (req.path.startsWith('/forge-api')) {
+      // API path with no matching handler — return 404 instead of hanging
+      return res.status(404).json({ error: 'API endpoint not found', path: req.path });
     }
-    console.log('[export] _cache keys:', Object.keys(_cache).join(','));
-    const body = JSON.stringify(_cache);
-    console.log('[export] serialized body bytes:', body.length);
-    res.set('Content-Type', 'application/json; charset=utf-8');
-    res.set('Cache-Control', 'no-store');
-    res.status(200).send(body);
-    console.log('[export] response sent');
-  } catch (e) {
-    console.error('[export] error:', e && e.message ? e.message : e);
-    if (!res.headersSent) res.status(500).json({ error: String(e && e.message || e) });
-  }
-});
+    res.sendFile(path.join(staticDir, 'index.html'));
+  });
+}
 
 app.post('/forge-api/admin/import', async (req, res) => {
   try {
