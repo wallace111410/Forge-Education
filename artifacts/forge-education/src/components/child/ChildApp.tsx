@@ -388,7 +388,7 @@ function UnlockedDayScreen({ child, todayContext, onStartSession, onLogout }: an
 
   const getUnlockedMessage = () => {
     const messages: Record<string, any> = {
-      everly: { headline: 'Extra session.', agentLine: `Vera wasn't expecting you today — but she's glad you're here.`, prompt: 'What do you want to work on?' },
+      everly: { headline: 'Extra session.', agentLine: `Zoe wasn't expecting you today — but she's glad you're here.`, prompt: 'What do you want to work on?' },
       isla: { headline: 'Bonus day!', agentLine: `Ren is SO excited you're here on a non-school day.`, prompt: 'What sounds good to Isla today?' },
       weston: { headline: 'Surprise visit!', agentLine: `OZZY! Weston is here! This is the BEST surprise!`, prompt: 'What adventure should Ozzy and Weston go on?' }
     };
