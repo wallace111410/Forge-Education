@@ -428,6 +428,7 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
 function OverviewPanel({ data, onChildSelect, basePath }: any) {
   const CHILD_COLORS: Record<string, string> = { everly: '#7c3aed', isla: '#dc2626', weston: '#16a34a' };
   const [runway, setRunway] = useState<any>(null);
+  const [runwayCheckStatus, setRunwayCheckStatus] = useState<string>('');
   useEffect(() => {
     fetch(`${basePath || ''}/forge-api/admin/runway`)
       .then(r => r.json())
@@ -467,7 +468,26 @@ function OverviewPanel({ data, onChildSelect, basePath }: any) {
                 </div>
               </div>
             )}
-            <div className="panel-section-title">Content Runway</div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '20px' }}>
+              <div className="panel-section-title" style={{ marginTop: 0 }}>Content Runway</div>
+              <button
+                onClick={async () => {
+                  try {
+                    const r = await fetch(`${basePath || ''}/forge-api/admin/runway-check-now`, { method: 'POST' });
+                    const j = await r.json();
+                    setRunwayCheckStatus(j.alertsPosted > 0 ? `Posted ${j.alertsPosted} new alert(s) to inboxes` : 'No new alerts (already current)');
+                    setTimeout(() => setRunwayCheckStatus(''), 4000);
+                  } catch (err) {
+                    setRunwayCheckStatus('Error checking runway');
+                    setTimeout(() => setRunwayCheckStatus(''), 4000);
+                  }
+                }}
+                style={{ background: '#2a2a2a', color: '#aaa', border: '1px solid #444', borderRadius: '4px', padding: '4px 10px', fontSize: '11px', cursor: 'pointer' }}
+              >
+                Refresh alerts
+              </button>
+            </div>
+            {runwayCheckStatus && <div style={{ fontSize: '11px', color: '#888', marginBottom: '6px' }}>{runwayCheckStatus}</div>}
             <div style={{ background: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: '8px', padding: '14px 16px', marginBottom: '16px' }}>
               <div style={{ fontSize: '12px', color: '#888', marginBottom: '12px' }}>
                 Weeks of mission content remaining per child × domain. Green ≥ {summary.thresholds?.yellow || 12}wk · Yellow {summary.thresholds?.red || 8}–{summary.thresholds?.yellow || 12}wk · Red &lt; {summary.thresholds?.red || 8}wk.
