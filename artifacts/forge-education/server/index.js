@@ -2424,13 +2424,28 @@ app.get('/{*splat}', (req, res) => {
 }
 
 app.get('/forge-api/admin/export', async (req, res) => {
+  console.log('[export] start');
   try {
-    const data = readData();
+    if (!_cache) {
+      console.error('[export] _cache is null');
+      return res.status(503).json({ error: 'Data not loaded yet' });
+    }
+    console.log('[export] _cache present, serializing');
+    let body;
+    try {
+      body = JSON.stringify(_cache, null, 2);
+    } catch (jsonErr) {
+      console.error('[export] JSON.stringify failed:', jsonErr.message);
+      return res.status(500).json({ error: 'Serialization failed: ' + jsonErr.message });
+    }
+    console.log('[export] body size:', body.length);
     res.setHeader('Content-Type', 'application/json');
-    res.json(data);
+    res.setHeader('Content-Length', Buffer.byteLength(body));
+    res.end(body);
+    console.log('[export] sent OK');
   } catch (e) {
-    console.error('Export endpoint error:', e);
-    res.status(500).json({ error: e.message });
+    console.error('[export] outer error:', e);
+    if (!res.headersSent) res.status(500).json({ error: e.message });
   }
 });
 
