@@ -2423,29 +2423,30 @@ app.get('/{*splat}', (req, res) => {
   });
 }
 
-app.get('/forge-api/admin/export', async (req, res) => {
-  console.log('[export] start');
+app.get('/forge-api/admin/ping', (req, res) => {
+  res.json({ ok: true, ts: Date.now(), cacheLoaded: !!_cache });
+});
+
+app.get('/forge-api/admin/export', (req, res) => {
+  // Synchronous handler — Express handles async writes via streams.
+  // Skip async/await wrapping that may cause Express body-parser issues.
+  console.log('[export] route entered at ' + new Date().toISOString());
   try {
     if (!_cache) {
       console.error('[export] _cache is null');
-      return res.status(503).json({ error: 'Data not loaded yet' });
+      res.status(503).json({ error: 'Data not loaded yet' });
+      return;
     }
-    console.log('[export] _cache present, serializing');
-    let body;
-    try {
-      body = JSON.stringify(_cache, null, 2);
-    } catch (jsonErr) {
-      console.error('[export] JSON.stringify failed:', jsonErr.message);
-      return res.status(500).json({ error: 'Serialization failed: ' + jsonErr.message });
-    }
-    console.log('[export] body size:', body.length);
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Content-Length', Buffer.byteLength(body));
-    res.end(body);
-    console.log('[export] sent OK');
+    console.log('[export] _cache keys:', Object.keys(_cache).join(','));
+    const body = JSON.stringify(_cache);
+    console.log('[export] serialized body bytes:', body.length);
+    res.set('Content-Type', 'application/json; charset=utf-8');
+    res.set('Cache-Control', 'no-store');
+    res.status(200).send(body);
+    console.log('[export] response sent');
   } catch (e) {
-    console.error('[export] outer error:', e);
-    if (!res.headersSent) res.status(500).json({ error: e.message });
+    console.error('[export] error:', e && e.message ? e.message : e);
+    if (!res.headersSent) res.status(500).json({ error: String(e && e.message || e) });
   }
 });
 
