@@ -114,10 +114,10 @@
         "stage": 3,
         "pin": "1111",
         "primaryAgent": {
-          "name": "Vera",
-          "systemName": "vera",
+          "name": "Zoe",
+          "systemName": "zoe",
           "avatarStage": 3,
-          "voiceId": "vera_voice_placeholder"
+          "voiceId": "zoe_voice_placeholder"
         },
         "domains": {
           "identity": {
