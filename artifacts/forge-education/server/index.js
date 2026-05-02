@@ -2235,7 +2235,7 @@ if (isProduction) {
   
 app.get('/forge-api/admin/profile/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const profile = ensureProfile(child);
@@ -2246,7 +2246,7 @@ app.get('/forge-api/admin/profile/:childId', (req, res) => {
 
 app.post('/forge-api/admin/profile/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const profile = ensureProfile(child);
@@ -2260,7 +2260,7 @@ app.post('/forge-api/admin/profile/:childId', (req, res) => {
 
 app.get('/forge-api/admin/session-logs/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const logs = ensureSessionLogs(child);
@@ -2271,7 +2271,7 @@ app.get('/forge-api/admin/session-logs/:childId', (req, res) => {
 // List sessions with transcript metadata for parent transcript viewer
 app.get('/forge-api/admin/transcripts/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const sessions = (child.sessions || []).map(s => ({
@@ -2293,7 +2293,7 @@ app.get('/forge-api/admin/transcripts/:childId', (req, res) => {
 // Download single session transcript as plain text
 app.get('/forge-api/admin/transcript/:childId/:sessionId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const session = (child.sessions || []).find(s => s.id === req.params.sessionId);
@@ -2328,7 +2328,7 @@ app.get('/forge-api/admin/transcript/:childId/:sessionId', (req, res) => {
 // Download ALL sessions for a child as one combined text file
 app.get('/forge-api/admin/transcripts-all/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const sessions = (child.sessions || []).slice().sort((a,b) => (a.startTime||'').localeCompare(b.startTime||''));
@@ -2364,7 +2364,7 @@ app.get('/forge-api/admin/transcripts-all/:childId', (req, res) => {
 
 app.post('/forge-api/admin/session-logs/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const logs = ensureSessionLogs(child);
@@ -2390,7 +2390,7 @@ app.post('/forge-api/admin/session-logs/:childId', (req, res) => {
 
 app.put('/forge-api/admin/session-logs/:childId/:logId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const logs = ensureSessionLogs(child);
@@ -2404,7 +2404,7 @@ app.put('/forge-api/admin/session-logs/:childId/:logId', (req, res) => {
 
 app.post('/forge-api/admin/progressions/:childId', (req, res) => {
   try {
-    const data = loadData();
+    const data = readData();
     const child = getChild(data, req.params.childId);
     if (!child) return res.status(404).json({ error: 'Child not found' });
     const progressions = ensureProgressions(child);
@@ -2426,11 +2426,10 @@ app.get('/{*splat}', (req, res) => {
 app.get('/forge-api/admin/export', async (req, res) => {
   try {
     const data = readData();
-    const filename = 'forge-backup-' + new Date().toISOString().slice(0,10) + '.json';
-    res.setHeader('Content-Disposition', 'attachment; filename="' + filename + '"');
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(data, null, 2));
+    res.json(data);
   } catch (e) {
+    console.error('Export endpoint error:', e);
     res.status(500).json({ error: e.message });
   }
 });
