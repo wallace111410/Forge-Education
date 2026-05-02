@@ -601,7 +601,7 @@ Return ONLY the JSON object. No other text.`;
             onClick={toggleMute}
             title={voiceMuted ? 'Unmute voice' : 'Mute voice'}
           >
-            {voiceMuted ? 'ð' : 'ð'}
+            {voiceMuted ? '🔇' : '🔊'}
           </button>
           {isSpeaking && (
             <button
@@ -712,7 +712,7 @@ Return ONLY the JSON object. No other text.`;
                 disabled={loading || !sessionStarted}
                 title={isListening ? 'Stop listening' : 'Use voice'}
               >
-                ð¤
+                🎤
               </button>
             )}
             <button
