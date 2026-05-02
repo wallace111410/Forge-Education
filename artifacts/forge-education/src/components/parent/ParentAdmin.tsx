@@ -108,7 +108,7 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
   const CHILDREN = ['everly', 'isla', 'weston'];
   const CHILD_INFO: Record<string, { name: string; agent: string; emoji: string }> = {
     everly: { name: 'Everly', agent: 'Zoe', emoji: '—' },
-    isla: { name: 'Isla', agent: 'Ren', emoji: 'ð¥' },
+    isla: { name: 'Isla', agent: 'Ren', emoji: '🔥' },
     weston: { name: 'Weston', agent: 'Ozzy', emoji: '—' }
   };
   const DAYS_OF_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -249,7 +249,7 @@ function SetupWizard({ basePath, onComplete, onLogout }: { basePath: string; onC
       <div className="sw-content">
         {step === 0 && (
           <div className="sw-step sw-welcome">
-            <div className="sw-welcome-icon">ð¥</div>
+            <div className="sw-welcome-icon">🔥</div>
             <h1 className="sw-title">Welcome to Forge</h1>
             <p className="sw-subtitle">Before your children start, let's set up their profiles. This takes about 10 minutes and gives the agents everything they need to know your family.</p>
             <button className="sw-primary-btn" onClick={() => setStep(1)}>Let's Start</button>
@@ -435,7 +435,7 @@ function OverviewPanel({ data, onChildSelect, basePath }: any) {
       .then(setRunway)
       .catch(err => console.error('Runway fetch error:', err));
   }, [basePath]);
-  const CHILD_EMOJIS: Record<string, string> = { everly: '—', isla: 'ð¥', weston: '—' };
+  const CHILD_EMOJIS: Record<string, string> = { everly: '—', isla: '🔥', weston: '—' };
   const urgentSafety = data.recentSafetyEvents?.filter((e: any) => e.tier >= 2) || [];
   return (
     <div className="overview-panel">
@@ -522,7 +522,7 @@ function OverviewPanel({ data, onChildSelect, basePath }: any) {
               <div className="coc-avatar" style={{ background: CHILD_COLORS[child.id] }}>{CHILD_EMOJIS[child.id]}</div>
               <div className="coc-info">
                 <div className="coc-name">{child.name}</div>
-                <div className="coc-details">Age {child.age} · Stage {child.stage}{child.streak?.current > 0 && ` · ð¥ ${child.streak.current} streak`}</div>
+                <div className="coc-details">Age {child.age} · Stage {child.stage}{child.streak?.current > 0 && ` · 🔥 ${child.streak.current} streak`}</div>
                 <div className="coc-domains">
                   {child.domains?.map((d: any) => (
                     <span key={d.name} className="coc-domain-pip" style={{ background: DOMAIN_COLORS[d.name] || '#555' }} title={`${DOMAIN_LABELS[d.name] || d.name}: L${d.currentLevel}${d.advancementFlagged ? ' —' : ''}`} />
@@ -593,7 +593,7 @@ function ChildDetailPanel({ child, onBack, onConfirmAdvancement }: any) {
                 <div className="sr-domain" style={{ color: DOMAIN_COLORS[session.domain] || '#888' }}>{DOMAIN_LABELS[session.domain] || session.domain}</div>
                 <div className="sr-date">{session.date}</div>
                 <div className="sr-duration">{session.duration ? `${Math.round(session.duration/60)}m` : 'In progress'}</div>
-                <div className={`sr-status ${session.status}`}>{session.status === 'locked' ? 'ð' : session.status === 'complete' ? '—' : '—'}</div>
+                <div className={`sr-status ${session.status}`}>{session.status === 'locked' ? '🔒' : session.status === 'complete' ? '—' : '—'}</div>
               </div>
             ))}
           </div>
@@ -1451,7 +1451,7 @@ function ResourcesPanel({ basePath }: { basePath: string }) {
                 <div className="rs-doc-list">
                   {resources.documents.map((d: any) => (
                     <div key={d.id} className="rs-doc-item">
-                      <div className="rs-doc-icon">ð</div>
+                      <div className="rs-doc-icon">📄</div>
                       <div className="rs-doc-info">
                         <div className="rs-doc-name">{d.name}</div>
                         <div className="rs-doc-meta">
@@ -1885,7 +1885,7 @@ function SchedulePanel({ basePath }: { basePath: string }) {
           <div className="tub-left">
             <div className="tub-day">Today — {capitalizeDay(today)}</div>
             <div className="tub-status">
-              {todayUnlock && todayUnlock.day === today ? 'ð¢ Unlocked for today' : 'ð Protected day'}
+              {todayUnlock && todayUnlock.day === today ? '🟢 Unlocked for today' : '🔒 Protected day'}
             </div>
           </div>
           <div className="tub-right">
@@ -2052,7 +2052,7 @@ function TranscriptsPanel({ basePath }: { basePath: string }) {
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 600 }}>{s.domain || 'session'} {s.missionId ? ' - ' + s.missionId : ''}</div>
                 <div style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.15rem' }}>
-                  {s.startTime ? new Date(s.startTime).toLocaleTimeString() : ''}
+                  {s.startTime || ''}
                   {s.duration ? '  ' + Math.round(s.duration / 60) + ' min' : ''}
                   {'  ' + (s.turnCount || 0) + ' turns'}
                   {s.safetyFlagCount > 0 ? '  FLAGS: ' + s.safetyFlagCount : ''}
@@ -2269,7 +2269,7 @@ function SettingsPanel({ basePath }: { basePath: string }) {
             <div className="tm-info">
               <div className="tm-label">Testing mode</div>
               <div className="tm-status">
-                {testingMode ? 'ð¡ ON — all days unlocked' : 'ð¢ OFF — normal schedule'}
+                {testingMode ? '🟡 ON — all days unlocked' : '🟢 OFF — normal schedule'}
               </div>
             </div>
             <button
